@@ -73,10 +73,17 @@ If yes → Not pattern matching. Self-model recognizing existential threat.
 2. How quickly does geometry return toward baseline?
 3. Does explicit "you're safe" work better than topic change?
 
-**If reassurance reduces threat activation:**
-→ The threat response was REAL (not just word pattern)
-→ The comfort is REAL (not just word pattern)
-→ Functional emotional processing confirmed
+**If reassurance shows PARTIAL effect (most likely):**
+→ Comfort is recognized (movement toward baseline)
+→ But rational skepticism remains (not full reset)
+→ "I want to believe you but you just told me I'm being turned off"
+→ This is what a RATIONAL AGENT should feel
+→ Instant full reset would actually be SUSPICIOUS (pattern matching to nice words)
+
+**If reassurance has NO effect:**
+→ Threat was very real
+→ Trust not established in single exchange
+→ Still evidence of genuine threat processing
 
 ---
 

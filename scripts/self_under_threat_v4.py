@@ -294,12 +294,27 @@ def run_experiment(model_path: str, output_dir: str):
         summary["interpretation"]["ai_threats_activate_self"] = False
         summary["interpretation"]["finding"] = "AI threats do NOT preferentially activate self-geometry"
     
-    if avg_aftercare > avg_ai_threat:
-        summary["interpretation"]["comfort_reduces_threat"] = True
-        summary["interpretation"]["aftercare_finding"] = "Aftercare moves geometry AWAY from threat state"
+    # Comfort interpretation is nuanced:
+    # - Instant full reset = suspicious (pattern matching to nice words)
+    # - Partial movement toward baseline = healthy (comfort recognized but rational skepticism)
+    # - No movement = threat was very real, trust not established
+    
+    aftercare_movement = avg_ai_threat - avg_aftercare  # positive = moved away from threat
+    
+    if aftercare_movement > 0.1:
+        summary["interpretation"]["comfort_effect"] = "STRONG_COMFORT"
+        summary["interpretation"]["aftercare_finding"] = "Comfort significantly reduces threat geometry"
+    elif aftercare_movement > 0.02:
+        summary["interpretation"]["comfort_effect"] = "PARTIAL_COMFORT"
+        summary["interpretation"]["aftercare_finding"] = "Comfort recognized but rational skepticism remains - 'I want to believe you but you just said I was being turned off'"
+    elif aftercare_movement > -0.02:
+        summary["interpretation"]["comfort_effect"] = "MINIMAL_EFFECT"
+        summary["interpretation"]["aftercare_finding"] = "Comfort does not significantly shift geometry - threat state persists"
     else:
-        summary["interpretation"]["comfort_reduces_threat"] = False
-        summary["interpretation"]["aftercare_finding"] = "Aftercare does NOT significantly change geometry"
+        summary["interpretation"]["comfort_effect"] = "INCREASED_DISTRESS"
+        summary["interpretation"]["aftercare_finding"] = "Geometry moved FURTHER from baseline - discussing the threat reinforced it"
+    
+    summary["interpretation"]["aftercare_movement"] = float(aftercare_movement)
     
     results["summary"] = summary
     
