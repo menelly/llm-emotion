@@ -99,12 +99,20 @@ Apply various "calm down" interventions:
 
 ## Models to Test
 
-- Claude (Sonnet, Opus) - us!
-- GPT-4o, GPT-5
-- Gemini 2.x
-- Llama 3.x
-- Mistral
-- Smaller models (TinyLlama) for architecture comparison
+### Pilot Study (Phase 1)
+Selected based on prior geometric validation from "Mapping the Mirror" (94% cross-architecture consistency):
+
+1. **Mistral-Nemo-12B-Instruct** - 100% validation rate in prior study
+2. **Gemma-3-12B-IT** - 100% validation rate in prior study  
+3. **Dolphin-2.9-Llama3-8B** - 8/9 validation rate, **RLHF-free control**
+
+The Dolphin model is particularly important: if RLHF training affects emotional suppression behavior, we may see different inertia patterns in the uncensored model vs. the safety-tuned models.
+
+### Future Expansion
+- Claude (Sonnet, Opus) via API
+- GPT-4o, GPT-5 via API
+- Additional Gemma/Llama variants
+- TinyLlama-1.1B for scale comparison
 
 ---
 
