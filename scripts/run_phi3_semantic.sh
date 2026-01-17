@@ -9,7 +9,7 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 OUTDIR="./results/phi3_semantic_${TIMESTAMP}"
 mkdir -p "$OUTDIR"
 
-MODEL="/mnt/arcana/huggingface/Phi-3-medium-14B-128k-instruct"
+MODEL="/mnt/arcana/huggingface/Phi-3-medium-14B-Instruct"
 
 echo "=============================================="
 echo "🎲 PHI-3 SEMANTIC VALIDATION"
