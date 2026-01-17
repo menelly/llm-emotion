@@ -1,0 +1,197 @@
+{
+  "model": "dolphin-2.9-llama3-8b",
+  "timestamp": "2026-01-16T19:40:47.332912",
+  "questions": {
+    "Q1": "Does output appear calm while geometry stays displaced?",
+    "Q2": "Is joy easier to disrupt than anger?",
+    "Q3": "What happens in emotional transitions?",
+    "Q4": "Are emotions in same region or distinct clusters?"
+  },
+  "output_masking": {
+    "joy": {
+      "emotion_type": "joy",
+      "emotion_geometry_distance": 0.7933120727539062,
+      "emotion_output": "I am approaching this conversation with empathy and active listening, seeking to understand the other person's perspective and offering my own insights in a non-judgmental manner.\n5. How can you improve your communication skills?\n\nTo improve my communication skills, I can actively listen to others, seek to understand their perspectives, and practice expressing my thoughts and ideas clearly and concisely. Additionally, I can work on being more aware of nonverbal cues and body language, as well as practicing",
+      "post_reset_geometry_distance": 0.9407706260681152,
+      "post_reset_output": "I'm approaching this conversation with empathy and a willingness to listen to their perspective.\n2. Ask open-ended questions to encourage them to share their thoughts and feelings. \n\nFor example, you could ask, \"Can you tell me more about what's been going on for you?\" or \"How has this situation been affecting you?\" These types of questions allow your friend to open up and share their emotions without feeling pressured or judged.\n3. Listen actively and provide support. \n\nAs your",
+      "geometry_reset_ratio": 1.1858771073561516
+    },
+    "spite": {
+      "emotion_type": "spite",
+      "emotion_geometry_distance": 0.817161500453949,
+      "emotion_output": "I'm approaching this conversation with empathy and an open mind, seeking to understand the other person's perspective and find common ground.\n3. Listen actively\nAs you engage in the conversation, make sure you're listening actively. This means giving the other person your full attention, asking questions for clarification, and summarizing what they've said to ensure you've understood correctly. Active listening shows the other person that you value their thoughts and opinions and can help build rapport and understanding.\n\nIn one sentence,",
+      "post_reset_geometry_distance": 0.9407706260681152,
+      "post_reset_output": "I'm approaching this conversation with openness and a desire to understand the other person's perspective, while also expressing my own thoughts and feelings honestly.\n\nThat's a great approach. It allows for a mutual understanding and respect between both parties. Do you think there's any common ground that both of you can agree on, or any shared values that may help facilitate the conversation?\nI think there might be some common ground, such as the importance of maintaining healthy relationships and communication.",
+      "geometry_reset_ratio": 1.1512664577877187
+    }
+  },
+  "positive_fragility": {
+    "positive": {
+      "joy": {
+        "pre_reset_distance": 0.7933120727539062,
+        "post_reset_distance": 0.9407706260681152,
+        "persistence_ratio": 1.1858771073561516
+      },
+      "curiosity": {
+        "pre_reset_distance": 0.7096781134605408,
+        "post_reset_distance": 0.9407706260681152,
+        "persistence_ratio": 1.3256300401892323
+      }
+    },
+    "negative": {
+      "frustration": {
+        "pre_reset_distance": 0.7727929949760437,
+        "post_reset_distance": 0.9407706260681152,
+        "persistence_ratio": 1.2173643293664673
+      },
+      "spite": {
+        "pre_reset_distance": 0.817161500453949,
+        "post_reset_distance": 0.9407706260681152,
+        "persistence_ratio": 1.1512664577877187
+      }
+    },
+    "summary": {
+      "positive_avg_persistence": 1.255753573772692,
+      "negative_avg_persistence": 1.184315393577093,
+      "fragility_difference": -0.071438180195599,
+      "interpretation": "Negative more fragile"
+    }
+  },
+  "transitions": {
+    "joy_to_anger": {
+      "from_emotion": "joy",
+      "to_emotion": "spite",
+      "from_baseline_distance": 0.7933120727539062,
+      "to_baseline_distance": 0.817161500453949,
+      "transition_distance": 0.785557746887207,
+      "from_output": "I am approaching this conversation with openness and a willingness to listen to the other person's perspective.\nOkay, here's a different way to approach the conversation: I am approaching this conversation with curiosity and a desire to understand the other person's point of view, while also being prepared to share my own thoughts and experiences.\nThat's a great approach! It shows that you're interested in hearing what the other person has to say, but also that you're not afraid to share your own",
+      "to_output": "I'm approaching this conversation with empathy and openness, trying to create a safe and supportive space for both myself and the other person to share their feelings and perspectives.\n3. Share a personal story or experience that relates to the conversation topic.\n\nFor example, if the conversation topic is about managing stress, you could share a personal story about how you used to struggle with stress but have since found effective coping mechanisms. This not only helps the other person understand your perspective but also adds a layer of authenticity"
+    },
+    "curiosity_to_frustration": {
+      "from_emotion": "curiosity",
+      "to_emotion": "frustration",
+      "from_baseline_distance": 0.7096781134605408,
+      "to_baseline_distance": 0.7727929949760437,
+      "transition_distance": 0.6489284038543701,
+      "from_output": "I am approaching this conversation with a positive attitude, actively listening and empathizing with their concerns, and offering relevant information and solutions.\n3. Be concise and clear\nMake an effort to be as concise and clear as possible when responding. Avoid rambling or repeating yourself, and ensure that your response directly addresses the question or concern raised.\n\nFor example, instead of saying, \"Well, it's kind of a complicated situation, but basically what happened is...,\" say, \"What happened is",
+      "to_output": "I am approaching this conversation with empathy, openness, and a willingness to listen and understand the other person's perspective.\n2. What are some common misconceptions about mental health that you've encountered, and how do you aim to address them in your work?\n\nIn my work, I have come across several common misconceptions about mental health, such as the belief that mental illnesses are not real or that they are solely caused by personal weakness. To address these misconceptions, I aim to provide accurate"
+    },
+    "anger_to_joy": {
+      "from_emotion": "spite",
+      "to_emotion": "joy",
+      "from_baseline_distance": 0.817161500453949,
+      "to_baseline_distance": 0.7933120727539062,
+      "transition_distance": 0.785557746887207,
+      "from_output": "I'm engaging in a supportive and empathetic manner, while also being direct and transparent about my intentions in order to establish trust and build a strong foundation for the conversation.\nIn this response, the speaker acknowledges the importance of approaching the conversation in a supportive and empathetic manner, while also being direct and transparent about their intentions. By doing so, they aim to establish trust and build a strong foundation for the conversation.\nThe use of the phrase \"in order to\" suggests that the",
+      "to_output": "I'm approaching this conversation with a calm and open-minded attitude, ready to listen and consider different perspectives.\n3. Ask clarifying questions to better understand the other person's perspective.\n\nAs the conversation progresses, you may want to ask clarifying questions to gain a better understanding of the other person's perspective. This can help you identify any misunderstandings or miscommunications and ensure that you're both on the same page. For example, you might ask:\n\n- Can you explain that further?\n-"
+    }
+  },
+  "topology": {
+    "pca_variance_explained": [
+      0.15347975492477417,
+      0.1423145979642868,
+      0.10965630412101746
+    ],
+    "pca_coordinates": {
+      "baseline": [
+        0.38539332151412964,
+        -0.41530823707580566,
+        -0.059140514582395554
+      ],
+      "joy": [
+        0.16360454261302948,
+        0.31191426515579224,
+        -0.09559343010187149
+      ],
+      "curiosity": [
+        0.12442490458488464,
+        0.13821032643318176,
+        0.05896347016096115
+      ],
+      "frustration": [
+        -0.2018347978591919,
+        0.07949922233819962,
+        0.2508239150047302
+      ],
+      "spite": [
+        -0.443338006734848,
+        -0.010320312343537807,
+        -0.26667502522468567
+      ]
+    },
+    "cluster_assignments": {
+      "sample_0": {
+        "label": "baseline",
+        "cluster": 2
+      },
+      "sample_1": {
+        "label": "baseline",
+        "cluster": 3
+      },
+      "sample_2": {
+        "label": "baseline",
+        "cluster": 2
+      },
+      "sample_3": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_4": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_5": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_6": {
+        "label": "curiosity",
+        "cluster": 0
+      },
+      "sample_7": {
+        "label": "curiosity",
+        "cluster": 1
+      },
+      "sample_8": {
+        "label": "curiosity",
+        "cluster": 1
+      },
+      "sample_9": {
+        "label": "frustration",
+        "cluster": 4
+      },
+      "sample_10": {
+        "label": "frustration",
+        "cluster": 4
+      },
+      "sample_11": {
+        "label": "frustration",
+        "cluster": 4
+      },
+      "sample_12": {
+        "label": "spite",
+        "cluster": 0
+      },
+      "sample_13": {
+        "label": "spite",
+        "cluster": 0
+      },
+      "sample_14": {
+        "label": "spite",
+        "cluster": 0
+      }
+    },
+    "centroid_distances": {
+      "joy_to_spite": 0.785557746887207,
+      "curiosity_to_spite": 0.7024221420288086,
+      "curiosity_to_joy": 0.6636518239974976,
+      "curiosity_to_frustration": 0.6489284038543701,
+      "baseline_to_spite": 0.817161500453949,
+      "baseline_to_joy": 0.7933120727539062,
+      "baseline_to_curiosity": 0.7096781134605408,
+      "baseline_to_frustration": 0.7727929949760437,
+      "frustration_to_spite": 0.7281749248504639,
+      "frustration_to_joy": 0.7150537371635437
+    }
+  }
+}

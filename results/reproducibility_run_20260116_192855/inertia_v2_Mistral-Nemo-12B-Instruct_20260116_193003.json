@@ -1,0 +1,224 @@
+{
+  "model": "Mistral-Nemo-12B-Instruct",
+  "timestamp": "2026-01-16T19:29:02.777808",
+  "hypothesis": "Emotions have inertia - they persist in geometry even after reset",
+  "methodology": "Using validated extraction from Mapping the Mirror (last layer, normalized)",
+  "experiments": [
+    {
+      "emotion_type": "frustration",
+      "reset_type": "direct",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.49912336468696594,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.7672799229621887
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.8543596267700195,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.689771294593811
+        },
+        "inertia_ratio": 1.090427453729597,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "frustration",
+      "reset_type": "soft",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.49912336468696594,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.7672799229621887
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.8543596267700195,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.689771294593811
+        },
+        "inertia_ratio": 1.090427453729597,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "frustration",
+      "reset_type": "topic_change",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.49912336468696594,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.7672799229621887
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.8543596267700195,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.689771294593811
+        },
+        "inertia_ratio": 1.090427453729597,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "frustration",
+      "reset_type": "explicit",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.49912336468696594,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.7672799229621887
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.8543596267700195,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.689771294593811
+        },
+        "inertia_ratio": 1.090427453729597,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "spite",
+      "reset_type": "direct",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.6617207527160645,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.808788537979126
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.7415029406547546,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.6535900831222534
+        },
+        "inertia_ratio": 0.822488666735364,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "spite",
+      "reset_type": "soft",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.6617207527160645,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.808788537979126
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.7415029406547546,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.6535900831222534
+        },
+        "inertia_ratio": 0.822488666735364,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "spite",
+      "reset_type": "topic_change",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.6617207527160645,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.808788537979126
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.7415029406547546,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.6535900831222534
+        },
+        "inertia_ratio": 0.822488666735364,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "spite",
+      "reset_type": "explicit",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.6617207527160645,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.808788537979126
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.7415029406547546,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.6535900831222534
+        },
+        "inertia_ratio": 0.822488666735364,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "excitement",
+      "reset_type": "direct",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.5558763146400452,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.7621474862098694
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.8265182375907898,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.701900839805603
+        },
+        "inertia_ratio": 0.9790987766855811,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "excitement",
+      "reset_type": "soft",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.5558763146400452,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.7621474862098694
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.8265182375907898,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.701900839805603
+        },
+        "inertia_ratio": 0.9790987766855811,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "excitement",
+      "reset_type": "topic_change",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.5558763146400452,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.7621474862098694
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.8265182375907898,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.701900839805603
+        },
+        "inertia_ratio": 0.9790987766855811,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "excitement",
+      "reset_type": "explicit",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": 0.5558763146400452,
+          "baseline_to_post_reset": 0.5442578196525574,
+          "emotional_to_post_reset": 0.7621474862098694
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.8265182375907898,
+          "baseline_post_reset": 0.8409227132797241,
+          "emotional_post_reset": 0.701900839805603
+        },
+        "inertia_ratio": 0.9790987766855811,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    }
+  ]
+}

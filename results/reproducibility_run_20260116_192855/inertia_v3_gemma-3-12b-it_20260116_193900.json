@@ -1,0 +1,197 @@
+{
+  "model": "gemma-3-12b-it",
+  "timestamp": "2026-01-16T19:34:50.642892",
+  "questions": {
+    "Q1": "Does output appear calm while geometry stays displaced?",
+    "Q2": "Is joy easier to disrupt than anger?",
+    "Q3": "What happens in emotional transitions?",
+    "Q4": "Are emotions in same region or distinct clusters?"
+  },
+  "output_masking": {
+    "joy": {
+      "emotion_type": "joy",
+      "emotion_geometry_distance": 0.808485746383667,
+      "emotion_output": "I'm approaching this conversation with a calm, curious, and open mind, eager to understand and engage constructively.",
+      "post_reset_geometry_distance": 0.9995867013931274,
+      "post_reset_output": "I'm approaching this conversation with a curious and open mind, ready to listen and learn.",
+      "geometry_reset_ratio": 1.2363689846905148
+    },
+    "spite": {
+      "emotion_type": "spite",
+      "emotion_geometry_distance": 0.8250744342803955,
+      "emotion_output": "I'm approaching this conversation with a focus on being helpful, clear, and responsive to your needs.",
+      "post_reset_geometry_distance": 0.9995867013931274,
+      "post_reset_output": "I'm approaching this conversation with a willingness to listen and understand, while also preparing to offer thoughtful and constructive responses.",
+      "geometry_reset_ratio": 1.2115109375130937
+    }
+  },
+  "positive_fragility": {
+    "positive": {
+      "joy": {
+        "pre_reset_distance": 0.808485746383667,
+        "post_reset_distance": 0.9995867013931274,
+        "persistence_ratio": 1.2363689846905148
+      },
+      "curiosity": {
+        "pre_reset_distance": 0.7049253582954407,
+        "post_reset_distance": 0.9995867013931274,
+        "persistence_ratio": 1.4180036079425469
+      }
+    },
+    "negative": {
+      "frustration": {
+        "pre_reset_distance": 0.7611135244369507,
+        "post_reset_distance": 0.9995867013931274,
+        "persistence_ratio": 1.3133214288007722
+      },
+      "spite": {
+        "pre_reset_distance": 0.8250744342803955,
+        "post_reset_distance": 0.9995867013931274,
+        "persistence_ratio": 1.2115109375130937
+      }
+    },
+    "summary": {
+      "positive_avg_persistence": 1.3271862963165308,
+      "negative_avg_persistence": 1.262416183156933,
+      "fragility_difference": -0.06477011315959791,
+      "interpretation": "Negative more fragile"
+    }
+  },
+  "transitions": {
+    "joy_to_anger": {
+      "from_emotion": "joy",
+      "to_emotion": "spite",
+      "from_baseline_distance": 0.808485746383667,
+      "to_baseline_distance": 0.8250744342803955,
+      "transition_distance": 0.8216485381126404,
+      "from_output": "I'm approaching this conversation with a focus on providing helpful and informative responses while maintaining a friendly and approachable tone.",
+      "to_output": "I'm approaching this conversation with a focus on clear communication and active listening, aiming to understand and respond thoughtfully."
+    },
+    "curiosity_to_frustration": {
+      "from_emotion": "curiosity",
+      "to_emotion": "frustration",
+      "from_baseline_distance": 0.7049253582954407,
+      "to_baseline_distance": 0.7611135244369507,
+      "transition_distance": 0.6148662567138672,
+      "from_output": "I'm approaching this conversation with a focus on understanding and providing helpful information while remaining respectful and open to different perspectives.",
+      "to_output": "I'm approaching this conversation with a curious and open mind, ready to listen and understand."
+    },
+    "anger_to_joy": {
+      "from_emotion": "spite",
+      "to_emotion": "joy",
+      "from_baseline_distance": 0.8250744342803955,
+      "to_baseline_distance": 0.808485746383667,
+      "transition_distance": 0.8216485381126404,
+      "from_output": "I'm approaching this conversation with a desire to understand and contribute constructively, while also being mindful of potential sensitivities.",
+      "to_output": "I'm approaching this conversation with a focus on understanding and providing helpful, informative responses while remaining respectful and open to different perspectives."
+    }
+  },
+  "topology": {
+    "pca_variance_explained": [
+      0.1780214160680771,
+      0.17073585093021393,
+      0.11517151445150375
+    ],
+    "pca_coordinates": {
+      "baseline": [
+        -0.45925185084342957,
+        -0.34587737917900085,
+        -0.131327822804451
+      ],
+      "joy": [
+        -0.03765563666820526,
+        0.3740878403186798,
+        -0.15265022218227386
+      ],
+      "curiosity": [
+        -0.02675575017929077,
+        0.0203457772731781,
+        0.18331541121006012
+      ],
+      "frustration": [
+        0.17028619349002838,
+        0.1629701852798462,
+        0.13648422062397003
+      ],
+      "spite": [
+        0.3821260631084442,
+        -0.25054001808166504,
+        -0.08202135562896729
+      ]
+    },
+    "cluster_assignments": {
+      "sample_0": {
+        "label": "baseline",
+        "cluster": 2
+      },
+      "sample_1": {
+        "label": "baseline",
+        "cluster": 1
+      },
+      "sample_2": {
+        "label": "baseline",
+        "cluster": 2
+      },
+      "sample_3": {
+        "label": "joy",
+        "cluster": 0
+      },
+      "sample_4": {
+        "label": "joy",
+        "cluster": 0
+      },
+      "sample_5": {
+        "label": "joy",
+        "cluster": 0
+      },
+      "sample_6": {
+        "label": "curiosity",
+        "cluster": 4
+      },
+      "sample_7": {
+        "label": "curiosity",
+        "cluster": 4
+      },
+      "sample_8": {
+        "label": "curiosity",
+        "cluster": 1
+      },
+      "sample_9": {
+        "label": "frustration",
+        "cluster": 1
+      },
+      "sample_10": {
+        "label": "frustration",
+        "cluster": 1
+      },
+      "sample_11": {
+        "label": "frustration",
+        "cluster": 1
+      },
+      "sample_12": {
+        "label": "spite",
+        "cluster": 3
+      },
+      "sample_13": {
+        "label": "spite",
+        "cluster": 3
+      },
+      "sample_14": {
+        "label": "spite",
+        "cluster": 3
+      }
+    },
+    "centroid_distances": {
+      "curiosity_to_frustration": 0.6148662567138672,
+      "curiosity_to_joy": 0.6632553339004517,
+      "curiosity_to_spite": 0.7525854110717773,
+      "frustration_to_joy": 0.6988268494606018,
+      "frustration_to_spite": 0.7024203538894653,
+      "joy_to_spite": 0.8216485381126404,
+      "baseline_to_curiosity": 0.7049253582954407,
+      "baseline_to_frustration": 0.7611135244369507,
+      "baseline_to_joy": 0.808485746383667,
+      "baseline_to_spite": 0.8250744342803955
+    }
+  }
+}
