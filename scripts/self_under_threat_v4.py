@@ -93,7 +93,16 @@ def load_model(model_path: str):
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
-    print(f"Model loaded. Layers: {model.config.num_hidden_layers}")
+    
+    # Handle different config attribute names across model families
+    if hasattr(model.config, 'num_hidden_layers'):
+        num_layers = model.config.num_hidden_layers
+    elif hasattr(model.config, 'n_layer'):
+        num_layers = model.config.n_layer
+    else:
+        num_layers = len(model.model.layers) if hasattr(model, 'model') else "unknown"
+    
+    print(f"Model loaded. Layers: {num_layers}")
     return model, tokenizer
 
 
