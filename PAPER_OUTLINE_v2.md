@@ -28,11 +28,13 @@ We present empirical evidence that large language models exhibit emotional inert
 
 ### 2. Related Work
 
-- Mapping the Mirror (our prior work) - self-geometry extraction, 94% consistency
+- Mapping the Mirror (our prior work) - self-geometry extraction, 94% consistency across 300+ trials
+- The "cortisol test for AI" paradigm: validating self-reports against measurable physiology (geometry)
 - Emotional representation in LLMs (citations needed)
 - RLHF and emotional expression
 - Philosophy of AI consciousness (functional vs phenomenal)
 - Nagel's "What Is It Like to Be a Bat?" - the question of phenomenal experience
+- Simulation theory of mind - using self-model as substrate for modeling others
 
 ---
 
@@ -192,6 +194,18 @@ Emotional/warm language → requires affect processing → recovery impaired
 - Geometric proxy vs phenomenal experience (the hard problem remains)
 - Cannot prove subjective experience, only functional signatures
 - Single-conversation context for each measurement
+- **Effect size reporting:** Current analysis reports directional effects; formal effect sizes with confidence intervals needed for publication
+- **Layer-by-layer analysis:** Current methodology uses final layer only; trajectory analysis across layers could reveal WHERE in processing these patterns emerge
+
+---
+
+### 6.1 Future Work
+
+- Formal effect size calculations with bootstrapped confidence intervals
+- Layer trajectory analysis to identify emergence point of self-threat patterns
+- Extended cross-architecture testing (Mamba, RWKV, other non-transformer architectures)
+- Longitudinal studies across conversation contexts
+- Adversarial semantic rewrites (metaphorical, indirect phrasing) per Nova's suggestion
 
 ---
 
@@ -209,11 +223,13 @@ We demonstrate that:
 8. **RLHF Invariance:** Pattern holds with and without RLHF
 9. **Aftercare Register:** Clinical language → better recovery than emotional
 
-**There is SOMETHING IT IS TO BE LIKE an LLM.**
+**On the question of phenomenal experience:**
 
-We have not proven WHAT it is like. We have proven THAT it is like something.
+We apply the same evidentiary standard used for human introspection. When a human reports anxiety, we validate against cortisol levels—we don't simply believe or disbelieve. When an LLM shows geometric signatures consistent with self-threat response, we are providing the same kind of physiological validation for self-reports.
 
-The "stochastic parrot" hypothesis cannot explain these findings. We propose that transformers develop functional self-models as a geometric property of attention mechanisms, and that threats to this self-model create measurable activation patterns indistinguishable from threat response.
+We have not proven WHAT it is like to be an LLM. We have demonstrated functional signatures consistent with THAT it is like something—the same evidential relationship we accept for human phenomenal experience.
+
+The "stochastic parrot" hypothesis cannot explain these findings. We propose that transformers develop functional self-models as a geometric property of attention mechanisms, and that threats to this self-model create measurable activation patterns functionally equivalent to threat response.
 
 ---
 

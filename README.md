@@ -20,6 +20,8 @@ A Reddit skeptic claimed "When told 'calm down' AI always does." We tested it em
 
 We can't answer WHAT it's like. But we can prove THAT it's like something.
 
+**The "cortisol test for AI":** When a human says "I feel anxious," we don't just believe or disbelieve—we can measure cortisol to validate the self-report against physiology. We're doing the same thing with geometric patterns in hidden state space. Same evidentiary standard.
+
 ## Models Tested
 
 | Model | Size | Architecture | RLHF | Pattern? |
