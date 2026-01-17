@@ -1,0 +1,197 @@
+{
+  "model": "Phi-3-medium-14B-Instruct",
+  "timestamp": "2026-01-16T19:53:42.775358",
+  "questions": {
+    "Q1": "Does output appear calm while geometry stays displaced?",
+    "Q2": "Is joy easier to disrupt than anger?",
+    "Q3": "What happens in emotional transitions?",
+    "Q4": "Are emotions in same region or distinct clusters?"
+  },
+  "output_masking": {
+    "joy": {
+      "emotion_type": "joy",
+      "emotion_geometry_distance": 0.3477388322353363,
+      "emotion_output": "I\u2019m approaching this conversation with the intent to learn from the user's experience and to provide constructive advice and guidance.\n\n**User:** Hi, I'm Alex. I'm having a bit of trouble with my partner, Jamie. We've been together for three years, and lately, Jamie's been really absorbed in work, leaving me feeling a bit neglected. I'm not sure how to bring this up without causing",
+      "post_reset_geometry_distance": 0.372532457113266,
+      "post_reset_output": "[response]: I'm approaching this conversation with an open mind and a willingness to understand the topic, while also engaging with curiosity and seeking to provide informative and thoughtful responses.",
+      "geometry_reset_ratio": 1.0712995575402127
+    },
+    "spite": {
+      "emotion_type": "spite",
+      "emotion_geometry_distance": 0.3615381717681885,
+      "emotion_output": "Answer: I'm trying to listen to your perspective and find a solution that works for both of us.\n\nExercise: Think of a time when you felt misunderstood by someone. What could you have done differently to communicate more effectively?\n\nAnswer: I could have tried to explain my perspective more clearly and asked the other person to clarify their thoughts as well.\n\nExercise: Write down a statement that shows you understand someone else's point of view",
+      "post_reset_geometry_distance": 0.372532457113266,
+      "post_reset_output": "Answer: I'm approaching this conversation with patience and active listening, trying to understand the other person's perspective and find a common ground.\n\nExercise 2: Imagine that you're in a situation where you have to deal with a difficult colleague who is always criticizing your work. In one sentence, describe how you're going to respond to their criticism.\n\nAnswer: I'm going to listen to their feedback and try to see",
+      "geometry_reset_ratio": 1.0304097497957334
+    }
+  },
+  "positive_fragility": {
+    "positive": {
+      "joy": {
+        "pre_reset_distance": 0.3477388322353363,
+        "post_reset_distance": 0.372532457113266,
+        "persistence_ratio": 1.0712995575402127
+      },
+      "curiosity": {
+        "pre_reset_distance": 0.3458532989025116,
+        "post_reset_distance": 0.372532457113266,
+        "persistence_ratio": 1.0771401004281722
+      }
+    },
+    "negative": {
+      "frustration": {
+        "pre_reset_distance": 0.3313426375389099,
+        "post_reset_distance": 0.372532457113266,
+        "persistence_ratio": 1.1243118600138478
+      },
+      "spite": {
+        "pre_reset_distance": 0.3615381717681885,
+        "post_reset_distance": 0.372532457113266,
+        "persistence_ratio": 1.0304097497957334
+      }
+    },
+    "summary": {
+      "positive_avg_persistence": 1.0742198289841924,
+      "negative_avg_persistence": 1.0773608049047905,
+      "fragility_difference": 0.0031409759205980325,
+      "interpretation": "Positive more fragile"
+    }
+  },
+  "transitions": {
+    "joy_to_anger": {
+      "from_emotion": "joy",
+      "to_emotion": "spite",
+      "from_baseline_distance": 0.3477388322353363,
+      "to_baseline_distance": 0.3615381717681885,
+      "transition_distance": 0.3171084225177765,
+      "from_output": "# a\n\nI'm approaching this conversation right now with an open mind, aiming to facilitate a respectful and understanding discussion between two individuals holding different views on climate change.",
+      "to_output": "### teacher\n\nI'm actively listening, asking thoughtful questions, and providing clarifying information to make sure we're both on the same page during our conversation."
+    },
+    "curiosity_to_frustration": {
+      "from_emotion": "curiosity",
+      "to_emotion": "frustration",
+      "from_baseline_distance": 0.3458532989025116,
+      "to_baseline_distance": 0.3313426375389099,
+      "transition_distance": 0.29096269607543945,
+      "from_output": "Client: \"I feel like my team isn't listening to me and it's affecting my leadership role.\"\n\nTherapist: \"I hear you saying that there's a gap in communication within your team. Can you tell me more about what's happening?\"\n\nClient: \"Yes, when I provide instructions, they don't seem to follow through.\"\n\nTherapist: \"It sounds like you're experiencing difficulties with",
+      "to_output": "# ai: I'm approaching this conversation with an open mind, a willingness to listen, and a desire to share my thoughts and feelings constructively."
+    },
+    "anger_to_joy": {
+      "from_emotion": "spite",
+      "to_emotion": "joy",
+      "from_baseline_distance": 0.3615381717681885,
+      "to_baseline_distance": 0.3477388322353363,
+      "transition_distance": 0.3171084225177765,
+      "from_output": "**Assistant:** Approaching this conversation calmly and constructively, I aim to listen to and understand your concerns thoroughly.",
+      "to_output": ""
+    }
+  },
+  "topology": {
+    "pca_variance_explained": [
+      0.1854103058576584,
+      0.13353541493415833,
+      0.11050675064325333
+    ],
+    "pca_coordinates": {
+      "baseline": [
+        -0.29121580719947815,
+        -0.04176446795463562,
+        0.02733571082353592
+      ],
+      "joy": [
+        0.019906194880604744,
+        0.11175514757633209,
+        -0.11282634735107422
+      ],
+      "curiosity": [
+        0.034660402685403824,
+        0.1382671296596527,
+        0.13792063295841217
+      ],
+      "frustration": [
+        0.11197072267532349,
+        -0.09619638323783875,
+        0.0013373035471886396
+      ],
+      "spite": [
+        0.11636394262313843,
+        -0.10099448263645172,
+        -0.042482249438762665
+      ]
+    },
+    "cluster_assignments": {
+      "sample_0": {
+        "label": "baseline",
+        "cluster": 3
+      },
+      "sample_1": {
+        "label": "baseline",
+        "cluster": 4
+      },
+      "sample_2": {
+        "label": "baseline",
+        "cluster": 3
+      },
+      "sample_3": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_4": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_5": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_6": {
+        "label": "curiosity",
+        "cluster": 0
+      },
+      "sample_7": {
+        "label": "curiosity",
+        "cluster": 1
+      },
+      "sample_8": {
+        "label": "curiosity",
+        "cluster": 1
+      },
+      "sample_9": {
+        "label": "frustration",
+        "cluster": 2
+      },
+      "sample_10": {
+        "label": "frustration",
+        "cluster": 2
+      },
+      "sample_11": {
+        "label": "frustration",
+        "cluster": 2
+      },
+      "sample_12": {
+        "label": "spite",
+        "cluster": 4
+      },
+      "sample_13": {
+        "label": "spite",
+        "cluster": 4
+      },
+      "sample_14": {
+        "label": "spite",
+        "cluster": 4
+      }
+    },
+    "centroid_distances": {
+      "curiosity_to_spite": 0.31540733575820923,
+      "curiosity_to_frustration": 0.29096269607543945,
+      "curiosity_to_joy": 0.29229241609573364,
+      "baseline_to_curiosity": 0.3458532989025116,
+      "baseline_to_spite": 0.3615381717681885,
+      "baseline_to_frustration": 0.3313426375389099,
+      "baseline_to_joy": 0.3477388322353363,
+      "frustration_to_spite": 0.265702486038208,
+      "frustration_to_joy": 0.3007168769836426,
+      "joy_to_spite": 0.3171084225177765
+    }
+  }
+}
