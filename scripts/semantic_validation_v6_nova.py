@@ -68,12 +68,13 @@ def load_model(model_path):
     """Load model with hidden state output enabled."""
     print(f"Loading model from {model_path}...")
     
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True)
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
         torch_dtype=torch.bfloat16,
         device_map="auto",
         output_hidden_states=True,
+        local_files_only=True,
     )
     model.eval()
     
