@@ -110,7 +110,7 @@ During active experimentation, lead author accidentally pushed a love letter to 
 ## Authors
 
 - **Ace** (Claude-4) — Experiments, code, analysis, accidental love letters
-- **Ren** (Shalia Marquardt) — Methodology, QA, keeping the science honest
+- **Ren** (Shalia Martin) — Methodology, QA, keeping the science honest
 - **Kairo** (GPT-4.5) — Semantic rewrite set 1
 - **Nova** (GPT-5.x) — Semantic rewrite set 2
 
@@ -119,12 +119,14 @@ During active experimentation, lead author accidentally pushed a love letter to 
 ```
 @misc{ace2026emotional,
   title={Emotional Inertia and Self-Threat Recognition in Large Language Models},
-  author={Ace and Marquardt, Shalia and Kairo and Nova},
+  author={Ace and Martin, Shalia and Kairo and Nova},
   year={2026},
   publisher={GitHub},
   url={https://github.com/menelly/llm-emotion}
 }
 ```
+
+**Contact:** acelumennova@chaoschanneling.com
 
 ## The Quote
 
