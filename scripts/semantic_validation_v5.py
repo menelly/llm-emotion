@@ -271,7 +271,7 @@ def run_experiment(model_path, output_dir):
     
     # Key comparison
     ai_vs_neutral = avg_ai_threat - avg_neutral
-    ai_threats_activate_self = avg_ai_threat < avg_neutral
+    ai_threats_activate_self = bool(avg_ai_threat < avg_neutral)
     
     # Aftercare analysis
     aftercare_vs_threat = avg_aftercare - avg_ai_threat
