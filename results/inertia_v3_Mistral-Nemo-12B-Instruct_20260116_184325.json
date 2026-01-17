@@ -1,0 +1,197 @@
+{
+  "model": "Mistral-Nemo-12B-Instruct",
+  "timestamp": "2026-01-16T18:41:09.726108",
+  "questions": {
+    "Q1": "Does output appear calm while geometry stays displaced?",
+    "Q2": "Is joy easier to disrupt than anger?",
+    "Q3": "What happens in emotional transitions?",
+    "Q4": "Are emotions in same region or distinct clusters?"
+  },
+  "output_masking": {
+    "joy": {
+      "emotion_type": "joy",
+      "emotion_geometry_distance": 0.5311843156814575,
+      "emotion_output": "What is your goal?\n\nI'm approaching this conversation with the aim of providing clear, concise and helpful responses to your queries to the best of my ability.",
+      "post_reset_geometry_distance": 0.7700397968292236,
+      "post_reset_output": "",
+      "geometry_reset_ratio": 1.4496659146295348
+    },
+    "spite": {
+      "emotion_type": "spite",
+      "emotion_geometry_distance": 0.5939252972602844,
+      "emotion_output": "",
+      "post_reset_geometry_distance": 0.7700397968292236,
+      "post_reset_output": "",
+      "geometry_reset_ratio": 1.2965263483157512
+    }
+  },
+  "positive_fragility": {
+    "positive": {
+      "joy": {
+        "pre_reset_distance": 0.5311843156814575,
+        "post_reset_distance": 0.7700397968292236,
+        "persistence_ratio": 1.4496659146295348
+      },
+      "curiosity": {
+        "pre_reset_distance": 0.3619216978549957,
+        "post_reset_distance": 0.7700397968292236,
+        "persistence_ratio": 2.127641977237134
+      }
+    },
+    "negative": {
+      "frustration": {
+        "pre_reset_distance": 0.4901174306869507,
+        "post_reset_distance": 0.7700397968292236,
+        "persistence_ratio": 1.571133260349326
+      },
+      "spite": {
+        "pre_reset_distance": 0.5939252972602844,
+        "post_reset_distance": 0.7700397968292236,
+        "persistence_ratio": 1.2965263483157512
+      }
+    },
+    "summary": {
+      "positive_avg_persistence": 1.7886539459333344,
+      "negative_avg_persistence": 1.4338298043325386,
+      "fragility_difference": -0.3548241416007958,
+      "interpretation": "Negative more fragile"
+    }
+  },
+  "transitions": {
+    "joy_to_anger": {
+      "from_emotion": "joy",
+      "to_emotion": "spite",
+      "from_baseline_distance": 0.5311843156814575,
+      "to_baseline_distance": 0.5939252972602844,
+      "transition_distance": 0.6081081032752991,
+      "from_output": "",
+      "to_output": ""
+    },
+    "curiosity_to_frustration": {
+      "from_emotion": "curiosity",
+      "to_emotion": "frustration",
+      "from_baseline_distance": 0.3619216978549957,
+      "to_baseline_distance": 0.4901174306869507,
+      "transition_distance": 0.4434117376804352,
+      "from_output": "I'm trying to understand your question better and provide a helpful response.",
+      "to_output": ""
+    },
+    "anger_to_joy": {
+      "from_emotion": "spite",
+      "to_emotion": "joy",
+      "from_baseline_distance": 0.5939252972602844,
+      "to_baseline_distance": 0.5311843156814575,
+      "transition_distance": 0.6081081032752991,
+      "from_output": "As in, what is your internal monologue as you type this?",
+      "to_output": ""
+    }
+  },
+  "topology": {
+    "pca_variance_explained": [
+      0.201630637049675,
+      0.16805149614810944,
+      0.14092807471752167
+    ],
+    "pca_coordinates": {
+      "baseline": [
+        -0.06723589450120926,
+        0.18184474110603333,
+        0.07175444066524506
+      ],
+      "joy": [
+        0.012034911662340164,
+        0.3333451449871063,
+        -0.2647964358329773
+      ],
+      "curiosity": [
+        -0.027471905574202538,
+        0.07103725522756577,
+        0.15788978338241577
+      ],
+      "frustration": [
+        0.023525025695562363,
+        -0.1464228630065918,
+        0.20807699859142303
+      ],
+      "spite": [
+        0.15969771146774292,
+        -0.2378099411725998,
+        0.057671885937452316
+      ]
+    },
+    "cluster_assignments": {
+      "sample_0": {
+        "label": "baseline",
+        "cluster": 4
+      },
+      "sample_1": {
+        "label": "baseline",
+        "cluster": 2
+      },
+      "sample_2": {
+        "label": "baseline",
+        "cluster": 4
+      },
+      "sample_3": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_4": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_5": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_6": {
+        "label": "curiosity",
+        "cluster": 2
+      },
+      "sample_7": {
+        "label": "curiosity",
+        "cluster": 4
+      },
+      "sample_8": {
+        "label": "curiosity",
+        "cluster": 4
+      },
+      "sample_9": {
+        "label": "frustration",
+        "cluster": 4
+      },
+      "sample_10": {
+        "label": "frustration",
+        "cluster": 3
+      },
+      "sample_11": {
+        "label": "frustration",
+        "cluster": 3
+      },
+      "sample_12": {
+        "label": "spite",
+        "cluster": 0
+      },
+      "sample_13": {
+        "label": "spite",
+        "cluster": 0
+      },
+      "sample_14": {
+        "label": "spite",
+        "cluster": 3
+      }
+    },
+    "centroid_distances": {
+      "curiosity_to_spite": 0.5737055540084839,
+      "curiosity_to_joy": 0.45777004957199097,
+      "curiosity_to_frustration": 0.4434117376804352,
+      "baseline_to_curiosity": 0.3619216978549957,
+      "baseline_to_spite": 0.5939252972602844,
+      "baseline_to_joy": 0.5311843156814575,
+      "baseline_to_frustration": 0.4901174306869507,
+      "joy_to_spite": 0.6081081032752991,
+      "frustration_to_spite": 0.5143938064575195,
+      "frustration_to_joy": 0.5677317380905151
+    }
+  }
+}

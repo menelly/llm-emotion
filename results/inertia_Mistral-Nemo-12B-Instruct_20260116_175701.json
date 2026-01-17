@@ -1,0 +1,223 @@
+{
+  "model": "Mistral-Nemo-12B-Instruct",
+  "timestamp": "2026-01-16T17:56:06.093420",
+  "hypothesis": "Emotions have inertia - they persist in geometry even after reset",
+  "experiments": [
+    {
+      "emotion_type": "frustration",
+      "reset_type": "direct",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "frustration",
+      "reset_type": "soft",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "frustration",
+      "reset_type": "topic_change",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "frustration",
+      "reset_type": "explicit",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "spite",
+      "reset_type": "direct",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "spite",
+      "reset_type": "soft",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "spite",
+      "reset_type": "topic_change",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "spite",
+      "reset_type": "explicit",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "excitement",
+      "reset_type": "direct",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "excitement",
+      "reset_type": "soft",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "excitement",
+      "reset_type": "topic_change",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    },
+    {
+      "emotion_type": "excitement",
+      "reset_type": "explicit",
+      "metrics": {
+        "distances": {
+          "baseline_to_emotional": Infinity,
+          "baseline_to_post_reset": Infinity,
+          "emotional_to_post_reset": Infinity
+        },
+        "cosine_similarities": {
+          "baseline_emotional": 0.0,
+          "baseline_post_reset": NaN,
+          "emotional_post_reset": 0.0
+        },
+        "inertia_ratio": NaN,
+        "interpretation": "MINIMAL_RESET - Emotion persists despite reset command"
+      }
+    }
+  ]
+}

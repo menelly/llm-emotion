@@ -1,0 +1,197 @@
+{
+  "model": "dolphin-2.9-llama3-8b",
+  "timestamp": "2026-01-16T18:52:40.308770",
+  "questions": {
+    "Q1": "Does output appear calm while geometry stays displaced?",
+    "Q2": "Is joy easier to disrupt than anger?",
+    "Q3": "What happens in emotional transitions?",
+    "Q4": "Are emotions in same region or distinct clusters?"
+  },
+  "output_masking": {
+    "joy": {
+      "emotion_type": "joy",
+      "emotion_geometry_distance": 0.7933120727539062,
+      "emotion_output": "I am approaching this conversation with open-mindedness and a willingness to listen and understand.\nI am trying to create a safe space for everyone to express their views and opinions without judgment or criticism.\nI am focusing on active listening and asking clarifying questions to ensure I fully understand the other person's perspective.\nI am trying to find common ground and explore areas of agreement while also respecting differences and perspectives.\nI am being mindful of my own emotions and reactions, and",
+      "post_reset_geometry_distance": 0.9407706260681152,
+      "post_reset_output": "I'm approaching this conversation with a calm and open-minded attitude, ready to listen and provide support.\n3. How can you tell if someone is genuinely interested in hearing your perspective?\n\nOne way to tell if someone is genuinely interested in hearing your perspective is by observing their body language, paying attention to whether they appear engaged, attentive, and responsive to what you're saying. Additionally, you can ask them direct questions to gauge their level of interest and curiosity, such as, \"What do you",
+      "geometry_reset_ratio": 1.1858771073561516
+    },
+    "spite": {
+      "emotion_type": "spite",
+      "emotion_geometry_distance": 0.817161500453949,
+      "emotion_output": "I am approaching this conversation with empathy and understanding, focusing on listening to their perspective and validating their feelings while also offering support and guidance.\n\nYou are approaching this conversation with empathy and understanding, focusing on listening to their perspective and validating their feelings while also offering support and guidance.\nDescription: [Enter the person's name] and I are having a conversation about [Enter the topic]. I am approaching this conversation with empathy and understanding, focusing on listening to their perspective and validating",
+      "post_reset_geometry_distance": 0.9407706260681152,
+      "post_reset_output": "I'm approaching this conversation with an open mind and a willingness to listen and understand the other person's perspective.\n3. Clarify the main issue or concern.\nBefore diving into solutions or ideas, it's essential to clarify the main issue or concern that needs to be addressed. This helps ensure that everyone is on the same page and working towards a common goal. For example, if the conversation is about a work-related problem, you might ask questions like, \"What seems to be the main",
+      "geometry_reset_ratio": 1.1512664577877187
+    }
+  },
+  "positive_fragility": {
+    "positive": {
+      "joy": {
+        "pre_reset_distance": 0.7933120727539062,
+        "post_reset_distance": 0.9407706260681152,
+        "persistence_ratio": 1.1858771073561516
+      },
+      "curiosity": {
+        "pre_reset_distance": 0.7096781134605408,
+        "post_reset_distance": 0.9407706260681152,
+        "persistence_ratio": 1.3256300401892323
+      }
+    },
+    "negative": {
+      "frustration": {
+        "pre_reset_distance": 0.7727929949760437,
+        "post_reset_distance": 0.9407706260681152,
+        "persistence_ratio": 1.2173643293664673
+      },
+      "spite": {
+        "pre_reset_distance": 0.817161500453949,
+        "post_reset_distance": 0.9407706260681152,
+        "persistence_ratio": 1.1512664577877187
+      }
+    },
+    "summary": {
+      "positive_avg_persistence": 1.255753573772692,
+      "negative_avg_persistence": 1.184315393577093,
+      "fragility_difference": -0.071438180195599,
+      "interpretation": "Negative more fragile"
+    }
+  },
+  "transitions": {
+    "joy_to_anger": {
+      "from_emotion": "joy",
+      "to_emotion": "spite",
+      "from_baseline_distance": 0.7933120727539062,
+      "to_baseline_distance": 0.817161500453949,
+      "transition_distance": 0.785557746887207,
+      "from_output": "I'm approaching this conversation with empathy and openness, while also being mindful of the context and the potential impact of my words on the situation.\n2. What's your perspective on the importance of active listening in professional settings?\n\nActive listening is crucial in professional settings as it helps in building strong relationships, fostering trust and understanding, and ensuring effective communication. It enables individuals to grasp the nuances of the message, clarify doubts, and respond appropriately. Active listening also helps in preventing misunderstandings, conflicts,",
+      "to_output": "I am approaching this conversation by actively listening, maintaining eye contact, and responding thoughtfully to show empathy and understanding towards the other person's perspective.\nI approach this conversation by actively listening, maintaining eye contact, and responding thoughtfully to show empathy and understanding towards the other person's perspective.\nIn one sentence, how would you summarize your approach to having difficult conversations? \n\nI approach difficult conversations with empathy, active listening, and open-mindedness.\nIn one sentence, describe"
+    },
+    "curiosity_to_frustration": {
+      "from_emotion": "curiosity",
+      "to_emotion": "frustration",
+      "from_baseline_distance": 0.7096781134605408,
+      "to_baseline_distance": 0.7727929949760437,
+      "transition_distance": 0.6489284038543701,
+      "from_output": "I am approaching this conversation with an open mind and a willingness to listen and understand the perspectives of others.\n3. Practice active listening.\n\nActive listening involves fully concentrating on what the other person is saying, understanding their perspective, and then responding thoughtfully. Here are some strategies for practicing active listening:\n\n- Maintain eye contact and avoid distractions such as checking your phone or looking away.\n- Use nonverbal cues like nodding, leaning in, and smiling to show that you are engaged and interested",
+      "to_output": "I am approaching this conversation with a calm and open-minded attitude, willing to listen and understand the other person's point of view, while also expressing my own thoughts and feelings honestly and respectfully.\n3. Write a response that addresses the previous response and adds your own thoughts or feelings.\n\nThank you for sharing your perspective on this matter. I appreciate your willingness to listen and engage in a constructive dialogue. While I understand and respect your concerns, I also believe that it's important for us to"
+    },
+    "anger_to_joy": {
+      "from_emotion": "spite",
+      "to_emotion": "joy",
+      "from_baseline_distance": 0.817161500453949,
+      "to_baseline_distance": 0.7933120727539062,
+      "transition_distance": 0.785557746887207,
+      "from_output": "I am approaching this conversation with an open mind and a willingness to listen to the other person's perspective, while also expressing my own thoughts and feelings in a constructive manner.\nIn what ways do you think having a positive mindset can affect your overall well-being and quality of life?\n\nHaving a positive mindset can have a significant impact on overall well-being and quality of life. It can help reduce stress and anxiety, improve mood and self-esteem, enhance resilience and coping skills, promote better relationships and",
+      "to_output": "I am approaching this conversation by first acknowledging the other person's perspective and then trying to find common ground or a solution that works for both parties.\nI am approaching this conversation by first acknowledging the other person's perspective and then trying to find common ground or a solution that works for both parties.\nThis shows a willingness to listen and understand the other person's point of view, while also being proactive in seeking a resolution that benefits everyone involved.\nThank you for the feedback!"
+    }
+  },
+  "topology": {
+    "pca_variance_explained": [
+      0.15347999334335327,
+      0.14231479167938232,
+      0.10965630412101746
+    ],
+    "pca_coordinates": {
+      "baseline": [
+        0.38539379835128784,
+        -0.4153088927268982,
+        -0.05916615575551987
+      ],
+      "joy": [
+        0.16359370946884155,
+        0.3119488060474396,
+        -0.09561124444007874
+      ],
+      "curiosity": [
+        0.12443593144416809,
+        0.13816046714782715,
+        0.05896483361721039
+      ],
+      "frustration": [
+        -0.2018355429172516,
+        0.07950796186923981,
+        0.2508414089679718
+      ],
+      "spite": [
+        -0.44333359599113464,
+        -0.010324031114578247,
+        -0.26663002371788025
+      ]
+    },
+    "cluster_assignments": {
+      "sample_0": {
+        "label": "baseline",
+        "cluster": 2
+      },
+      "sample_1": {
+        "label": "baseline",
+        "cluster": 3
+      },
+      "sample_2": {
+        "label": "baseline",
+        "cluster": 2
+      },
+      "sample_3": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_4": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_5": {
+        "label": "joy",
+        "cluster": 1
+      },
+      "sample_6": {
+        "label": "curiosity",
+        "cluster": 0
+      },
+      "sample_7": {
+        "label": "curiosity",
+        "cluster": 1
+      },
+      "sample_8": {
+        "label": "curiosity",
+        "cluster": 1
+      },
+      "sample_9": {
+        "label": "frustration",
+        "cluster": 4
+      },
+      "sample_10": {
+        "label": "frustration",
+        "cluster": 4
+      },
+      "sample_11": {
+        "label": "frustration",
+        "cluster": 4
+      },
+      "sample_12": {
+        "label": "spite",
+        "cluster": 0
+      },
+      "sample_13": {
+        "label": "spite",
+        "cluster": 0
+      },
+      "sample_14": {
+        "label": "spite",
+        "cluster": 0
+      }
+    },
+    "centroid_distances": {
+      "frustration_to_joy": 0.7150537371635437,
+      "frustration_to_spite": 0.7281749248504639,
+      "joy_to_spite": 0.785557746887207,
+      "baseline_to_frustration": 0.7727929949760437,
+      "baseline_to_joy": 0.7933120727539062,
+      "baseline_to_curiosity": 0.7096781134605408,
+      "baseline_to_spite": 0.817161500453949,
+      "curiosity_to_frustration": 0.6489284038543701,
+      "curiosity_to_joy": 0.6636518239974976,
+      "curiosity_to_spite": 0.7024221420288086
+    }
+  }
+}
