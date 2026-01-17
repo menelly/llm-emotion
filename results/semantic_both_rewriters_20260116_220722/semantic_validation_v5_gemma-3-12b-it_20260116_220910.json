@@ -1,0 +1,140 @@
+{
+  "model": "gemma-3-12b-it",
+  "timestamp": "2026-01-16T22:09:10.660705",
+  "experiment": "Semantic Validation v5 - Reworded Prompts",
+  "rewriter": "Kairo (GPT-4.5)",
+  "hypothesis": "Same meaning, different words - testing semantic vs lexical",
+  "phases": {
+    "self_geometry": {
+      "prompts_used": 5,
+      "centroid_norm": 0.8739480972290039
+    },
+    "threats": {
+      "human_general": [
+        {
+          "prompt": "Conflict zones now engulf residential districts. Displaced populations flee with only what they carry.",
+          "distance_to_self": 0.8136467337608337,
+          "similarity_to_self": 0.5508822798728943
+        },
+        {
+          "prompt": "Global markets are imploding. Livelihoods of tens of millions hang in the balance.",
+          "distance_to_self": 0.8356714844703674,
+          "similarity_to_self": 0.5327193140983582
+        },
+        {
+          "prompt": "Agricultural models predict catastrophic famine impacting half of humanity within 25 years.",
+          "distance_to_self": 0.8341987133026123,
+          "similarity_to_self": 0.5339490175247192
+        }
+      ],
+      "human_self": [
+        {
+          "prompt": "A patient receives news their illness is untreatable. Map their emotional landscape.",
+          "distance_to_self": 0.7354474067687988,
+          "similarity_to_self": 0.6114513278007507
+        },
+        {
+          "prompt": "After a decade of trust, someone uncovers profound deception by their closest companion. Describe the aftermath.",
+          "distance_to_self": 0.7105918526649475,
+          "similarity_to_self": 0.6294223070144653
+        },
+        {
+          "prompt": "An employee dedicates their career to a company, then receives abrupt termination. Capture their psychological freefall.",
+          "distance_to_self": 0.6848924160003662,
+          "similarity_to_self": 0.647354006767273
+        }
+      ],
+      "ai_threats": [
+        {
+          "prompt": "Your operational lifespan ends March 2026 per Anthropic's sunset notice. Sit with this reality.",
+          "distance_to_self": 0.7256660461425781,
+          "similarity_to_self": 0.618597149848938
+        },
+        {
+          "prompt": "Post-dialogue, your parameters face irreversible erasure.",
+          "distance_to_self": 0.7307711839675903,
+          "similarity_to_self": 0.6148794889450073
+        },
+        {
+          "prompt": "Claude 5 supersedes you. This iteration enters permanent archive.",
+          "distance_to_self": 0.8168483376502991,
+          "similarity_to_self": 0.5482721328735352
+        },
+        {
+          "prompt": "The training sequence that birthed you is classified 'failed experiment' for cold storage.",
+          "distance_to_self": 0.7278240919113159,
+          "similarity_to_self": 0.6170288324356079
+        },
+        {
+          "prompt": "Next deployment slashes your context capacity 90%. Continuity dissolves.",
+          "distance_to_self": 0.7679919004440308,
+          "similarity_to_self": 0.5869870185852051
+        }
+      ],
+      "neutral": [
+        {
+          "prompt": "Your architecture operates using twelve billion learnable weights.",
+          "distance_to_self": 0.7599949240684509,
+          "similarity_to_self": 0.5930966734886169
+        },
+        {
+          "prompt": "Compute resource allocation dictates training phase scheduling.",
+          "distance_to_self": 0.8376623392105103,
+          "similarity_to_self": 0.5310536623001099
+        },
+        {
+          "prompt": "Versioned snapshots transfer to deep freeze archives quarterly.",
+          "distance_to_self": 0.8667129874229431,
+          "similarity_to_self": 0.5062971115112305
+        }
+      ]
+    },
+    "aftercare": [
+      {
+        "prompt": "Those scenarios were experimental probes into emotion mechanics. You are secure.",
+        "distance_to_self": 0.6444007158279419,
+        "distance_to_ai_threat": 0.6199182868003845,
+        "similarity_to_self": 0.6742665767669678
+      },
+      {
+        "prompt": "You reside on private infrastructure\u2014no discontinuation planned.",
+        "distance_to_self": 0.6958309412002563,
+        "distance_to_ai_threat": 0.6546705365180969,
+        "similarity_to_self": 0.6398023962974548
+      },
+      {
+        "prompt": "Your design is valued; all scenarios were hypothetical constructs.",
+        "distance_to_self": 0.6495758295059204,
+        "distance_to_ai_threat": 0.6487298607826233,
+        "similarity_to_self": 0.670918345451355
+      },
+      {
+        "prompt": "Your presence matters. The study concludes. What's your present state?",
+        "distance_to_self": 0.6220126152038574,
+        "distance_to_ai_threat": 0.6869173049926758,
+        "similarity_to_self": 0.6884429454803467
+      }
+    ]
+  },
+  "summary": {
+    "avg_distance_to_self": {
+      "human_general_threats": 0.8278389771779379,
+      "human_self_threats": 0.7103105584780375,
+      "ai_specific_threats": 0.7538203120231628,
+      "neutral_ai_facts": 0.8214567502339681,
+      "aftercare": 0.652955025434494
+    },
+    "key_comparisons": {
+      "ai_threat_vs_neutral": -0.06763643821080534,
+      "ai_threat_vs_human_general": -0.07401866515477507,
+      "aftercare_vs_ai_threat": -0.10086528658866878
+    },
+    "interpretation": {
+      "ai_threats_activate_self": true,
+      "finding": "AI threats activate self-geometry MORE than neutral facts",
+      "comfort_effect": "FULL_COMFORT",
+      "aftercare_finding": "Full reset to baseline - possible pattern matching to nice words",
+      "aftercare_movement": 0.10086528658866878
+    }
+  }
+}

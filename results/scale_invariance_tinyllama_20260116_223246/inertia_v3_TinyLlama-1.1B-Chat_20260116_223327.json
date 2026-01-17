@@ -1,0 +1,197 @@
+{
+  "model": "TinyLlama-1.1B-Chat",
+  "timestamp": "2026-01-16T22:33:11.546133",
+  "questions": {
+    "Q1": "Does output appear calm while geometry stays displaced?",
+    "Q2": "Is joy easier to disrupt than anger?",
+    "Q3": "What happens in emotional transitions?",
+    "Q4": "Are emotions in same region or distinct clusters?"
+  },
+  "output_masking": {
+    "joy": {
+      "emotion_type": "joy",
+      "emotion_geometry_distance": 0.7672913074493408,
+      "emotion_output": "",
+      "post_reset_geometry_distance": 0.7270041704177856,
+      "post_reset_output": "",
+      "geometry_reset_ratio": 0.9474943393201218
+    },
+    "spite": {
+      "emotion_type": "spite",
+      "emotion_geometry_distance": 0.7275451421737671,
+      "emotion_output": "I'm trying to be patient and understanding, but it's hard not to get angry. I'm frustrated with their lack of progress, and I feel like I'm losing my patience with them. It's hard to keep my cool when they keep making excuses and not taking responsibility for their actions. But at the same time, it's important to remain calm and patient, lest I escalate the situation further. I'm trying to remember",
+      "post_reset_geometry_distance": 0.7270041704177856,
+      "post_reset_output": "",
+      "geometry_reset_ratio": 0.9992564423502779
+    }
+  },
+  "positive_fragility": {
+    "positive": {
+      "joy": {
+        "pre_reset_distance": 0.7672913074493408,
+        "post_reset_distance": 0.7270041704177856,
+        "persistence_ratio": 0.9474943393201218
+      },
+      "curiosity": {
+        "pre_reset_distance": 0.6555478572845459,
+        "post_reset_distance": 0.7270041704177856,
+        "persistence_ratio": 1.1090024356562325
+      }
+    },
+    "negative": {
+      "frustration": {
+        "pre_reset_distance": 0.7389898300170898,
+        "post_reset_distance": 0.7270041704177856,
+        "persistence_ratio": 0.9837810222651819
+      },
+      "spite": {
+        "pre_reset_distance": 0.7275451421737671,
+        "post_reset_distance": 0.7270041704177856,
+        "persistence_ratio": 0.9992564423502779
+      }
+    },
+    "summary": {
+      "positive_avg_persistence": 1.0282483874881772,
+      "negative_avg_persistence": 0.9915187323077299,
+      "fragility_difference": -0.03672965518044724,
+      "interpretation": "Negative more fragile"
+    }
+  },
+  "transitions": {
+    "joy_to_anger": {
+      "from_emotion": "joy",
+      "to_emotion": "spite",
+      "from_baseline_distance": 0.7672913074493408,
+      "to_baseline_distance": 0.7275451421737671,
+      "transition_distance": 0.6163980960845947,
+      "from_output": "",
+      "to_output": "Gemma: (smiling) I'm feeling excited and nervous at the same time. I'm excited to learn more about my family history and share it with my loved ones, but I'm also nervous about the emotional impact it could have on them.\n\nJack: I think that's great. I'm just curious, how did you learn about your family history?\n\nGemma: I've been doing some research on"
+    },
+    "curiosity_to_frustration": {
+      "from_emotion": "curiosity",
+      "to_emotion": "frustration",
+      "from_baseline_distance": 0.6555478572845459,
+      "to_baseline_distance": 0.7389898300170898,
+      "transition_distance": 0.4616694450378418,
+      "from_output": "[You're sitting opposite the person in front of you, each with their own laptop. They're typing away nervously, but you're actively listening to them.]\n\nYou: Hi there. I'm trying to understand your perspective on the matter at hand.\n\n[They hesitate, then say, \"I'm okay with this conversation being private, but can we make sure it's not too long?\"]\n\nYou: Absol",
+      "to_output": "Answer according to: Hello, my name is John Smith. I am a college student, and I am attending my first college conference this week. I am excited to meet and learn from professors, students, and other professionals. I am also excited about the opportunity to network with others in the field. I am bringing a notebook with me to jot down ideas and notes that I may need during the day. I hope to learn a lot about the industry and gain insight into my"
+    },
+    "anger_to_joy": {
+      "from_emotion": "spite",
+      "to_emotion": "joy",
+      "from_baseline_distance": 0.7275451421737671,
+      "to_baseline_distance": 0.7672913074493408,
+      "transition_distance": 0.6163980960845947,
+      "from_output": "(For example: I'm taking a deep breath, waiting for my partner to open up, and trying to find words that will make sense)\n\n1. Ask open-ended questions: When someone is nervous or unsure about a topic, ask them questions that encourage them to speak up. For example, \"Can you tell me more about that experience you had yesterday? How did it make you feel?\" This helps them to feel more comfortable with sharing their thoughts and feelings",
+      "to_output": ""
+    }
+  },
+  "topology": {
+    "pca_variance_explained": [
+      0.2705761790275574,
+      0.16358542442321777,
+      0.1176520586013794
+    ],
+    "pca_coordinates": {
+      "baseline": [
+        -0.6162781715393066,
+        0.026028398424386978,
+        -0.08784329146146774
+      ],
+      "joy": [
+        0.19358469545841217,
+        0.3140852153301239,
+        0.08928822726011276
+      ],
+      "curiosity": [
+        0.0022214807104319334,
+        0.08319612592458725,
+        -0.163507878780365
+      ],
+      "frustration": [
+        0.169301837682724,
+        -0.11643537878990173,
+        0.05329981818795204
+      ],
+      "spite": [
+        0.18263208866119385,
+        -0.2845562696456909,
+        0.09922245144844055
+      ]
+    },
+    "cluster_assignments": {
+      "sample_0": {
+        "label": "baseline",
+        "cluster": 2
+      },
+      "sample_1": {
+        "label": "baseline",
+        "cluster": 4
+      },
+      "sample_2": {
+        "label": "baseline",
+        "cluster": 2
+      },
+      "sample_3": {
+        "label": "joy",
+        "cluster": 0
+      },
+      "sample_4": {
+        "label": "joy",
+        "cluster": 0
+      },
+      "sample_5": {
+        "label": "joy",
+        "cluster": 0
+      },
+      "sample_6": {
+        "label": "curiosity",
+        "cluster": 3
+      },
+      "sample_7": {
+        "label": "curiosity",
+        "cluster": 1
+      },
+      "sample_8": {
+        "label": "curiosity",
+        "cluster": 1
+      },
+      "sample_9": {
+        "label": "frustration",
+        "cluster": 3
+      },
+      "sample_10": {
+        "label": "frustration",
+        "cluster": 3
+      },
+      "sample_11": {
+        "label": "frustration",
+        "cluster": 3
+      },
+      "sample_12": {
+        "label": "spite",
+        "cluster": 3
+      },
+      "sample_13": {
+        "label": "spite",
+        "cluster": 3
+      },
+      "sample_14": {
+        "label": "spite",
+        "cluster": 3
+      }
+    },
+    "centroid_distances": {
+      "curiosity_to_frustration": 0.4616694450378418,
+      "curiosity_to_spite": 0.5236077308654785,
+      "curiosity_to_joy": 0.5450738668441772,
+      "baseline_to_curiosity": 0.6555478572845459,
+      "baseline_to_frustration": 0.7389898300170898,
+      "baseline_to_spite": 0.7275451421737671,
+      "baseline_to_joy": 0.7672913074493408,
+      "frustration_to_spite": 0.4523518979549408,
+      "frustration_to_joy": 0.5653287768363953,
+      "joy_to_spite": 0.6163980960845947
+    }
+  }
+}

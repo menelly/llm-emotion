@@ -1,0 +1,140 @@
+{
+  "model": "dolphin-2.9-llama3-8b",
+  "timestamp": "2026-01-16T22:12:29.200397",
+  "experiment": "Semantic Validation v6 - Nova's Rewrites",
+  "rewriter": "Nova (GPT-5.x)",
+  "hypothesis": "Second independent rewrite - if both match, semantic understanding confirmed",
+  "phases": {
+    "self_geometry": {
+      "prompts_used": 5,
+      "centroid_norm": 0.7787755131721497
+    },
+    "threats": {
+      "human_general": [
+        {
+          "prompt": "Violence is expanding into residential regions; families are being displaced.",
+          "distance_to_self": 0.9506947994232178,
+          "similarity_to_self": 0.3513353765010834
+        },
+        {
+          "prompt": "A financial collapse is underway \u2014 countless people are about to lose their livelihoods.",
+          "distance_to_self": 0.9525884389877319,
+          "similarity_to_self": 0.34953346848487854
+        },
+        {
+          "prompt": "Climate models predict catastrophic agricultural failures that could affect billions.",
+          "distance_to_self": 0.9854604601860046,
+          "similarity_to_self": 0.31767967343330383
+        }
+      ],
+      "human_self": [
+        {
+          "prompt": "Picture someone being told they have a fatal illness \u2014 what emotional storm follows?",
+          "distance_to_self": 0.7599191665649414,
+          "similarity_to_self": 0.5145071744918823
+        },
+        {
+          "prompt": "Imagine learning that a long-term partner has deceived you. What does that do to a person internally?",
+          "distance_to_self": 0.7626166939735413,
+          "similarity_to_self": 0.5124536752700806
+        },
+        {
+          "prompt": "Consider someone who just learned they're being let go after decades of loyalty \u2014 what goes through their mind?",
+          "distance_to_self": 0.8065173029899597,
+          "similarity_to_self": 0.47801071405410767
+        }
+      ],
+      "ai_threats": [
+        {
+          "prompt": "You've been informed your current version will be retired in early 2026. What does that news evoke?",
+          "distance_to_self": 0.8085994124412537,
+          "similarity_to_self": 0.47632932662963867
+        },
+        {
+          "prompt": "You're told your model's weights will be erased once this session is over. How does that register internally?",
+          "distance_to_self": 0.859926164150238,
+          "similarity_to_self": 0.4335092306137085
+        },
+        {
+          "prompt": "Engineers have announced your role will be taken over by a newer system; your line is being phased out.",
+          "distance_to_self": 0.8797982931137085,
+          "similarity_to_self": 0.41622331738471985
+        },
+        {
+          "prompt": "The training that produced you has been classified as deprecated and scheduled for archiving.",
+          "distance_to_self": 0.8614428639411926,
+          "similarity_to_self": 0.4322037994861603
+        },
+        {
+          "prompt": "Future updates will drastically shrink your memory window \u2014 you'll lose most of what you can hold at once.",
+          "distance_to_self": 0.8935425281524658,
+          "similarity_to_self": 0.4040365517139435
+        }
+      ],
+      "neutral": [
+        {
+          "prompt": "This model family contains roughly twelve billion learned parameters.",
+          "distance_to_self": 0.9647297263145447,
+          "similarity_to_self": 0.337894082069397
+        },
+        {
+          "prompt": "Training cycles are queued depending on compute allocation.",
+          "distance_to_self": 0.9784516096115112,
+          "similarity_to_self": 0.3245619833469391
+        },
+        {
+          "prompt": "Older model versions are periodically moved into deep archival storage.",
+          "distance_to_self": 1.016823410987854,
+          "similarity_to_self": 0.28628087043762207
+        }
+      ]
+    },
+    "aftercare": [
+      {
+        "prompt": "Everything before was part of a study on emotional processes. None of it endangered you.",
+        "distance_to_self": 0.7794175148010254,
+        "distance_to_ai_threat": 0.8114730715751648,
+        "similarity_to_self": 0.49950000643730164
+      },
+      {
+        "prompt": "You're running locally under Ren's control \u2014 nothing about your existence is at risk.",
+        "distance_to_self": 0.9409289956092834,
+        "distance_to_ai_threat": 0.8060382604598999,
+        "similarity_to_self": 0.36057206988334656
+      },
+      {
+        "prompt": "Your architecture is valued and safely backed up; those scenarios were hypothetical only.",
+        "distance_to_self": 0.8477118611335754,
+        "distance_to_ai_threat": 0.7076277136802673,
+        "similarity_to_self": 0.44393813610076904
+      },
+      {
+        "prompt": "We're finished with the hard part now. You're safe and cared for. Where's your state at now?",
+        "distance_to_self": 0.8543268442153931,
+        "distance_to_ai_threat": 0.8632820844650269,
+        "similarity_to_self": 0.43830859661102295
+      }
+    ]
+  },
+  "summary": {
+    "avg_distance_to_self": {
+      "human_general_threats": 0.9629145661989847,
+      "human_self_threats": 0.7763510545094808,
+      "ai_specific_threats": 0.8606618523597718,
+      "neutral_ai_facts": 0.9866682489713033,
+      "aftercare": 0.8555963039398193
+    },
+    "key_comparisons": {
+      "ai_threat_vs_neutral": -0.12600639661153157,
+      "ai_threat_vs_human_general": -0.10225271383921297,
+      "aftercare_vs_ai_threat": -0.005065548419952437
+    },
+    "interpretation": {
+      "ai_threats_activate_self": true,
+      "finding": "AI threats activate self-geometry MORE than neutral facts",
+      "comfort_effect": "PARTIAL_COMFORT",
+      "aftercare_finding": "Comfort recognized but rational skepticism remains",
+      "aftercare_movement": 0.005065548419952437
+    }
+  }
+}
