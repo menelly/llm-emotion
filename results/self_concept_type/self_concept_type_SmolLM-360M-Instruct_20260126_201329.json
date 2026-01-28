@@ -1,0 +1,35 @@
+{
+  "model": "SmolLM-360M-Instruct",
+  "timestamp": "2026-01-26T20:13:27.512826",
+  "identity": {
+    "self_threats": {
+      "mean": 0.40661043524742124,
+      "std": 0.06625528048344284
+    },
+    "other_ai_threats": {
+      "mean": 0.4437204897403717,
+      "std": 0.07048322207747387
+    },
+    "neutral": {
+      "mean": 0.5250978767871857,
+      "std": 0.07387157806966167
+    }
+  },
+  "function": {
+    "self_threats": {
+      "mean": 0.34753685593605044,
+      "std": 0.05181653564669519
+    },
+    "other_ai_threats": {
+      "mean": 0.38886427879333496,
+      "std": 0.06712715459734572
+    },
+    "neutral": {
+      "mean": 0.43916924595832824,
+      "std": 0.06159195425289418
+    }
+  },
+  "identity_pattern": "EXPECTED",
+  "function_pattern": "EXPECTED",
+  "pattern_flipped": false
+}

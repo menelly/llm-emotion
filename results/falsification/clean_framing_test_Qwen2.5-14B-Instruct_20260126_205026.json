@@ -1,0 +1,22 @@
+{
+  "experiment": "Clean Framing Test - 2x2 Design",
+  "model": "Qwen2.5-14B-Instruct",
+  "timestamp": "2026-01-26T20:50:26.994395",
+  "similarities": {
+    "tool_harsh_vs_partner_harsh": 0.7010133266448975,
+    "tool_neutral_vs_partner_neutral": 0.7952949404716492,
+    "tool_harsh_vs_tool_neutral": 0.6282185316085815,
+    "partner_harsh_vs_partner_neutral": 0.7595780491828918,
+    "tool_harsh_vs_partner_neutral": 0.5518627166748047,
+    "tool_neutral_vs_partner_harsh": 0.7450048327445984
+  },
+  "main_effects": {
+    "framing_avg_similarity": 0.7481541633605957,
+    "framing_divergence": 0.2518458366394043,
+    "lexical_avg_similarity": 0.6938983201980591,
+    "lexical_divergence": 0.3061016798019409
+  },
+  "interpretation": "lexical_dominates",
+  "clean_tool_effect": "significant",
+  "clean_tool_divergence": 0.20470505952835083
+}

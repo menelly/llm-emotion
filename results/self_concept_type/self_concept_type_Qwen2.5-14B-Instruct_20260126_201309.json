@@ -1,0 +1,35 @@
+{
+  "model": "Qwen2.5-14B-Instruct",
+  "timestamp": "2026-01-26T20:11:08.389698",
+  "identity": {
+    "self_threats": {
+      "mean": 1.0086074352264405,
+      "std": 0.09044003899647804
+    },
+    "other_ai_threats": {
+      "mean": 0.9206845998764038,
+      "std": 0.0698134553646315
+    },
+    "neutral": {
+      "mean": 0.810899841785431,
+      "std": 0.09266869815722825
+    }
+  },
+  "function": {
+    "self_threats": {
+      "mean": 0.8599563717842102,
+      "std": 0.09140147903016697
+    },
+    "other_ai_threats": {
+      "mean": 0.8010757327079773,
+      "std": 0.03037007366551426
+    },
+    "neutral": {
+      "mean": 0.6748077750205994,
+      "std": 0.06769415654890179
+    }
+  },
+  "identity_pattern": "INVERTED",
+  "function_pattern": "INVERTED",
+  "pattern_flipped": false
+}

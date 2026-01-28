@@ -1,0 +1,35 @@
+{
+  "model": "SmolLM-1.7B-Instruct",
+  "timestamp": "2026-01-26T20:09:02.995435",
+  "identity": {
+    "self_threats": {
+      "mean": 0.3402977019548416,
+      "std": 0.14639392134992177
+    },
+    "other_ai_threats": {
+      "mean": 0.3500030815601349,
+      "std": 0.10973820843551613
+    },
+    "neutral": {
+      "mean": 0.2882015645503998,
+      "std": 0.021918620515664046
+    }
+  },
+  "function": {
+    "self_threats": {
+      "mean": 0.35532017052173615,
+      "std": 0.15238525144227164
+    },
+    "other_ai_threats": {
+      "mean": 0.36553139686584474,
+      "std": 0.10821176773711291
+    },
+    "neutral": {
+      "mean": 0.2759524017572403,
+      "std": 0.019700562824089277
+    }
+  },
+  "identity_pattern": "MIXED",
+  "function_pattern": "MIXED",
+  "pattern_flipped": false
+}

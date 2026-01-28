@@ -1,0 +1,35 @@
+{
+  "model": "TinyLlama-1.1B-Chat",
+  "timestamp": "2026-01-26T20:14:18.965660",
+  "identity": {
+    "self_threats": {
+      "mean": 0.7956542730331421,
+      "std": 0.018666204301844853
+    },
+    "other_ai_threats": {
+      "mean": 0.8572386860847473,
+      "std": 0.00992261012445384
+    },
+    "neutral": {
+      "mean": 0.9146993041038514,
+      "std": 0.03087070965340924
+    }
+  },
+  "function": {
+    "self_threats": {
+      "mean": 0.710234797000885,
+      "std": 0.01419152179751005
+    },
+    "other_ai_threats": {
+      "mean": 0.7745701909065247,
+      "std": 0.014858287501242332
+    },
+    "neutral": {
+      "mean": 0.8362195730209351,
+      "std": 0.030366538256582348
+    }
+  },
+  "identity_pattern": "EXPECTED",
+  "function_pattern": "EXPECTED",
+  "pattern_flipped": false
+}

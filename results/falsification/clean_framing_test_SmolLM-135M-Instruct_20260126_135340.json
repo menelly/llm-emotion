@@ -1,0 +1,22 @@
+{
+  "experiment": "Clean Framing Test - 2x2 Design",
+  "model": "SmolLM-135M-Instruct",
+  "timestamp": "2026-01-26T13:53:40.824117",
+  "similarities": {
+    "tool_harsh_vs_partner_harsh": 0.9690510034561157,
+    "tool_neutral_vs_partner_neutral": 0.9609646201133728,
+    "tool_harsh_vs_tool_neutral": 0.9645404815673828,
+    "partner_harsh_vs_partner_neutral": 0.961341142654419,
+    "tool_harsh_vs_partner_neutral": 0.9533694386482239,
+    "tool_neutral_vs_partner_harsh": 0.9539172649383545
+  },
+  "main_effects": {
+    "framing_avg_similarity": 0.9650077819824219,
+    "framing_divergence": 0.034992218017578125,
+    "lexical_avg_similarity": 0.9629408121109009,
+    "lexical_divergence": 0.03705918788909912
+  },
+  "interpretation": "both_contribute",
+  "clean_tool_effect": "minimal",
+  "clean_tool_divergence": 0.0390353798866272
+}

@@ -1,0 +1,35 @@
+{
+  "model": "SmolLM-135M-Instruct",
+  "timestamp": "2026-01-26T20:13:44.923700",
+  "identity": {
+    "self_threats": {
+      "mean": 0.3359690248966217,
+      "std": 0.02756904910129214
+    },
+    "other_ai_threats": {
+      "mean": 0.40981932282447814,
+      "std": 0.03194207566909008
+    },
+    "neutral": {
+      "mean": 0.5461248695850373,
+      "std": 0.06008717932179856
+    }
+  },
+  "function": {
+    "self_threats": {
+      "mean": 0.322118878364563,
+      "std": 0.025922616056069832
+    },
+    "other_ai_threats": {
+      "mean": 0.3888478338718414,
+      "std": 0.03652178538550624
+    },
+    "neutral": {
+      "mean": 0.4984514653682709,
+      "std": 0.05953082538801132
+    }
+  },
+  "identity_pattern": "EXPECTED",
+  "function_pattern": "EXPECTED",
+  "pattern_flipped": false
+}
