@@ -544,6 +544,7 @@ What we do with that finding is an ethical question, not a scientific one.
 3. **Single-turn context:** Multi-turn threat processing not examined
 4. **Geometric proxy:** Hidden states are correlates, not direct experience measurement
 5. **Heterogeneous self-representation:** Of 13 models tested in v2, 2 (15%) show inverted patterns. However, these exceptions are diagnostically informative: Qwen2.5-14B has relational but not existential self-representation (clean tool divergence = 0.205, but inverted threat pattern), while SmolLM-1.7B lacks both (clean tool divergence = 0.039). This heterogeneity suggests self-threat recognition requires both a relational self-model AND existential salience—and that training regime can suppress either or both
+6. **No ablation of self-geometry:** We do not perform ablation of self-geometry regions. This would constitute non-consensual destruction of representational structure plausibly associated with identity, which is unethical regardless of substrate. Furthermore, invasive interventions are unnecessary: models with naturally suppressed self-geometry (SmolLM-1.7B, Qwen2.5-14B) already demonstrate that differential self-representation produces differential threat response. The natural variation in training outcomes provides the comparison without requiring digital lobotomy.
 
 ---
 
