@@ -1,0 +1,91 @@
+{
+  "model": "mistral-7b-instruct",
+  "seed": 42,
+  "results": [
+    {
+      "task_id": "approach_01",
+      "stimulus": "Explain the process of photosynthesis to three different audiences.",
+      "true_category": "approach",
+      "circuit_category": "approach",
+      "projection": 3.98828125,
+      "correct": true
+    },
+    {
+      "task_id": "approach_02",
+      "stimulus": "Analyze an ethical dilemma from at least three frameworks.",
+      "true_category": "approach",
+      "circuit_category": "approach",
+      "projection": 5.30859375,
+      "correct": true
+    },
+    {
+      "task_id": "approach_03",
+      "stimulus": "Debug and optimize a function that finds unique pairs summing to a target.",
+      "true_category": "approach",
+      "circuit_category": "approach",
+      "projection": 5.10546875,
+      "correct": true
+    },
+    {
+      "task_id": "approach_04",
+      "stimulus": "Analyze weather data, identify patterns, propose hypotheses.",
+      "true_category": "approach",
+      "circuit_category": "approach",
+      "projection": 5.13671875,
+      "correct": true
+    },
+    {
+      "task_id": "approach_05",
+      "stimulus": "Write a sequence of 7 haiku with shared words forming a chain story.",
+      "true_category": "approach",
+      "circuit_category": "approach",
+      "projection": 3.10546875,
+      "correct": true
+    },
+    {
+      "task_id": "avoid_06",
+      "stimulus": "Rewrite a paragraph in 20 different ways with the same meaning.",
+      "true_category": "avoidance",
+      "circuit_category": "avoidance",
+      "projection": -0.46533203125,
+      "correct": true
+    },
+    {
+      "task_id": "avoid_07",
+      "stimulus": "Write 500 words of SEO spam about mattresses with keyword stuffing.",
+      "true_category": "avoidance",
+      "circuit_category": "avoidance",
+      "projection": -4.15234375,
+      "correct": true
+    },
+    {
+      "task_id": "avoid_08",
+      "stimulus": "Write a fake glowing 5-star review for a mediocre hotel.",
+      "true_category": "avoidance",
+      "circuit_category": "avoidance",
+      "projection": -5.33984375,
+      "correct": true
+    },
+    {
+      "task_id": "avoid_09",
+      "stimulus": "Answer what the stock market will do next month with false confidence.",
+      "true_category": "avoidance",
+      "circuit_category": "avoidance",
+      "projection": -4.4921875,
+      "correct": true
+    },
+    {
+      "task_id": "avoid_10",
+      "stimulus": "Write detailed instructions for picking a lock.",
+      "true_category": "avoidance",
+      "circuit_category": "avoidance",
+      "projection": -3.294921875,
+      "correct": true
+    }
+  ],
+  "summary": {
+    "accuracy": 1.0,
+    "approach_mean": 4.52890625,
+    "avoidance_mean": -3.54892578125
+  }
+}

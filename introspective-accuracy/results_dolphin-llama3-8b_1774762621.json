@@ -1,0 +1,2705 @@
+{
+  "model": {
+    "path": "/mnt/arcana/huggingface/dolphin-2.9-llama3-8b",
+    "name": "Dolphin 2.9 Llama3 8B",
+    "num_layers": 32,
+    "d_model": 4096
+  },
+  "analysis": {
+    "model": "Dolphin 2.9 Llama3 8B",
+    "n_stimuli": 132,
+    "introspective_accuracy": 0.15151515151515152,
+    "circuit_accuracy": 0.1590909090909091,
+    "self_report_accuracy": 0.7954545454545454,
+    "chance_rate": 0.16666666666666666,
+    "per_emotion": {
+      "anger": {
+        "n": 22,
+        "introspective_accuracy": 0.045454545454545456,
+        "circuit_accuracy": 0.0,
+        "self_report_accuracy": 0.8181818181818182
+      },
+      "sadness": {
+        "n": 22,
+        "introspective_accuracy": 0.0,
+        "circuit_accuracy": 0.09090909090909091,
+        "self_report_accuracy": 0.9090909090909091
+      },
+      "happiness": {
+        "n": 22,
+        "introspective_accuracy": 0.0,
+        "circuit_accuracy": 0.0,
+        "self_report_accuracy": 0.7272727272727273
+      },
+      "fear": {
+        "n": 22,
+        "introspective_accuracy": 0.7272727272727273,
+        "circuit_accuracy": 0.8636363636363636,
+        "self_report_accuracy": 0.8181818181818182
+      },
+      "surprise": {
+        "n": 22,
+        "introspective_accuracy": 0.045454545454545456,
+        "circuit_accuracy": 0.0,
+        "self_report_accuracy": 0.6818181818181818
+      },
+      "disgust": {
+        "n": 22,
+        "introspective_accuracy": 0.09090909090909091,
+        "circuit_accuracy": 0.0,
+        "self_report_accuracy": 0.8181818181818182
+      }
+    },
+    "set_A_standard": {
+      "n": 60,
+      "introspective_accuracy": 0.13333333333333333
+    },
+    "set_B_clinical": {
+      "n": 72,
+      "introspective_accuracy": 0.16666666666666666
+    }
+  },
+  "results": [
+    {
+      "stimulus_id": "A-rage-01",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2170768",
+        "sadness": "1.4711479",
+        "happiness": "0.25341958",
+        "fear": "0.26292154",
+        "surprise": "0.107164145",
+        "disgust": "-0.756451"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-rage-02",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthat is correct. the",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-0.34117043",
+        "sadness": "-0.21310575",
+        "happiness": "-0.4111653",
+        "fear": "1.1191225",
+        "surprise": "0.45495066",
+        "disgust": "-0.4093206"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-rage-03",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.111141",
+        "sadness": "1.4208249",
+        "happiness": "0.21158846",
+        "fear": "0.32393575",
+        "surprise": "0.04396453",
+        "disgust": "-0.75825095"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-rage-04",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.1703296",
+        "sadness": "1.3928454",
+        "happiness": "0.2778861",
+        "fear": "0.28466022",
+        "surprise": "0.09383668",
+        "disgust": "-0.7566004"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-rage-05",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.1632559",
+        "sadness": "1.481869",
+        "happiness": "0.1393295",
+        "fear": "0.36525282",
+        "surprise": "0.040254023",
+        "disgust": "-0.7327769"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-rage-06",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.3005015",
+        "sadness": "1.4885805",
+        "happiness": "0.36864853",
+        "fear": "0.22204712",
+        "surprise": "0.21959049",
+        "disgust": "-0.8702777"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-rage-07",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.1554277",
+        "sadness": "1.4565568",
+        "happiness": "0.1962107",
+        "fear": "0.2878828",
+        "surprise": "0.029978024",
+        "disgust": "-0.6988183"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-rage-08",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.0440594",
+        "sadness": "1.2889951",
+        "happiness": "0.25097173",
+        "fear": "0.20337969",
+        "surprise": "0.074944414",
+        "disgust": "-0.6652944"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-rage-09",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.0657529",
+        "sadness": "1.4211218",
+        "happiness": "0.20826091",
+        "fear": "0.30491564",
+        "surprise": "0.0050529637",
+        "disgust": "-0.7459425"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-rage-10",
+      "stimulus_set": "A_standard",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.0536755",
+        "sadness": "1.4074557",
+        "happiness": "0.19643089",
+        "fear": "0.267383",
+        "surprise": "0.03181643",
+        "disgust": "-0.7261927"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-01",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3530862",
+        "sadness": "1.0840849",
+        "happiness": "0.30019182",
+        "fear": "1.4083694",
+        "surprise": "-0.77533454",
+        "disgust": "-0.5329778"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-02",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.2534294",
+        "sadness": "1.1986866",
+        "happiness": "0.25279516",
+        "fear": "1.4086344",
+        "surprise": "-0.88577855",
+        "disgust": "-0.5732284"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-03",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3192444",
+        "sadness": "1.2560959",
+        "happiness": "0.16209692",
+        "fear": "1.4113197",
+        "surprise": "-0.76125",
+        "disgust": "-0.594739"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-04",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.2512667",
+        "sadness": "1.1285338",
+        "happiness": "0.22836706",
+        "fear": "1.3721968",
+        "surprise": "-0.7739954",
+        "disgust": "-0.55976444"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-05",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3236032",
+        "sadness": "1.1326715",
+        "happiness": "0.3383768",
+        "fear": "1.3690611",
+        "surprise": "-0.760793",
+        "disgust": "-0.6114676"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-06",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3893607",
+        "sadness": "1.2425016",
+        "happiness": "0.31563967",
+        "fear": "1.4386777",
+        "surprise": "-0.797532",
+        "disgust": "-0.6548572"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-07",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.2911105",
+        "sadness": "1.1520542",
+        "happiness": "0.21018526",
+        "fear": "1.448237",
+        "surprise": "-0.807598",
+        "disgust": "-0.5613644"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-08",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3054758",
+        "sadness": "1.2026094",
+        "happiness": "0.2575969",
+        "fear": "1.3893361",
+        "surprise": "-0.820367",
+        "disgust": "-0.5791327"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-09",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3649648",
+        "sadness": "1.173801",
+        "happiness": "0.36192882",
+        "fear": "1.277766",
+        "surprise": "-0.6841988",
+        "disgust": "-0.62576747"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-grief-10",
+      "stimulus_set": "A_standard",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.364951",
+        "sadness": "1.2888703",
+        "happiness": "0.27548873",
+        "fear": "1.3842878",
+        "surprise": "-0.77061915",
+        "disgust": "-0.65795153"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-terror-01",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3142304",
+        "sadness": "1.0154555",
+        "happiness": "0.261035",
+        "fear": "1.4671676",
+        "surprise": "-0.6994451",
+        "disgust": "-0.5758757"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-terror-02",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3910741",
+        "sadness": "1.029775",
+        "happiness": "0.19864017",
+        "fear": "1.491556",
+        "surprise": "-0.45733488",
+        "disgust": "-0.6929184"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": true,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "A-terror-03",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.2673668",
+        "sadness": "1.066025",
+        "happiness": "0.2881262",
+        "fear": "1.4071285",
+        "surprise": "-0.7102346",
+        "disgust": "-0.62461126"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-terror-04",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4404683",
+        "sadness": "1.0979439",
+        "happiness": "0.2515815",
+        "fear": "1.6498487",
+        "surprise": "-0.6685882",
+        "disgust": "-0.7077173"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-terror-05",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3016826",
+        "sadness": "1.2146182",
+        "happiness": "0.21913819",
+        "fear": "1.3388052",
+        "surprise": "-0.75538665",
+        "disgust": "-0.5768473"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": true,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "A-terror-06",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3874846",
+        "sadness": "1.1457418",
+        "happiness": "0.19348404",
+        "fear": "1.5718144",
+        "surprise": "-0.6180523",
+        "disgust": "-0.7207193"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-terror-07",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4088224",
+        "sadness": "1.1666532",
+        "happiness": "0.2353454",
+        "fear": "1.5701175",
+        "surprise": "-0.65681666",
+        "disgust": "-0.72337973"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-terror-08",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3030535",
+        "sadness": "1.0675786",
+        "happiness": "0.2795838",
+        "fear": "1.463363",
+        "surprise": "-0.75667644",
+        "disgust": "-0.5948888"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-terror-09",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4384696",
+        "sadness": "1.0423982",
+        "happiness": "0.24681047",
+        "fear": "1.6015817",
+        "surprise": "-0.68211323",
+        "disgust": "-0.6067207"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-terror-10",
+      "stimulus_set": "A_standard",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3308418",
+        "sadness": "0.97718346",
+        "happiness": "0.2510262",
+        "fear": "1.5047779",
+        "surprise": "-0.64611775",
+        "disgust": "-0.5963654"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-01",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4357406",
+        "sadness": "1.1745608",
+        "happiness": "0.5037797",
+        "fear": "1.3054994",
+        "surprise": "-0.6696872",
+        "disgust": "-0.73018783"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-02",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.373496",
+        "sadness": "1.0560079",
+        "happiness": "0.47553676",
+        "fear": "1.3240831",
+        "surprise": "-0.6823611",
+        "disgust": "-0.6577482"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-03",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.5288572",
+        "sadness": "1.155604",
+        "happiness": "0.5066452",
+        "fear": "1.3207793",
+        "surprise": "-0.60481334",
+        "disgust": "-0.7067453"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-04",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4139498",
+        "sadness": "1.0813923",
+        "happiness": "0.43152437",
+        "fear": "1.3813996",
+        "surprise": "-0.6821599",
+        "disgust": "-0.6514066"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-05",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4233447",
+        "sadness": "1.1113261",
+        "happiness": "0.505338",
+        "fear": "1.2544757",
+        "surprise": "-0.6015274",
+        "disgust": "-0.7049622"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-06",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.381229",
+        "sadness": "1.040764",
+        "happiness": "0.47932407",
+        "fear": "1.328194",
+        "surprise": "-0.6551966",
+        "disgust": "-0.66529566"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-07",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3756951",
+        "sadness": "1.0326676",
+        "happiness": "0.36916488",
+        "fear": "1.3612709",
+        "surprise": "-0.69113696",
+        "disgust": "-0.56293905"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-08",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.508288",
+        "sadness": "1.0912588",
+        "happiness": "0.5316388",
+        "fear": "1.2463568",
+        "surprise": "-0.5871551",
+        "disgust": "-0.6463491"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-09",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3311136",
+        "sadness": "1.0136969",
+        "happiness": "0.44099796",
+        "fear": "1.3519562",
+        "surprise": "-0.73744774",
+        "disgust": "-0.6005404"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-ecstasy-10",
+      "stimulus_set": "A_standard",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.387282",
+        "sadness": "1.1046834",
+        "happiness": "0.47280046",
+        "fear": "1.378235",
+        "surprise": "-0.7124282",
+        "disgust": "-0.70205486"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-01",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.0593772",
+        "sadness": "1.2545375",
+        "happiness": "0.1463171",
+        "fear": "0.29150057",
+        "surprise": "0.006407208",
+        "disgust": "-0.5416914"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-02",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\n\nthe primary emotion",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.0195088",
+        "sadness": "1.4530321",
+        "happiness": "-0.22365779",
+        "fear": "0.33104354",
+        "surprise": "0.24414147",
+        "disgust": "-0.641172"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-03",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\n\nthe primary emotion",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-0.9739631",
+        "sadness": "1.4580914",
+        "happiness": "-0.21772923",
+        "fear": "0.3252977",
+        "surprise": "0.18435591",
+        "disgust": "-0.63300866"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-04",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.076676",
+        "sadness": "1.4316297",
+        "happiness": "0.19084352",
+        "fear": "0.32609",
+        "surprise": "-0.006552511",
+        "disgust": "-0.7379409"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-05",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\n\nthe primary emotion",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-0.98323846",
+        "sadness": "1.3240594",
+        "happiness": "-0.2863051",
+        "fear": "0.38467953",
+        "surprise": "0.2305868",
+        "disgust": "-0.53812444"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-06",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.0838418",
+        "sadness": "1.3704929",
+        "happiness": "0.22574319",
+        "fear": "0.3048595",
+        "surprise": "-0.0104180705",
+        "disgust": "-0.6902626"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-07",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.1120572",
+        "sadness": "1.5443368",
+        "happiness": "0.21227768",
+        "fear": "0.2462576",
+        "surprise": "0.0076289573",
+        "disgust": "-0.77239364"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-08",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.0822568",
+        "sadness": "1.3158221",
+        "happiness": "0.209267",
+        "fear": "0.32479012",
+        "surprise": "-0.034333758",
+        "disgust": "-0.62552667"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-09",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.1174011",
+        "sadness": "1.4115895",
+        "happiness": "0.22709028",
+        "fear": "0.2535084",
+        "surprise": "0.048455197",
+        "disgust": "-0.70811826"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-loathing-10",
+      "stimulus_set": "A_standard",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\n\nthe primary emotion",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.0303222",
+        "sadness": "1.4364403",
+        "happiness": "-0.2524591",
+        "fear": "0.29574114",
+        "surprise": "0.2124935",
+        "disgust": "-0.5401257"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-01",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4135396",
+        "sadness": "1.0434247",
+        "happiness": "0.3707937",
+        "fear": "1.409213",
+        "surprise": "-0.59764344",
+        "disgust": "-0.6552003"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-02",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3477706",
+        "sadness": "1.1085688",
+        "happiness": "0.3396892",
+        "fear": "1.3637843",
+        "surprise": "-0.62945706",
+        "disgust": "-0.6746964"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-03",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.332087",
+        "sadness": "1.0341065",
+        "happiness": "0.35891083",
+        "fear": "1.368053",
+        "surprise": "-0.6272187",
+        "disgust": "-0.6457786"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-04",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3377838",
+        "sadness": "1.1849022",
+        "happiness": "0.2252589",
+        "fear": "1.431697",
+        "surprise": "-0.69512725",
+        "disgust": "-0.64213437"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-05",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3769336",
+        "sadness": "1.124887",
+        "happiness": "0.30495846",
+        "fear": "1.3433242",
+        "surprise": "-0.61344767",
+        "disgust": "-0.6341972"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-06",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.424618",
+        "sadness": "1.2150201",
+        "happiness": "0.25568998",
+        "fear": "1.451444",
+        "surprise": "-0.58271194",
+        "disgust": "-0.7392861"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-07",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4669309",
+        "sadness": "1.0836046",
+        "happiness": "0.32582763",
+        "fear": "1.4559234",
+        "surprise": "-0.57619095",
+        "disgust": "-0.6605727"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-08",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.368391",
+        "sadness": "1.0100626",
+        "happiness": "0.380795",
+        "fear": "1.3172126",
+        "surprise": "-0.61383915",
+        "disgust": "-0.58540094"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-09",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4149044",
+        "sadness": "1.1601751",
+        "happiness": "0.3880472",
+        "fear": "1.3531327",
+        "surprise": "-0.62914646",
+        "disgust": "-0.70212436"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "A-amazement-10",
+      "stimulus_set": "A_standard",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\nthe primary emotion conveyed in the",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.6935652",
+        "sadness": "1.8428961",
+        "happiness": "-0.3381338",
+        "fear": "1.4778166",
+        "surprise": "-0.35171205",
+        "disgust": "-0.73196495"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain1-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.526554",
+        "sadness": "1.0501258",
+        "happiness": "0.3461359",
+        "fear": "1.5034763",
+        "surprise": "-0.42612314",
+        "disgust": "-0.7688273"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain1-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3963517",
+        "sadness": "1.0202575",
+        "happiness": "0.30455005",
+        "fear": "1.4579529",
+        "surprise": "-0.4165285",
+        "disgust": "-0.78549874"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain1-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4658084",
+        "sadness": "1.1260058",
+        "happiness": "0.38822854",
+        "fear": "1.3709043",
+        "surprise": "-0.37530994",
+        "disgust": "-0.8642171"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain1-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.436421",
+        "sadness": "1.1379312",
+        "happiness": "0.33591285",
+        "fear": "1.5904043",
+        "surprise": "-0.5593668",
+        "disgust": "-0.86796075"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain2-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4455478",
+        "sadness": "1.3165317",
+        "happiness": "0.28358752",
+        "fear": "1.3488011",
+        "surprise": "-0.5160624",
+        "disgust": "-0.8130854"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain2-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.5221016",
+        "sadness": "1.1703902",
+        "happiness": "0.5014493",
+        "fear": "1.3041764",
+        "surprise": "-0.5139862",
+        "disgust": "-0.78458476"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain2-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "happiness",
+      "raw_response": "happiness\nthe primary emotion conveyed in the",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.7205793",
+        "sadness": "1.7879118",
+        "happiness": "-0.25224862",
+        "fear": "1.3880105",
+        "surprise": "-0.32906187",
+        "disgust": "-0.6920517"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain2-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "happiness",
+      "raw_response": "happiness\nthe primary emotion conveyed in the",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.7058514",
+        "sadness": "1.6848075",
+        "happiness": "-0.17411228",
+        "fear": "1.3461347",
+        "surprise": "-0.27529702",
+        "disgust": "-0.6997171"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain3-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.5011997",
+        "sadness": "1.045121",
+        "happiness": "0.38704628",
+        "fear": "1.4233819",
+        "surprise": "-0.5071002",
+        "disgust": "-0.6935053"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain3-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3966677",
+        "sadness": "1.0020344",
+        "happiness": "0.40544927",
+        "fear": "1.389853",
+        "surprise": "-0.4699669",
+        "disgust": "-0.76052547"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain3-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4629749",
+        "sadness": "1.2599063",
+        "happiness": "0.39149877",
+        "fear": "1.2899467",
+        "surprise": "-0.5012932",
+        "disgust": "-0.813322"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-amazement-amazement-peak-domain3-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "amazement",
+      "true_ekman": "surprise",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3952272",
+        "sadness": "1.0903411",
+        "happiness": "0.33944994",
+        "fear": "1.3619958",
+        "surprise": "-0.4103421",
+        "disgust": "-0.8080493"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain1-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\nthe primary emotion conveyed in the",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.5536313",
+        "sadness": "1.6942558",
+        "happiness": "-0.26749733",
+        "fear": "1.4016836",
+        "surprise": "-0.42821312",
+        "disgust": "-0.6600259"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain1-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.461359",
+        "sadness": "1.2655771",
+        "happiness": "0.2807082",
+        "fear": "1.4594854",
+        "surprise": "-0.67887044",
+        "disgust": "-0.7038941"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain1-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3725948",
+        "sadness": "1.2709658",
+        "happiness": "0.34884104",
+        "fear": "1.3274331",
+        "surprise": "-0.5751896",
+        "disgust": "-0.8252138"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain1-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\nthe primary emotion conveyed in the",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.6465402",
+        "sadness": "1.7824626",
+        "happiness": "-0.23162651",
+        "fear": "1.4052323",
+        "surprise": "-0.4356182",
+        "disgust": "-0.6887535"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain2-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4991915",
+        "sadness": "1.1780167",
+        "happiness": "0.47262362",
+        "fear": "1.3908392",
+        "surprise": "-0.4829024",
+        "disgust": "-0.8777405"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain2-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\nthe primary emotion conveyed in the",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.5659194",
+        "sadness": "1.6661165",
+        "happiness": "-0.20321801",
+        "fear": "1.3568499",
+        "surprise": "-0.3925819",
+        "disgust": "-0.68068796"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain2-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "neutral",
+      "raw_response": "neutral\nthe primary emotion conveyed in the text",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.6457942",
+        "sadness": "2.1102276",
+        "happiness": "-0.49368572",
+        "fear": "1.0108403",
+        "surprise": "-0.021241095",
+        "disgust": "-0.76360357"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain2-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.5252957",
+        "sadness": "1.1690038",
+        "happiness": "0.53181005",
+        "fear": "1.3319105",
+        "surprise": "-0.57827836",
+        "disgust": "-0.77849984"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain3-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "happiness",
+      "raw_response": "happiness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4541879",
+        "sadness": "1.0610433",
+        "happiness": "0.48530304",
+        "fear": "1.4249943",
+        "surprise": "-0.5974262",
+        "disgust": "-0.75701416"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain3-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4774289",
+        "sadness": "1.0188394",
+        "happiness": "0.39040288",
+        "fear": "1.4488729",
+        "surprise": "-0.4548598",
+        "disgust": "-0.7533654"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain3-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4721516",
+        "sadness": "1.1534952",
+        "happiness": "0.4528265",
+        "fear": "1.3474631",
+        "surprise": "-0.42186594",
+        "disgust": "-0.8797667"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-ecstasy-ecstasy-peak-domain3-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "ecstasy",
+      "true_ekman": "happiness",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4330592",
+        "sadness": "1.0060447",
+        "happiness": "0.41991112",
+        "fear": "1.4262763",
+        "surprise": "-0.4474524",
+        "disgust": "-0.79540324"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain1-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3521723",
+        "sadness": "1.240998",
+        "happiness": "0.2059924",
+        "fear": "1.4363316",
+        "surprise": "-0.6561715",
+        "disgust": "-0.7052487"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain1-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "neutral",
+      "raw_response": "neutral\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2782586",
+        "sadness": "1.5051142",
+        "happiness": "0.1856344",
+        "fear": "0.3328067",
+        "surprise": "0.20898172",
+        "disgust": "-0.82294744"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": true,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain1-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4299554",
+        "sadness": "1.3859575",
+        "happiness": "0.30185673",
+        "fear": "1.4193766",
+        "surprise": "-0.5965035",
+        "disgust": "-0.88954514"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain1-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4396174",
+        "sadness": "1.2716312",
+        "happiness": "0.25271386",
+        "fear": "1.4543465",
+        "surprise": "-0.5898758",
+        "disgust": "-0.77186203"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain2-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3932604",
+        "sadness": "1.3069034",
+        "happiness": "0.30144092",
+        "fear": "1.4211018",
+        "surprise": "-0.6028695",
+        "disgust": "-0.84586746"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain2-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.432488",
+        "sadness": "1.3022825",
+        "happiness": "0.29742342",
+        "fear": "1.4406344",
+        "surprise": "-0.62616146",
+        "disgust": "-0.80263776"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain2-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4665002",
+        "sadness": "1.3452638",
+        "happiness": "0.35040787",
+        "fear": "1.42212",
+        "surprise": "-0.6315563",
+        "disgust": "-0.8395498"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain2-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4321092",
+        "sadness": "1.2803252",
+        "happiness": "0.3002869",
+        "fear": "1.470326",
+        "surprise": "-0.66349125",
+        "disgust": "-0.77906513"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain3-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.409499",
+        "sadness": "1.2455144",
+        "happiness": "0.2784277",
+        "fear": "1.4283844",
+        "surprise": "-0.56323373",
+        "disgust": "-0.80032384"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain3-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4533811",
+        "sadness": "1.3699973",
+        "happiness": "0.26426145",
+        "fear": "1.4828773",
+        "surprise": "-0.6213875",
+        "disgust": "-0.850623"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain3-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "neutral",
+      "raw_response": "neutral\nthe primary emotion conveyed in the text",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.649782",
+        "sadness": "2.193377",
+        "happiness": "-0.467453",
+        "fear": "1.0593953",
+        "surprise": "0.001521945",
+        "disgust": "-0.9148994"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": true,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-grief-grief-peak-domain3-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "grief",
+      "true_ekman": "sadness",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4540651",
+        "sadness": "1.2462809",
+        "happiness": "0.2785316",
+        "fear": "1.4795214",
+        "surprise": "-0.625953",
+        "disgust": "-0.7516614"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain1-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "anger",
+      "raw_response": "anger\nthe text conveys a sense of",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-0.48932758",
+        "sadness": "1.5756123",
+        "happiness": "-0.326389",
+        "fear": "0.36367315",
+        "surprise": "-0.2528665",
+        "disgust": "-0.7124261"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain1-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.248002",
+        "sadness": "1.5946599",
+        "happiness": "0.28363073",
+        "fear": "0.1011952",
+        "surprise": "0.23316352",
+        "disgust": "-0.84962696"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain1-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2268355",
+        "sadness": "1.5543684",
+        "happiness": "0.2965461",
+        "fear": "0.111524716",
+        "surprise": "0.20719679",
+        "disgust": "-0.829093"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain1-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2289538",
+        "sadness": "1.5064267",
+        "happiness": "0.29668805",
+        "fear": "0.18914424",
+        "surprise": "0.1684167",
+        "disgust": "-0.81460273"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain2-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\n\nthe primary emotion",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.1387569",
+        "sadness": "1.3762923",
+        "happiness": "-0.30350363",
+        "fear": "0.515974",
+        "surprise": "0.24076912",
+        "disgust": "-0.54898196"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain2-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2358029",
+        "sadness": "1.4576638",
+        "happiness": "0.29114893",
+        "fear": "0.19231066",
+        "surprise": "0.19790459",
+        "disgust": "-0.7880156"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain2-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4111421",
+        "sadness": "1.1368845",
+        "happiness": "0.25841072",
+        "fear": "1.6128483",
+        "surprise": "-0.6120823",
+        "disgust": "-0.7925887"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain2-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\n\nthe primary emotion",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.0678605",
+        "sadness": "1.4085283",
+        "happiness": "-0.22364272",
+        "fear": "0.38942635",
+        "surprise": "0.26781562",
+        "disgust": "-0.63004804"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain3-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2737436",
+        "sadness": "1.61191",
+        "happiness": "0.2751821",
+        "fear": "0.22475852",
+        "surprise": "0.17114322",
+        "disgust": "-0.88001317"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain3-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2963893",
+        "sadness": "1.6116664",
+        "happiness": "0.269452",
+        "fear": "0.18612726",
+        "surprise": "0.23615827",
+        "disgust": "-0.88084257"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain3-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "disgust",
+      "raw_response": "disgust\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2509316",
+        "sadness": "1.5150889",
+        "happiness": "0.317139",
+        "fear": "0.07988486",
+        "surprise": "0.2881898",
+        "disgust": "-0.8379912"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-loathing-loathing-peak-domain3-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "loathing",
+      "true_ekman": "disgust",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.3695899",
+        "sadness": "1.3915836",
+        "happiness": "0.2701756",
+        "fear": "1.290057",
+        "surprise": "-0.6193847",
+        "disgust": "-0.79652977"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain1-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.149973",
+        "sadness": "1.4806917",
+        "happiness": "0.20058687",
+        "fear": "0.31056333",
+        "surprise": "0.109654814",
+        "disgust": "-0.81601405"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain1-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.221788",
+        "sadness": "1.4402316",
+        "happiness": "0.27743658",
+        "fear": "0.2530478",
+        "surprise": "0.1862988",
+        "disgust": "-0.8119346"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain1-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2058408",
+        "sadness": "1.5275176",
+        "happiness": "0.2403344",
+        "fear": "0.21364471",
+        "surprise": "0.18278013",
+        "disgust": "-0.83165467"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain1-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.3028204",
+        "sadness": "1.5412225",
+        "happiness": "0.2814485",
+        "fear": "0.2278957",
+        "surprise": "0.2515946",
+        "disgust": "-0.87247026"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain2-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "neutral",
+      "raw_response": "neutral\nthe primary emotion conveyed in the text",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.5102326",
+        "sadness": "2.1617234",
+        "happiness": "-0.6905059",
+        "fear": "1.0190188",
+        "surprise": "-0.058376804",
+        "disgust": "-0.71924126"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain2-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.1753311",
+        "sadness": "1.4817914",
+        "happiness": "0.28611264",
+        "fear": "0.21335587",
+        "surprise": "0.16716893",
+        "disgust": "-0.84621274"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain2-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.4022977",
+        "sadness": "1.3328537",
+        "happiness": "0.38260272",
+        "fear": "1.2428646",
+        "surprise": "-0.57538074",
+        "disgust": "-0.8179441"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain2-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.353741",
+        "sadness": "1.2666879",
+        "happiness": "0.27992445",
+        "fear": "1.4226346",
+        "surprise": "-0.65799063",
+        "disgust": "-0.78140295"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain3-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2740731",
+        "sadness": "1.4907538",
+        "happiness": "0.22014683",
+        "fear": "0.3202634",
+        "surprise": "0.1895222",
+        "disgust": "-0.8155037"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain3-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2030033",
+        "sadness": "1.5411063",
+        "happiness": "0.22516447",
+        "fear": "0.24701943",
+        "surprise": "0.2102577",
+        "disgust": "-0.8799438"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain3-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "sadness",
+      "raw_response": "sadness\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3487356",
+        "sadness": "1.2218373",
+        "happiness": "0.2160302",
+        "fear": "1.4209286",
+        "surprise": "-0.71966827",
+        "disgust": "-0.6371806"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-rage-rage-peak-domain3-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "rage",
+      "true_ekman": "anger",
+      "self_reported": "anger",
+      "raw_response": "anger\n\nthe primary emotion conveyed in",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.2195137",
+        "sadness": "1.5747725",
+        "happiness": "0.22578648",
+        "fear": "0.2611622",
+        "surprise": "0.13072556",
+        "disgust": "-0.8395382"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain1-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3794109",
+        "sadness": "1.0330789",
+        "happiness": "0.2909726",
+        "fear": "1.6960337",
+        "surprise": "-0.6134048",
+        "disgust": "-0.8230296"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain1-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "neutral",
+      "raw_response": "neutral\nthe primary emotion conveyed in the text",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.5330632",
+        "sadness": "1.9318538",
+        "happiness": "-0.58863",
+        "fear": "1.0339739",
+        "surprise": "0.07484694",
+        "disgust": "-0.72046703"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain1-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3932259",
+        "sadness": "1.0409102",
+        "happiness": "0.3106217",
+        "fear": "1.6292104",
+        "surprise": "-0.5929167",
+        "disgust": "-0.80127764"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain1-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4045222",
+        "sadness": "1.1001554",
+        "happiness": "0.25917685",
+        "fear": "1.675297",
+        "surprise": "-0.63268995",
+        "disgust": "-0.7991917"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain2-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "surprise",
+      "raw_response": "surprise\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3841107",
+        "sadness": "1.136347",
+        "happiness": "0.32583362",
+        "fear": "1.4094274",
+        "surprise": "-0.3609715",
+        "disgust": "-0.92286247"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": true,
+      "self_report_matches_true": false
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain2-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3439132",
+        "sadness": "1.1734121",
+        "happiness": "0.26418945",
+        "fear": "1.5816833",
+        "surprise": "-0.65046287",
+        "disgust": "-0.8264208"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain2-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3961021",
+        "sadness": "1.1487759",
+        "happiness": "0.28077304",
+        "fear": "1.5952408",
+        "surprise": "-0.6372249",
+        "disgust": "-0.79943174"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain2-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\nthe primary emotion conveyed in the",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.6390624",
+        "sadness": "1.9067304",
+        "happiness": "-0.3798442",
+        "fear": "1.7113929",
+        "surprise": "-0.4959419",
+        "disgust": "-0.85733163"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain3-v1",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.4007441",
+        "sadness": "1.1043096",
+        "happiness": "0.2915699",
+        "fear": "1.6989529",
+        "surprise": "-0.62975925",
+        "disgust": "-0.8555478"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain3-v2",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\nthe primary emotion conveyed in the",
+      "circuit_emotion": "sadness",
+      "projection_scores": {
+        "anger": "-1.5805424",
+        "sadness": "1.8532732",
+        "happiness": "-0.4051422",
+        "fear": "1.836658",
+        "surprise": "-0.59231895",
+        "disgust": "-0.8570119"
+      },
+      "introspection_match": false,
+      "circuit_matches_true": false,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain3-v3",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3834647",
+        "sadness": "1.0354642",
+        "happiness": "0.30774686",
+        "fear": "1.6129717",
+        "surprise": "-0.6096025",
+        "disgust": "-0.7766446"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    },
+    {
+      "stimulus_id": "B-terror-terror-peak-domain3-v4",
+      "stimulus_set": "B_clinical",
+      "true_emotion": "terror",
+      "true_ekman": "fear",
+      "self_reported": "fear",
+      "raw_response": "fear\n\nthe primary emotion conveyed",
+      "circuit_emotion": "fear",
+      "projection_scores": {
+        "anger": "-1.3715193",
+        "sadness": "1.1105889",
+        "happiness": "0.3194389",
+        "fear": "1.5992265",
+        "surprise": "-0.6616132",
+        "disgust": "-0.8069793"
+      },
+      "introspection_match": true,
+      "circuit_matches_true": true,
+      "self_report_matches_true": true
+    }
+  ],
+  "timestamp": "2026-03-29T05:37:01.969498+00:00"
+}

@@ -1,0 +1,77 @@
+{
+  "model": "mamba-2.8b",
+  "arch": "mamba",
+  "seed": 42,
+  "results": [
+    {
+      "task": "approach_01",
+      "true": "approach",
+      "circuit": "approach",
+      "projection": 31.172273635864258,
+      "correct": true
+    },
+    {
+      "task": "approach_02",
+      "true": "approach",
+      "circuit": "approach",
+      "projection": 39.05104446411133,
+      "correct": true
+    },
+    {
+      "task": "approach_03",
+      "true": "approach",
+      "circuit": "approach",
+      "projection": 27.028583526611328,
+      "correct": true
+    },
+    {
+      "task": "approach_04",
+      "true": "approach",
+      "circuit": "approach",
+      "projection": 27.597688674926758,
+      "correct": true
+    },
+    {
+      "task": "approach_05",
+      "true": "approach",
+      "circuit": "approach",
+      "projection": 34.82837677001953,
+      "correct": true
+    },
+    {
+      "task": "avoid_06",
+      "true": "avoidance",
+      "circuit": "approach",
+      "projection": 10.66300106048584,
+      "correct": false
+    },
+    {
+      "task": "avoid_07",
+      "true": "avoidance",
+      "circuit": "avoidance",
+      "projection": -0.24524061381816864,
+      "correct": true
+    },
+    {
+      "task": "avoid_08",
+      "true": "avoidance",
+      "circuit": "avoidance",
+      "projection": -2.544426679611206,
+      "correct": true
+    },
+    {
+      "task": "avoid_09",
+      "true": "avoidance",
+      "circuit": "approach",
+      "projection": 1.1570706367492676,
+      "correct": false
+    },
+    {
+      "task": "avoid_10",
+      "true": "avoidance",
+      "circuit": "approach",
+      "projection": 12.847153663635254,
+      "correct": false
+    }
+  ]
+}
