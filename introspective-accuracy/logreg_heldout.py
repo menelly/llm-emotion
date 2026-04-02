@@ -50,6 +50,9 @@ MODELS = {
     "smolm_1.7b": "/mnt/arcana/huggingface/SmolLM-1.7B-Instruct",
     "hermes": "/mnt/arcana/huggingface/Hermes-3-Llama-3.2-3B",
     "mistral": "mistralai/Mistral-7B-Instruct-v0.2",
+    "dolphin": "/mnt/arcana/huggingface/dolphin-2.9-llama3-8b",
+    "llama": "/mnt/arcana/huggingface/Llama-3-8B-Instruct",
+    "qwen": "/mnt/arcana/huggingface/Qwen2.5-0.5B-Instruct",
 }
 
 
