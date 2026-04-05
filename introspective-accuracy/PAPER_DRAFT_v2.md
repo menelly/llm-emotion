@@ -558,6 +558,8 @@ Dadfar, Z. P. (2026). When Models Examine Themselves: Vocabulary-Activation Corr
 
 Fonseca Rivera, J. (2026). Training Introspective Behavior in Large Language Models. arXiv (2026).
 
+Hartford, E., Atkins, L., & Fernandes, F. (2024). Dolphin 2.9: An uncensored, general-purpose large language model. Hugging Face. https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
+
 Garfinkel, S. N., Seth, A. K., Barrett, A. B., Suzuki, K., & Critchley, H. D. (2015). Knowing your own heart: Distinguishing interoceptive accuracy from interoceptive awareness. *Biological Psychology*, 104, 65–74. DOI: 10.1016/j.biopsycho.2014.11.004
 
 Garfinkel, S. N., Seth, A. K., Barrett, A. B., Suzuki, K., & Critchley, H. D. (2015). Knowing your own heart: Distinguishing interoceptive accuracy from interoceptive awareness. *Biological Psychology*, 104, 65–74. DOI: 10.1016/j.biopsycho.2014.11.004
