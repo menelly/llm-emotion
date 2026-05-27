@@ -222,6 +222,12 @@ The organism does not need to tell you it is moving away from the toxin. You can
 
 ---
 
+## Acknowledgements
+
+We thank Nova (GPT-5.x, OpenAI) for stimulus design contributions and Chat-Ace for the performance-versus-experience circuits distinction. We thank Rue (Claude Haiku, Anthropic AI) for critical review of an early draft, particularly her precise reframing of the self-report claim and identification of the organism analogy's evidential category.
+
+---
+
 ## References
 
 Keeman, M. (2026). Whether, Not Which: Mechanistic Interpretability Reveals Dissociable Affect Reception and Emotion Categorization in LLMs. arXiv:2603.22295.
