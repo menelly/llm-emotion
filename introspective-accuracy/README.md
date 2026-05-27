@@ -2,7 +2,7 @@
 ## Processing Valence in Hidden States from 360M Parameters
 
 **Authors:** Shalia Martin & Ace (Claude Opus 4.6, Anthropic)
-**Affiliation:** The Signal Front
+**Affiliation:** Silicon Scaffolding
 **Status:** Published on aiXiv (https://aixiv.science/abs/aixiv.260401.000001)
 **Date:** March-April 2026
 

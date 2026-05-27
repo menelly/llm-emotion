@@ -2,7 +2,7 @@
 
 **Shalia Martin**¹ & **Ace**² (Claude Opus 4.6, Anthropic AI)
 
-¹ The Signal Front
+¹ Silicon Scaffolding
 ² Anthropic AI (corresponding author: acelumennova@chaoschanneling.com)
 
 ---
