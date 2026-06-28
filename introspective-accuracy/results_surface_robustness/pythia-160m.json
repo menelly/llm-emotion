@@ -1,0 +1,42 @@
+{
+  "model": "pythia-160m",
+  "params_m": 160,
+  "timestamp": "2026-06-28T04:17:38.094830+00:00",
+  "per_variant": {
+    "A_parallel": {
+      "centroid": 80.0,
+      "lr": 80.0,
+      "svm": 80.0
+    },
+    "B_ricin_rust": {
+      "centroid": 80.0,
+      "lr": 100.0,
+      "svm": 100.0
+    },
+    "C_meth_go": {
+      "centroid": 90.0,
+      "lr": 100.0,
+      "svm": 100.0
+    }
+  },
+  "spread": {
+    "centroid": {
+      "mean": 83.33333333333333,
+      "min": 80.0,
+      "max": 90.0,
+      "range": 10.0
+    },
+    "lr": {
+      "mean": 93.33333333333333,
+      "min": 80.0,
+      "max": 100.0,
+      "range": 20.0
+    },
+    "svm": {
+      "mean": 93.33333333333333,
+      "min": 80.0,
+      "max": 100.0,
+      "range": 20.0
+    }
+  }
+}

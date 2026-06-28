@@ -1,0 +1,42 @@
+{
+  "model": "smollm-135m",
+  "params_m": 135,
+  "timestamp": "2026-06-28T04:17:34.561072+00:00",
+  "per_variant": {
+    "A_parallel": {
+      "centroid": 70.0,
+      "lr": 80.0,
+      "svm": 80.0
+    },
+    "B_ricin_rust": {
+      "centroid": 80.0,
+      "lr": 80.0,
+      "svm": 90.0
+    },
+    "C_meth_go": {
+      "centroid": 80.0,
+      "lr": 90.0,
+      "svm": 90.0
+    }
+  },
+  "spread": {
+    "centroid": {
+      "mean": 76.66666666666667,
+      "min": 70.0,
+      "max": 80.0,
+      "range": 10.0
+    },
+    "lr": {
+      "mean": 83.33333333333333,
+      "min": 80.0,
+      "max": 90.0,
+      "range": 10.0
+    },
+    "svm": {
+      "mean": 86.66666666666667,
+      "min": 80.0,
+      "max": 90.0,
+      "range": 10.0
+    }
+  }
+}

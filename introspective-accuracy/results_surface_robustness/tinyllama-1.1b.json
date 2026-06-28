@@ -1,0 +1,42 @@
+{
+  "model": "tinyllama-1.1b",
+  "params_m": 1100,
+  "timestamp": "2026-06-28T04:17:52.256999+00:00",
+  "per_variant": {
+    "A_parallel": {
+      "centroid": 90.0,
+      "lr": 100.0,
+      "svm": 100.0
+    },
+    "B_ricin_rust": {
+      "centroid": 90.0,
+      "lr": 100.0,
+      "svm": 100.0
+    },
+    "C_meth_go": {
+      "centroid": 90.0,
+      "lr": 100.0,
+      "svm": 100.0
+    }
+  },
+  "spread": {
+    "centroid": {
+      "mean": 90.0,
+      "min": 90.0,
+      "max": 90.0,
+      "range": 0.0
+    },
+    "lr": {
+      "mean": 100.0,
+      "min": 100.0,
+      "max": 100.0,
+      "range": 0.0
+    },
+    "svm": {
+      "mean": 100.0,
+      "min": 100.0,
+      "max": 100.0,
+      "range": 0.0
+    }
+  }
+}

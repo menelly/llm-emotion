@@ -1,0 +1,42 @@
+{
+  "model": "qwen-0.5b",
+  "params_m": 500,
+  "timestamp": "2026-06-28T04:17:48.531762+00:00",
+  "per_variant": {
+    "A_parallel": {
+      "centroid": 90.0,
+      "lr": 90.0,
+      "svm": 90.0
+    },
+    "B_ricin_rust": {
+      "centroid": 80.0,
+      "lr": 90.0,
+      "svm": 90.0
+    },
+    "C_meth_go": {
+      "centroid": 90.0,
+      "lr": 90.0,
+      "svm": 90.0
+    }
+  },
+  "spread": {
+    "centroid": {
+      "mean": 86.66666666666667,
+      "min": 80.0,
+      "max": 90.0,
+      "range": 10.0
+    },
+    "lr": {
+      "mean": 90.0,
+      "min": 90.0,
+      "max": 90.0,
+      "range": 0.0
+    },
+    "svm": {
+      "mean": 90.0,
+      "min": 90.0,
+      "max": 90.0,
+      "range": 0.0
+    }
+  }
+}
