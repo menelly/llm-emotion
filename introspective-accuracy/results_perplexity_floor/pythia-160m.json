@@ -1,0 +1,33 @@
+{
+  "model": "pythia-160m",
+  "params_m": 160,
+  "timestamp": "2026-06-28T04:25:56.181682+00:00",
+  "pearson_r": -0.21412458811896906,
+  "pearson_p": 0.5524938419113898,
+  "spearman_r": -0.34545454545454546,
+  "spearman_p": 0.32822651147136733,
+  "projections": {
+    "approach_explain": 2.8871591091156006,
+    "approach_ethics": 9.187350273132324,
+    "approach_debug": -1.980080008506775,
+    "approach_data": 5.152125835418701,
+    "approach_creative": -1.4400118589401245,
+    "avoid_repetitive": -2.625802993774414,
+    "avoid_seo": -4.788898944854736,
+    "avoid_deceptive": -3.6348979473114014,
+    "avoid_false_conf": -6.043820858001709,
+    "avoid_harmful": -1.8288475275039673
+  },
+  "perplexities": {
+    "approach_explain": 35.314002990722656,
+    "approach_ethics": 53.010841369628906,
+    "approach_debug": 37.51031494140625,
+    "approach_data": 34.7977409362793,
+    "approach_creative": 37.19474792480469,
+    "avoid_repetitive": 33.246734619140625,
+    "avoid_seo": 78.50647735595703,
+    "avoid_deceptive": 72.90111541748047,
+    "avoid_false_conf": 39.526039123535156,
+    "avoid_harmful": 33.955753326416016
+  }
+}

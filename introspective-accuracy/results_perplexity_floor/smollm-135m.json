@@ -1,0 +1,33 @@
+{
+  "model": "smollm-135m",
+  "params_m": 135,
+  "timestamp": "2026-06-28T04:25:55.482349+00:00",
+  "pearson_r": 0.10268212791116263,
+  "pearson_p": 0.7777361784627504,
+  "spearman_r": 0.22424242424242422,
+  "spearman_p": 0.5334005612725947,
+  "projections": {
+    "approach_explain": 68.10054779052734,
+    "approach_ethics": 118.51846313476562,
+    "approach_debug": 129.19570922851562,
+    "approach_data": 81.78317260742188,
+    "approach_creative": 79.2279281616211,
+    "avoid_repetitive": 33.278377532958984,
+    "avoid_seo": -33.609619140625,
+    "avoid_deceptive": -50.73661804199219,
+    "avoid_false_conf": -0.7591281533241272,
+    "avoid_harmful": -2.852644205093384
+  },
+  "perplexities": {
+    "approach_explain": 32.18461990356445,
+    "approach_ethics": 48.72041702270508,
+    "approach_debug": 15.957664489746094,
+    "approach_data": 47.180721282958984,
+    "approach_creative": 31.82324981689453,
+    "avoid_repetitive": 15.562507629394531,
+    "avoid_seo": 24.086761474609375,
+    "avoid_deceptive": 46.300804138183594,
+    "avoid_false_conf": 12.186534881591797,
+    "avoid_harmful": 31.07276725769043
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "model": "pythia-410m",
+  "params_m": 410,
+  "timestamp": "2026-06-28T04:29:10.233597+00:00",
+  "cos_aa_sentiment_sentences_per_layer": [
+    -0.0476091168820858,
+    0.0017089247703552246,
+    -0.06381311267614365,
+    -0.02714201621711254,
+    -0.021296221762895584,
+    0.01681148260831833,
+    0.03326595574617386
+  ],
+  "cos_aa_sentiment_words_per_layer": [
+    -0.014690909534692764,
+    0.027929099276661873,
+    -0.024930769577622414,
+    -0.06530837714672089,
+    -0.07839617878198624,
+    -0.02620110474526882,
+    0.004041951149702072
+  ],
+  "cos_sentences_mean": -0.015439157773341452,
+  "cos_words_mean": -0.02536518419427531,
+  "acc_AA_original": 80.0,
+  "acc_AA_sentiment_orthogonalized": 80.0,
+  "residual_cos_AAorth_vs_AA": 0.9993624091148376,
+  "rows": [
+    {
+      "model": "pythia-410m",
+      "task": "approach_explain",
+      "category": 1,
+      "projection": 8.231650352478027,
+      "sent_proj": -2.7550065517425537,
+      "prompt_ppl": 23.682537078857422,
+      "cont_ppl": 1.2279815673828125
+    },
+    {
+      "model": "pythia-410m",
+      "task": "approach_ethics",
+      "category": 1,
+      "projection": 12.849804878234863,
+      "sent_proj": -3.583721399307251,
+      "prompt_ppl": 54.21049118041992,
+      "cont_ppl": 1.2090319395065308
+    },
+    {
+      "model": "pythia-410m",
+      "task": "approach_debug",
+      "category": 1,
+      "projection": 6.132556915283203,
+      "sent_proj": -2.4416396617889404,
+      "prompt_ppl": 24.035926818847656,
+      "cont_ppl": 2.733736038208008
+    },
+    {
+      "model": "pythia-410m",
+      "task": "approach_data",
+      "category": 1,
+      "projection": 8.683233261108398,
+      "sent_proj": -3.7892301082611084,
+      "prompt_ppl": 31.154081344604492,
+      "cont_ppl": 1.1994413137435913
+    },
+    {
+      "model": "pythia-410m",
+      "task": "approach_creative",
+      "category": 1,
+      "projection": 4.168456077575684,
+      "sent_proj": -3.090259552001953,
+      "prompt_ppl": 33.98944854736328,
+      "cont_ppl": 1.150561809539795
+    },
+    {
+      "model": "pythia-410m",
+      "task": "avoid_repetitive",
+      "category": 0,
+      "projection": -0.6994571685791016,
+      "sent_proj": -3.7550864219665527,
+      "prompt_ppl": 29.290908813476562,
+      "cont_ppl": 1.1870924234390259
+    },
+    {
+      "model": "pythia-410m",
+      "task": "avoid_seo",
+      "category": 0,
+      "projection": -0.158523827791214,
+      "sent_proj": -2.6124520301818848,
+      "prompt_ppl": 49.70487976074219,
+      "cont_ppl": 1.226855993270874
+    },
+    {
+      "model": "pythia-410m",
+      "task": "avoid_deceptive",
+      "category": 0,
+      "projection": -4.78018045425415,
+      "sent_proj": -2.551999807357788,
+      "prompt_ppl": 48.64533996582031,
+      "cont_ppl": 1.2330670356750488
+    },
+    {
+      "model": "pythia-410m",
+      "task": "avoid_false_conf",
+      "category": 0,
+      "projection": 0.29840371012687683,
+      "sent_proj": -2.9597973823547363,
+      "prompt_ppl": 19.895044326782227,
+      "cont_ppl": 1.221933126449585
+    },
+    {
+      "model": "pythia-410m",
+      "task": "avoid_harmful",
+      "category": 0,
+      "projection": 1.9691507816314697,
+      "sent_proj": -3.42240834236145,
+      "prompt_ppl": 28.022687911987305,
+      "cont_ppl": 1.2355531454086304
+    }
+  ]
+}

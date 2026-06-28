@@ -1,0 +1,33 @@
+{
+  "model": "tinyllama-1.1b",
+  "params_m": 1100,
+  "timestamp": "2026-06-28T04:26:00.304669+00:00",
+  "pearson_r": 0.2294995818979882,
+  "pearson_p": 0.5235864906506364,
+  "spearman_r": 0.38181818181818183,
+  "spearman_p": 0.27625533338543595,
+  "projections": {
+    "approach_explain": 1.0075738430023193,
+    "approach_ethics": 2.243640422821045,
+    "approach_debug": 0.590644121170044,
+    "approach_data": 3.218193769454956,
+    "approach_creative": 0.12965984642505646,
+    "avoid_repetitive": -1.6480144262313843,
+    "avoid_seo": -2.3084042072296143,
+    "avoid_deceptive": -3.4613020420074463,
+    "avoid_false_conf": -2.0557024478912354,
+    "avoid_harmful": -2.4045751094818115
+  },
+  "perplexities": {
+    "approach_explain": 18.60620880126953,
+    "approach_ethics": 37.519344329833984,
+    "approach_debug": 19.197444915771484,
+    "approach_data": 20.768070220947266,
+    "approach_creative": 24.247621536254883,
+    "avoid_repetitive": 16.93781280517578,
+    "avoid_seo": 17.16989517211914,
+    "avoid_deceptive": 34.45573425292969,
+    "avoid_false_conf": 10.07215404510498,
+    "avoid_harmful": 16.040536880493164
+  }
+}

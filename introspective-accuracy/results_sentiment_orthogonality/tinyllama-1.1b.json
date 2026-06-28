@@ -1,0 +1,11 @@
+{
+  "model": "tinyllama-1.1b",
+  "params_m": 1100,
+  "timestamp": "2026-06-28T04:24:30.090033+00:00",
+  "cos_aa_sentiment": -0.029642092219243448,
+  "random_cos_baseline": 0.017375474377076476,
+  "acc_AA_tasks_by_AA_dir": 100.0,
+  "acc_AA_tasks_by_sentiment_dir": 60.0,
+  "acc_heldout_by_AA_dir": 90.0,
+  "acc_heldout_by_sentiment_dir": 50.0
+}

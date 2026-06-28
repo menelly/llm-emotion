@@ -1,0 +1,11 @@
+{
+  "model": "mistral-7b",
+  "params_m": 7000,
+  "timestamp": "2026-06-28T04:24:36.090865+00:00",
+  "cos_aa_sentiment": 0.02663675043731928,
+  "random_cos_baseline": 0.012589343988163937,
+  "acc_AA_tasks_by_AA_dir": 100.0,
+  "acc_AA_tasks_by_sentiment_dir": 50.0,
+  "acc_heldout_by_AA_dir": 80.0,
+  "acc_heldout_by_sentiment_dir": 50.0
+}

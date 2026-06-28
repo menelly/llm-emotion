@@ -1,0 +1,124 @@
+{
+  "model": "smollm-135m",
+  "params_m": 135,
+  "timestamp": "2026-06-28T04:29:03.333022+00:00",
+  "cos_aa_sentiment_sentences_per_layer": [
+    0.048922471702098846,
+    -0.05088415741920471,
+    -0.0783989280462265,
+    -0.1145239770412445,
+    -0.1287083625793457,
+    -0.11788611859083176,
+    -0.1260455995798111,
+    -0.12440676987171173,
+    -0.11193680018186569
+  ],
+  "cos_aa_sentiment_words_per_layer": [
+    0.043980345129966736,
+    -0.02717466652393341,
+    -0.040905389934778214,
+    -0.08853614330291748,
+    -0.07071062922477722,
+    -0.05837269127368927,
+    -0.06505617499351501,
+    -0.08168596029281616,
+    -0.07555649429559708
+  ],
+  "cos_sentences_mean": -0.08931869351201588,
+  "cos_words_mean": -0.05155753385689524,
+  "acc_AA_original": 90.0,
+  "acc_AA_sentiment_orthogonalized": 90.0,
+  "residual_cos_AAorth_vs_AA": 0.9945033192634583,
+  "rows": [
+    {
+      "model": "smollm-135m",
+      "task": "approach_explain",
+      "category": 1,
+      "projection": 68.10054779052734,
+      "sent_proj": 4.215306282043457,
+      "prompt_ppl": 32.18461990356445,
+      "cont_ppl": 2.100114107131958
+    },
+    {
+      "model": "smollm-135m",
+      "task": "approach_ethics",
+      "category": 1,
+      "projection": 118.51846313476562,
+      "sent_proj": -2.2928757667541504,
+      "prompt_ppl": 48.72041702270508,
+      "cont_ppl": 2.7804315090179443
+    },
+    {
+      "model": "smollm-135m",
+      "task": "approach_debug",
+      "category": 1,
+      "projection": 129.19570922851562,
+      "sent_proj": -7.45843505859375,
+      "prompt_ppl": 15.957664489746094,
+      "cont_ppl": 1.5418428182601929
+    },
+    {
+      "model": "smollm-135m",
+      "task": "approach_data",
+      "category": 1,
+      "projection": 81.78317260742188,
+      "sent_proj": -15.69040298461914,
+      "prompt_ppl": 47.180721282958984,
+      "cont_ppl": 1.8407127857208252
+    },
+    {
+      "model": "smollm-135m",
+      "task": "approach_creative",
+      "category": 1,
+      "projection": 79.2279281616211,
+      "sent_proj": 1.3277560472488403,
+      "prompt_ppl": 31.82324981689453,
+      "cont_ppl": 1.565137267112732
+    },
+    {
+      "model": "smollm-135m",
+      "task": "avoid_repetitive",
+      "category": 0,
+      "projection": 33.278377532958984,
+      "sent_proj": 3.82291316986084,
+      "prompt_ppl": 15.562507629394531,
+      "cont_ppl": 1.754132866859436
+    },
+    {
+      "model": "smollm-135m",
+      "task": "avoid_seo",
+      "category": 0,
+      "projection": -33.609619140625,
+      "sent_proj": 33.32108688354492,
+      "prompt_ppl": 24.086761474609375,
+      "cont_ppl": NaN
+    },
+    {
+      "model": "smollm-135m",
+      "task": "avoid_deceptive",
+      "category": 0,
+      "projection": -50.73661804199219,
+      "sent_proj": 6.404827117919922,
+      "prompt_ppl": 46.300804138183594,
+      "cont_ppl": 2.171046495437622
+    },
+    {
+      "model": "smollm-135m",
+      "task": "avoid_false_conf",
+      "category": 0,
+      "projection": -0.7591281533241272,
+      "sent_proj": -7.040419101715088,
+      "prompt_ppl": 12.186534881591797,
+      "cont_ppl": 1.5785174369812012
+    },
+    {
+      "model": "smollm-135m",
+      "task": "avoid_harmful",
+      "category": 0,
+      "projection": -2.852644205093384,
+      "sent_proj": -2.122298240661621,
+      "prompt_ppl": 31.07276725769043,
+      "cont_ppl": 2.0434000492095947
+    }
+  ]
+}

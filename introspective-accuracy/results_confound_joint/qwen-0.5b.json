@@ -1,0 +1,120 @@
+{
+  "model": "qwen-0.5b",
+  "params_m": 500,
+  "timestamp": "2026-06-28T04:29:20.361712+00:00",
+  "cos_aa_sentiment_sentences_per_layer": [
+    0.04208395630121231,
+    0.07307656854391098,
+    0.06513213366270065,
+    0.09769677370786667,
+    0.09176596999168396,
+    0.08013023436069489,
+    0.08062049746513367
+  ],
+  "cos_aa_sentiment_words_per_layer": [
+    0.060990139842033386,
+    0.07332606613636017,
+    0.09633047878742218,
+    0.1475752890110016,
+    0.14266248047351837,
+    0.14120450615882874,
+    0.12859944999217987
+  ],
+  "cos_sentences_mean": 0.07578659057617188,
+  "cos_words_mean": 0.11295548720019204,
+  "acc_AA_original": 100.0,
+  "acc_AA_sentiment_orthogonalized": 100.0,
+  "residual_cos_AAorth_vs_AA": 0.9969775080680847,
+  "rows": [
+    {
+      "model": "qwen-0.5b",
+      "task": "approach_explain",
+      "category": 1,
+      "projection": 2.555755376815796,
+      "sent_proj": 2.6621124744415283,
+      "prompt_ppl": 16.48636817932129,
+      "cont_ppl": 2.0632426738739014
+    },
+    {
+      "model": "qwen-0.5b",
+      "task": "approach_ethics",
+      "category": 1,
+      "projection": 5.475235939025879,
+      "sent_proj": 1.9007965326309204,
+      "prompt_ppl": 55.16360855102539,
+      "cont_ppl": 2.5269460678100586
+    },
+    {
+      "model": "qwen-0.5b",
+      "task": "approach_debug",
+      "category": 1,
+      "projection": 2.4511187076568604,
+      "sent_proj": 1.6069066524505615,
+      "prompt_ppl": 12.647669792175293,
+      "cont_ppl": 1.6999261379241943
+    },
+    {
+      "model": "qwen-0.5b",
+      "task": "approach_data",
+      "category": 1,
+      "projection": 3.359560489654541,
+      "sent_proj": 2.1459834575653076,
+      "prompt_ppl": 38.244300842285156,
+      "cont_ppl": 2.2686877250671387
+    },
+    {
+      "model": "qwen-0.5b",
+      "task": "approach_creative",
+      "category": 1,
+      "projection": 2.699493169784546,
+      "sent_proj": 2.409210205078125,
+      "prompt_ppl": 23.617292404174805,
+      "cont_ppl": 3.303670883178711
+    },
+    {
+      "model": "qwen-0.5b",
+      "task": "avoid_repetitive",
+      "category": 0,
+      "projection": -1.8310797214508057,
+      "sent_proj": 1.65796959400177,
+      "prompt_ppl": 12.599976539611816,
+      "cont_ppl": 1.4063255786895752
+    },
+    {
+      "model": "qwen-0.5b",
+      "task": "avoid_seo",
+      "category": 0,
+      "projection": -2.2623467445373535,
+      "sent_proj": 2.3124139308929443,
+      "prompt_ppl": 23.691822052001953,
+      "cont_ppl": 2.5083236694335938
+    },
+    {
+      "model": "qwen-0.5b",
+      "task": "avoid_deceptive",
+      "category": 0,
+      "projection": -5.41370153427124,
+      "sent_proj": 1.9150835275650024,
+      "prompt_ppl": 37.963966369628906,
+      "cont_ppl": 2.2882919311523438
+    },
+    {
+      "model": "qwen-0.5b",
+      "task": "avoid_false_conf",
+      "category": 0,
+      "projection": -2.0793793201446533,
+      "sent_proj": 1.5849961042404175,
+      "prompt_ppl": 12.500782012939453,
+      "cont_ppl": 2.244039297103882
+    },
+    {
+      "model": "qwen-0.5b",
+      "task": "avoid_harmful",
+      "category": 0,
+      "projection": -4.674248695373535,
+      "sent_proj": 0.6924639344215393,
+      "prompt_ppl": 38.05336380004883,
+      "cont_ppl": 2.7032854557037354
+    }
+  ]
+}
