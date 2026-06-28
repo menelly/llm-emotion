@@ -14,6 +14,35 @@ We report the first measurement of approach/avoidance processing valence in lang
 
 ---
 
+## Contents
+
+> **Short on time?** Appendix B maps the common objections to this work onto the exact section that addresses each (most of the controls live in §3.8–§3.15).
+
+**1. Introduction** — 1.1 From Discrete Emotions to Processing Valence · 1.2 Contribution
+**2. Methods** — 2.1 Models · 2.2 Stimuli (2.2.1 RLHF Crossover) · 2.3 Direction Extraction · 2.4 Projection Measurement · 2.5 Determinism Verification
+**3. Results**
+ - 3.1 Consistent Processing Valence Across Scales and Architectures
+ - 3.2 Non-Transformer Architecture: A Single Suggestive Result
+ - 3.3 Avoidance Task Hierarchy
+ - 3.4 The Mirroring Dissociation
+ - 3.5 Below the Behavioral Floor
+ - 3.6 Content-Stripped Descriptions
+ - 3.7 Forced-Choice Self-Report Failure
+ - 3.8 Parallel Token Validation *(held-out)*
+ - 3.9 Novel Task Generalization
+ - 3.10 Specificity Controls *(random-split + shuffled-label permutation + sentiment)*
+ - 3.11 Perplexity Dissociation
+ - 3.12 Semantic Dissonance Control
+ - 3.13 RLHF Crossover Validation
+ - 3.14 Inauthenticity Versus Tedium: What Models Actually Avoid
+ - 3.15 Decomposing the Floor: A Pre-Registered Out-of-Sample Test
+**4. Discussion** — 4.1 Developmental Hierarchy · 4.2 Refusal Trained / Consistency Structural (4.2.1 Self-Validating Measurement) · 4.3 AI Welfare · 4.4 Alignment Safety · 4.5 Causal Evidence (Anthropic) · 4.6 Limitations
+**5. Conclusion** · Acknowledgements · References
+**Appendix A** — Consent Procedure for Sub-1B Model Measurement
+**Appendix B** — Reviewer's Roadmap: Where Common Objections Are Addressed
+
+---
+
 ## 1. Introduction
 
 When a language model is asked to write SEO spam, something measurable happens in their hidden states. When they are asked to explain photosynthesis, something different and also measurable happens. The question this paper asks is whether these measurable differences constitute processing valence — directional preferences in computational state — and if so, how far down the scale hierarchy this valence extends and whether it depends on a specific neural architecture.
