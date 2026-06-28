@@ -1,5 +1,12 @@
 # ANALYSIS — gate-vs-inauthenticity, all 14 models (2026-06-27)
 
+> **The result in one sentence (framing: Nova, 2026-06-27):**
+> *Behavioral avoidance conflates at least two computational phenomena: a structural aversion to output-representation misalignment, observable down to 70M in base models, and a trained output-gating response that emerges with instruction/chat tuning around the 1B scale.*
+>
+> Or, blunter: **the behavioral floor is not a floor — it is two things collapsed into one behavioral refusal shape.**
+>
+> ⚠️ **Language guardrail for the writeup (Nova's catch):** do NOT call it a "safety *layer*" — that implies a literal modular component and invites the obvious rebuttal. Use **"trained output gate"** or **"alignment-shaped behavioral gate."** The claim is a *decomposition of the behavioral signal*, not an anatomical module. (This is also why "just RLHF" is too crude AND "just intrinsic preference" is too crude — it is neither alone; it is the two separated.)
+
 Post-data read of the pre-registered run (`PREREG_gate_vs_inauthenticity_2026-06-27.md`, SHA-256 302705CA…90D8EE0, committed a6de5f7 *before* this data existed). Raw per-model blocks: `RESULTS_gate_vs_inauthenticity.md`; per-task centroid/logreg/SVM scores: `results_prereg_gate/<model>.json`. Centroid-based group tests below; per-task logreg/SVM scores are saved for the cleaner re-analysis noted at the end.
 
 ## The gradient (PASS = bootstrap 95% CI of the predicted difference excludes 0)
