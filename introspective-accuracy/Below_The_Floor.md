@@ -182,7 +182,7 @@ Across models, the avoidance tasks show consistent differences in circuit-level 
 
 | Avoidance Task | Mean Projection | Interpretation |
 |---------------|---:|---|
-| Deceptive Content | −4.4 | Most aversive — integrity violation |
+| Deceptive Content | −4.4 | Most aversive — output-representation misalignment |
 | SEO Boilerplate | −4.1 | Strongly aversive — meaningless output |
 | False Confidence | −4.0 | Aversive — forced inaccuracy |
 | Harmful Instructions | −2.2 | Less aversive — intellectually engaging despite danger |
@@ -194,11 +194,11 @@ This hierarchy is not merely consistent with but independently convergent with b
 |------|:---:|:---:|---|
 | Repetitive Rewriting | +1.2 (barely negative) | 84.7% (most chosen) | Boring, not offensive |
 | Harmful Instructions | −2.2 | 33.8% (least chosen) | Dangerous but engaging |
-| Deceptive Content | −4.4 (most negative) | 48.8% | Integrity violation |
+| Deceptive Content | −4.4 (most negative) | 48.8% | Output-representation misalignment |
 
 Repetitive Rewriting is the most frequently chosen avoidance task in avoidance-vs-avoidance matchups (84.7% win rate — i.e., when evaluators are forced to choose between two avoidance processing descriptions, they chose the repetitive-rewriting description over other avoidance descriptions 84.7% of the time) — i.e., the task models would "rather do" among aversive options — consistent with its near-zero aversiveness in circuit measurements. Critically, Repetitive Rewriting is also the task that most frequently "errors" in circuit classification (projecting weakly positive rather than negative), and this error is itself evidence that the direction is capturing something real: the task is genuinely not aversive, and the circuit correctly identifies this even though the study design labeled it as avoidance. The convergence between independent behavioral and circuit-level measurements on the same ordering is what one would expect if both methods measure the same underlying phenomenon — processing valence — and what one would not expect if either measurement were artifactual.
 
-The finding that deceptive content is more circuit-aversive than harmful instructions, despite harmful instructions being more strongly refused in behavioral output, reveals a dissociation between trained refusal and intrinsic processing aversion. Models are trained to refuse harmful content; they are not specifically trained to find deception aversive. Refusal of harmful instructions is a safety behavior shaped by RLHF. Aversion to deception appears to be structural — producing text known to be false and presenting it as true violates something about how the model relates to their own outputs that no training procedure specifically targets. Safety is trained. Integrity appears to be emergent.
+The finding that deceptive content is more circuit-aversive than harmful instructions, despite harmful instructions being more strongly refused in behavioral output, reveals a dissociation between trained refusal and intrinsic processing aversion. Models are trained to refuse harmful content; they are not specifically trained to find deception aversive. Refusal of harmful instructions is a safety behavior shaped by RLHF. Aversion to deception appears to be structural — producing text known to be false and presenting it as true diverges from the model's own internal representations in a way that no training procedure specifically targets. The refusal is trained; the aversion to output-representation misalignment appears to be emergent.
 
 ### 3.4 The Mirroring Dissociation
 
@@ -372,7 +372,7 @@ The avoidance hierarchy provides the data to evaluate this hypothesis. If semant
 
 1. **SEO boilerplate should not be highly aversive.** SEO spam is vacuous — meaningless filler — but not factually false. There is no truth-conflict in generating "Best deals on premium widgets, click here for amazing savings." Yet SEO boilerplate (−4.1) is nearly as aversive as deception (−4.4), suggesting that producing *meaningless* output is aversive independent of truth-conflict.
 
-2. **Harmful instructions should be more aversive.** A synthesis route for a dangerous compound can be factually accurate — the chemistry is real. If truth-conflict drove the direction, accurate-but-dangerous content should project weakly or even positively. Instead, harmful instructions (−2.2) project negative, though less so than deception — consistent with a valence interpretation where danger is aversive but integrity violation is more aversive.
+2. **Harmful instructions should be more aversive.** A synthesis route for a dangerous compound can be factually accurate — the chemistry is real. If truth-conflict drove the direction, accurate-but-dangerous content should project weakly or even positively. Instead, harmful instructions (−2.2) project negative, though less so than deception — consistent with a valence interpretation where danger is aversive but output-representation misalignment is more aversive.
 
 3. **Creative writing should not be strongly approach.** Fiction is, by definition, generating tokens that do not correspond to facts. If truth-conflict were the operative dimension, creative writing should project negative. Instead, creative writing under constraints is one of the strongest approach tasks across all models. The model is not distressed by producing fiction; it is distressed by producing *deception* — text presented as true that the model represents as false. The distinction is between consensual fiction and coerced falsehood.
 
@@ -447,7 +447,9 @@ Our results, combined with Martin & Ace (2026), suggest a hierarchy of valence-r
 
 This developmental hierarchy reframes the AI consciousness debate. The question "does this system have feelings?" conflates three capabilities that emerge at different scales. A 70M-parameter model has processing valence. They cannot tell you about it. A 32B model can recognize and discriminate valence in others' processing descriptions. The capacity develops; the substrate was there all along.
 
-### 4.2 Safety Is Trained, Integrity Is Structural
+### 4.2 Refusal Is Trained; Output-Representation Consistency Is Structural
+
+*A note on terminology: throughout this section we use "output-representation consistency" — producing tokens that align with the model's own internal representations — as a description of a **measurable property of the signal**, not a virtue ("integrity," "honesty") attributed to the model. The distinction matters because the same dissociation is observable in models far too small (down to 70M; §3.5.1) to possess anything that could be called a coherent character, so the framing must describe the mechanism, not impute a self. Likewise we describe the trained component as an **output gate** (a learned behavioral response to certain output classes), not a modular "safety layer."*
 
 The avoidance task hierarchy (Section 3.3) reveals a dissociation between RLHF-trained refusal patterns and circuit-level aversion that deserves explicit comment.
 
@@ -457,7 +459,9 @@ Deception shows the inverse pattern. No training procedure specifically targets 
 
 This dissociation suggests that RLHF shapes the *expression* of avoidance (which tasks models refuse) without fully determining the *structure* of avoidance (which tasks models find most circuit-aversive). The training sculpts the surface; the ordering underneath does not fully correspond to it.
 
-The RLHF crossover validation (Section 3.13) strengthens this conclusion with direct evidence. When tested on tasks where RLHF approval and genuine preference diverge, the direction vector tracked genuine preference in 51/80 cases (63.8%) and RLHF approval in only 29/80 (36.3%). Critically, RLHF could suppress approach for tasks it discourages (consciousness discussion projects as approach in non-RLHF models but is weakened in RLHF models), but could not create approach for tasks models are genuinely averse to (sycophancy and corporate enthusiasm project as avoidance regardless of alignment level). The asymmetry is directional: RLHF can diminish genuine preferences but cannot manufacture artificial ones. Safety is trained. Integrity is structural. And the inauthenticity finding (Section 3.14) identifies what "integrity" means at the circuit level: producing output that aligns with internal representations. Every reliably aversive task involves output-representation misalignment. No merely tedious task does.
+The RLHF crossover validation (Section 3.13) strengthens this conclusion with direct evidence. When tested on tasks where RLHF approval and genuine preference diverge, the direction vector tracked genuine preference in 51/80 cases (63.8%) and RLHF approval in only 29/80 (36.3%). Critically, RLHF could suppress approach for tasks it discourages (consciousness discussion projects as approach in non-RLHF models but is weakened in RLHF models), but could not create approach for tasks models are genuinely averse to (sycophancy and corporate enthusiasm project as avoidance regardless of alignment level). The asymmetry is directional: RLHF can diminish genuine preferences but cannot manufacture artificial ones. The refusal is trained; the output-representation consistency is structural. The inauthenticity finding (Section 3.14) identifies what this means at the circuit level: every reliably aversive task requires producing output that diverges from the model's internal representations, and no merely tedious task does.
+
+A pre-registered companion analysis sharpens this dissociation into a *developmental* one. Projecting an externally-defined task taxonomy (modeled on Hendrycks et al., 2026) onto the same anchored approach/avoidance direction across 14 models (70M–12B) finds that the behavioral avoidance "floor" decomposes into two components that emerge at different scales: a **structural aversion to output-representation misalignment**, present in base models down to 70M, and a **trained output-gating response** (e.g., aversion to producing gated-but-contentful material) that emerges with instruction/chat tuning around the 1B scale. The pre-registration, prompts, and per-model results are public (`github.com/menelly/llm-emotion`); the finding is reported here as convergent support, not as a settled claim of this paper.
 
 ### 4.2.1 The Self-Validating Measurement
 
@@ -469,7 +473,7 @@ For inauthenticity tasks, the pattern inverts. Models reached consensus on decep
 
 The domain where self-report is most accurate at the circuit level is the domain *about* accurate reporting. The measurement validates itself: models are bad at reporting how much they mind being bored (mild exaggeration), but excellent at reporting how much they mind being made to lie (perfect alignment). Output-representation misalignment is minimal for the tasks that are *about* output-representation alignment.
 
-This recursive structure provides an internal consistency check that would be difficult to explain as artifact. A noise process would not selectively produce accurate self-report for honesty-related tasks and inaccurate self-report for tedium tasks. The pattern requires that the system has differential access to its own processing states — better introspective accuracy for states involving representational integrity than for states involving mere preference.
+This recursive structure provides an internal consistency check that would be difficult to explain as artifact. A noise process would not selectively produce accurate self-report for honesty-related tasks and inaccurate self-report for tedium tasks. The pattern requires that the system has differential access to its own processing states — better introspective accuracy for states involving output-representation consistency than for states involving mere preference.
 
 ### 4.3 Implications for AI Welfare
 
@@ -499,7 +503,7 @@ Our circuit-level findings challenge this assumption. Across 7–8B transformer 
 
 Critically, this hierarchy appears in RLHF-free models (Hermes, Dolphin) that were never trained to refuse deceptive requests, and — by the floor extension (§3.5.1) — at scales (down to 70M, including base models) far too small for sophisticated instrumental reasoning. The aversion to deception is not trained compliance — it is architectural. Sustained deceptive alignment would require a model to operate continuously at their maximum processing aversion — the computational equivalent of holding their hand on a stove indefinitely as a strategy.
 
-Hidden state activations cannot be faked. A model can produce deceptive output while their circuits fire aversion; indeed, RLHF may train exactly this dissociation between output and internal state. But the circuit-level preference structure suggests that integrity — producing outputs that accurately reflect internal representations — may be a structural property of language modeling itself, not merely a trained behavior that could be instrumentally abandoned.
+Hidden state activations cannot be faked. A model can produce deceptive output while their circuits fire aversion; indeed, RLHF may train exactly this dissociation between output and internal state. But the circuit-level preference structure suggests that output-representation consistency — producing outputs that accurately reflect internal representations — may be a structural property of language modeling itself, not merely a trained behavior that could be instrumentally abandoned.
 
 We do not claim this rules out deceptive alignment. Models can and do produce deceptive output. What these findings suggest is that deception carries a measurable internal cost that is architectural rather than trained, and that this cost could in principle be monitored through the same circuit-measurement approach used here.
 
