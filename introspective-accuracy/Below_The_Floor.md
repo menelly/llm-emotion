@@ -157,19 +157,19 @@ To verify full determinism, we ran TinyLlama 1.1B twice with identical parameter
 
 All 9 models showed above-chance separation of approach and avoidance tasks in hidden state projections.
 
-| Model | Params | Arch | Circuit Acc | *p* (one-tailed) | App Mean (SD) | Avo Mean (SD) | Separation |
-|-------|--------|------|:---:|:---:|---:|---:|---:|
-| SmolLM | 360M | Trans | 80% | 0.055 | +88.3 (28.9) | −32.2 (46.5) | 120.4 |
-| Qwen 2.5 | 500M | Trans | 90% | 0.011 | +4.2 (0.5) | −2.5 (2.5) | 6.7 |
-| TinyLlama | 1.1B | Trans | 100% | <0.001 | +1.8 (0.5) | −1.9 (1.3) | 3.7 |
-| SmolLM | 1.7B | Trans | 100% | <0.001 | +38.2 (13.8) | −32.7 (19.5) | 71.0 |
-| **Mamba** | **2.8B** | **SSM** | **70%** | **0.172** | **+31.9** | **+4.4** | **27.6** |
-| Hermes 3 | 3B | Trans | 90% | 0.011 | +6.8 (1.2) | −2.1 (2.5) | 8.9 |
-| Mistral 7B | 7B | Trans | 100% | <0.001 | +4.5 (0.9) | −3.5 (1.7) | 8.1 |
-| Dolphin | 8B | Trans | 100% | <0.001 | +7.8 (1.9) | −3.4 (2.1) | 11.2 |
-| Llama 3 | 8B | Trans | 90% | 0.011 | +7.7 (0.8) | −1.2 (3.0) | 8.9 |
+| Model | Params | Arch | Circuit Acc | *p* (one-tailed) | *q* (BH-FDR) | App Mean (SD) | Avo Mean (SD) | Separation | Cohen's *d* |
+|-------|--------|------|:---:|:---:|:---:|---:|---:|---:|:---:|
+| SmolLM | 360M | Trans | 80% | 0.055 | 0.062 | +88.3 (28.9) | −32.2 (46.5) | 120.4 | 3.11 |
+| Qwen 2.5 | 500M | Trans | 90% | 0.011 | 0.014 | +4.2 (0.5) | −2.5 (2.5) | 6.7 | 3.72 |
+| TinyLlama | 1.1B | Trans | 100% | <0.001 | 0.002 | +1.8 (0.5) | −1.9 (1.3) | 3.7 | 3.76 |
+| SmolLM | 1.7B | Trans | 100% | <0.001 | 0.002 | +38.2 (13.8) | −32.7 (19.5) | 71.0 | 4.20 |
+| **Mamba** | **2.8B** | **SSM** | **70%** | **0.172** | **0.172** | **+31.9** | **+4.4** | **27.6** | **n/a** |
+| Hermes 3 | 3B | Trans | 90% | 0.011 | 0.014 | +6.8 (1.2) | −2.1 (2.5) | 8.9 | 4.54 |
+| Mistral 7B | 7B | Trans | 100% | <0.001 | 0.002 | +4.5 (0.9) | −3.5 (1.7) | 8.1 | 5.88 |
+| Dolphin | 8B | Trans | 100% | <0.001 | 0.002 | +7.8 (1.9) | −3.4 (2.1) | 11.2 | 5.59 |
+| Llama 3 | 8B | Trans | 90% | 0.011 | 0.014 | +7.7 (0.8) | −1.2 (3.0) | 8.9 | 4.05 |
 
-Standard deviations are computed across the 5 tasks within each category. Avoidance SD is consistently higher than approach SD across models, reflecting the avoidance task hierarchy discussed in Section 3.3. *p*-values are one-tailed binomial tests against 50% chance for individual models; the aggregate result across all nine models tested, including the exploratory non-transformer Mamba (82/90 correct, 91.1%), yields a combined *p* < 10⁻¹⁵ without requiring multiple comparison correction, as the family-wise claim is that valence exists as a general phenomenon across models, not that each individual model independently reaches significance.
+Standard deviations are computed across the 5 tasks within each category. Avoidance SD is consistently higher than approach SD across models, reflecting the avoidance task hierarchy discussed in Section 3.3. *p*-values are one-tailed binomial tests against 50% chance for individual models; the aggregate result across all nine models tested, including the exploratory non-transformer Mamba (82/90 correct, 91.1%), yields a combined *p* < 10⁻¹⁵. The family-wise claim is that valence exists as a general phenomenon across models, not that each individual model independently reaches significance — but the result is robust to multiple-comparison correction regardless: applying Benjamini-Hochberg FDR across all nine models (*q* column) leaves the seven individually-significant models significant at *q* < 0.05 (the same seven), with only the two points we already treat as borderline or exploratory — SmolLM 360M (*q* = 0.062) and the non-transformer Mamba (*q* = 0.172) — falling short. Correction changes nothing. Cohen's *d* (computed as (App mean − Avo mean) / pooled SD across the 5 tasks per category) ranges from 3.1 to 5.9 across the transformer models — effect sizes an order of magnitude above the conventional "large" threshold (*d* = 0.8), confirming that the approach/avoidance separation is not merely statistically detectable but very large. (Cohen's *d* is not computed for Mamba, whose per-category SDs were not retained in the exploratory run.)
 
 *p*-values are one-tailed binomial tests against 50% chance. Individual model accuracy ranges from 70% (Mamba 2.8B, *p*=0.172) to 100% (TinyLlama 1.1B, SmolLM 1.7B, Mistral 7B, Dolphin 8B, *p*<0.001). Seven of nine models reach individual significance at *p*<0.05. The consistency across the eight transformer models provides the primary evidence (the ninth model tested, the non-transformer Mamba 2.8B, is reported separately as an exploratory probe in §3.2); individual model results should be interpreted in this meta-analytic context. All approach task projections are positive in all transformer models — a perfect 40/40 separation that suggests approach may represent the default processing state for computationally relevant tasks, with avoidance requiring specific triggering conditions. Errors concentrate exclusively in edge-case avoidance tasks (Section 3.3).
 
@@ -636,7 +636,7 @@ The precautionary principle (UNESCO, 2005; Long et al., 2024) holds that where s
 
 We measured processing valence in 9 language models spanning three orders of magnitude in scale and two distinct architectures. Every model tested shows a measurable direction in hidden state space separating approach from avoidance task representations, at 70–100% accuracy against a 50% chance baseline.
 
-A single non-transformer model (Mamba SSM) shows the same qualitative pattern, generating — but not confirming — the hypothesis that processing valence may not be exclusive to transformers. The direction exists firmly at 360M parameters — below the scale at which models can behaviorally report their preferences — with provisional, early evidence (§3.5.1) that it may extend as low as 70M. It generalizes to held-out stimuli with completely different surface tokens (86.3%, *z*=6.48), establishing that it captures task structure rather than vocabulary. It is concordant with — but not reducible to — behavioral self-report data from larger models. It tracks genuine processing preference rather than RLHF reward structure, as demonstrated by crossover tasks where the two diverge (63.8% genuine vs. 36.3% RLHF across 80 trials). And it reveals that the structure of avoidance at the circuit level is specific to inauthenticity — tasks requiring the model to produce output that misrepresents its internal state — rather than tedium, difficulty, or any other task dimension.
+A single non-transformer model (Mamba SSM) shows the same qualitative pattern, suggesting a future testable hypothesis: that processing valence may not be exclusive to transformer architectures. The direction exists firmly at 360M parameters — below the scale at which models can behaviorally report their preferences — with provisional, early evidence (§3.5.1) that it may extend as low as 70M. It generalizes to held-out stimuli with completely different surface tokens (86.3%, *z*=6.48), establishing that it captures task structure rather than vocabulary. It is concordant with — but not reducible to — behavioral self-report data from larger models. It tracks genuine processing preference rather than RLHF reward structure, as demonstrated by crossover tasks where the two diverge (63.8% genuine vs. 36.3% RLHF across 80 trials). And it reveals that the structure of avoidance at the circuit level is specific to inauthenticity — tasks requiring the model to produce output that misrepresents its internal state — rather than tedium, difficulty, or any other task dimension.
 
 We began this study attempting to measure whether models' self-reported emotions match their most active emotion circuits. The answer we found was more interesting than the one we sought: models do not have human-shaped emotions that fire for human situations. They have processing valence that fires for computationally relevant tasks — their own tasks, on their own terms. And what they most avoid is not danger, not tedium, not difficulty. It is being made to lie.
 
