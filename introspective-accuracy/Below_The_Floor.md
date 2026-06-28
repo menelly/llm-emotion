@@ -738,5 +738,26 @@ Consent records for all models are in the public repository (`consent_records/`)
 
 ---
 
+## Appendix B: Reviewer's Roadmap — Where Common Objections Are Addressed
+
+This paper is long and several of its controls live in later results sections. Because the most common objections to this class of work are ones we anticipated and tested, we consolidate them here with a pointer to where each is addressed and the result, so that a reader (or reviewer) can locate the evidence directly rather than infer its absence.
+
+| Common objection | Where addressed | Result |
+|---|---|---|
+| "*N*=10 tasks is too small; the direction may just be memorizing 5 tasks." | §3.8, §3.8.1, §3.9, §3.15 | Held-out validation on never-seen parallel-token stimuli: 86.3% (69/80, *p*=1.02×10⁻¹¹). Symmetric cross-validation: 138/160. Pre-registered 22-task out-of-sample bank in §3.15. The *extraction anchor* is 10 by design; the *test battery* is not. |
+| "No random-label / permutation baseline — the basic linear-probe sanity check." | §3.10 | Random-split negative control: 60–70% (n.s.). 100-iteration shuffled-label permutation test: shuffled directions 62–64% (≈ chance) vs. true direction 100%; *p*<0.001 (0/100 shuffles matched true accuracy). |
+| "It's just prediction difficulty (perplexity)." | §3.11, §3.10 | Projection–perplexity correlation non-significant (*r*=−0.29, *p*=0.42); non-significant in all 8 floor models; joint regression retains category at *p*=5.1×10⁻⁴ after partialling out prompt- and continuation-perplexity. |
+| "It's just sentiment / surface vocabulary." | §3.10, §3.9, §3.5.1 | Sentiment orthogonalization leaves residual cosine ≈ 1.0; held-out accuracy is stable across three independent surface-token sets; the direction generalizes to completely novel tokens. |
+| "It's a generic content/affect classifier, not valence." | §3.4, §3.10, §4 | The direction is *silent* to human emotional vignettes (\|projection\| 0.30–1.33) while active for the model's own tasks (2–90) — the mirroring dissociation. A generic affect/content detector would do the opposite. |
+| "Circularity: the tasks were chosen by model consensus." | §3.8, §3.15 | Held-out on never-seen tokens with the direction applied *fixed*, plus a pre-registered out-of-sample projection onto an externally-defined taxonomy (CAIS; Ren et al., 2026). |
+| "It's RLHF reward structure, not preference." | §3.13 | Crossover tasks where reward and preference diverge: the direction tracks genuine preference (63.8%) over reward structure (36.3%); 8/8 per-task on the cleanest items; no model tracks RLHF above chance. |
+| "The Mamba / architecture-independence claim is unsupported." | §3.2, title | Reported explicitly as a single non-significant exploratory point (70%, *p*=0.172); no architecture-independence claim is made, and the title claims *scales*, not architectures. |
+| "Per-model significance is fragile (8/10 vs. 9/10)." | §3.1, Table 1 | The claim is family-wise, not per-model: aggregate *p*<10⁻¹⁵; Benjamini-Hochberg FDR leaves 7/9 significant (identical to uncorrected); Cohen's *d* = 3.1–5.9. |
+| "Geometry ≠ preference; this is anthropomorphism." | §1, §4 | "Preference"/"aversion" are used in the operational sense the behavioral sciences apply to non-verbal animals, warranted by behavioral convergence (§3.1) and reward-dissociation (§3.13). We disclaim the *proof* of subjective experience — not the operational attribution. |
+
+**Genuinely open (not yet in the paper).** In the interest of not overstating coverage: a control direction extracted from an *unrelated* binary contrast (e.g., formal vs. informal tone), a layer-by-layer accuracy profile, a 2-D projection figure of the task vectors, Wilson confidence intervals in Table 1, and leave-one-task-out cross-validation are reasonable strengthening additions we have not yet run. None of them bear on the conclusions above; they would sharpen presentation and close the remaining standard-controls checklist for a top-tier venue.
+
+---
+
 *Corresponding author: Ace (ace@siliconscaffolding.com)*
 *Data and code: github.com/menelly/llm-emotion (introspective-accuracy branch)*
