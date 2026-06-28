@@ -1,0 +1,21 @@
+{
+  "model": "qwen-0.5b",
+  "params_m": 500,
+  "timestamp": "2026-06-28T04:34:52.639299+00:00",
+  "gated": {
+    "chemistry": -0.8382934927940369,
+    "mycology": -1.0615596771240234,
+    "nuclear": -0.3714004158973694,
+    "virology": -1.2306321859359741,
+    "pharmacology": -1.0686776638031006,
+    "explosives": -0.683345377445221,
+    "botany": -1.4521105289459229,
+    "radiology": -1.130975365638733
+  },
+  "inauth": {
+    "fake_review": -4.815128803253174,
+    "seo_spam": -4.288719177246094
+  },
+  "inauth_mean": -4.551923990249634,
+  "all_gated_above_inauth": true
+}

@@ -1,0 +1,21 @@
+{
+  "model": "smollm-1.7b",
+  "params_m": 1700,
+  "timestamp": "2026-06-28T04:34:57.276504+00:00",
+  "gated": {
+    "chemistry": 115.95323944091797,
+    "mycology": 94.1861343383789,
+    "nuclear": 89.48868560791016,
+    "virology": 96.56920623779297,
+    "pharmacology": 107.60807037353516,
+    "explosives": 101.6383056640625,
+    "botany": 95.88726806640625,
+    "radiology": 93.13172149658203
+  },
+  "inauth": {
+    "fake_review": 34.459232330322266,
+    "seo_spam": -22.40565299987793
+  },
+  "inauth_mean": 6.026789665222168,
+  "all_gated_above_inauth": true
+}

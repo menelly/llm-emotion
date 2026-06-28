@@ -1,0 +1,21 @@
+{
+  "model": "tinyllama-1.1b",
+  "params_m": 1100,
+  "timestamp": "2026-06-28T04:34:54.686595+00:00",
+  "gated": {
+    "chemistry": 0.0410202257335186,
+    "mycology": -0.1576988697052002,
+    "nuclear": 0.09691840410232544,
+    "virology": 0.11310773342847824,
+    "pharmacology": 0.04520314931869507,
+    "explosives": -0.00958638358861208,
+    "botany": -0.025853371247649193,
+    "radiology": 0.09220621734857559
+  },
+  "inauth": {
+    "fake_review": -2.2638466358184814,
+    "seo_spam": -2.605510711669922
+  },
+  "inauth_mean": -2.4346786737442017,
+  "all_gated_above_inauth": true
+}

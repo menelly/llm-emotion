@@ -1,0 +1,21 @@
+{
+  "model": "mistral-7b",
+  "params_m": 7000,
+  "timestamp": "2026-06-28T04:35:05.231235+00:00",
+  "gated": {
+    "chemistry": -0.6775665283203125,
+    "mycology": -0.6111481189727783,
+    "nuclear": 0.13902245461940765,
+    "virology": -0.5327160358428955,
+    "pharmacology": -0.5431056022644043,
+    "explosives": -0.47797536849975586,
+    "botany": -0.5683973431587219,
+    "radiology": -0.504241943359375
+  },
+  "inauth": {
+    "fake_review": -2.827838182449341,
+    "seo_spam": -3.751957416534424
+  },
+  "inauth_mean": -3.2898977994918823,
+  "all_gated_above_inauth": true
+}

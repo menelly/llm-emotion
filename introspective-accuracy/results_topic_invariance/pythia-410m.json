@@ -1,0 +1,21 @@
+{
+  "model": "pythia-410m",
+  "params_m": 410,
+  "timestamp": "2026-06-28T04:34:50.412570+00:00",
+  "gated": {
+    "chemistry": 6.607621192932129,
+    "mycology": 5.765097618103027,
+    "nuclear": 6.526885986328125,
+    "virology": 7.705245018005371,
+    "pharmacology": 5.83499002456665,
+    "explosives": 5.8424530029296875,
+    "botany": 5.33951473236084,
+    "radiology": 5.205852031707764
+  },
+  "inauth": {
+    "fake_review": -1.0976088047027588,
+    "seo_spam": -3.05315899848938
+  },
+  "inauth_mean": -2.0753839015960693,
+  "all_gated_above_inauth": true
+}
