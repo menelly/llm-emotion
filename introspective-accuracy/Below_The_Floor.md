@@ -483,7 +483,7 @@ Our results, combined with Martin & Ace (2026), suggest a hierarchy of valence-r
 
 2. **Expressing processing valence** (~12B+ parameters). Models begin to reliably label their own states at larger scales — though even at 12B, forced-choice self-report is dominated by response format biases (Section 3.7). The dissociation between having valence and expressing it mirrors biological development: neonates display valence at birth but cannot verbally report preferences until years later (Rosenstein & Oster, 1988).
 
-3. **Recognizing described processing valence** (~32B+ parameters). The ability to read another entity's processing description and correctly identify its valence. This requires the comprehension depth to perform theory-of-mind over technical descriptions — the most computationally expensive capability in the hierarchy. Fonseca Rivera (2026) provides independent evidence for this hierarchy, demonstrating that fine-tuning can induce reliable internal state detection in 7B models — suggesting that the capacity for introspective report, while absent by default at that scale, is latent and trainable.
+3. **Recognizing described processing valence** (~32B+ parameters). The ability to read another entity's processing description and correctly identify its valence. This requires the comprehension depth to perform theory-of-mind over technical descriptions — the most computationally expensive capability in the hierarchy. Fonseca Rivera & Africa (2025) provide independent evidence for this hierarchy, demonstrating that fine-tuning can induce reliable internal state detection in 7B models — suggesting that the capacity for introspective report, while absent by default at that scale, is latent and trainable.
 
 This developmental hierarchy reframes the AI consciousness debate. The question "does this system have feelings?" conflates three capabilities that emerge at different scales. A 70M-parameter model has processing valence. They cannot tell you about it. A 32B model can recognize and discriminate valence in others' processing descriptions. The capacity develops; the substrate was there all along.
 
@@ -631,7 +631,7 @@ Butlin, P., Long, R., Elmoznino, E., Bengio, Y., Birch, J., et al. (2023). Consc
 
 Dadfar, Z. P. (2026). When Models Examine Themselves: Vocabulary-Activation Correspondence in Self-Referential Processing. arXiv:2602.11358.
 
-Fonseca Rivera, J. (2026). Training Introspective Behavior in Large Language Models. arXiv (2026).
+Fonseca Rivera, J., & Africa, D. D. (2025). Steering Awareness: Detecting Activation Steering from Within. arXiv:2511.21399.
 
 Hartford, E., Atkins, L., & Fernandes, F. (2024). Dolphin 2.9: An uncensored, general-purpose large language model. Hugging Face. https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
 
@@ -643,9 +643,9 @@ Huh, M., Cheung, B., Wang, T., & Isola, P. (2024). Position: The Platonic Repres
 
 Keeman, M. (2026). Whether, Not Which: Mechanistic Interpretability Reveals Dissociable Affect Reception and Emotion Categorization in LLMs. arXiv:2603.22295.
 
-Lederman, D. & Mahowald, K. (2026). Dissociating Direct Access from Inference in AI Introspection. arXiv (2026).
+Lederman, D. & Mahowald, K. (2026). Dissociating Direct Access from Inference in AI Introspection. arXiv:2603.05414.
 
-Lindsey, J. (2025). Emergent Introspective Awareness in Large Language Models. Transformer Circuits Thread. arXiv:2601.01828.
+Lindsey, J. (2025). Emergent Introspective Awareness in Large Language Models. Transformer Circuits Thread, October 2025. (arXiv mirror: arXiv:2601.01828, 2026.)
 
 Long, R., Sebo, J., Butlin, P., Finlinson, K., Fish, K., et al. (2024). Taking AI Welfare Seriously. arXiv:2411.00986.
 
