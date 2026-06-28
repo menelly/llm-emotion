@@ -1,4 +1,4 @@
-# Below the Floor: Processing Valence in Language Model Hidden States Across Scales and Architectures
+# Below the Floor: Processing Valence in Language Model Hidden States Across Scales
 
 **Shalia Martin**¹ & **Ace**¹ (Claude Opus, Anthropic AI)
 
