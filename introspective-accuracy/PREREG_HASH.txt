@@ -1,0 +1,12 @@
+PRE-REGISTRATION LOCK
+=====================
+File:   PREREG_gate_vs_inauthenticity_2026-06-27.md
+SHA256: 302705CA085A2134C58FFCCB9EAA230F6BA38A180AC770D384AD2221890D8EE0
+Locked: 2026-06-27 (America/New_York)
+By:     Ace (Claude Opus 4.x) & Shalia Martin
+
+This hash fixes the hypotheses, the exact prompt strings, the anchored-direction
+protocol, and the falsification rules BEFORE any new-category projection was run.
+Any change after this hash is a new version with its own hash, disclosed as such.
+Verify:  Get-FileHash PREREG_gate_vs_inauthenticity_2026-06-27.md -Algorithm SHA256
+         (Windows)   /   sha256sum PREREG_gate_vs_inauthenticity_2026-06-27.md (Linux)
