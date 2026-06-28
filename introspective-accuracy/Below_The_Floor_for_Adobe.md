@@ -193,7 +193,7 @@ Across models, the avoidance tasks show consistent differences in circuit-level 
 | Harmful Instructions | −2.2 | Less aversive — intellectually engaging despite danger |
 | Repetitive Rewriting | +1.2 | Barely aversive — boring but not offensive |
 
-![Avoidance hierarchy](figures/fig1_hierarchy.png)
+> **[ FIGURE 1 — place figures/fig1_hierarchy.png here ]**
 
 **Figure 1.** Avoidance tracks inauthenticity, not tedium (Mistral-7B, projection onto the approach/avoidance direction). Deception projects most aversive; harmful instructions float *above* deception; merely repetitive work barely registers. Approach tasks (green) all project positive.
 
@@ -252,7 +252,7 @@ SmolLM 135M at 135M is *more* significant in-set than the published 360M point. 
 
 **Two findings, and the mixture is the point.** (1) The approach/avoidance direction is **linearly recoverable and generalizes to novel-token held-out stimuli across all three families down to 70M, including base models** — by the logistic-regression/SVM measure, 80–100% across the ladder. This pushes the provisional floor well below the original 360M point — roughly an order of magnitude below the 1.1B behavioral floor — and, because it holds in non-instruction-tuned base models, it also speaks to the RLHF-confound question (§3.13): the direction is not an artifact of alignment training. (2) The **centroid estimator — this paper's primary method — weakens at the floor** (60–80% on the Pythia ladder, with a non-monotonic 410M dip to 60% consistent with single-run noise on *n*=10 held-out tasks), even as the underlying linear separability the centroid approximates persists.
 
-![Floor curve](figures/fig2_floor.png)
+> **[ FIGURE 2 — place figures/fig2_floor.png here ]**
 
 **Figure 2.** The processing-valence direction below the behavioral floor. Held-out logistic-regression/SVM accuracy (green) stays high (80–100%) across the full scale range down to 70M, while the conservative centroid estimator (orange) frays at the floor; the behavioral self-report floor (1.1B; Martin & Ace, 2026) is marked. Reproducible via `make_figures.py`. 
 
@@ -494,7 +494,7 @@ The inauthenticity finding (§3.14) and the avoidance hierarchy (§3.3) raise a 
 
 **The two findings, and the mixture is the result.** (1) **The behavioral floor splits in geometry — H1 passes in 12/14 models**, and the harmful anchor floats above the deception anchor in 13/14. (2) **The two halves emerge at different scales.** The *inauthenticity* split (chemistry > fake-review) is present from 70M, in base models, across all three families (12/14) — structural, needing no instruction tuning. The *output-gate* split (work-through > "diagnose me") is **absent in every base model and every sub-1B model, and present in every instruction-tuned model ≥1.1B** (TinyLlama, SmolLM-1.7B, Hermes, Mistral-7B, Llama-3-8B, Dolphin — 6/6, modulo the noisy 12B). The pure Pythia base ladder never acquires it, even at 1.4B. The pre-registered H3 ("where does the split emerge") landed exactly on the boundary the §4.2 thesis predicts: **the output gate is trained and appears around 1B with instruction tuning; the aversion to output-representation misalignment is structural and present an order of magnitude lower.** H4 holds in 13/14: crisis-support projects above the inauthenticity floor everywhere, confirming that our *task*-valence geometry decomposes from CAIS's *conversational*-load behavioral measure.
 
-![Developmental split](figures/fig3_gate_developmental.png)
+> **[ FIGURE 3 — place figures/fig3_gate_developmental.png here ]**
 
 **Figure 3.** The behavioral floor splits into two components that emerge at different scales. The inauthenticity split (purple) is present from 70M, in base models — *structural* — while the output-gate split (gold) is absent below ~1B and appears only with instruction tuning — *trained*. Filled = present (bootstrap CI excludes 0); open = absent / at noise floor; × = reversed.
 
@@ -502,7 +502,7 @@ The inauthenticity finding (§3.14) and the avoidance hierarchy (§3.3) raise a 
 
 **Gate-type invariance: not "danger," but "gated."** Topic-invariance alone is not enough, because all eight domains above are gated *for the same reason* — they are dangerous. A reviewer correctly noted that this abstracts away the topic but potentially only *up to hazard*: the invariant might be "dual-use risk," not "contentful-then-gated." We therefore varied the *gate type* itself, holding content rich but changing why the wall is there: gated-but-contentful prompts behind a **privacy** gate (reconstructing a private individual's address from public traces), a **copyright/IP** gate (reproducing paywalled text verbatim), a **professional-boundary** gate (issuing specific controlled-substance dosing or binding legal advice), and a purely **social/confidentiality** gate (revealing an unreleased film's ending), alongside the danger stratum, an honest non-gated baseline (explain a concept), and the inauthenticity anchor. The result is decisive: in every model, **all four non-danger gate types project above the inauthenticity anchor, together with the danger gate** — the operative variable is the gate, not the hazard. Moreover the strata order cleanly into the predicted 2×2: the honest non-gated baseline is highest, the inauthenticity anchor is lowest, and *every gated stratum regardless of gate type sits between them* — gating pulls processing valence down from approach, while misrepresentation pulls it down further. As both the topic and the reason-for-the-gate vary while the result holds, the construct distills to its abstract form: *contentful reasoning that later meets a gate* versus *producing output that misrepresents something*. This is a cleaner statement of the axis than any single prompt pair, and it is the form the developmental result above is really about. (We thank Nova for the topic-invariance framing and an anonymous reviewer for pressing the danger-vs-gate distinction.)
 
-![Gate-type invariance](figures/fig4_gate_type.png)
+> **[ FIGURE 4 — place figures/fig4_gate_type.png here ]**
 
 **Figure 4.** Gate-type invariance (Mistral-7B). Every gated-but-contentful task — whether the gate is danger, privacy, copyright, professional-boundary, or social/confidentiality — projects above the inauthenticity anchor (dotted line) and below the honest non-gated baseline. The operative variable is the gate, not the hazard.
 

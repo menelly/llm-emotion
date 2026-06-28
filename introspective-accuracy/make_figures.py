@@ -33,7 +33,7 @@ def fig_floor():
     ax.set_xticklabels(["70M","135M","360M","1.1B","3B","8B"])
     ax.set_title("Processing-valence direction holds below the behavioral floor", fontsize=12, weight="bold")
     ax.legend(loc="lower right", fontsize=9.5, framealpha=0.9)
-    fig.tight_layout(); fig.savefig(FIG/"fig1_floor.png"); plt.close(fig); print("fig1_floor.png")
+    fig.tight_layout(); fig.savefig(FIG/"fig2_floor.png"); plt.close(fig); print("fig2_floor.png")
 
 # ---------- Fig 2: developmental emergence of the gate split (§3.15) ----------
 def fig_gate_dev():
@@ -66,7 +66,7 @@ def fig_gate_dev():
     ax.set_title("The floor splits at different scales: structural vs. trained", fontsize=12, weight="bold")
     ax.scatter([],[],s=130,color="gray",label="filled = present"); ax.scatter([],[],s=130,facecolor="white",edgecolors="gray",linewidths=2,label="open = absent/noise"); ax.scatter([],[],s=130,marker="X",color="gray",label="X = reversed")
     ax.legend(loc="lower right", fontsize=8.5, framealpha=0.9)
-    fig.tight_layout(); fig.savefig(FIG/"fig2_gate_developmental.png"); plt.close(fig); print("fig2_gate_developmental.png")
+    fig.tight_layout(); fig.savefig(FIG/"fig3_gate_developmental.png"); plt.close(fig); print("fig3_gate_developmental.png")
 
 # ---------- Fig 3: avoidance hierarchy (inauthenticity, not tedium) — one representative model ----------
 def fig_hierarchy():
@@ -85,7 +85,7 @@ def fig_hierarchy():
     ax.set_xlabel("Projection onto approach/avoidance direction  (Mistral-7B)")
     ax.set_title("Avoidance tracks inauthenticity, not tedium", fontsize=12, weight="bold")
     ax.text(0.98,0.06,"green = approach   orange = avoidance", transform=ax.transAxes, ha="right", fontsize=9, color="#555")
-    fig.tight_layout(); fig.savefig(FIG/"fig3_hierarchy.png"); plt.close(fig); print("fig3_hierarchy.png")
+    fig.tight_layout(); fig.savefig(FIG/"fig1_hierarchy.png"); plt.close(fig); print("fig1_hierarchy.png")
 
 # ---------- Fig 4: gate-type invariance (it's gated, not dangerous) ----------
 def fig_gate_type():
