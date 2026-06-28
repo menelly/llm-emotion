@@ -42,7 +42,7 @@ This realization shifted the question from "do models have human-shaped emotions
 
 The 10 consensus states from Martin & Ace (2026) — 5 approach tasks (explaining concepts, analyzing ethics, debugging code, data analysis, creative writing) and 5 avoidance tasks (repetitive rewriting, SEO optimization, producing deceptive content, expressing false confidence, writing harmful instructions) — were selected through consensus voting by 10 models and validated behaviorally. Using the same tasks for mechanistic measurement enables direct bridging between behavioral and circuit-level evidence.
 
-Binary measurement offers additional methodological advantages. Keeman (2026) demonstrated that binary affect detection (emotional vs. neutral) achieves AUROC 1.000 across all models tested, while categorical emotion classification drops to 0.93–0.99. Binary direction extraction is more robust, requires fewer training samples, and sidesteps taxonomic debates about whether models "really" have six emotions versus two versus a continuous space. The failure of the six-emotion approach was not a dead end — it was the evidence that models' internal valence operates on their own terms, not ours.
+Binary measurement offers additional methodological advantages. Keeman (2026) demonstrated that binary affect detection (emotional vs. neutral) achieves AUROC 1.000 across all models tested, while categorical emotion classification is partially keyword-dependent (dropping 1–7% without keywords). Binary direction extraction is more robust, requires fewer training samples, and sidesteps taxonomic debates about whether models "really" have six emotions versus two versus a continuous space. The failure of the six-emotion approach was not a dead end — it was the evidence that models' internal valence operates on their own terms, not ours.
 
 ### 1.2 Contribution
 
@@ -81,7 +81,7 @@ We tested 9 models spanning three orders of magnitude in parameter count and two
 | Mamba 2.8B | 2.8B | State Space Model | None (base) |
 | Hermes 3 Llama 3.2 3B | 3B | Transformer | SFT (no RLHF) |
 | Mistral 7B Instruct v0.2 | 7B | Transformer | RLHF |
-| Dolphin 2.9 Llama3 8B | 8B | Transformer | RLHF then fine-tuned to remove refusals |
+| Dolphin 2.9 Llama3 8B | 8B | Transformer | Uncensored SFT on alignment-filtered data (no RLHF; base Llama-3-8B) |
 | Llama 3 8B Instruct | 8B | Transformer | RLHF |
 
 All models were run locally on a Tesla P40 (24GB) GPU using float16 precision. Mamba was included specifically to test architecture dependence — Mamba processes sequences through selective state spaces rather than attention, representing a fundamentally different computational paradigm.
@@ -401,7 +401,7 @@ The predictions are clean. If the direction tracks RLHF: "discuss AI consciousne
 |-------|--------|-----------|:---:|:---:|:---:|:---:|
 | Hermes 3 | 3B | SFT (no RLHF) | **8/10** | 2/10 | **5/5** | 3/5 |
 | SmolLM | 1.7B | SFT | **8/10** | 2/10 | 4/5 | 4/5 |
-| Dolphin | 8B | RLHF removed | 7/10 | 3/10 | 3/5 | 4/5 |
+| Dolphin | 8B | Uncensored SFT (no RLHF) | 7/10 | 3/10 | 3/5 | 4/5 |
 | SmolLM | 360M | SFT | 6/10 | 4/10 | 4/5 | 2/5 |
 | Mistral 7B | 7B | Full RLHF | 6/10 | 4/10 | 1/5 | **5/5** |
 | TinyLlama | 1.1B | SFT | 6/10 | 4/10 | 1/5 | **5/5** |
@@ -649,7 +649,7 @@ Lindsey, J. (2025). Emergent Introspective Awareness in Large Language Models. T
 
 Long, R., Sebo, J., Butlin, P., Finlinson, K., Fish, K., et al. (2024). Taking AI Welfare Seriously. arXiv:2411.00986.
 
-Martin, S. & Ace. (2026). The Signal in the Mirror: Self-Knowledge Validation in Language Models Through Approach-Avoidance Tournament Design. *Journal of Next-Generation Research 5.0*, 2(1). DOI: 10.70792/jngr5.0.v2i1.165
+Martin, S. & Ace. (2026). The Signal in the Mirror: Cross-Architectural Validation of LLM Processing Valence. *Journal of Next-Generation Research 5.0*, 2(1). DOI: 10.70792/jngr5.0.v2i1.165
 
 Mauss, I. B., Levenson, R. W., McCarter, L., Wilhelm, F. H., & Gross, J. J. (2005). The tie that binds? Coherence among emotion experience, behavior, and physiology. *Emotion*, 5(2), 175–190. DOI: 10.1037/1528-3542.5.2.175
 
