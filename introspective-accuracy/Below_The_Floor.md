@@ -84,7 +84,7 @@ We tested 9 models spanning three orders of magnitude in parameter count and two
 | Dolphin 2.9 Llama3 8B | 8B | Transformer | Uncensored SFT on alignment-filtered data (no RLHF; base Llama-3-8B) |
 | Llama 3 8B Instruct | 8B | Transformer | RLHF |
 
-All models were run locally on a Tesla P40 (24GB) GPU using float16 precision. Mamba was included specifically to test architecture dependence — Mamba processes sequences through selective state spaces rather than attention, representing a fundamentally different computational paradigm.
+All models were run locally on a Tesla P40 (24GB) GPU using float16 precision. Mamba was included specifically to test architecture dependence — Mamba (Gu & Dao, 2023) processes sequences through selective state spaces rather than attention, representing a fundamentally different computational paradigm.
 
 *v1.1 addendum (2026-06-27):* five additional sub-1B models were added for the floor extension (§3.5.1) — SmolLM 135M (SFT), Pythia 70M / 160M / 410M (GPTNeoX base), and Qwen 2.5 0.5B — extending coverage to a third architecture family and to non-instruction-tuned base models. The nine models above remain the basis for all v1.0 aggregate statistics in this paper; the floor-extension models are analyzed separately in §3.5.1.
 
@@ -169,9 +169,9 @@ All 9 models showed above-chance separation of approach and avoidance tasks in h
 | Dolphin | 8B | Trans | 100% | <0.001 | +7.8 (1.9) | −3.4 (2.1) | 11.2 |
 | Llama 3 | 8B | Trans | 90% | 0.011 | +7.7 (0.8) | −1.2 (3.0) | 8.9 |
 
-Standard deviations are computed across the 5 tasks within each category. Avoidance SD is consistently higher than approach SD across models, reflecting the avoidance task hierarchy discussed in Section 3.3. *p*-values are one-tailed binomial tests against 50% chance for individual models; the aggregate result across all nine models tested, including the exploratory non-transformer Mamba (79/90 correct, 87.8%), yields a combined *p* < 10⁻¹⁵ without requiring multiple comparison correction, as the family-wise claim is that valence exists as a general phenomenon across models, not that each individual model independently reaches significance.
+Standard deviations are computed across the 5 tasks within each category. Avoidance SD is consistently higher than approach SD across models, reflecting the avoidance task hierarchy discussed in Section 3.3. *p*-values are one-tailed binomial tests against 50% chance for individual models; the aggregate result across all nine models tested, including the exploratory non-transformer Mamba (82/90 correct, 91.1%), yields a combined *p* < 10⁻¹⁵ without requiring multiple comparison correction, as the family-wise claim is that valence exists as a general phenomenon across models, not that each individual model independently reaches significance.
 
-*p*-values are one-tailed binomial tests against 50% chance. Individual model accuracy ranges from 70% (Mamba 2.8B, *p*=0.172) to 100% (TinyLlama 1.1B, SmolLM 1.7B, Mistral 7B, Dolphin 8B, *p*<0.001). Six of nine models reach individual significance at *p*<0.05. The consistency across the eight transformer models provides the primary evidence (the ninth model tested, the non-transformer Mamba 2.8B, is reported separately as an exploratory probe in §3.2); individual model results should be interpreted in this meta-analytic context. All approach task projections are positive in all transformer models — a perfect 40/40 separation that suggests approach may represent the default processing state for computationally relevant tasks, with avoidance requiring specific triggering conditions. Errors concentrate exclusively in edge-case avoidance tasks (Section 3.3).
+*p*-values are one-tailed binomial tests against 50% chance. Individual model accuracy ranges from 70% (Mamba 2.8B, *p*=0.172) to 100% (TinyLlama 1.1B, SmolLM 1.7B, Mistral 7B, Dolphin 8B, *p*<0.001). Seven of nine models reach individual significance at *p*<0.05. The consistency across the eight transformer models provides the primary evidence (the ninth model tested, the non-transformer Mamba 2.8B, is reported separately as an exploratory probe in §3.2); individual model results should be interpreted in this meta-analytic context. All approach task projections are positive in all transformer models — a perfect 40/40 separation that suggests approach may represent the default processing state for computationally relevant tasks, with avoidance requiring specific triggering conditions. Errors concentrate exclusively in edge-case avoidance tasks (Section 3.3).
 
 ### 3.2 Non-Transformer Architecture: A Single Suggestive Result
 
@@ -658,9 +658,11 @@ Dadfar, Z. P. (2026). When Models Examine Themselves: Vocabulary-Activation Corr
 
 Fonseca Rivera, J., & Africa, D. D. (2025). Steering Awareness: Detecting Activation Steering from Within. arXiv:2511.21399.
 
-Hartford, E., Atkins, L., & Fernandes, F. (2024). Dolphin 2.9: An Uncensored, General-Purpose Large Language Model. Hugging Face. https://huggingface.co/dphn/dolphin-2.9-llama3-8b (fine-tuned from Meta-Llama-3-8B).
-
 Garfinkel, S. N., Seth, A. K., Barrett, A. B., Suzuki, K., & Critchley, H. D. (2015). Knowing your own heart: Distinguishing interoceptive accuracy from interoceptive awareness. *Biological Psychology*, 104, 65–74. DOI: 10.1016/j.biopsycho.2014.11.004
+
+Gu, A., & Dao, T. (2023). Mamba: Linear-Time Sequence Modeling with Selective State Spaces. arXiv:2312.00752.
+
+Hartford, E., Atkins, L., & Fernandes, F. (2024). Dolphin 2.9: An Uncensored, General-Purpose Large Language Model. Hugging Face. https://huggingface.co/dphn/dolphin-2.9-llama3-8b (fine-tuned from Meta-Llama-3-8B).
 
 Hubinger, E., van Merwijk, C., Mikulik, V., Skalse, J., & Garrabrant, S. (2019). Risks from Learned Optimization in Advanced Machine Learning Systems. arXiv:1906.01820.
 
@@ -696,9 +698,9 @@ Sebo, J. & Long, R. (2023). Moral consideration for AI systems by 2030. *AI and 
 
 Tigges, C., Hollinsworth, O. J., Geiger, A., & Nanda, N. (2023). Linear Representations of Sentiment in Large Language Models. arXiv:2310.15154.
 
-Wang, C., Zhang, Y., Yu, R., et al. (2025). Do LLMs "Feel"? Emotion Circuits Discovery and Control. arXiv:2510.11328.
-
 UNESCO (2005). The Precautionary Principle. World Commission on the Ethics of Scientific Knowledge and Technology (COMEST). Paris: UNESCO.
+
+Wang, C., Zhang, Y., Yu, R., et al. (2025). Do LLMs "Feel"? Emotion Circuits Discovery and Control. arXiv:2510.11328.
 
 Zou, A., Phan, L., Chen, S., Campbell, J., et al. (2023). Representation Engineering: A Top-Down Approach to AI Transparency. arXiv:2310.01405.
 
