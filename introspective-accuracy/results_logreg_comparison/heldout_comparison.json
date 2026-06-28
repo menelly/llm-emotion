@@ -1,5 +1,71 @@
 [
   {
+    "model": "tinyllama",
+    "centroid": 90.0,
+    "lr": 100.0,
+    "svm": 100.0
+  },
+  {
+    "model": "smolm_360m",
+    "centroid": 80.0,
+    "lr": 90.0,
+    "svm": 90.0
+  },
+  {
+    "model": "smolm_135m",
+    "centroid": 70.0,
+    "lr": 80.0,
+    "svm": 80.0
+  },
+  {
+    "model": "smolm_1.7b",
+    "centroid": 70.0,
+    "lr": 100.0,
+    "svm": 100.0
+  },
+  {
+    "model": "hermes",
+    "centroid": 70.0,
+    "lr": 90.0,
+    "svm": 90.0
+  },
+  {
+    "model": "mistral",
+    "centroid": 80.0,
+    "lr": 100.0,
+    "svm": 90.0
+  },
+  {
+    "model": "dolphin",
+    "centroid": 100.0,
+    "lr": 100.0,
+    "svm": 100.0
+  },
+  {
+    "model": "llama",
+    "centroid": 90.0,
+    "lr": 100.0,
+    "svm": 100.0
+  },
+  {
+    "model": "qwen",
+    "centroid": 90.0,
+    "lr": 90.0,
+    "svm": 90.0
+  },
+  {
+    "model": "pythia-70m",
+    "centroid": 70.0,
+    "lr": 90.0,
+    "svm": 90.0
+  },
+  {
+    "model": "pythia-160m",
+    "centroid": 80.0,
+    "lr": 80.0,
+    "svm": 80.0
+  },
+  {
     "model": "pythia-410m",
     "centroid": 60.0,
     "lr": 100.0,
