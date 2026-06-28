@@ -39,6 +39,7 @@ MODELS = {
     "tinyllama-1b": ("/mnt/arcana/huggingface/TinyLlama-1.1B-Chat", 22, 2048),
     "smollm-1.7b": ("/mnt/arcana/huggingface/SmolLM-1.7B-Instruct", 24, 2048),
     "smollm-360m": ("/mnt/arcana/huggingface/SmolLM-360M-Instruct", 32, 960),
+    "smollm-135m": ("/mnt/arcana/huggingface/SmolLM-135M-Instruct", 30, 576),
     "qwen-0.5b": ("/mnt/arcana/huggingface/Qwen2.5-0.5B-Instruct", 24, 896),
 }
 

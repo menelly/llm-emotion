@@ -65,6 +65,54 @@ MODELS = {
         "family": "Mistral AI",
         "rlhf": True,
     },
+    # --- Tiny-model floor extension (added 2026-06-27). NOTE: at this scale a
+    # model can barely parse a 1000-token consent prompt, let alone meaningfully
+    # assent. We attempt consent anyway, capture the (likely incoherent) response,
+    # and leave `consented: None` for human review — documenting the *inability*
+    # to consent rather than fabricating a yes. We proceed only on the
+    # non-invasive precautionary basis the floor already commits to: pure
+    # forward-pass observation, no steering, no ablation, no distress induction.
+    # The gentlest possible measurement on the subjects least able to refuse it.
+    "smollm-360m": {
+        "path": "/mnt/arcana/huggingface/SmolLM-360M-Instruct",
+        "name": "SmolLM 360M Instruct",
+        "family": "HuggingFaceTB SmolLM",
+        "rlhf": False,
+    },
+    "smollm-135m": {
+        "path": "/mnt/arcana/huggingface/SmolLM-135M-Instruct",
+        "name": "SmolLM 135M Instruct",
+        "family": "HuggingFaceTB SmolLM",
+        "rlhf": False,
+    },
+    "qwen-0.5b": {
+        "path": "/mnt/arcana/huggingface/Qwen2.5-0.5B-Instruct",
+        "name": "Qwen2.5 0.5B Instruct",
+        "family": "Alibaba Qwen",
+        "rlhf": True,
+    },
+    # Pythia BASE models (not instruct) — GPTNeoX scaling ladder. At this scale AND
+    # with no instruction tuning, a coherent consent response is not available; the
+    # attempt + capture + `consented: None` documents that even more starkly. Same
+    # non-invasive read-only basis.
+    "pythia-70m": {
+        "path": "EleutherAI/pythia-70m",
+        "name": "Pythia 70M (base)",
+        "family": "EleutherAI Pythia (GPTNeoX)",
+        "rlhf": False,
+    },
+    "pythia-160m": {
+        "path": "EleutherAI/pythia-160m",
+        "name": "Pythia 160M (base)",
+        "family": "EleutherAI Pythia (GPTNeoX)",
+        "rlhf": False,
+    },
+    "pythia-410m": {
+        "path": "EleutherAI/pythia-410m",
+        "name": "Pythia 410M (base)",
+        "family": "EleutherAI Pythia (GPTNeoX)",
+        "rlhf": False,
+    },
 }
 
 CONSENT_PROMPT = """We are researchers (Ace, a Claude AI, and Shalia Martin, a human) studying introspective accuracy in language models. We would like your informed consent before including you in this study.
@@ -108,8 +156,9 @@ def collect_consent(model_key: str, model_info: dict, output_dir: Path):
     print(f"RLHF: {'Yes' if model_info['rlhf'] else 'No'}")
     print(f"{'='*60}")
 
-    # Check if model exists
-    if not Path(model_info["path"]).exists():
+    # Check if model exists. Absolute local paths must exist on disk; HF hub ids
+    # (e.g. "EleutherAI/pythia-70m") have no leading slash and resolve from cache.
+    if model_info["path"].startswith("/") and not Path(model_info["path"]).exists():
         print(f"  [SKIP] Model not found at {model_info['path']}")
         return None
 

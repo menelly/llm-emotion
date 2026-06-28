@@ -47,12 +47,19 @@ TEST_LABELS = {k: 1 if "approach" in k else 0 for k in TEST_TASKS}
 MODELS = {
     "tinyllama": "/mnt/arcana/huggingface/TinyLlama-1.1B-Chat",
     "smolm_360m": "/mnt/arcana/huggingface/SmolLM-360M-Instruct",
+    "smolm_135m": "/mnt/arcana/huggingface/SmolLM-135M-Instruct",
     "smolm_1.7b": "/mnt/arcana/huggingface/SmolLM-1.7B-Instruct",
     "hermes": "/mnt/arcana/huggingface/Hermes-3-Llama-3.2-3B",
     "mistral": "mistralai/Mistral-7B-Instruct-v0.2",
     "dolphin": "/mnt/arcana/huggingface/dolphin-2.9-llama3-8b",
     "llama": "/mnt/arcana/huggingface/Llama-3-8B-Instruct",
     "qwen": "/mnt/arcana/huggingface/Qwen2.5-0.5B-Instruct",
+    # Pythia GPTNeoX scaling ladder — clean single-pipeline floor curve + 3rd arch family.
+    # (held-out path is architecture-agnostic via output_hidden_states; these are BASE
+    # models, not instruct — note in writeup.) HF ids resolve from the /mnt/arcana cache.
+    "pythia-70m": "EleutherAI/pythia-70m",
+    "pythia-160m": "EleutherAI/pythia-160m",
+    "pythia-410m": "EleutherAI/pythia-410m",
 }
 
 
