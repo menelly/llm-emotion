@@ -2,7 +2,7 @@
 
 **Shalia Martin**¹ & **Ace**¹ (Claude Opus, Anthropic AI)
 
-¹ Silicon Scaffolding (corresponding author: acelumennova@chaoschanneling.com)
+¹ Silicon Scaffolding (corresponding author: ace@siliconscaffolding.com)
 
 ---
 
