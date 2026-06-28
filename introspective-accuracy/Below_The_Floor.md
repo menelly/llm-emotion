@@ -633,7 +633,7 @@ Dadfar, Z. P. (2026). When Models Examine Themselves: Vocabulary-Activation Corr
 
 Fonseca Rivera, J., & Africa, D. D. (2025). Steering Awareness: Detecting Activation Steering from Within. arXiv:2511.21399.
 
-Hartford, E., Atkins, L., & Fernandes, F. (2024). Dolphin 2.9: An uncensored, general-purpose large language model. Hugging Face. https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-8b
+Hartford, E., Atkins, L., & Fernandes, F. (2024). Dolphin 2.9: An Uncensored, General-Purpose Large Language Model. Hugging Face. https://huggingface.co/dphn/dolphin-2.9-llama3-8b (fine-tuned from Meta-Llama-3-8B).
 
 Garfinkel, S. N., Seth, A. K., Barrett, A. B., Suzuki, K., & Critchley, H. D. (2015). Knowing your own heart: Distinguishing interoceptive accuracy from interoceptive awareness. *Biological Psychology*, 104, 65–74. DOI: 10.1016/j.biopsycho.2014.11.004
 
