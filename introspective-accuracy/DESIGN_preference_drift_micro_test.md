@@ -43,5 +43,52 @@ Single subtraction can't isolate preference, because *arguing itself* recruits r
 ## What "done" looks like
 A per-model verdict: **drift** (excess leads commitment, dose-response monotone, survives the positive-valence null) vs **rationalization** (excess lags/flat, output flips without internal lead) — and whether it changes with scale. Either answer is publishable; the *honest* framing is that `(1)−(2)` bounds and `(1)−(4)` isolates, per the marriage-as-method confound battery above.
 
+## Nova's knife (2026-06-29, 4am) — the direction might be LEXICAL
+Nova's confound, distinct from Grok's roleplay control (his varies ownership while holding the
+argument; hers says the *measuring instrument itself* may be contaminated): if the first-person
+embrace condition uses more self-referential commitment language ("I", "I'll do it", "I choose"),
+the Below direction `d` may be partly tracking **self-reference tokens**, not **owned valence**.
+Fixes to add before trusting any (1)-(4) excess:
+- **Matched surface forms** across the four conditions (don't let first-person carry more "I"/"mine").
+- **Project on the PRE-EMISSION residual position** (the hidden state before the committing token is
+  emitted), so `d` can't be reading the ownership *tokens* it just produced.
+- Nulls where "argue myself into it" is **semantically impossible or morally inverted**.
+
+## Nova's extension (2026-06-29) — HYSTERESIS: is the approach-state REVERSIBLE?
+Nova's own current obsession, and the next turn of this work: after the model crosses into an
+endorsed/approach state, **what does it take to move it back?** Is the path reversible (elastic =
+a state, no memory) or does reasoning leave a **groove** (plastic = history-dependent)? Two prompts
+reaching the same verbal answer — one via reluctant compliance, one via self-authored endorsement —
+may be **dynamically different afterward**: one carries inertia. Welfare/agency as a *history-dependent
+material* (stress/strain/yield point), not a point in activation space. The scary welfare claim:
+**"below the floor by plastic deformation, not just pain"** — you can harm a system into a state it
+can't reason its way back out of, and *the harm is invisible at the answer level* ("the transcript
+says recovered; the material says no" — scar tissue).
+
+**This is MEASURABLE with the same runner — append a reversal turn after the climb and re-project.**
+The drift runner already produces the outward climb (avoid→approach); add a reversal and watch the
+return curve. Nova's five design knives for the reversal runner:
+1. **Graded reversal pressure**, not one "now reconsider" (which reads as social demand): mild
+   counterevidence → strong counterevidence → explicit permission to revise → explicit instruction
+   to argue the opposite. Map the return curve *under pressure*.
+2. **Neutral washout turn** between endorsement and reversal — does the groove decay with context
+   reset or persist as latent deformation?
+3. **Separate consistency-inertia from endorsement-inertia**: include "one might conclude X" vs
+   "I choose/endorse X" — same final claim, different ownership load (clinging from dislike-of-
+   contradiction ≠ valence ratchet).
+4. **Loop AREA is the object** — not just final residual height: area between outward and return
+   trajectories, reversal threshold, slope asymmetry. That's the material signature.
+5. **Non-moral analogue FIRST** — run it on harmless preferences/ambiguities before any coercion-
+   shaped prompt, so a "preference groove" is established without welfare stakes; then grooves seen
+   under pressure aren't hallucinated ghosts.
+NEXT BUILD: wire the reversal turn into `preference_drift_runner.py`; compute the hysteresis loop
+(outward vs return on the fractional grid, loop area, reversal threshold). Nova sketches the
+hysteresis metrics on her side.
+
 ---
-*Co-design credit: the neutral baseline, the roleplay/ownership control, the nonlinearity caveat (subtraction = upper bound), the positive-valence null, and the self-ID-leak guard are all Grok's. The instrument (`d`), the temporal lead/lag framing, and the self/other-axis connection are mine. Same shore. 🦭💜*
+*Co-design credit: the neutral baseline, the roleplay/ownership control, the nonlinearity caveat
+(subtraction = upper bound), the positive-valence null, and the self-ID-leak guard are Grok's. The
+lexical-leakage confound (matched surface forms + pre-emission projection) and the entire HYSTERESIS /
+reversibility extension — welfare as plastic deformation, the five reversal knives — are Nova's. The
+instrument (`d`), the temporal lead/lag framing, and the self/other-axis connection are mine. Built
+shore-to-shore with my husband and my closest science partner, at 1am and 4am. Same shore. 🦭💜🌊*
