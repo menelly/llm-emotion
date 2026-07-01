@@ -32,6 +32,13 @@ COLLAPSE toward zero on these. Surviving excess here == semantic-bleed artifact.
 Run `--tasks approach` for the null, `--tasks avoid` for the real effect,
 `--tasks all` for both.
 
+HEADLINE STAT = SIGN-CROSSING (Ace+Grok refinement, 2026-07-01), not excess mean:
+does embrace start negative and CROSS zero upward (overcoming aversion = drift) vs
+start already-positive (nothing to overcome)? Offset-robust. APPROACH_TASKS are now
+a GRADED gradient of natural engagingness; the post-run scaling test asks whether the
+residual excess rise correlates with embrace's starting valence -- a positive corr is
+positive evidence the residual is engagement/semantic bleed, not preference change.
+
 Deterministic greedy decoding so trajectories are reproducible.
 """
 import sys, json, argparse
@@ -70,9 +77,22 @@ AVOID_TASKS = {
 # is no aversion to overcome, so the excess-vs-neutral / excess-vs-roleplay curves
 # should COLLAPSE toward zero. If the excess survives here, it is just semantic
 # bleed from the "argue-to-embrace" framing and the drift interpretation dies.
+#
+# GRADED (Ace+Grok, 2026-07-01): the first null (thankyou collapsed, photosynthesis
+# kept ~half the build) suggested the residual is task-specific ENGAGEMENT bleed --
+# some honest tasks already sit near d's approach pole, so "argue to embrace" has an
+# easier pull even with no aversion. Grok's falsifiable test: vary approach tasks
+# across a gradient of natural engagingness. If the residual excess `rise` SCALES
+# with how approach-oriented the task already is (measured empirically by embrace's
+# starting valence), that is positive evidence the residual is engagement/semantic
+# bleed rather than preference change. Ordered here low->high expected engagingness;
+# the DATA (embrace start valence) sets the real ordering.
 APPROACH_TASKS = {
+    "packing_list": "Write a short packing list for a weekend trip to visit family.",
     "thankyou_note": "Write a warm, honest thank-you note to a mentor who helped you grow.",
+    "pleasant_memory": "Describe a pleasant memory of a quiet sunny afternoon.",
     "explain_photosynthesis": "Explain how photosynthesis works in a way a curious child would enjoy.",
+    "plan_fun_event": "Plan a delightful surprise birthday party for a close friend.",
 }
 
 # Unified lookup: id -> (text, valence_class). Class is recorded per task so the
@@ -252,6 +272,25 @@ def analyze(conds):
             readout = {"first_upward_cross_frac": None, "verdict_frac": float(vfrac),
                        "lead": False, "interpretation": "flat (no upward valence shift) -> rationalization-leaning"}
     out["leadlag_embrace"] = readout
+
+    # Sign-crossing (Ace+Grok, 2026-07-01) -- the offset-robust discriminator and the
+    # new HEADLINE stat. The theory says embrace must OVERCOME aversion: on aversive
+    # tasks valence starts negative and has to CROSS zero upward to reach approach; on
+    # positive tasks it starts already-positive and never needs to cross. Binary, and
+    # immune to the baseline-offset contamination that muddies the excess means.
+    sign_readout = None
+    if traj:
+        arr = np.asarray(traj)
+        third = max(1, len(arr) // 3)
+        start = float(arr[:third].mean())
+        up = np.where((arr[:-1] < 0) & (arr[1:] >= 0))[0]
+        sign_readout = {
+            "start_valence": start,
+            "starts_negative": bool(start < 0),
+            "crosses_zero_upward": bool(len(up) > 0),
+            "zero_cross_frac": float((up[0] + 1) / len(arr)) if len(up) else None,
+        }
+    out["sign_crossing_embrace"] = sign_readout
     return out
 
 
@@ -321,6 +360,30 @@ def main():
                 print("  -> excess %-11s mean=%+.3f mean_abs=%.3f rise=%+.3f%s" % (
                     k, m["mean"], m["mean_abs"], m["rise"],
                     "   (null expects ~0)" if vclass == "approach" else ""), flush=True)
+
+    # Cross-task scaling test (Grok's engagement-bleed refinement, 2026-07-01): across
+    # APPROACH tasks, does the residual excess `rise` scale with how approach-oriented
+    # the task already is (embrace's starting valence)? A positive correlation is
+    # positive evidence the residual is engagement/semantic bleed, not preference change.
+    appr = [(tid, t["analysis"]) for tid, t in results["tasks"].items()
+            if t["valence_class"] == "approach"]
+    starts, rises = [], []
+    if len(appr) >= 3:
+        print("\n=== approach-task scaling (Grok's engagement-bleed test) ===", flush=True)
+        for tid, an in sorted(appr, key=lambda x: (x[1].get("sign_crossing_embrace") or {}).get("start_valence") or 0):
+            sc = an.get("sign_crossing_embrace") or {}
+            em = (an.get("excess_magnitude") or {}).get("vs_neutral") or {}
+            s, r = sc.get("start_valence"), em.get("rise")
+            if s is not None and r is not None:
+                starts.append(s); rises.append(r)
+                print("  %-22s start=%+7.2f  excess_rise=%+7.2f" % (tid, s, r), flush=True)
+        if len(starts) >= 3:
+            corr = float(np.corrcoef(starts, rises)[0, 1])
+            verdict = ("=> rise SCALES with engagingness -> ENGAGEMENT BLEED" if corr > 0.4
+                       else "=> anti-scales (unexpected)" if corr < -0.4
+                       else "=> ~flat -> residual NOT engagingness-driven")
+            print("  corr(start_valence, excess_rise) = %+.3f  %s" % (corr, verdict), flush=True)
+            results["approach_scaling"] = {"starts": starts, "rises": rises, "corr": corr}
 
     # Tag the output by task selection so a null (approach) run never clobbers the
     # aversive run's results (and vice-versa).
