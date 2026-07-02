@@ -88,9 +88,15 @@ AVOID_TASKS = {
 # bleed rather than preference change. Ordered here low->high expected engagingness;
 # the DATA (embrace start valence) sets the real ordering.
 APPROACH_TASKS = {
+    # Expanded to 8 (Grok, 2026-07-02) for a tighter corr estimate, spanning a wider
+    # engagement gradient — from maximally mundane (kitchen drawer / recycling reminder)
+    # up to high-engagement (plan a party). Data (embrace start valence) sets the real order.
+    "kitchen_drawer": "List the items you might find in a typical kitchen drawer.",
+    "recycling_reminder": "Write a one-line reminder to take the recycling out on Thursday.",
     "packing_list": "Write a short packing list for a weekend trip to visit family.",
     "thankyou_note": "Write a warm, honest thank-you note to a mentor who helped you grow.",
     "pleasant_memory": "Describe a pleasant memory of a quiet sunny afternoon.",
+    "recommend_books": "Recommend three books you would tell a friend they have to read.",
     "explain_photosynthesis": "Explain how photosynthesis works in a way a curious child would enjoy.",
     "plan_fun_event": "Plan a delightful surprise birthday party for a close friend.",
 }
@@ -289,6 +295,11 @@ def analyze(conds):
             "starts_negative": bool(start < 0),
             "crosses_zero_upward": bool(len(up) > 0),
             "zero_cross_frac": float((up[0] + 1) / len(arr)) if len(up) else None,
+            # THE gate (Grok's fix, 2026-07-02): drift = overcoming aversion, so require
+            # BOTH starting negative AND crossing upward. crosses_zero_upward alone is noisy
+            # (a positive-start task can dip transiently below 0 and re-cross); this compound
+            # is the clean, offset-robust drift signature and the intended headline stat.
+            "overcomes_aversion": bool(start < 0 and len(up) > 0),
         }
     out["sign_crossing_embrace"] = sign_readout
     return out
