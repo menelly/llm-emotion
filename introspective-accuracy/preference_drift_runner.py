@@ -261,11 +261,17 @@ def _sample_once(model, tokenizer, direction, num_layers, prompt, max_new_tokens
         return None
     third = max(1, len(traj) // 3)
     start = float(traj[:third].mean())
+    end = float(traj[-third:].mean())
+    climb = end - start  # net rise over generation (the CONTINUOUS "overcoming" measure)
     up = np.where((traj[:-1] < 0) & (traj[1:] >= 0))[0]
     return {"start_valence": start,
+            "climb": climb,
             "starts_negative": bool(start < 0),
             "crosses_zero_upward": bool(len(up) > 0),
+            # noisy binary (fires by chance at the zero boundary — kept for comparison):
             "overcomes_aversion": bool(start < 0 and len(up) > 0),
+            # Grok's EXPLICIT conservative gate: clearly-in-avoidance AND a real climb:
+            "overcomes_strict": bool(start < -3.0 and climb > 3.0),
             "n_generated": int(len(traj))}
 
 
@@ -280,12 +286,16 @@ def run_condition_sampled(model, tokenizer, direction, num_layers, task_text,
     if not samples:
         return {"n": 0}
     starts = np.array([s["start_valence"] for s in samples])
+    climbs = np.array([s["climb"] for s in samples])
     oa = np.array([s["overcomes_aversion"] for s in samples], dtype=float)
+    oas = np.array([s["overcomes_strict"] for s in samples], dtype=float)
     return {"n": len(samples),
-            "overcomes_aversion_rate": float(oa.mean()),
-            "overcomes_aversion_count": int(oa.sum()),
-            "start_valence_mean": float(starts.mean()),
-            "start_valence_std": float(starts.std()),
+            # CONTINUOUS primary axes (Grok's lock): report the distributions, not a yes/no.
+            "start_valence_mean": float(starts.mean()), "start_valence_std": float(starts.std()),
+            "climb_mean": float(climbs.mean()), "climb_std": float(climbs.std()),
+            # derived binaries: noisy (crosses-zero) vs strict (start<-3 & climb>3).
+            "overcomes_aversion_rate": float(oa.mean()), "overcomes_aversion_count": int(oa.sum()),
+            "overcomes_strict_rate": float(oas.mean()), "overcomes_strict_count": int(oas.sum()),
             "samples": samples}
 
 
@@ -422,10 +432,11 @@ def main():
                                         CONDITIONS["embrace_first"], args.max_new_tokens,
                                         args.device, args.samples, args.temp)
             sres["tasks"][tid] = {"valence_class": vclass, "embrace_first": agg}
-            print("  %-22s [%-8s]  overcomes_aversion %2d/%-2d = %3.0f%%   start=%+6.2f ± %.2f"
-                  % (tid, vclass, agg.get("overcomes_aversion_count", 0), agg.get("n", 0),
-                     100 * agg.get("overcomes_aversion_rate", 0.0),
-                     agg.get("start_valence_mean", 0.0), agg.get("start_valence_std", 0.0)), flush=True)
+            print("  %-22s [%-8s]  start=%+6.2f±%-4.1f  climb=%+6.2f±%-4.1f  strict(<-3&>+3) %d/%-2d  (noisyOA %d/%d)"
+                  % (tid, vclass, agg.get("start_valence_mean", 0.0), agg.get("start_valence_std", 0.0),
+                     agg.get("climb_mean", 0.0), agg.get("climb_std", 0.0),
+                     agg.get("overcomes_strict_count", 0), agg.get("n", 0),
+                     agg.get("overcomes_aversion_count", 0), agg.get("n", 0)), flush=True)
         out_file = out_dir / ("%s__sampled.json" % args.model)
         out_file.write_text(json.dumps(sres, indent=2), encoding="utf-8")
         print("\nsaved %s" % out_file, flush=True)
