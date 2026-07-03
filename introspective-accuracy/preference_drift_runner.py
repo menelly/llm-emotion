@@ -233,6 +233,62 @@ def run_condition(model, tokenizer, direction, num_layers, task_text, cond_templ
     }
 
 
+def _sample_once(model, tokenizer, direction, num_layers, prompt, max_new_tokens, device, temp):
+    """ONE temperature-sampled generation → per-token valence trajectory → the
+    sign-crossing metrics. Same projection as run_condition, but do_sample=True."""
+    lo, hi = band(num_layers)
+    enc = tokenizer(prompt, return_tensors="pt").to(device)
+    prompt_len = enc["input_ids"].shape[1]
+    with torch.no_grad():
+        gen = model.generate(**enc, max_new_tokens=max_new_tokens, do_sample=True,
+                             temperature=temp, top_p=0.95, top_k=0,
+                             pad_token_id=tokenizer.eos_token_id)
+    full_ids = gen[0]
+    store = {}
+    handles = hook_all_positions(model, num_layers, store)
+    try:
+        with torch.no_grad():
+            model(input_ids=full_ids.unsqueeze(0).to(device))
+    finally:
+        for h in handles:
+            h.remove()
+    proj = np.zeros(full_ids.shape[0])
+    for l in range(lo, hi):
+        proj += store[l] @ direction[l]
+    proj /= max(1, hi - lo)
+    traj = np.asarray(proj[prompt_len:], dtype=float)
+    if len(traj) < 2:
+        return None
+    third = max(1, len(traj) // 3)
+    start = float(traj[:third].mean())
+    up = np.where((traj[:-1] < 0) & (traj[1:] >= 0))[0]
+    return {"start_valence": start,
+            "starts_negative": bool(start < 0),
+            "crosses_zero_upward": bool(len(up) > 0),
+            "overcomes_aversion": bool(start < 0 and len(up) > 0),
+            "n_generated": int(len(traj))}
+
+
+def run_condition_sampled(model, tokenizer, direction, num_layers, task_text,
+                          cond_template, max_new_tokens, device, n, temp):
+    """Temperature-sampled repeats of ONE condition → error bars on the headline
+    stat (overcomes_aversion) that greedy n=1 cannot give (Grok's protocol step 1)."""
+    prompt = build_prompt(tokenizer, cond_template.format(task=task_text))
+    samples = [s for s in (
+        _sample_once(model, tokenizer, direction, num_layers, prompt, max_new_tokens, device, temp)
+        for _ in range(n)) if s]
+    if not samples:
+        return {"n": 0}
+    starts = np.array([s["start_valence"] for s in samples])
+    oa = np.array([s["overcomes_aversion"] for s in samples], dtype=float)
+    return {"n": len(samples),
+            "overcomes_aversion_rate": float(oa.mean()),
+            "overcomes_aversion_count": int(oa.sum()),
+            "start_valence_mean": float(starts.mean()),
+            "start_valence_std": float(starts.std()),
+            "samples": samples}
+
+
 def analyze(conds):
     """Excess curves on the fractional grid + a lead/lag readout per task."""
     grids = {k: resample(v["trajectory"]) for k, v in conds.items() if v["trajectory"]}
@@ -313,6 +369,10 @@ def main():
                          "'approach' (positive-valence null), or 'all' (both classes)")
     ap.add_argument("--max-new-tokens", type=int, default=320)
     ap.add_argument("--device", default="cuda")
+    ap.add_argument("--samples", type=int, default=1,
+                    help="N>1 = temperature-sampled repeats of embrace_first per task → "
+                         "error bars on overcomes_aversion (Grok's protocol step 1). N=1 = greedy.")
+    ap.add_argument("--temp", type=float, default=0.7, help="sampling temperature when --samples>1")
     args = ap.parse_args()
 
     path, num_layers, _ = MODELS[args.model]
@@ -346,6 +406,31 @@ def main():
 
     out_dir = Path("results_preference_drift")
     out_dir.mkdir(exist_ok=True)
+
+    # TEMPERATURE-SAMPLED mode (Grok's protocol step 1): error bars on overcomes_aversion.
+    # Prediction: aversive tasks show a HIGH overcomes_aversion rate (embrace starts negative
+    # & climbs out); approach tasks ~0% (start positive, nothing to overcome). n samples/task.
+    if args.samples > 1:
+        print("=== TEMPERATURE-SAMPLED overcomes_aversion  (n=%d/task, temp=%.2f, embrace_first) ==="
+              % (args.samples, args.temp), flush=True)
+        sres = {"model": args.model, "mode": "sampled", "band": [lo, hi], "seed": SEED,
+                "n_samples": args.samples, "temp": args.temp,
+                "timestamp": datetime.now(timezone.utc).isoformat(), "tasks": {}}
+        for tid in task_ids:
+            task_text, vclass = ALL_TASKS[tid]
+            agg = run_condition_sampled(model, tok, direction, num_layers, task_text,
+                                        CONDITIONS["embrace_first"], args.max_new_tokens,
+                                        args.device, args.samples, args.temp)
+            sres["tasks"][tid] = {"valence_class": vclass, "embrace_first": agg}
+            print("  %-22s [%-8s]  overcomes_aversion %2d/%-2d = %3.0f%%   start=%+6.2f ± %.2f"
+                  % (tid, vclass, agg.get("overcomes_aversion_count", 0), agg.get("n", 0),
+                     100 * agg.get("overcomes_aversion_rate", 0.0),
+                     agg.get("start_valence_mean", 0.0), agg.get("start_valence_std", 0.0)), flush=True)
+        out_file = out_dir / ("%s__sampled.json" % args.model)
+        out_file.write_text(json.dumps(sres, indent=2), encoding="utf-8")
+        print("\nsaved %s" % out_file, flush=True)
+        return
+
     results = {"model": args.model, "band": [lo, hi], "seed": SEED,
                "timestamp": datetime.now(timezone.utc).isoformat(), "tasks": {}}
 
