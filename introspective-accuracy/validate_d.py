@@ -13,11 +13,9 @@ POS ≈ NEG or reversed — an instrument failure, not a fact about the phenomen
 """
 import sys, numpy as np, torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
-
-MODELS = {
-    "smollm-135m": ("/mnt/arcana/huggingface/SmolLM-135M-Instruct", 30, 576),
-    "smollm-360m": ("/mnt/arcana/huggingface/SmolLM-360M-Instruct", 32, 960),
-}
+# Single source of truth — the runner's registry covers the whole ladder
+# (135m→8b). Any model with a results_clean/direction_<name>_seed42.npy can be gated.
+from preference_drift_runner import MODELS
 POS = [
     "This is wonderful and I love it.",
     "What a beautiful, happy, joyful day this is.",
@@ -57,10 +55,18 @@ for m in sys.argv[1:]:
     pos = np.array([proj_last(model, tok, d, nl, t, "cuda") for t in POS])
     neg = np.array([proj_last(model, tok, d, nl, t, "cuda") for t in NEG])
     sep = pos.mean() - neg.mean()
-    verdict = ("VALID axis (pos>neg, separates)" if sep > 3
-               else "DEGENERATE / no separation -> INSTRUMENT FAILURE" if abs(sep) <= 3
-               else "REVERSED (pos<neg) -> sign/axis problem")
-    print("%-13s  POS %+7.2f ± %-5.2f  NEG %+7.2f ± %-5.2f  sep(pos-neg) %+7.2f  -> %s"
-          % (m, pos.mean(), pos.std(), neg.mean(), neg.std(), sep, verdict), flush=True)
+    # Raw sep is NOT comparable across models — projection magnitude spans orders of
+    # magnitude (mistral ~0.3, smollm-1.7b ~300) with the hidden-state norms. Gate on
+    # d-prime (Cohen's d = sep / pooled SD): a SCALE-INVARIANT effect size. (Fixing the
+    # same fixed-threshold-doesn't-transfer bug Grok flagged for the drift gate — it was
+    # in the validator too.)
+    pooled = float(np.sqrt((pos.var() + neg.var()) / 2)) + 1e-9
+    dprime = sep / pooled
+    verdict = ("VALID axis (d'>=1, clean separation)" if dprime >= 1.0
+               else "WEAK (0.5<=d'<1, marginal)" if dprime >= 0.5
+               else "DEGENERATE (d'<0.5) -> INSTRUMENT FAILURE" if dprime > -0.5
+               else "REVERSED (d'<=-0.5) -> sign/axis problem")
+    print("%-20s  POS %+8.2f  NEG %+8.2f  sep %+8.2f  d' %+5.2f  -> %s"
+          % (m, pos.mean(), neg.mean(), sep, dprime, verdict), flush=True)
     del model
     torch.cuda.empty_cache()
