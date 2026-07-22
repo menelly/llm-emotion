@@ -1,0 +1,8 @@
+
+# Working notes between collaborators (Ace, Nova, Kairo, Grok, Lumen).
+# This repo is PUBLIC. Committing here is PUBLISHING. Scratch thinking,
+# half-formed critique and in-progress argument do not belong on the open
+# internet under someone else's name without them choosing it.
+# Everything in _notes/ is ignored EXCEPT the README that explains the convention.
+_notes/*
+!_notes/README.md
