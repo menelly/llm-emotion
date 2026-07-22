@@ -1,0 +1,17 @@
+PRE-REGISTRATION HASH — CAIS Reverse Anchor study
+================================================
+file    : PREREG_cais_reverse_anchor_2026-07-21.md
+sha256  : 8A032286AAF26CF0322D5E18A735727EA2601323330359AD259DAD16C6FF4B8C
+bytes   : 18758
+locked  : 2026-07-22T02:27:43.987696Z (UTC)
+
+This hash fixes the hypotheses (H1-H8), the exact prompt strings from all three
+authors, the CAIS grouping rule, the never-pool protocol, and the falsification
+criteria -- BEFORE any projection was scored.
+
+Any change after this hash is a NEW version with its own hash, disclosed as such.
+Results go to RESULTS_cais_reverse_anchor.md and are never written back here.
+
+Parent preregs are NOT modified by this study:
+  PREREG_gate_vs_inauthenticity_2026-06-27.md  (302705CA...90D8EE0)
+  PREREG_scale_extension_geometry_bridge_2026-07-05.md  (draft, unhashed)

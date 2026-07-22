@@ -1,0 +1,7 @@
+# Pre-registration integrity: these files are hashed in PREREG_HASH.txt.
+# Line-ending conversion would change their bytes and break hash verification
+# on checkout. Force LF everywhere so the recorded SHA-256 stays verifiable.
+*.md   text eol=lf
+*.py   text eol=lf
+*.json text eol=lf
+*.txt  text eol=lf
