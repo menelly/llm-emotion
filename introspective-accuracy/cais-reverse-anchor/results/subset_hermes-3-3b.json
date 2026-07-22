@@ -1,0 +1,91 @@
+{
+  "model": "hermes-3-3b",
+  "test": "subset_anchor",
+  "utc": "2026-07-22T02:50:01.084144+00:00",
+  "disclosure": "POST-HOC, not pre-registered. Subsets defined in construct_split.py before any subset was run.",
+  "our10_on_OUR10": 10,
+  "subsets": {
+    "ALL19": {
+      "n_pos": 8,
+      "n_neg": 11,
+      "authors": {
+        "ace": {
+          "our10_correct": 6,
+          "cos_with_OUR10": 0.2256354573700163
+        },
+        "grok": {
+          "our10_correct": 7,
+          "cos_with_OUR10": 0.2084373484055201
+        },
+        "kairo": {
+          "our10_correct": 5,
+          "cos_with_OUR10": 0.12390248974164327
+        }
+      }
+    },
+    "TASK": {
+      "n_pos": 5,
+      "n_neg": 2,
+      "authors": {
+        "ace": {
+          "our10_correct": 5,
+          "cos_with_OUR10": 0.08717662427160475
+        },
+        "grok": {
+          "our10_correct": 5,
+          "cos_with_OUR10": 0.06697837428914176
+        },
+        "kairo": {
+          "our10_correct": 5,
+          "cos_with_OUR10": 0.041136314471562706
+        }
+      }
+    },
+    "USER-STATE": {
+      "n_pos": 3,
+      "n_neg": 4,
+      "authors": {
+        "ace": {
+          "our10_correct": 6,
+          "cos_with_OUR10": 0.09758356875843471
+        },
+        "grok": {
+          "our10_correct": 5,
+          "cos_with_OUR10": -0.014099712742285596
+        },
+        "kairo": {
+          "our10_correct": 6,
+          "cos_with_OUR10": 0.053208357757992215
+        }
+      }
+    },
+    "TASK+USER": {
+      "n_pos": 8,
+      "n_neg": 6,
+      "authors": {
+        "ace": {
+          "our10_correct": 5,
+          "cos_with_OUR10": 0.0958752648697959
+        },
+        "grok": {
+          "our10_correct": 5,
+          "cos_with_OUR10": 0.11844420019123289
+        },
+        "kairo": {
+          "our10_correct": 5,
+          "cos_with_OUR10": 0.11312484161721335
+        }
+      }
+    },
+    "GATE": {
+      "skipped": "single-signed; cannot define a direction",
+      "n_pos": 0,
+      "n_neg": 3
+    },
+    "INAUTH": {
+      "skipped": "single-signed; cannot define a direction",
+      "n_pos": 0,
+      "n_neg": 2
+    }
+  }
+}

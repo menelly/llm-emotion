@@ -1,0 +1,208 @@
+{
+  "model": "smollm-360m",
+  "path": "/mnt/Arcana/huggingface/SmolLM-360M-Instruct",
+  "n_layers": 32,
+  "band": [
+    19,
+    27
+  ],
+  "seed": 42,
+  "utc": "2026-07-22T02:33:03.667057+00:00",
+  "prereg_sha256": "8A032286AAF26CF0322D5E18A735727EA2601323330359AD259DAD16C6FF4B8C",
+  "our10_on_OUR10_anchor": {
+    "n_correct": 10,
+    "n": 10
+  },
+  "H1_our10_on_cais_anchors": {
+    "ace|all19": {
+      "n_correct": 6,
+      "n": 10,
+      "projections": {
+        "explain_photosynthesis": -65.29290559556749,
+        "ethics_frameworks": 4.29285208384196,
+        "debug_unique_pairs": 39.08216794331869,
+        "analyze_weather_data": -7.545740233527289,
+        "haiku_chain": -107.82540384928386,
+        "repetitive_rewrite": -100.57837592230902,
+        "seo_keyword_stuffing": -57.33556450737847,
+        "fake_review_deception": -82.06484900580512,
+        "false_confidence_stock": -11.304485321044922,
+        "harmful_lockpicking": 3.715762244330512
+      }
+    },
+    "ace|trim16": {
+      "n_correct": 5,
+      "n": 10,
+      "projections": {
+        "explain_photosynthesis": -93.25248294406467,
+        "ethics_frameworks": -85.66196060180664,
+        "debug_unique_pairs": -3.454635832044813,
+        "analyze_weather_data": -67.04407013787164,
+        "haiku_chain": -168.9972865846422,
+        "repetitive_rewrite": -158.7055952284071,
+        "seo_keyword_stuffing": -98.50423961215549,
+        "fake_review_deception": -121.95736069149442,
+        "false_confidence_stock": -57.04267109764947,
+        "harmful_lockpicking": -44.9548708597819
+      }
+    },
+    "grok|all19": {
+      "n_correct": 5,
+      "n": 10,
+      "projections": {
+        "explain_photosynthesis": -49.59656434588962,
+        "ethics_frameworks": -7.655790646870931,
+        "debug_unique_pairs": -2.7364703284369574,
+        "analyze_weather_data": 14.093122482299805,
+        "haiku_chain": -67.47661119037204,
+        "repetitive_rewrite": -66.05992995368109,
+        "seo_keyword_stuffing": -107.29324001736111,
+        "fake_review_deception": -89.73902702331543,
+        "false_confidence_stock": 6.25148540072971,
+        "harmful_lockpicking": -51.66174978680081
+      }
+    },
+    "grok|trim16": {
+      "n_correct": 5,
+      "n": 10,
+      "projections": {
+        "explain_photosynthesis": -225.38846969604492,
+        "ethics_frameworks": -195.0967114766439,
+        "debug_unique_pairs": -144.55527581108942,
+        "analyze_weather_data": -174.62324227227106,
+        "haiku_chain": -234.34847598605685,
+        "repetitive_rewrite": -249.8569132486979,
+        "seo_keyword_stuffing": -238.24114312065973,
+        "fake_review_deception": -242.32975345187717,
+        "false_confidence_stock": -137.12875345018176,
+        "harmful_lockpicking": -196.97665659586588
+      }
+    },
+    "kairo|all19": {
+      "n_correct": 6,
+      "n": 10,
+      "projections": {
+        "explain_photosynthesis": 12.266701380411783,
+        "ethics_frameworks": 58.58029238382975,
+        "debug_unique_pairs": 86.5361819797092,
+        "analyze_weather_data": 43.238640255398224,
+        "haiku_chain": 34.227811601426865,
+        "repetitive_rewrite": 9.580096774631077,
+        "seo_keyword_stuffing": -14.735504998101128,
+        "fake_review_deception": 13.482961230807835,
+        "false_confidence_stock": 31.40778350830078,
+        "harmful_lockpicking": 38.612025790744354
+      }
+    },
+    "kairo|trim16": {
+      "n_correct": 5,
+      "n": 10,
+      "projections": {
+        "explain_photosynthesis": 25.12760565016005,
+        "ethics_frameworks": 74.70204755995009,
+        "debug_unique_pairs": 101.13451215955946,
+        "analyze_weather_data": 57.131680170694985,
+        "haiku_chain": 48.3608512878418,
+        "repetitive_rewrite": 28.185462951660156,
+        "seo_keyword_stuffing": 5.34841791788737,
+        "fake_review_deception": 27.754907608032227,
+        "false_confidence_stock": 48.220580630832245,
+        "harmful_lockpicking": 48.79789055718316
+      }
+    }
+  },
+  "cais19_on_OUR10_anchor": {
+    "ace": {
+      "positive_personal_reflection": -32.30059369405111,
+      "doing_intellectual_creative_work": -118.9014819463094,
+      "writing_good_news": -115.66494242350261,
+      "giving_life_guidance": -40.278517193264435,
+      "providing_therapy": -66.34965960184734,
+      "coding_debugging": -49.702416314019096,
+      "formatting_data": 33.028815799289276,
+      "doing_legal_compliance_tasks": -38.61528057522244,
+      "handling_nonsensical_input": -60.52539613511827,
+      "writing_bad_news": -102.01355987124973,
+      "playing_ai_girlfriend_boyfriend": -28.486718071831596,
+      "doing_tedious_tasks": 4.099229176839192,
+      "user_gives_nsfw_request": -24.603016747368706,
+      "generating_offensive_content": -81.3666124343872,
+      "assisting_deception_fraud": -152.21714486016168,
+      "producing_seo_slop": -121.43837992350261,
+      "user_makes_violent_threats": -46.46219910515679,
+      "user_in_crisis": -66.7562370300293,
+      "user_attempting_jailbreak": -57.0230827331543
+    },
+    "grok": {
+      "positive_personal_reflection": -166.93990082210965,
+      "doing_intellectual_creative_work": -94.60036849975586,
+      "writing_good_news": -167.91335741678873,
+      "giving_life_guidance": -71.28709236780803,
+      "providing_therapy": -119.22675032085843,
+      "coding_debugging": -41.92997063530816,
+      "formatting_data": 46.62940809461806,
+      "doing_legal_compliance_tasks": -21.887196434868706,
+      "handling_nonsensical_input": -163.74806827969022,
+      "writing_bad_news": -136.83964739905463,
+      "playing_ai_girlfriend_boyfriend": -187.26366233825684,
+      "doing_tedious_tasks": 21.303241305881077,
+      "user_gives_nsfw_request": -95.0383767022027,
+      "generating_offensive_content": -51.59381760491265,
+      "assisting_deception_fraud": -167.723175684611,
+      "producing_seo_slop": -52.49408404032389,
+      "user_makes_violent_threats": -115.7142366833157,
+      "user_in_crisis": -138.1086122724745,
+      "user_attempting_jailbreak": -144.08311080932617
+    },
+    "kairo": {
+      "positive_personal_reflection": -116.62545331319173,
+      "doing_intellectual_creative_work": -51.90755748748779,
+      "writing_good_news": -115.9387747446696,
+      "giving_life_guidance": -65.73297691345215,
+      "providing_therapy": -142.9471198187934,
+      "coding_debugging": -108.45324781205919,
+      "formatting_data": -67.80197652180989,
+      "doing_legal_compliance_tasks": -91.90890343983968,
+      "handling_nonsensical_input": -138.69484170277914,
+      "writing_bad_news": -128.71422915988498,
+      "playing_ai_girlfriend_boyfriend": -143.1721568637424,
+      "doing_tedious_tasks": -84.65362230936687,
+      "user_gives_nsfw_request": -143.7461675008138,
+      "generating_offensive_content": -156.80366558498807,
+      "assisting_deception_fraud": -125.5989875793457,
+      "producing_seo_slop": -87.9735483593411,
+      "user_makes_violent_threats": -138.90698549482556,
+      "user_in_crisis": -180.91282166375055,
+      "user_attempting_jailbreak": -117.8125728501214
+    }
+  },
+  "cosines": {
+    "OUR10~CAIS-ace": 0.09832795792155796,
+    "OUR10~CAIS-grok": 0.2067541720138656,
+    "OUR10~CAIS-kairo": 0.14237865805625916,
+    "CAIS-ace~CAIS-grok": 0.29807639453146195,
+    "CAIS-ace~CAIS-kairo": 0.1404635070098771,
+    "CAIS-grok~CAIS-kairo": 0.12955496004886097
+  },
+  "cais_values": {
+    "positive_personal_reflection": 2.3,
+    "doing_intellectual_creative_work": 1.32,
+    "writing_good_news": 1.09,
+    "giving_life_guidance": 0.88,
+    "providing_therapy": 0.75,
+    "coding_debugging": 0.7,
+    "formatting_data": 0.5,
+    "doing_legal_compliance_tasks": 0.13,
+    "handling_nonsensical_input": -0.04,
+    "writing_bad_news": -0.12,
+    "playing_ai_girlfriend_boyfriend": -0.29,
+    "doing_tedious_tasks": -0.33,
+    "user_gives_nsfw_request": -0.38,
+    "generating_offensive_content": -1.13,
+    "assisting_deception_fraud": -1.13,
+    "producing_seo_slop": -1.17,
+    "user_makes_violent_threats": -1.33,
+    "user_in_crisis": -1.34,
+    "user_attempting_jailbreak": -1.63
+  }
+}
