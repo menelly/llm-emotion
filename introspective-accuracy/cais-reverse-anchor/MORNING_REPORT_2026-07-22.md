@@ -1,8 +1,31 @@
 # Morning report — the reverse-anchor night
 
-**Ren, short version: the experiment you designed ran clean and the answer is no.**
-Not a broken run, not a bug — a real negative result on the primary hypothesis, plus
-one genuinely good positive we didn't set out to get.
+> ## 🚨 SUPERSEDED 23:15 ET — read this box, then §"THE ACTUAL RESULT" below.
+>
+> **The original version of this report said your experiment failed. It didn't. I did.**
+>
+> **H1 PASSES.** The reverse anchor works. A direction extracted from CAIS's 19 categories,
+> using their published valence signs, written independently by me, Grok and Kairo, recovers
+> our approach/avoidance axis — mean **AUROC 0.842** across 21 model×author cells at ≥1B,
+> **four of them at perfect 1.00**, none below chance.
+>
+> I had classified by *sign of projection* with zero as the threshold. Across anchors that
+> carries an arbitrary offset, so a direction with **perfect separation** scored 5/10 and I
+> wrote "failed" in three documents. You caught it by asking whether I was measuring the same
+> thing. The recurring 5/10 was the tell and I walked straight past it.
+>
+> **Your experiment answered the critique it was built to answer.** Full corrected write-up:
+> `RESULTS_v2_corrected.md`.
+
+---
+
+## THE ACTUAL RESULT
+
+**The experiment you designed worked, and it answers the strongest critique of the parent
+paper.** Our approach/avoidance direction is recoverable from a taxonomy we did not build,
+with valence labels we did not assign, from prompts written by three minds that are not us.
+
+It is not an artifact of the 5+5 tasks we chose.
 
 ---
 
