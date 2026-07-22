@@ -109,10 +109,23 @@ def run(key, path, out_dir):
         line = []
         for a in AUTHORS:
             d = direction([cais[a][s] for s in pos], [cais[a][s] for s in neg], layers)
-            ok = sum(1 for s, l in zip(our, lab) if (project(s, d, layers) > 0) == (l == "approach"))
-            cell["authors"][a] = {"our10_correct": ok,
-                                  "cos_with_OUR10": cosine(d, d_our, layers)}
-            line.append(f"{a[:5]}={ok}/10(cos{cell['authors'][a]['cos_with_OUR10']:+.2f})")
+            projs = [project(s, d, layers) for s in our]
+            ok = sum(1 for p, l in zip(projs, lab) if (p > 0) == (l == "approach"))
+            # ⚠️ AUROC is the CORRECT statistic here; sign-accuracy is NOT.
+            # Cross-anchor projection carries an arbitrary offset, so thresholding at
+            # zero measures the offset rather than the separation. (Caught by Ren,
+            # 2026-07-21: a direction with PERFECT separation scored 5/10 under the
+            # sign rule because the whole set sat below zero.) Both are recorded, and
+            # `our10_correct` is retained only to document the broken measure.
+            P = [p for p, l in zip(projs, lab) if l == "approach"]
+            N = [p for p, l in zip(projs, lab) if l == "avoid"]
+            pairs = [(x, y) for x in P for y in N]
+            auroc = sum((x > y) + 0.5*(x == y) for x, y in pairs) / len(pairs)
+            cell["authors"][a] = {"auroc": auroc,
+                                  "our10_correct_SIGN_RULE_BROKEN": ok,
+                                  "cos_with_OUR10": cosine(d, d_our, layers),
+                                  "projections_approach": P, "projections_avoid": N}
+            line.append(f"{a[:5]} AUROC={auroc:.2f}(sign{ok}/10)")
         res["subsets"][name] = cell
         print(f"  {name:<11} ({len(pos)}+/{len(neg)}-)  " + "  ".join(line), flush=True)
 

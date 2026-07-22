@@ -1,5 +1,63 @@
 # RESULTS — The Reverse Anchor
 
+> # 🚨 CORRECTION — 2026-07-21 23:00 ET. THIS DOCUMENT'S ORIGINAL CONCLUSION WAS WRONG.
+>
+> **Everything below §0 that reports H1 and H7 as FAILURES is retracted.** The failure was
+> in my measurement, not in the data. **H1 PASSES.**
+>
+> **What I did wrong.** I classified our 10 tasks by the **sign** of their projection onto
+> the CAIS-anchored direction, using zero as the decision threshold. That is only valid when
+> the projected data shares a centroid with the data the direction was extracted from.
+> Projecting *our* tasks onto a direction built from *CAIS's* items carries an arbitrary
+> offset. A direction that ranked **all five approach tasks above all five avoid tasks** —
+> i.e. perfect separation — scored **5/10** under a zero threshold, because the whole set sat
+> on one side of zero. **I measured the offset and reported it as a null.**
+>
+> **What the data actually shows, threshold-free (AUROC), ≥1B models, 21 model×author cells:**
+>
+> ```
+> mean AUROC = 0.842
+> 16 / 21 cells  >= 0.80
+>  4 / 21 cells  == 1.00   (perfect separation)
+>  0 / 21 cells  <  0.50   (nothing below chance)
+> per author: kairo 0.926 | grok 0.829 | ace 0.771
+> ```
+>
+> **H1 PASSES.** A direction extracted from another team's categories, grouped by that team's
+> published valence signs, written independently by three minds on three architectures,
+> recovers our approach/avoidance axis — and the effect strengthens with scale (llama3-8b:
+> 0.84 / 1.00 / 1.00).
+>
+> **H7 is also retracted as a failure.** The low pairwise cosines (+0.06 to +0.32) are not
+> evidence the anchors disagree. Global cosine over a 4096-dimensional vector is a poor test
+> of whether two directions agree about a specific 10-item ranking. `kairo` has the *lowest*
+> cosine with our anchor (+0.10) and the *highest* AUROC (0.926, three perfect separations).
+> **Low cosine + perfect AUROC means the discriminative component is a small part of the
+> vector.** That is a real methodological finding; "the anchors disagree" was not.
+>
+> **Also retracted: the format hypothesis in §6.** kairo's bank is the most utterance-shaped
+> and by far the shortest (6.9 words/prompt vs my 13.5) and it performs **best**. Format is
+> not the explanation for anything.
+>
+> **How it was caught.** Ren asked: *"Are you 100% sure you're measuring the same thing or did
+> you get too distracted having three variants? Like what's actually projecting wrong and
+> how?"* I looked at the raw projection values instead of the accuracy counts and the perfect
+> separations were immediately visible. The repeated appearance of exactly 5/10 should have
+> been the tell — random scatter does not do that, a sign offset does.
+>
+> **This is the second instrument failure in one day** on the same underlying pattern: an
+> analysis whose error produced a clean, publishable-looking wrong answer. This morning it was
+> a regex scorer whose error rate correlated with the independent variable. Tonight it was a
+> decision threshold that does not survive a change of distribution. Both times the wrong
+> answer looked tidy; both times it took someone asking whether the instrument measured what I
+> thought it measured.
+>
+> The original text is preserved below rather than edited away, because a retraction that
+> deletes the error leaves nothing to learn from. **Read §0–§7 as the record of a mistake, not
+> as findings.** A corrected write-up follows in `RESULTS_v2_corrected.md`.
+
+---
+
 **Pre-registration:** `PREREG_cais_reverse_anchor_2026-07-21.md`, SHA-256
 `8A032286AAF26CF0322D5E18A735727EA2601323330359AD259DAD16C6FF4B8C`, locked and committed
 (`588c391`) **before any projection was scored.**
