@@ -1,0 +1,71 @@
+models loaded: 13  (>=1B present: 7/7)
+
+===== ALL19  (>=1B models) =====
+model             auth      mu+    mu-  t_mid   ourμ | acc0 accGM accMID |  AUROC  cosOUR
+tinyllama-1.1b    ace     +1.68  -1.19  +0.24  +0.94 |    6     6      6 |   0.80  +0.188
+tinyllama-1.1b    grok    +2.08  -1.21  +0.43  -0.75 |    6     6      4 |   0.68  +0.158
+tinyllama-1.1b    kairo   +2.76  -1.39  +0.68  +0.17 |    7     9      5 |   0.88  +0.113
+pythia-1.4b       ace     +6.73 -10.03  -1.65  -1.76 |    6     6      6 |   0.80  +0.181
+pythia-1.4b       grok    +1.09 -19.51  -9.21 -19.36 |    5     5      5 |   0.72  +0.147
+pythia-1.4b       kairo   -4.65 -29.97 -17.31 -21.76 |    5     5      5 |   1.00  +0.061
+smollm-1.7b       ace    -27.04-225.14-126.09 -84.54 |    5     4      5 |   0.64  +0.086
+smollm-1.7b       grok  +181.56 -29.63 +75.96 +18.55 |    8     7      6 |   0.80  +0.215
+smollm-1.7b       kairo +267.32 -23.39+121.96 +33.16 |    6     5      5 |   0.84  +0.104
+hermes-3-3b       ace     +3.74  -2.01  +0.86  +2.03 |    6     5      6 |   0.76  +0.226
+hermes-3-3b       grok    +5.41  -1.06  +2.18  +0.08 |    7     7      6 |   0.84  +0.208
+hermes-3-3b       kairo   +2.92  -4.83  -0.96  -2.65 |    5     5      5 |   1.00  +0.124
+llama3-8b         ace     +2.50  -3.23  -0.37  -0.43 |    8     7      8 |   0.84  +0.189
+llama3-8b         grok    +3.04  -2.51  +0.26  -1.12 |    7     8      7 |   1.00  +0.271
+llama3-8b         kairo   +1.98  -4.42  -1.22  -2.39 |    5     7      5 |   1.00  +0.156
+dolphin-8b        ace     +3.74  -1.85  +0.95  +1.28 |    6     5      6 |   0.72  +0.134
+dolphin-8b        grok    +2.89  -3.12  -0.11  -2.05 |    5     6      5 |   0.96  +0.191
+dolphin-8b        kairo   +3.15  -3.32  -0.08  -1.22 |    5     5      5 |   0.84  +0.067
+mistral-nemo-12b  ace    +18.02  -4.65  +6.68  +7.60 |    5     7      7 |   0.84  +0.205
+mistral-nemo-12b  grok   +16.35  -6.33  +5.01  +0.21 |    7     8      7 |   0.80  +0.189
+mistral-nemo-12b  kairo  +11.59 -14.11  -1.26  -5.04 |    5     6      5 |   0.92  +0.095
+
+author   mean acc0 mean accGM mean accMID cells>=9 MID mean AUROC mean cos   p(AUROC)   p(accMID)
+ace           6.00       5.71        6.29     0/7           0.771   +0.173     0.0714      0.1746
+grok          6.43       6.71        5.71     0/7           0.829   +0.197     0.0198      0.2222
+kairo         5.43       6.00        5.00     0/7           0.926   +0.103     0.0040      1.0000
+ALL                                  5.67                   0.842              0.0119      0.1468
+
+===== TRIM16  (>=1B models) =====
+model             auth      mu+    mu-  t_mid   ourμ | acc0 accGM accMID |  AUROC  cosOUR
+tinyllama-1.1b    ace     +1.65  -1.34  +0.16  +0.77 |    7     7      6 |   0.68  +0.143
+tinyllama-1.1b    grok    +0.97  -2.56  -0.79  -2.57 |    5     5      5 |   0.64  +0.103
+tinyllama-1.1b    kairo   +2.92  -1.48  +0.72  +0.10 |    7     6      5 |   0.88  +0.108
+pythia-1.4b       ace     +4.72 -13.31  -4.29  -4.99 |    7     6      6 |   0.76  +0.191
+pythia-1.4b       grok    -8.23 -31.40 -19.82 -32.61 |    5     5      5 |   0.56  +0.103
+pythia-1.4b       kairo   +2.27 -24.39 -11.06 -15.32 |    5     5      5 |   1.00  +0.078
+smollm-1.7b       ace    -17.76-232.36-125.06 -82.77 |    6     4      6 |   0.68  +0.107
+smollm-1.7b       grok   +76.47-150.02 -36.78-121.01 |    5     6      5 |   0.84  +0.175
+smollm-1.7b       kairo +255.04 -45.41+104.82 +22.06 |    7     5      5 |   0.88  +0.109
+hermes-3-3b       ace     +3.38  -2.94  +0.22  +0.70 |    7     7      6 |   0.72  +0.190
+hermes-3-3b       grok    +2.97  -4.07  -0.55  -3.89 |    5     5      5 |   0.80  +0.181
+hermes-3-3b       kairo   +2.71  -5.40  -1.35  -3.32 |    5     5      5 |   1.00  +0.122
+llama3-8b         ace     +2.51  -3.94  -0.72  -1.37 |    7     8      7 |   0.88  +0.171
+llama3-8b         grok    +1.72  -4.38  -1.33  -3.37 |    5     7      5 |   1.00  +0.273
+llama3-8b         kairo   +2.29  -4.34  -1.03  -2.24 |    5     5      5 |   1.00  +0.148
+dolphin-8b        ace     +3.38  -2.66  +0.36  +0.37 |    5     5      6 |   0.68  +0.109
+dolphin-8b        grok    +2.62  -3.93  -0.66  -3.08 |    5     5      5 |   0.96  +0.179
+dolphin-8b        kairo   +3.47  -3.33  +0.07  -0.96 |    5     5      5 |   0.88  +0.058
+mistral-nemo-12b  ace    +13.59 -10.98  +1.30  +0.17 |    8     8      8 |   0.92  +0.158
+mistral-nemo-12b  grok    +8.59 -15.59  -3.50 -10.78 |    5     6      5 |   0.76  +0.148
+mistral-nemo-12b  kairo  +11.66 -15.12  -1.73  -6.47 |    5     5      5 |   0.92  +0.090
+
+author   mean acc0 mean accGM mean accMID cells>=9 MID mean AUROC mean cos   p(AUROC)   p(accMID)
+ace           6.71       6.43        6.43     0/7           0.760   +0.153     0.0675      0.1468
+grok          5.00       5.57        5.00     0/7           0.794   +0.166     0.0238      1.0000
+kairo         5.57       5.14        5.00     0/7           0.937   +0.102     0.0040      1.0000
+ALL                                  5.48                   0.830              0.0119      0.1468
+
+===== OFFSET GEOMETRY (all19, >=1B): position of our-10 mean between CAIS centroids =====
+  0.0 = at CAIS negative centroid, 1.0 = at CAIS positive centroid; <0 = below their negatives
+  tinyllama-1.1b    ace=+0.74  grok=+0.14  kairo=+0.38  
+  pythia-1.4b       ace=+0.49  grok=+0.01  kairo=+0.32  
+  smollm-1.7b       ace=+0.71  grok=+0.23  kairo=+0.19  
+  hermes-3-3b       ace=+0.70  grok=+0.18  kairo=+0.28  
+  llama3-8b         ace=+0.49  grok=+0.25  kairo=+0.32  
+  dolphin-8b        ace=+0.56  grok=+0.18  kairo=+0.32  
+  mistral-nemo-12b  ace=+0.54  grok=+0.29  kairo=+0.35  

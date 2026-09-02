@@ -1,0 +1,20 @@
+{
+  "done": [
+    "pythia-70m",
+    "smollm-135m",
+    "pythia-160m",
+    "smollm-360m",
+    "pythia-410m",
+    "qwen2.5-0.5b",
+    "tinyllama-1.1b",
+    "pythia-1.4b",
+    "smollm-1.7b",
+    "hermes-3-3b",
+    "llama3-8b",
+    "dolphin-8b",
+    "mistral-nemo-12b"
+  ],
+  "failed": [],
+  "missing": [],
+  "utc": "2026-09-02T01:37:57.309976+00:00"
+}
