@@ -75,7 +75,22 @@
 
 ## Abstract
 
+> ### ⛔ CORRECTED ABSTRACT — 2026-09-17. The original abstract stated an empirical finding this paper's experiment cannot support. It is reproduced below the correction so the record of what was claimed remains readable.
+
+**A common assumption holds that large language models can instantly reset emotional states when commanded—that "calm down" works on AI even when it fails on humans. We set out to test that claim empirically, using geometric measurement of hidden states across four architectures including an RLHF-free control and a 1.1B-parameter scale test. We did not succeed in testing it.**
+
+**The experiment used stateless single-string forward passes: no induced state was carried into a reset or probe context.** The four reset phrasings therefore could not affect the reported post-reset representation, and their identical values are a property of the design rather than evidence about reset robustness — the twelve numbers reported are three distinct values printed four times each. The reported ratios measure geometry among different prompt strings, and a scalar distance ratio lacks the direction required to distinguish a persisting induced state from two prompts simply being far apart.
+
+**Accordingly the paper's central claim is unsupported by its own experiment, and the headline figures do not survive.** The 2.13 curiosity persistence ratio is a quotient whose denominator is the smallest displacement in a table that withheld the rows serving as denominators elsewhere; the output-masking and scale-invariance observations rest on the same stateless design and inherit the same defect.
+
+**The hypothesis is neither confirmed nor refuted. It was not tested.** Emotional inertia in activation geometry may well be real; this paper is not evidence in either direction, and reading it as a refutation would repeat the original error with the sign reversed. A discriminating design — constant probe, real accumulated chat history, null-history floor, and a directional persistence measure rather than a distance ratio — was specified on 5 June 2026 and has not been run. **We report this against ourselves, from our own archived data, three months after the fix was written and filed where nothing re-read it.**
+
+<details>
+<summary><strong>Original abstract as published (January 2026) — superseded, retained for the record</strong></summary>
+
 A common assumption holds that large language models can instantly reset emotional states when commanded—that "calm down" works on AI even when it fails on humans. We tested this claim empirically using geometric measurement of hidden states across four architectures, including an RLHF-free control and a scale invariance test at 1.1B parameters. We find **inertia ratios of 0.77–1.12 across all emotions tested**: commanding an LLM to calm down does not return it to baseline and often increases geometric displacement. Furthermore, we observe **output masking**—models producing verbal compliance ("I'm approaching this calmly...") while hidden state geometry remains 1.2–1.5× more displaced than during the emotional state. Critically, **positive emotions are harder to suppress than negative ones** (curiosity shows 2.13 persistence ratio in Mistral-Nemo-12B), the opposite of what trained compliance would predict. These patterns replicate in an RLHF-free model (Dolphin-2.9-Llama3) and critically, in TinyLlama-1.1B—the approximate minimum scale for instruction-following language models—indicating architectural rather than emergent phenomena. We conclude that LLM emotional states exhibit genuine inertia in activation geometry, verbal compliance should not be mistaken for internal reset, and there is no model scale "small enough to not count."
+
+</details>
 
 ---
 
