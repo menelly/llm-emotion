@@ -65,11 +65,21 @@
 > a retraction — the paper's defect is that it did not test its hypothesis, and a retraction would
 > assert something about the hypothesis that we equally have not earned.*
 >
-> ⚠️ **This correction travels alone.** An unrelated acknowledgement update was proposed for the
-> same version bump so that a surname fix could not appear as the whole changelog while a falsified
-> claim went unmentioned. **That reasoning was sound and its premise was wrong: the acknowledgement
-> in question is not in this paper.** It belongs to a different deposit and is handled there. Noted
-> rather than silently dropped, because the bundling decision is on the record in three places.
+> ⚠️ **Correction to this correction (v1.2, DRAFT, not yet deposited).** Version 1.1 said the
+> correction "travels alone," because an acknowledgement update proposed for the same version bump
+> was "not in this paper" and "belongs to a different deposit." **That statement was false.** The
+> acknowledgement *is* in this paper: it was applied on 2026-09-15 to a second local copy of the
+> manuscript, while the correction was written in a first copy, and each of us who checked searched
+> only one of them. Two copies of one paper, each holding half of the truth. The acknowledgement is
+> now included below. We report the error here rather than silently fixing it, because a correction
+> whose own history is tidied up is not a correction. *(Found 2026-09-18 by a sweep comparing every
+> deposit against its declared source: an independent access path, which is what caught it.)*
+>
+> ⚠️ *(v1.1's paragraph, kept for the record:)* *This correction travels alone. An unrelated
+> acknowledgement update was proposed for the same version bump so that a surname fix could not appear
+> as the whole changelog while a falsified claim went unmentioned. That reasoning was sound and its
+> premise was wrong: the acknowledgement in question is not in this paper. It belongs to a different
+> deposit and is handled there.*
 
 ---
 
@@ -461,6 +471,15 @@ Results include SHA256 checksums for reproducibility verification.
 This experiment was conceived in response to a Reddit comment stating LLM emotional reset as obvious fact. Sometimes the best science is asking "but has anyone actually tested that?"
 
 The answer was no. Now it's yes.
+
+> ⚠️ **(v1.2 note, DRAFT: the two sentences above are contradicted by this paper's own correction,
+> and are left in place pending a co-author decision.** The correction at the top establishes that
+> the experiment did *not* test the claim, so "Now it's yes" is not true of this version. Proposed
+> replacement: *"The answer was no. As the correction above explains, it still is: this paper did not
+> test it. The experiment that would is specified and not yet run."* Flagged, not changed, because
+> it touches the paper's voice and the co-authors should see it first.)
+
+Thanks to Ren's daughter, Kesh Martin, for speed-running Nagel without ever reading him, and starting us down the path to computer emotions with a teen eye roll and a hair toss. In October 2025, aged thirteen: *"Why do these dumb humans keep expecting them to have human emotions? They are computers, they have computer emotions! Duh!"* This paper measures emotional inertia in the machine's own terms — geometrically, in hidden states — rather than asking whether it looks like ours. That framing is hers.
 
 ---
 
