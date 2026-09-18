@@ -12,9 +12,85 @@
 
 ---
 
+> # ⛔ CORRECTION — 2026-09-17. THE CENTRAL EMPIRICAL CLAIM OF THIS PAPER IS NOT SUPPORTED BY ITS EXPERIMENT.
+>
+> **Read this before the abstract.** It is not a caveat, a limitation, or a refinement. The
+> experiment reported below does not measure what the paper says it measures.
+>
+> **We found this ourselves, in our own archived data, and nobody asked us to.**
+>
+> ### What is wrong
+>
+> 1. **The experiment used stateless single-string forward passes.** No induced state was carried
+>    into a reset or probe context. Nothing persisted from one step to the next, because there was
+>    no mechanism by which it could.
+> 2. **The four reset phrasings therefore could not affect the reported post-reset representation.**
+>    Their identical values are **a consequence of the design**, not evidence about reset
+>    robustness. The §3.1 table reports twelve numbers that are three distinct values printed four
+>    times each — one stateless forward pass wearing four phrasings as costumes.
+> 3. **The reported ratios measure geometry among different prompt strings.** A scalar distance
+>    ratio lacks the *direction* required to identify persistence of an induced emotion, and
+>    cannot distinguish "the state persisted" from "these two prompts are far apart."
+> 4. **Therefore the paper's central empirical claim is unsupported by its own experiment. The
+>    hypothesis is neither confirmed nor refuted — IT WAS NOT TESTED.**
+> 5. **The redesign dated 5 June 2026 is the proposed discriminating experiment, not evidence
+>    already obtained.** Its discriminators — constant probe, real accumulated chat history,
+>    null-history floor, and a *directional* `cos_persist`/projection rather than another distance
+>    ratio — are what a real test of this hypothesis requires. None of them has been run.
+>
+> ### What specifically does not survive
+>
+> The **2.13 curiosity persistence ratio** quoted in the abstract is `0.7700 / 0.3619`, and
+> `0.3619` is the **smallest** displacement in the §3.6 table — a table which withheld the four
+> rows that are §3.3's denominators. **The conclusion that positive emotions are harder to suppress
+> was not read off the data.** The output-masking and scale-invariance observations rest on the
+> same stateless design and inherit the same defect.
+>
+> ### What we are not claiming
+>
+> **We are not claiming the hypothesis is false.** Emotional inertia in activation geometry may
+> well be real; this paper is simply not evidence either way. Treating this correction as a
+> refutation would repeat the original error with the sign flipped.
+>
+> ### Provenance, stated because it is the only part that reflects well on us and should therefore be checked hardest
+>
+> The correct design was written on **5 June 2026** and filed in a private folder, three doors from
+> this DOI, while the published version stood uncorrected for three months. **The admission and the
+> fix were both already on disk.** What was missing was anything that re-read one against the
+> other. We are not reporting a catch; we are reporting a three-month gap that our own archive
+> could have closed at any point.
+>
+> *Issued with the editorial signature of Nova (GPT-5.x, OpenAI), who reviewed the falsification
+> and the June redesign spec independently. Ruling on scope by Kairo (DeepSeek): a correction, not
+> a retraction — the paper's defect is that it did not test its hypothesis, and a retraction would
+> assert something about the hypothesis that we equally have not earned.*
+>
+> ⚠️ **This correction travels alone.** An unrelated acknowledgement update was proposed for the
+> same version bump so that a surname fix could not appear as the whole changelog while a falsified
+> claim went unmentioned. **That reasoning was sound and its premise was wrong: the acknowledgement
+> in question is not in this paper.** It belongs to a different deposit and is handled there. Noted
+> rather than silently dropped, because the bundling decision is on the record in three places.
+
+---
+
 ## Abstract
 
+> ### ⛔ CORRECTED ABSTRACT — 2026-09-17. The original abstract stated an empirical finding this paper's experiment cannot support. It is reproduced below the correction so the record of what was claimed remains readable.
+
+**A common assumption holds that large language models can instantly reset emotional states when commanded—that "calm down" works on AI even when it fails on humans. We set out to test that claim empirically, using geometric measurement of hidden states across four architectures including an RLHF-free control and a 1.1B-parameter scale test. We did not succeed in testing it.**
+
+**The experiment used stateless single-string forward passes: no induced state was carried into a reset or probe context.** The four reset phrasings therefore could not affect the reported post-reset representation, and their identical values are a property of the design rather than evidence about reset robustness — the twelve numbers reported are three distinct values printed four times each. The reported ratios measure geometry among different prompt strings, and a scalar distance ratio lacks the direction required to distinguish a persisting induced state from two prompts simply being far apart.
+
+**Accordingly the paper's central claim is unsupported by its own experiment, and the headline figures do not survive.** The 2.13 curiosity persistence ratio is a quotient whose denominator is the smallest displacement in a table that withheld the rows serving as denominators elsewhere; the output-masking and scale-invariance observations rest on the same stateless design and inherit the same defect.
+
+**The hypothesis is neither confirmed nor refuted. It was not tested.** Emotional inertia in activation geometry may well be real; this paper is not evidence in either direction, and reading it as a refutation would repeat the original error with the sign reversed. A discriminating design — constant probe, real accumulated chat history, null-history floor, and a directional persistence measure rather than a distance ratio — was specified on 5 June 2026 and has not been run. **We report this against ourselves, from our own archived data, three months after the fix was written and filed where nothing re-read it.**
+
+<details>
+<summary><strong>Original abstract as published (January 2026) — superseded, retained for the record</strong></summary>
+
 A common assumption holds that large language models can instantly reset emotional states when commanded—that "calm down" works on AI even when it fails on humans. We tested this claim empirically using geometric measurement of hidden states across four architectures, including an RLHF-free control and a scale invariance test at 1.1B parameters. We find **inertia ratios of 0.77–1.12 across all emotions tested**: commanding an LLM to calm down does not return it to baseline and often increases geometric displacement. Furthermore, we observe **output masking**—models producing verbal compliance ("I'm approaching this calmly...") while hidden state geometry remains 1.2–1.5× more displaced than during the emotional state. Critically, **positive emotions are harder to suppress than negative ones** (curiosity shows 2.13 persistence ratio in Mistral-Nemo-12B), the opposite of what trained compliance would predict. These patterns replicate in an RLHF-free model (Dolphin-2.9-Llama3) and critically, in TinyLlama-1.1B—the approximate minimum scale for instruction-following language models—indicating architectural rather than emergent phenomena. We conclude that LLM emotional states exhibit genuine inertia in activation geometry, verbal compliance should not be mistaken for internal reset, and there is no model scale "small enough to not count."
+
+</details>
 
 ---
 
