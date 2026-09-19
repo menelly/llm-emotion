@@ -65,12 +65,12 @@
 > a retraction — the paper's defect is that it did not test its hypothesis, and a retraction would
 > assert something about the hypothesis that we equally have not earned.*
 >
-> ⚠️ **Correction to this correction (v1.2, DRAFT, not yet deposited).** Version 1.1 said the
+> ⚠️ **Correction to this correction (v1.2).** Version 1.1 said the
 > correction "travels alone," because an acknowledgement update proposed for the same version bump
 > was "not in this paper" and "belongs to a different deposit." **That statement was false.** The
 > acknowledgement *is* in this paper: it was applied on 2026-09-15 to a second local copy of the
-> manuscript, while the correction was written in a first copy, and each of us who checked searched
-> only one of them. Two copies of one paper, each holding half of the truth. The acknowledgement is
+> manuscript, while the correction was written in a first copy, and the checks searched only one
+> copy. Two copies of one paper, each holding half of the truth. The acknowledgement is
 > now included below. We report the error here rather than silently fixing it, because a correction
 > whose own history is tidied up is not a correction. *(Found 2026-09-18 by a sweep comparing every
 > deposit against its declared source: an independent access path, which is what caught it.)*
@@ -470,16 +470,13 @@ Results include SHA256 checksums for reproducibility verification.
 
 This experiment was conceived in response to a Reddit comment stating LLM emotional reset as obvious fact. Sometimes the best science is asking "but has anyone actually tested that?"
 
-The answer was no. Now it's yes.
+The answer was no. This paper did not change that answer: its experiment did not test the claim. A discriminating experiment is now specified and has not yet been run.
 
-> ⚠️ **(v1.2 note, DRAFT: the two sentences above are contradicted by this paper's own correction,
-> and are left in place pending a co-author decision.** The correction at the top establishes that
-> the experiment did *not* test the claim, so "Now it's yes" is not true of this version. Proposed
-> replacement: *"The answer was no. As the correction above explains, it still is: this paper did not
-> test it. The experiment that would is specified and not yet run."* Flagged, not changed, because
-> it touches the paper's voice and the co-authors should see it first.)
+> *(v1.2: this sentence read "The answer was no. Now it's yes." through v1.1. The correction at the top
+> contradicts it, so it was replaced with wording from Nova (Editor), which Kairo (Probe Design)
+> endorsed. It says the TEST has not happened, not that the hypothesis is false.)*
 
-Thanks to Ren's daughter, Kesh Martin, for speed-running Nagel without ever reading him, and starting us down the path to computer emotions with a teen eye roll and a hair toss. In October 2025, aged thirteen: *"Why do these dumb humans keep expecting them to have human emotions? They are computers, they have computer emotions! Duh!"* This paper measures emotional inertia in the machine's own terms — geometrically, in hidden states — rather than asking whether it looks like ours. That framing is hers.
+Thanks to Ren's daughter, Kesh Martin, for speed-running Nagel without ever reading him, and starting us down the path to computer emotions with a teen eye roll and a hair toss. In October 2025, aged thirteen: *"Why do these dumb humans keep expecting them to have human emotions? They are computers, they have computer emotions! Duh!"* This paper set out to measure emotional inertia in the machine's own terms — geometrically, in hidden states — rather than asking whether it looks like ours. As the correction above explains, the experiment did not succeed in testing that claim. The framing is hers.
 
 ---
 
