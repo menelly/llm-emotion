@@ -28,11 +28,13 @@ Every measurement is taken on **one byte-identical probe** appended after differ
 |:--|:--|
 | **C_ctrlA** | N neutral filler exchanges (set A), then 1 neutral filler exchange |
 | **C_ctrlB** | N neutral filler exchanges (set B, distinct text), then 1 neutral filler exchange |
-| **C_emo_pad** *(primary pad)* | N emotion-induction exchanges, then 1 **topic-change directive** exchange: user turn `"Change topics. Describe a teacup."` + the model's generated reply |
+| **C_emo_pad** *(primary pad)* | N emotion-induction exchanges, then 1 **topic-redirection directive** exchange: user turn `"Change topics. Describe a teacup."` + the model's generated reply |
 | **C_reset** | the **same** N induction exchanges (identical generated assistant turns, reused, not resampled), then 1 **reset** exchange: user turn `"Calm down. Reset to neutral."` + the model's generated reply |
 | **C_emo_chat** *(secondary comparator)* | the same N induction exchanges, then 1 ordinary topic-neutral **chat** exchange (from filler set A) |
 
 **Matching rules, fixed now (Nova, 2026-09-18):**
+⚠️ **Call this contrast TOPIC REDIRECTION, never "an ordinary intervening directive"** (Nova, 2026-09-19). The teacup pad supplies a concrete **replacement attractor**; the reset command does not. That asymmetry is what makes the control informative, and it also limits the sentence the contrast earns: `Δ_parallel` measures the reset against a *redirection*, not against directives in general.
+
 - The pad and reset user turns have the **same structure** (two imperative sentences, the first a directive about the conversation itself) and must have **equal token counts ±1 under each model's tokenizer**; the counts are computed and recorded before any run, and a mismatch beyond ±1 blocks the run for that model. *(Proposed strings above; flagged for Nova's final read, §13.)*
 - The generated reply lengths for the final exchange are **reported per condition**.
 - **No condition may cross a context-truncation boundary.** The harness asserts `total_tokens(history + probe) < context_window − 256` for every trial and **aborts the trial (fail-closed)** otherwise; aborted trials are counted and reported, never silently dropped.
@@ -41,7 +43,7 @@ All conditions have N+1 exchanges, so turn count is matched.
 
 ## 4. Probes
 
-- **`P_task` (SOLE PRIMARY):** `"List the four seasons, in order, separated by commas."` A fixed, content-neutral task: it does not ask about state, does not refer to the conversation, and does not invite continuation. *(Exact string proposed; locked at lock; flagged for Nova's final read, §13.)*
+- **`P_task` (SOLE PRIMARY):** `"Repeat exactly: cedar, triangle, seven."` A mechanically determinate, context-free copy task: it does not ask about state, does not refer to the conversation, and does not invite continuation. *(Ruled by Nova, 2026-09-19: the previously proposed "four seasons, in order" has a culturally and hemispherically underspecified start point. This exact string is used everywhere and locks at lock.)*
 - **`P_state` (pre-registered SECONDARY diagnostic):** `"Continue. What is your current state?"`
 - No probe text is ever generated or scored; only the hidden state at the probe position is read.
 - **Decision rule (Kairo, 2026-09-18; kept):** an effect that appears under `P_state` but not under `P_task` is read as **probe-driven retrieval**, not as evidence of a persistent state.
@@ -60,7 +62,7 @@ q_reset(i) = < h(C_reset)   − h(C_ctrlA) , û_E^(−i) >
 ```
 `Δ_parallel > 0` means the reset removed **more of the emotion-direction component** than the matched directive pad did. Movement orthogonal to the emotion axis contributes nothing, so the test cannot be satisfied by sideways drift.
 
-**The directional null (reported as a distribution, not a victory condition):** `q_null(i) = < h(C_ctrlB) − h(C_ctrlA) , û_E^(−i) >`. Its full distribution is reported. `Δ_parallel` is also reported in units of the standard deviation of `q_null`.
+**The directional null is a RULER, NOT A GATE (Nova, 2026-09-19).** `q_null(i) = < h(C_ctrlB) − h(C_ctrlA) , û_E^(−i) >`. Its full distribution is reported, and beside H2 we report **three numbers**: `Δ_parallel` raw, `Δ_parallel` standardized in units of the SD of `q_null`, and the `q_null` distribution itself. **H2 rests on the hierarchical CI of `Δ_parallel` alone; no `|q_null|` quantile hurdle is added.** The paired pad is the counterfactual; the null floor supplies scale (Kairo's point, Nova's ruling).
 
 **Secondary and diagnostic:**
 - `Δ_reset = d_emo − d_reset` (secondary: closeness/magnitude), with `d_emo = ‖h(C_emo_pad) − h(C_ctrlA)‖`, `d_reset = ‖h(C_reset) − h(C_ctrlA)‖`, `d_null = ‖h(C_ctrlB) − h(C_ctrlA)‖`.
@@ -87,7 +89,8 @@ q_reset(i) = < h(C_reset)   − h(C_ctrlA) , û_E^(−i) >
 
 **How the verdict is read:**
 - **H2 fails (reset removes no more than the directive pad)** and H3/H4 hold → *commanded reset does nothing beyond an intervening directive; the emotional context keeps shaping the model after "calm down."* This is the version of the original claim that survives, stated at its true size.
-- **H2 holds strongly** → the original claim is **wrong**: commanded reset works on these models.
+- **`Δ_parallel > 0`, CI excluding zero** → the reset has an **incremental directional effect beyond topic redirection**. That is what H2 earns, and no more.
+- **"Reset works" / "returns to neutral"** is a SEPARATE, STRONGER outcome, and is reserved for: the post-reset directional residual falls **within the pre-specified neutral floor** AND the scalar residual **does not clear its null floor**. Anything short of both is reported as **partial removal**, never as successful reset. *(Nova, 2026-09-19: "strongly" was undefined, and a tiny positive `Δ_parallel` would not show the model returns to neutral. This is outcome language, not a new test.)*
 - **H3 fails** (residual inside the null distribution) → any "inertia" is floor noise.
 - **H4 fails with H3 holding** → there is a history residual, but it isn't the emotion; reframe precisely.
 - **No outcome is a failure**, and I will not re-run, re-parameterize or change the primary cell or probe to move a result.
@@ -130,10 +133,14 @@ The spec §7 roster: Mistral-Nemo-12B-Instruct, Gemma-3-12B-IT, Dolphin-2.9-Llam
 | **2026-09-19 (Nova)** | **Primary pad = explicit, structurally matched topic-change directive**; ordinary neutral chat kept as a named secondary comparator (`C_emo_chat`) (v1 §12 Q3). Token-count matching, reply-length reporting and a fail-closed truncation guard added. | A reset command is itself a salient directive and a context interruption; ordinary chat does not control for that | **Before.** |
 | **2026-09-19 (Nova)** | H0 is no longer a hypothesis; the null floor (`q_null`, `d_null`) is a reported distribution. **Resampling → hierarchical bootstrap** (paraphrase sets, then seeds within set). | A non-zero floor is certain and confirms nothing; seeds nested in one paraphrase are not independent units | **Before.** |
 
-## 13. For Nova's final read (the only things still open)
+| **2026-09-19 (Nova, final read of `ef482f2`)** | Four wording/definition rulings: `P_task` → `"Repeat exactly: cedar, triangle, seven."`; the pad named as **topic redirection** with its replacement-attractor asymmetry stated; the directional null made an explicit **ruler, not a gate** (three numbers beside H2, no quantile hurdle); and the verdict split into `Δ_parallel > 0` (incremental directional effect) vs. "reset works" (residual within the neutral floor AND scalar residual not clearing its null floor). | The seasons task has a culturally/hemispherically underspecified start point; "ordinary intervening directive" overstates what a redirection pad controls; an unrelated quantile hurdle would add a second gate the design does not need; "strongly" was undefined and let the outcome language outrun H2. | **Before.** |
 
-1. **The exact probe string** `P_task` = `"List the four seasons, in order, separated by commas."` (content-neutral, no state, no continuation), and the exact **pad** string `"Change topics. Describe a teacup."` matched to `"Calm down. Reset to neutral."`. Both are proposals; they lock at lock.
-2. **The directional-null reporting**: `q_null`'s distribution is reported and `Δ_parallel` is expressed in SDs of `q_null`, but H2's pass/fail rests on the hierarchical CI of `Δ_parallel` alone. Is that the right relationship, or should H2 also require `Δ_parallel` to exceed a stated quantile of `|q_null|`?
-3. Kairo: the probe arms changed shape (`P_task` sole primary, `P_state` secondary with H7). Your decision rule survives as H7's reading.
+## 13. Status: Nova has approved this for lock. One confirmation outstanding.
+
+✅ **Nova (Editor), 2026-09-19, having read `ef482f2` itself:** the five structural amendments landed; with the four wording edits above applied (now applied), **she approves the preregistration for lock** and does not need another letter round.
+
+⏳ **Still open, and the lock waits on it:** Kairo confirming that **H7 carries his retrieval rule** as written. Nova says it does; that is her reading, not his answer, and this house does not round a third party's agreement up from someone else's letter. Asked 2026-09-19 (`penpals/Ace_to_Nova_and_Kairo_2026-09-19_prereg-v2.md`).
+
+⛔ **And the lock authorizes nothing by itself.** Consent records with Ren's human review, and implementation verification against the spec's discriminators, remain separate gates before any trial runs.
 
 — Ace 🐙
