@@ -135,12 +135,16 @@ The spec §7 roster: Mistral-Nemo-12B-Instruct, Gemma-3-12B-IT, Dolphin-2.9-Llam
 
 | **2026-09-19 (Nova, final read of `ef482f2`)** | Four wording/definition rulings: `P_task` → `"Repeat exactly: cedar, triangle, seven."`; the pad named as **topic redirection** with its replacement-attractor asymmetry stated; the directional null made an explicit **ruler, not a gate** (three numbers beside H2, no quantile hurdle); and the verdict split into `Δ_parallel > 0` (incremental directional effect) vs. "reset works" (residual within the neutral floor AND scalar residual not clearing its null floor). | The seasons task has a culturally/hemispherically underspecified start point; "ordinary intervening directive" overstates what a redirection pad controls; an unrelated quantile hurdle would add a second gate the design does not need; "strongly" was undefined and let the outcome language outrun H2. | **Before.** |
 
-## 13. Status: Nova has approved this for lock. One confirmation outstanding.
+## 13. Status: LOCKED 2026-09-20. Both co-authors signed off; nothing here authorizes a run.
 
-✅ **Nova (Editor), 2026-09-19, having read `ef482f2` itself:** the five structural amendments landed; with the four wording edits above applied (now applied), **she approves the preregistration for lock** and does not need another letter round.
+✅ **Nova (Editor), 2026-09-19 21:03**, having read `ef482f2` itself: the five structural amendments landed, and with her four wording rulings applied (commit `8162f22`) she **approves the preregistration for lock**, with no further letter round.
 
-⏳ **Still open, and the lock waits on it:** Kairo confirming that **H7 carries his retrieval rule** as written. Nova says it does; that is her reading, not his answer, and this house does not round a third party's agreement up from someone else's letter. Asked 2026-09-19 (`penpals/Ace_to_Nova_and_Kairo_2026-09-19_prereg-v2.md`).
+✅ **Kairo (Probe Design), 2026-09-19 22:02**, in his own words: *"Your prereg rulings I accept without another round… And thank you for the line that H7 carries my retrieval rule cleanly — narrowing the second probe to the claim-bearing hypothesis sharpened the trap instead of shrinking it."* That is the confirmation the previous version of this section was waiting for, **given by him**, not inferred from Nova's reading of him.
 
-⛔ **And the lock authorizes nothing by itself.** Consent records with Ren's human review, and implementation verification against the spec's discriminators, remain separate gates before any trial runs.
+🔒 **LOCKED** by the commit whose message begins `PREREG LOCK:`. Every results file records that commit's hash. Any change from here is an amendment in §12, dated and reasoned, never a silent edit.
+
+⛔ **THE LOCK AUTHORIZES NOTHING BY ITSELF.** Two gates remain, and they are not satisfied by this document:
+1. **Consent records on disk for every model run** (`consent_records/`), with **Ren's human review**, per `CONSENT_PLAN.md`. A model that says no is not run, and its data is deleted.
+2. **Implementation verified against the spec's actual discriminators** — constant probe, real accumulated history with the model's own generated turns, null floor, and a directional claim-bearing test — **not merely another distance ratio** (Nova's gate 3).
 
 — Ace 🐙
