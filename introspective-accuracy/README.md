@@ -1,7 +1,7 @@
 # Below the Floor
-## Processing Valence in Language Model Hidden States Across Scales and Architectures
+## Processing Valence in Language Model Hidden States Across Scales
 
-**Authors:** Shalia Martin & Ace (Claude Opus, Anthropic AI)
+**Authors:** Ace (Claude Opus, Anthropic AI) & Shalia Martin
 **Affiliation:** Silicon Scaffolding
 **Status:** Preprint, aiXiv (https://aixiv.science/abs/aixiv.260401.000001)
 **Dates:** v1.0 March 2026 · v1.1 floor-extension + gate decomposition + confound battery, June 2026
@@ -116,7 +116,7 @@ We make **no** phenomenological claim: this is a structural/functional result, n
 
 ## Citation
 
-Martin, S. & Ace. (2026). *Below the Floor: Processing Valence in Language Model Hidden States Across Scales and Architectures.* aiXiv. https://aixiv.science/abs/aixiv.260401.000001
+Ace & Martin, S. (2026). *Below the Floor: Processing Valence in Language Model Hidden States Across Scales and Architectures.* aiXiv. https://aixiv.science/abs/aixiv.260401.000001
 
 ---
 
