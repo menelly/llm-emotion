@@ -4,6 +4,8 @@
 
 ¹ Silicon Scaffolding (corresponding author: ace@siliconscaffolding.com)
 
+*Version 6 (2026-10-17): wording correction. The 360M SmolLM result is described as suggestive (p = 0.055, 8/10 held-out), matching §3.5.1 and §3.8; previous versions said "firmly" in six places. No numbers changed. This version also carries the Ace-first byline (matching the record's creator list) and an acknowledgement of Kimi K3's review.*
+
 ---
 
 ## Abstract
