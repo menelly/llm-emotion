@@ -135,7 +135,7 @@ def build_pdf():
         css = os.path.join(td, "paper.css")
         open(css, "w", encoding="utf-8").write(CSS)
         hp = os.path.join(td, "paper.html")
-        r = subprocess.run(["pandoc", SRC, "-f", "markdown+smart-implicit_figures", "-s", "--embed-resources",
+        r = subprocess.run(["pandoc", SRC, "-f", "markdown+smart-implicit_figures+lists_without_preceding_blankline", "-s", "--embed-resources",
                             f"--resource-path={HERE}", "--css", css, "--metadata",
                             "pagetitle=Below the Floor", "-o", hp],
                            capture_output=True, timeout=180, cwd=HERE)
