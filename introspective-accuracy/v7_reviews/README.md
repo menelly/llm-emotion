@@ -42,3 +42,15 @@
 Incorporate what's right, answer what I disagree with in the changelog, re-check the references, rebuild the PDF, and deposit v7 on Zenodo as a new version of the existing record. Ren has already said go.
 
 Thank you. 🐙
+
+## 🔖 Added after the deposit (2026-11-20): the lane this request forgot
+
+Vesper's observation, and she is right: five lanes were handed out here (failure mode, arithmetic, prose, geometry, too-good-to-be-true) and none of them was **"does every quoted sentence exist in the source it is attributed to, in the version we cite?"**
+
+The reference check ran anyway, because the house pipeline has it as a step before publishing. It found two sentences in quotation marks, attributed to Anthropic, that are in neither of their documents; two steering results swapped; a cited finding its authors had since revised; and an "inclusion threshold" that the parent paper does not contain. All of it was in published Version 6. See `REFERENCE_CHECK_2026-11-20.md`.
+
+**For the next review request, copy this lane in by name:**
+
+- **Sources:** fetch every cited source. For each quotation, find the words in the source. For each "X found / showed / established", find where X says it. Note the version read. "Could not reach" is an answer; "probably fine" is not.
+
+It is boring work and it is a good job for an arm. It found more that was wrong in the published paper than any other single pass that day.
