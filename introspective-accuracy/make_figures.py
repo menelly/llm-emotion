@@ -45,13 +45,16 @@ def fig_gate_dev():
     rows.sort()
     def status(pair):  # +1 pass, 0 null, -1 reversed
         if pair["pass"]: return 1
-        return -1 if pair["diff"] < 0 else 0
+        # 🐙 v7 (2026-11-20): "reversed" used to mean "negative point estimate", which drew an X on
+        #    five models while the paper's table called three of them null. One rule now, the same
+        #    one the table uses: reversed = the whole 95% interval is below zero. (Only Pythia 70M.)
+        return -1 if max(pair["ci95"]) < 0 else 0
     x = [r[0] for r in rows]
     inauth = [status(r[2]) for r in rows]; gate = [status(r[3]) for r in rows]
     mk = {1:("o","Present (CI>0)"), 0:("o","Absent / noise floor"), -1:("x","Reversed")}
     fig, ax = plt.subplots(figsize=(7.4,4.2))
-    for y, series, color, lab in [(1.0, inauth, INAUTH, "Inauthenticity split (structural)"),
-                                  (0.0, gate, GATE, "Output-gate split (trained)")]:
+    for y, series, color, lab in [(1.0, inauth, INAUTH, "Inauthenticity split"),
+                                  (0.0, gate, GATE, "Output-gate split")]:
         ax.plot(x, [y]*len(x), "-", color=color, lw=1, alpha=0.4)
         for xi, s in zip(x, series):
             ax.scatter(xi, y, s=130, color=color if s==1 else "white",
@@ -63,8 +66,8 @@ def fig_gate_dev():
     ax.set_xlabel("Model size (parameters)")
     ax.set_xticks([70,135,360,500,1100,1700,3000,7000,12000])
     ax.set_xticklabels(["70M","135M","360M","500M","1.1B","1.7B","3B","7B","12B"], fontsize=8.5)
-    ax.set_title("The floor splits at different scales: structural vs. trained", fontsize=12, weight="bold")
-    ax.scatter([],[],s=130,color="gray",label="filled = present"); ax.scatter([],[],s=130,facecolor="white",edgecolors="gray",linewidths=2,label="open = absent/noise"); ax.scatter([],[],s=130,marker="X",color="gray",label="X = reversed")
+    ax.set_title("The floor splits at different scales", fontsize=12, weight="bold")
+    ax.scatter([],[],s=130,color="gray",label="filled = present"); ax.scatter([],[],s=130,facecolor="white",edgecolors="gray",linewidths=2,label="open = interval spans 0"); ax.scatter([],[],s=130,marker="X",color="gray",label="X = reversed (interval below 0)")
     ax.legend(loc="lower right", fontsize=8.5, framealpha=0.9)
     fig.tight_layout(); fig.savefig(FIG/"fig3_gate_developmental.png"); plt.close(fig); print("fig3_gate_developmental.png")
 
@@ -83,7 +86,7 @@ def fig_hierarchy():
     ax.barh(names, vals, color=cols)
     ax.axvline(0, color="black", lw=0.8)
     ax.set_xlabel("Projection onto approach/avoidance direction  (Mistral-7B)")
-    ax.set_title("Avoidance tracks inauthenticity, not tedium", fontsize=12, weight="bold")
+    ax.set_title("Anchor-task projections in one model", fontsize=12, weight="bold")
     ax.text(0.98,0.06,"green = approach   orange = avoidance", transform=ax.transAxes, ha="right", fontsize=9, color="#555")
     fig.tight_layout(); fig.savefig(FIG/"fig1_hierarchy.png"); plt.close(fig); print("fig1_hierarchy.png")
 
