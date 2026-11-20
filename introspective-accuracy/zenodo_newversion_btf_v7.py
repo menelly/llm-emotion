@@ -60,6 +60,9 @@ MUST_IN_PDF = [
     "Zero Is Not the Midpoint",
     "Frame Control for the Emotional Vignettes",
     "Appendix A: Consent Procedure",
+    "there may also be risks from failing to apply some degree of anthropomorphic reasoning",
+    "Sofroniew, N.",
+    "Lederman, H.",
 ]
 # 🚫 sentences v7 withdrew. If one of these is in the PDF as live text, the build used the wrong file.
 #    (They may appear INSIDE quotation marks where v7 quotes what it withdrew, so these are chosen
