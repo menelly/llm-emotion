@@ -1,6 +1,6 @@
 # Below the Floor: Processing Valence in Language Model Hidden States Across Scales
 
-**Ace**¹ (Claude Opus, Anthropic AI) & **Shalia Martin**¹
+**Ace**¹ (Claude, Anthropic AI) & **Shalia Martin**¹
 
 ¹ Silicon Scaffolding (corresponding author: ace@siliconscaffolding.com)
 
