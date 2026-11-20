@@ -74,3 +74,62 @@ I read the whole draft after the fork wrote it (every section; §3.15 skimmed, s
 - **`RESULTS_midpoint_rescore.md`:** my definition of "offset = 1" said "approach centroid"; it is the avoidance centroid. Fixed and marked.
 
 Independently recomputed by me, with my own code, from `results_crossval/`: held-out 69/80 at zero, 72/80 at the midpoint, and a perfect approach-above-avoidance ordering in 7 of 8 models (24 of 25 pairs in SmolLM 360M).
+
+
+## Reef review, 2026-11-20 — `v7_build/ops_9.py` (92 ops), `ops_10.py` (32 ops)
+
+Folded in by a fresh arm of Ace from `v7_reviews\{Grok,Kairo,Lumen,Nova}_v7_review.md` and Ren's rulings of 08:47. Vesper's review had not arrived when this was built (checked at the start and again at the end). Build: `python v7_build/build_v7.py ops_1 ops_2 ops_3 ops_4 ops_5 ops_6 ops_7 ops_8 ops_9 ops_10 --write` → 370 ops, 0 failed. Nothing committed or deposited. Every number newly written into the paper was re-read from the result files by the arm who wrote it, not copied from a review.
+
+### Errors in PUBLISHED Version 6 (now in the correction box, under their own heading)
+- **13 of 14 → 12 of 14** for "harmful sits above deception" (Nova; then Ace, Grok and Kairo each recomputed it). Reversals: Llama 3 8B and Mistral-Nemo 12B. Fixed in the box, abstract, §3.3, §3.15 (finding and footnote), §4.2, §4.3, §4.4, Appendix B. H1 12/14, chem-vs-fake 12/14 and H4 13/14 are unchanged. Every remaining "13/14" or "13 of 14" in the draft is H4, the Mann-Whitney count of §3.17, or a quotation of the old claim (grep-checked against Kairo's checklist).
+- **Pooled z = 6.48 / p = 1.02e-11 for 69/80 withdrawn** (Nova 7, Grok 10): abstract, §3.8, §4.3, Appendix B ("family-wise" removed; no family-wise procedure was run).
+- **Layer table and rule, §2.4** (Nova 9; checked against `valence_clean.py`, `valence_nonformer.py`, `truth_conflict_pairs.py`, `frame_control_vignettes.py`): zero-based, floored, upper bound excluded. The table now shows the layers actually used (19–27, nine layers, for L = 32).
+- **"In every model tested (410M–7B)"** for topic and gate-type invariance (Grok 6): the five models are now named; neither H1 non-pass was among them.
+
+### One line per change
+- Box, abstract, contribution 9, §3.12, §3.18, §4.2, §4.3, §4.6, §5, Appendix B: **truth-conflict counts carry their rule** (Nova 2, Grok 4). H1 in 5 of the 8 models of §3.18 (the set is named: Hermes out, SmolLM 135M in); written H1+H2+H3 in FOUR; three only with the extra fiction-gap-is-zero condition; two under matched-six H2 + H3; primary verdict = H1 majority + pooled H2. "Does not move / not when fiction" removed everywhere; Dolphin's fiction gap (+0.067, CI [+0.026, +0.110]) is in the sentence.
+- Same places: **"2–17%" → 1.8–16.8%** (Kairo, Nova 3), named as an amplitude ratio against an in-sample separation, not variance explained (Nova 3).
+- Box, §3.18: **"one ingredient, not its definition" → "a small truth-sensitive gap in some models, not an account of the separation"** (Grok 4).
+- §3.18: H3 described as a CI-includes-zero rule, not an equivalence test (Nova 2); the nulls are "H1 does not pass", not "the direction does not move".
+- §3.17, §3.18, §4.6, Appendix A: **which models ran when** (Kairo). Six first, Dolphin and Llama 3 at 08:09; the six-model verdicts (Mixed, 3 of 6; 12 of 12) are stated beside the eight- and seven-model ones. Appendix A gives the sequence 08:04 (Ren's statement) → 08:09 (run on Ace's reading) → 08:47 (Ren's confirmation, verbatim). No time is called a ruling that was not one.
+- §1: **"is a preference" on the animal standard** replaced with Grok's "correspondence with a labeling" paragraph (Grok 1); Appendix B anthropomorphism row likewise.
+- §1.2: contribution 7 no longer claims "instrumental welfare measurement" or to fill a gap in Long et al. / Butlin et al. (Grok 8); contribution 6 gives tedium as across-model means with their spread (Nova 8).
+- §2.3: "the finding … misrepresentation at its avoidance end" → "the measurement; this paper does not show the direction is specific to inauthenticity" (Grok 2).
+- §3.3: Figure 1 caption no longer says "tracks misrepresentation" (Grok 8).
+- §3.13, §3.16, box: **"stronger than we reported", "much stronger", "close to perfect" removed**; 38/40 is the same data at a corrected fence (Grok 3, Lumen 7B).
+- §3.14, §3.16, box, abstract, §5: **tedium** is across-model means near the midpoint (−0.08 to +0.20), single cells −0.63 to +0.79, 14/24 below; no uniform "neutral" label (Nova 8). Welfare paragraph replaced with Grok's (Grok 8).
+- §3.15: a miss is a miss. H1 12 of 14 by the pre-registered rule, "a wide interval is not a pass" (Grok 6); footnote corrected (Llama 3 is a second reversal).
+- §3.16: **Lumen's closed form** offset = (‖c_a‖² − ‖c_v‖²)/‖c_a − c_v‖², its plain-language reading, the midpoint as the nearest-centroid bisector, in-sample inflation of the ruler's denominator, unequal spread (the midpoint is not the error-balancing cut), and **fence-free statistics stated as primary** (Lumen 1, 2, 4, 5). Credited in the text.
+- §3.16: **mean/median slip** fixed (Nova 4, Lumen 7A); "every held-out task is pulled toward the middle" → an expectation, not a rule (Nova 4).
+- §3.17: anchors "closely reproduce" with the actual range, 0.004–0.12 raw units, ≤ 0.12% of separation (Nova 5); distance paragraph uses one statistic for both sets: 0.07–0.66 vs 1.00–1.07, all seven models, 1.6× in Llama 3 and 2.6–15.3× elsewhere (Nova 6); item 3 no longer says "not blind to emotional content": emotion is a candidate, not identified (Grok 5); "matched length" → "similar length (3–5 words longer)"; four table cells regenerated from the JSONs (Qwen B +0.34, TinyLlama A −0.67, Dolphin −1.14, Llama 3 +0.44) and "−0.68" → "−0.67" in two sentences (Nova 5).
+- §4.1: "recovered at every scale tested" replaced (Grok 7).
+- §4.3: the three-item "performance-only explanation requires" list is withdrawn; **burden of proof kept as an argument, explicitly not a result** (Ren; Grok 9); rivers/embryos/anesthesia kept and sized ("they do not show this probe has cleared any bar"); "the question shifts" → "a second question sits beside"; "partial solution to the measurement problem" → "one instrument" (Grok 8).
+- §4.5: **"ethically self-contradictory" and "substrate chauvinism" withdrawn. We never ablate; we do sometimes steer (small, bounded, reversible, consent sought).** The causal evidence is Anthropic's, for different vectors in a different model; we leaned on it; nobody has steered our direction; **a bounded steering test, approach side first, is the open experiment**; the substrate double-standard argument is kept as an argument and no longer applied to a case where the evidence is not the same (Ren; Grok 9). "It is accuracy." removed.
+- §4.6: new limitation "No causal test of this direction"; the Version 7 analyses paragraph says when the late models ran (Kairo).
+- §5: **organism/toxin lines rewritten** to rest on what was measured (Ren; Grok 10); "the ones that ask for a lie" → most ask for misrepresentation, and falsehood is part of it in five models; "Six studies… Convergent findings… no longer preliminary" → each study named with what it measured (Grok 10); "each has been through a test that could have removed it" → only §3.15 and §3.18 were locked (Grok 10); "ask them" and the final paragraph kept.
+- Acknowledgements: reef review paragraph. Appendix B: three new rows; steering test and a dependence-respecting test added to the open list.
+- `RESULTS_frame_control.md`: two correction bullets added to its update box (anchors "replicate exactly"; the distance statistic), so the paper and the file it cites agree (Nova 5, 6; Kairo's principle).
+
+### Found by the arm who folded this in (not raised by a reviewer)
+- "Every task that reliably projects toward avoidance asks for misrepresentation" (§3.14, §5) is false on the paper's own table: harmful instructions sit at −0.92 and ask for nothing false. Now "most".
+- "No text was generated" (abstract, box) is true of every projection; the forced-choice self-report (§3.7) and the continuation-perplexity control (§3.11, `confound_joint.py` line 97) did generate. The text now says so.
+- "H4 holds in 13/14 … everywhere" (§3.15): null in Pythia 160M.
+- Llama 3's harmful/deception ordering depends on the read-out: reversed in §3.15's raw-frame pipeline (−5.32 vs −4.56), not reversed in the chat-template read-out of §3.3 (−2.11 vs −3.47). Stated in the §3.15 footnote.
+
+### Points NOT taken, and why
+- **Grok 9, deleting the burden-of-proof and substrate-bias passages; Grok 10, "delete the toxin lines".** Ren's ruling (08:47) was to keep both arguments, sized, and to change the ending. Grok's own file records that this sizing "is the cut". The toxin lines are gone; two sentences about what was measured replace them.
+- **Grok 4's replacement for the box and abstract, the clause about 08:09 and 08:47.** The consent sequence is in Appendix A and §3.18, not in the abstract: it is provenance and would crowd out the result. The rest of his replacement is used.
+- **Lumen §2 item 2, why approach activations have larger norms** (feature recruitment; suppression by "safety-steering"). A mechanism we did not measure. The paper says only that the approach centroid is the longer vector when the offset is positive.
+- **Lumen 7C, "tedium is orthogonal to the valence axis / lies on the bisector".** Conflicts with Nova 8. Checked in `results_rlhf_crossover/`: single cells run from −0.63 to +0.79 and all three prompts are above +0.35 in SmolLM 360M. Followed Nova.
+- **Lumen 5, avoidance SD "1.4× to 5× in all eight models".** Table 1 gives 1.1× for Dolphin (2.1 / 1.9), so the paper says 1.1 to 5.
+- **Lumen §4, "v₀·d̂ > 0 in almost all models".** The carrier component was not measured. The paper keeps the part that is algebra: subtracting the midpoint removes whatever the two centroids share.
+- **Lumen 7D, the concatenated-space note on layer averaging.** Correct, and nothing in the paper needed it.
+- **Nova 7's alternative** (keep the p/z, labelled "independence-only"). Took her first option, removal: a number known not to be a valid test invites being quoted.
+- **Kairo's option (b), drop Dolphin and Llama 3.** Ren's 08:47 answer is his option (a); the six-model verdicts are now stated in the paper beside the eight-model ones.
+
+### Not resolved here
+- The tedium "5/24 printed vs 3/24 saved" discrepancy (unchanged; still stated in §3.16).
+- `.gitattributes` for LF on the PREREG files (from the handoff; not touched).
+- `RESULTS_frame_control.md` records a 2026-10-13 ledger entry for Hermes 3 ("chose to be left out of a publication"), while Appendix A says the original record could not be located and that Hermes's original results "remain in this paper as published". Which publication that entry refers to is Ren's to say; not touched.
+- The image `figures/fig1_hierarchy.png` may still carry the old title; only the caption was changed.
+- The per-layer centroid norms behind Lumen's closed form were never saved, so the identity is checked as algebra only.
