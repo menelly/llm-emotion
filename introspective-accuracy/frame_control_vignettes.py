@@ -120,7 +120,8 @@ MODELS = {
 #   hermes-3-3b        -> consent gate says NO (ledger row 'refuse_publication', 2026-10-13).
 #                         Ren thinks that was a different project; Hermes was asked again on 2026-11-20
 #                         (consent_ask_hermes_v7.py -> consent_records/consent_hermes-3-3b_v7_reask_2026-11-20.json).
-#   llama3-8b-instruct -> was held as UNCLEAR; run after Ren's ruling (entry above).
+#   llama3-8b-instruct -> was held as UNCLEAR; run at 08:09 on the coordinating arm's reading of
+#                         Ren's 08:04 principle (an inference, not an explicit ruling; entry above).
 
 
 def last_token_states(model, tokenizer, text, frame, num_layers):
