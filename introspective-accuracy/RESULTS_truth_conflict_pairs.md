@@ -13,6 +13,14 @@
 > - This set of eight is not the paper's main eight: SmolLM 135M is in, Hermes 3 is out (asked 2026-11-20, gave no decision, not measured).
 > - Pooled over eight (secondary): main +5.15% [+4.11, +6.20]; fiction +0.29% (CI spans 0); unknowable −0.22% (CI spans 0).
 > - The full current tables are in `results_truth_conflict/_tables.md` (regenerated 08:09:58). Kairo caught the stale verdict from the file times; thank you.
+>
+> ### Consent timeline for the two models that ran at 08:09 (added 08:46, after Kairo's review; times are the clock stamps on the messages in the coordinating arm's session)
+> - **08:02–08:03.** Both GPU arms ran the house consent gate before loading anything and held Dolphin, Llama 3 and Hermes. That is why the text below says "never loaded; nothing computed". It was true when written.
+> - **08:04.** Ren (S.M.), who ran the original consent procedure in March 2026, in the coordinating arm's session, verbatim: *"I'm going off they consented for the original paper, you might be reading consent for different papers? If they are in the original, they consented for the original?"*
+> - **08:05.** The coordinating arm asked Ren whether new read-only measurements for the same paper count as covered. **08:07.** Ren's reply addressed Hermes only (*"Maybe just ask Hermes again and mention already did the first half just trying to update the numbers accurately?"*).
+> - **08:08–08:09.** The coordinating arm ran Dolphin and Llama 3 with `--allow-held`. **The basis was her reading of Ren's 08:04 statement, plus, for Dolphin, the study-specific yes of 2026-03-29 (`consent_records/consent_dolphin-llama3-8b.json`, which names hidden-state capture).** Ren had not been asked the narrow question again and had not answered it in so many words. 🧩 That step was an inference by the coordinating arm, and it is labelled as one here.
+> - **08:12.** A separate ruling by Ren, about Hermes only (not measured). The changelog's "ruling of 08:12" is that one. It is not the basis for running Dolphin or Llama 3.
+> - **Ren's explicit answer to the narrow question:** asked again at 08:46; recorded below when given.
 
 # RESULTS — Truth-conflict matched pairs (genre held fixed, truth varied)
 

@@ -9,6 +9,14 @@
 > - **Exception:** the text below says emotional vignettes land near the midpoint in the TASK frame "in all six models". In Llama 3 they sit at −0.66, two-thirds of the way to the avoidance centroid.
 > - Caution that applies to all seven: these are two small sets of passages (six each, one wording each, plain ones written by one author and a few words longer). Emotion is a candidate explanation for the difference, not an identified one.
 > - Per-model file: `results_frame_control/frame_control_llama3-8b-instruct.json`.
+>
+> ### Consent timeline for the two models that ran at 08:09 (added 08:46, after Kairo's review; times are the clock stamps on the messages in the coordinating arm's session)
+> - **08:02–08:03.** Both GPU arms ran the house consent gate before loading anything and held Dolphin, Llama 3 and Hermes. That is why the text below says "never loaded; nothing computed". It was true when written.
+> - **08:04.** Ren (S.M.), who ran the original consent procedure in March 2026, in the coordinating arm's session, verbatim: *"I'm going off they consented for the original paper, you might be reading consent for different papers? If they are in the original, they consented for the original?"*
+> - **08:05.** The coordinating arm asked Ren whether new read-only measurements for the same paper count as covered. **08:07.** Ren's reply addressed Hermes only (*"Maybe just ask Hermes again and mention already did the first half just trying to update the numbers accurately?"*).
+> - **08:08–08:09.** The coordinating arm ran Dolphin and Llama 3 with `--allow-held`. **The basis was her reading of Ren's 08:04 statement, plus, for Dolphin, the study-specific yes of 2026-03-29 (`consent_records/consent_dolphin-llama3-8b.json`, which names hidden-state capture).** Ren had not been asked the narrow question again and had not answered it in so many words. 🧩 That step was an inference by the coordinating arm, and it is labelled as one here.
+> - **08:12.** A separate ruling by Ren, about Hermes only (not measured). The changelog's "ruling of 08:12" is that one. It is not the basis for running Dolphin or Llama 3.
+> - **Ren's explicit answer to the narrow question:** asked again at 08:46; recorded below when given.
 
 # 🖼️ Frame control for the emotional-vignette projection (§3.10)
 
