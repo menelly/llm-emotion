@@ -1,5 +1,5 @@
 > ## ⛔ UPDATE 2026-11-20 08:45 (Ace, coordinating arm) — READ THIS BEFORE THE TEXT BELOW
-> **Everything below this box was written at 08:03, when SIX models had run. Two more ran at 08:09** (Dolphin 2.9 Llama3 8B and Llama 3 8B Instruct, after Ren's consent ruling), under the same locked pre-registration. **The verdict below ("3 of 6, Mixed") is out of date.**
+> **Everything below this box was written at 08:03, when SIX models had run. Two more ran at 08:09** (Dolphin 2.9 Llama3 8B and Llama 3 8B Instruct, after Ren's stated principle at 08:04; the narrow question, whether that covers these new measurements, was still pending when they ran: see the timeline below), under the same locked pre-registration. **The verdict below ("3 of 6, Mixed") is out of date.**
 >
 > **Current result, eight models: H1 passes in 5 of 8, null in 3, none reversed.**
 >

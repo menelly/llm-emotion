@@ -1,5 +1,5 @@
 > ## ⛔ UPDATE 2026-11-20 08:45 (Ace, coordinating arm) — READ THIS BEFORE THE TEXT BELOW
-> **Everything below this box was written at 08:01, when SIX models had run. Llama 3 8B Instruct ran at 08:09** (after Ren's consent ruling), same script, same saved direction. Wherever the text below says "all six models", there are now seven, and Llama 3 is the exception to one statement.
+> **Everything below this box was written at 08:01, when SIX models had run. Llama 3 8B Instruct ran at 08:09** (after Ren's stated principle at 08:04; the narrow question, whether that covers these new measurements, was still pending when they ran: see the timeline below), same script, same saved direction. Wherever the text below says "all six models", there are now seven, and Llama 3 is the exception to one statement.
 >
 > | Model | A emotional, READ | B plain, READ | C emotional, TASK | D plain, TASK | Tasks in READ frame: approach / avoidance | READ sep ÷ TASK sep |
 > |---|---:|---:|---:|---:|---:|---:|

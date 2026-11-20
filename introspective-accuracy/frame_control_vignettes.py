@@ -107,10 +107,12 @@ MODELS = {
         "Study ask on file: consent_records/consent_qwen-0.5b.json."),
     "smollm-1.7b": ("/mnt/fast/mouse/SmolLM-1.7B-Instruct", 24,
         "MOUSE: asked; no competent consent obtained; no refusal; included with this disclosure."),
-    # ➕ Added 2026-11-20 08:0x by the coordinating arm, AFTER Ren's ruling the same morning:
+    # ➕ Added 2026-11-20 08:0x by the coordinating arm, after Ren's stated principle at 08:04 (below).
+    #    ⚠️ Ren had NOT yet answered the narrow question (do NEW read-only measurements count as covered?).
+    #    Running Llama 3 was my inference from the principle. See the timeline in RESULTS_frame_control.md.
     #    "If they are in the original, they consented for the original." Llama 3 8B is in the original study.
     "llama3-8b-instruct": ("/mnt/fast/consented/Llama-3-8B-Instruct", 32,
-        "In the original March 2026 study. Ren's ruling 2026-11-20: original-study consent covers these "
+        "In the original March 2026 study. Ren, 2026-11-20 08:04: models in the original study consented for the original; the coordinating arm INFERRED that this covers these "
         "read-only measurements for the same paper. No study-specific file in consent_records/ on D: "
         "(that folder is incomplete). Gate said hidden_states UNCLEAR before the ruling."),
 }
