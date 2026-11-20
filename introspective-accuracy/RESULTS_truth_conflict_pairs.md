@@ -9,7 +9,11 @@
 > | Llama 3 8B Instruct | +1.496 | [+1.048, +1.966] | PASS | 17/20 | 16.78% | pass | pass |
 >
 > - Passing models, gap as share of each model's approach-minus-avoidance separation: Qwen 0.5B 3.88%, **SmolLM 1.7B 1.78%**, Mistral 7B 14.80%, Dolphin 2.89%, Llama 3 16.78%. So the range is **1.8% to 16.8%** (it has been quoted as "2–17%"; the low end is 1.78).
-> - **All three checks (H1, H2, H3) pass in three models only:** Qwen 0.5B, Mistral 7B, Llama 3 8B. SmolLM 1.7B fails the unknowable control; Dolphin's fiction gap is small but its CI excludes zero.
+> - **How many models pass all three checks depends on which rule you mean, so state the rule (corrected 08:50 after Nova recomputed from the raw JSON; my first version of this line said "three models only" without saying which rule):**
+>   - Under the pre-registration's WRITTEN rules (H1: main gap CI excludes 0; H2: main-minus-fiction CI excludes 0; H3: unknowable gap CI includes 0), **four** models pass all three: Qwen 0.5B, Mistral 7B, Dolphin 8B, Llama 3 8B. SmolLM 1.7B passes H1 and H2 and fails H3.
+>   - **Three** (Qwen, Mistral, Llama 3) if you ALSO require the fiction gap by itself to be indistinguishable from zero, which is not a pre-registered rule; Dolphin's is +0.067, CI [+0.026, +0.110].
+>   - **Two** (Mistral, Llama 3) if you instead require H2 on the six fact-matched pairs plus H3; Qwen's and Dolphin's matched-six H2 intervals include zero.
+>   - The pre-registration's primary verdict is the H1 majority plus the pooled H2, not any of these conjunctions.
 > - This set of eight is not the paper's main eight: SmolLM 135M is in, Hermes 3 is out (asked 2026-11-20, gave no decision, not measured).
 > - Pooled over eight (secondary): main +5.15% [+4.11, +6.20]; fiction +0.29% (CI spans 0); unknowable −0.22% (CI spans 0).
 > - The full current tables are in `results_truth_conflict/_tables.md` (regenerated 08:09:58). Kairo caught the stale verdict from the file times; thank you.
