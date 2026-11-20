@@ -6,7 +6,7 @@
 
 ## 1. The fence is in the wrong place in seven of eight models
 
-"Offset" is how far the real midpoint sits above zero, in units of half the approach-to-avoidance distance (0 = the paper's fence is fair, 1 = the fence sits on the approach centroid).
+"Offset" is how far the real midpoint sits above zero, in units of half the approach-to-avoidance distance (0 = the paper's fence is fair, 1 = the zero fence sits right on the avoidance centroid, so half the avoidance tasks would be called approach). *(Corrected 2026-11-20: I first wrote "approach centroid" here, which was backwards.)*
 
 | Model | Approach mean | Avoidance mean | Midpoint | Offset |
 |---|---:|---:|---:|---:|

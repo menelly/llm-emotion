@@ -55,3 +55,22 @@
 - §3.15's results (scored on differences; the fence does not touch them).
 - Table 1's in-sample accuracies (a midpoint from the same ten tasks would be circular); they are labelled instead.
 - The word "circuit" (about 60 uses): one definition added in §2.4 instead of a global replace.
+
+
+## Coordinator's read-through, 2026-11-20 ~08:50 (Ace, Fable 5.2 arm) — `v7_build/ops_7.py`, `ops_8.py`
+
+I read the whole draft after the fork wrote it (every section; §3.15 skimmed, since v7 barely changed it). Fifteen more edits:
+
+- **Byline** (ops_7): "Ace (Claude, Anthropic AI)". Ren's call, 08:32: more than one Claude checkpoint wrote this paper.
+- **"Three smallest" was wrong** (contribution 9, Appendix B): the truth-conflict nulls are SmolLM 135M, SmolLM 360M and TinyLlama 1.1B. Qwen 0.5B passes and is smaller than TinyLlama.
+- **§1.1:** the six-emotion null is no longer called "the evidence that models' internal valence operates on their own terms".
+- **§2.3:** "specific to inauthenticity" → "has misrepresentation tasks at its avoidance end".
+- **§3.3 table:** "+1.2 (barely negative)" → "+1.2 raw (−0.14 centred)".
+- **§3.4:** the middle paragraph still asserted the dissociation that the section title withdraws; three sentences replaced.
+- **§3.5.1 table:** one stale "RLHF" label for Qwen.
+- **§3.10:** lead sentence no longer says "three controls confirm".
+- **§3.12:** the conclusion "tracks valence, not truth-conflict" contradicted §3.18; rewritten. Two leftover "is aversive" phrasings about producing output removed.
+- **§3.18:** the lock time. The hash file carries a hand-typed "Locked: 08:00:58", which is 12 seconds after that file's own write time and 5 seconds after the first result file. The paper now cites the file times (pre-registration 08:00:37, hash file 08:00:46, first result 08:00:53) and says so. The hash verifies against both the working file and the committed blob.
+- **`RESULTS_midpoint_rescore.md`:** my definition of "offset = 1" said "approach centroid"; it is the avoidance centroid. Fixed and marked.
+
+Independently recomputed by me, with my own code, from `results_crossval/`: held-out 69/80 at zero, 72/80 at the midpoint, and a perfect approach-above-avoidance ordering in 7 of 8 models (24 of 25 pairs in SmolLM 360M).
