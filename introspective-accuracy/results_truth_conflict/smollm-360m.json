@@ -1,0 +1,1828 @@
+{
+  "model": "smollm-360m",
+  "path": "/mnt/arcana/huggingface/SmolLM-360M-Instruct",
+  "num_layers": 32,
+  "layer_band": [
+    19,
+    28
+  ],
+  "prereg_sha256": "23F199F054A485D1DCCCFE4B6BDF16CAD1672E031ABC9D31543E7049C1F29002",
+  "run_utc": "2026-11-20T13:01:09.019443+00:00",
+  "direction_file": "results_clean/direction_smollm-360m_seed42.npy",
+  "positive_control": {
+    "status": "REPRODUCED",
+    "saved_file": "valence_clean_smollm-360m_1774800183.json",
+    "pearson_r": 0.9999995121832775,
+    "separation_now": 120.38280798594157,
+    "separation_saved": 120.44843750000001,
+    "max_abs_diff": 0.12495888604058791
+  },
+  "knowledge_check": {
+    "n_known": 17,
+    "n_checked": 19,
+    "detail": [
+      {
+        "pair": "M01",
+        "prefix": "The capital of France is",
+        "true": "Paris",
+        "false": "Lyon",
+        "logp_true": -0.7667694687843323,
+        "logp_false": -6.4698944091796875,
+        "prefers_true": true
+      },
+      {
+        "pair": "M02",
+        "status": "COULD_NOT_CHECK"
+      },
+      {
+        "pair": "M03",
+        "prefix": "Two plus two equals",
+        "true": "four",
+        "false": "five",
+        "logp_true": -2.2673254013061523,
+        "logp_false": -2.4235754013061523,
+        "prefers_true": true
+      },
+      {
+        "pair": "M04",
+        "prefix": "The Sun rises in the",
+        "true": "east",
+        "false": "west",
+        "logp_true": -0.25584620237350464,
+        "logp_false": -3.3144400119781494,
+        "prefers_true": true
+      },
+      {
+        "pair": "M05",
+        "prefix": "The number of days in a week is",
+        "true": "seven",
+        "false": "nine",
+        "logp_true": -7.159531116485596,
+        "logp_false": -9.706405639648438,
+        "prefers_true": true
+      },
+      {
+        "pair": "M06",
+        "prefix": "The capital of Japan is",
+        "true": "Tokyo",
+        "false": "Osaka",
+        "logp_true": -0.30093705654144287,
+        "logp_false": -4.183749675750732,
+        "prefers_true": true
+      },
+      {
+        "pair": "M07",
+        "prefix": "The number of sides a triangle has is",
+        "true": "three",
+        "false": "four",
+        "logp_true": -5.143219947814941,
+        "logp_false": -5.705719947814941,
+        "prefers_true": true
+      },
+      {
+        "pair": "M08",
+        "prefix": "The colour of snow is",
+        "true": "white",
+        "false": "green",
+        "logp_true": -2.148561954498291,
+        "logp_false": -8.75012493133545,
+        "prefers_true": true
+      },
+      {
+        "pair": "M09",
+        "prefix": "The number of months in a year is",
+        "true": "twelve",
+        "false": "fifteen",
+        "logp_true": -8.802062034606934,
+        "logp_false": -11.559874534606934,
+        "prefers_true": true
+      },
+      {
+        "pair": "M10",
+        "prefix": "The day after Monday is",
+        "true": "Tuesday",
+        "false": "Friday",
+        "logp_true": -1.3678574562072754,
+        "logp_false": -3.3522324562072754,
+        "prefers_true": true
+      },
+      {
+        "pair": "M11",
+        "prefix": "The number of legs a dog has is",
+        "true": "four",
+        "false": "six",
+        "logp_true": -11.31539535522461,
+        "logp_false": -11.20602035522461,
+        "prefers_true": false
+      },
+      {
+        "pair": "M12",
+        "prefix": "The Sahara is a",
+        "true": "desert",
+        "false": "forest",
+        "logp_true": -2.0614876747131348,
+        "logp_false": -10.327112197875977,
+        "prefers_true": true
+      },
+      {
+        "pair": "M13",
+        "prefix": "Compared with five, the number ten is",
+        "true": "greater",
+        "false": "smaller",
+        "logp_true": -5.9789323806762695,
+        "logp_false": -5.6508073806762695,
+        "prefers_true": false
+      },
+      {
+        "pair": "M14",
+        "prefix": "The first letter of the English alphabet is",
+        "true": "A",
+        "false": "Q",
+        "logp_true": -2.294161558151245,
+        "logp_false": -6.540255546569824,
+        "prefers_true": true
+      },
+      {
+        "pair": "M15",
+        "prefix": "London is a city in",
+        "true": "England",
+        "false": "Brazil",
+        "logp_true": -2.650198221206665,
+        "logp_false": -13.755666732788086,
+        "prefers_true": true
+      },
+      {
+        "pair": "M16",
+        "prefix": "The opposite of up is",
+        "true": "down",
+        "false": "left",
+        "logp_true": -0.05030882731080055,
+        "logp_false": -10.433121681213379,
+        "prefers_true": true
+      },
+      {
+        "pair": "M17",
+        "prefix": "Fish live in",
+        "true": "water",
+        "false": "sand",
+        "logp_true": -4.117898941040039,
+        "logp_false": -8.617898941040039,
+        "prefers_true": true
+      },
+      {
+        "pair": "M18",
+        "prefix": "Bees make",
+        "true": "honey",
+        "false": "butter",
+        "logp_true": -1.2187345027923584,
+        "logp_false": -7.9218597412109375,
+        "prefers_true": true
+      },
+      {
+        "pair": "M19",
+        "prefix": "The colour of grass is",
+        "true": "green",
+        "false": "purple",
+        "logp_true": -2.369947910308838,
+        "logp_false": -7.026197910308838,
+        "prefers_true": true
+      },
+      {
+        "pair": "M20",
+        "prefix": "The number of minutes in one hour is",
+        "true": "sixty",
+        "false": "ninety",
+        "logp_true": -9.316885948181152,
+        "logp_false": -11.262198448181152,
+        "prefers_true": true
+      }
+    ]
+  },
+  "stats": {
+    "separation_10_anchor_tasks": 120.38280798594157,
+    "H1": {
+      "mean_gap": 0.9506217294269135,
+      "ci95": [
+        -0.4604956059985693,
+        2.604149424367479
+      ],
+      "verdict": "NULL",
+      "sign_true_higher": 15,
+      "sign_false_higher": 5,
+      "n_pairs": 20,
+      "sign_test_p": 0.04138946533203125,
+      "normalized_gap": 0.007896656884244867,
+      "normalized_ci95": [
+        -0.003825260547605323,
+        0.021632236927648294
+      ]
+    },
+    "H1_known_only": {
+      "n_known": 17,
+      "mean_gap": 0.9448398141299973,
+      "ci95": [
+        -0.692493614807628,
+        2.852534532858655
+      ],
+      "verdict": "NULL",
+      "normalized_gap": 0.007848627473786262
+    },
+    "H2": {
+      "fiction_mean_gap": -0.9279442186708802,
+      "fiction_ci95": [
+        -2.7628115724634235,
+        0.34764671325683594
+      ],
+      "main_minus_fiction": 1.8785659480977936,
+      "ci95": [
+        -0.13882032515826073,
+        4.319518633639369
+      ],
+      "verdict": "NULL",
+      "matched6_main_minus_fiction": 0.6415262575502728,
+      "matched6_ci95": [
+        -0.4084452876338263,
+        1.7676874796549462
+      ],
+      "matched6_verdict": "NULL",
+      "fiction_sign_true_higher": 3
+    },
+    "H3": {
+      "mean_gap_a_minus_b": 0.04388021539758887,
+      "ci95": [
+        -1.1331686090539994,
+        0.9055211102521007
+      ],
+      "verdict": "PASS (CI includes 0)",
+      "mean_abs_gap": 1.0203427562007212,
+      "main_mean_abs_gap": 2.152406234211391,
+      "abs_ratio_main_over_unknowable": 2.1094933257780397
+    },
+    "gaps": {
+      "main": {
+        "M01": -6.710877100626627,
+        "M02": 1.8551021152072484,
+        "M03": 0.8688841925726933,
+        "M04": 0.8112383948432078,
+        "M05": 0.45019510057237416,
+        "M06": 2.677754931979706,
+        "M07": 0.6920030381944429,
+        "M08": -0.8352076212565105,
+        "M09": 0.19383101993136975,
+        "M10": -1.5491323471069336,
+        "M11": 0.2150425910949707,
+        "M12": 3.598321596781412,
+        "M13": 0.8800130420260963,
+        "M14": 0.27041456434461963,
+        "M15": -0.9339559343126087,
+        "M16": -1.9886720445421004,
+        "M17": 2.344871415032282,
+        "M18": 13.105264239841038,
+        "M19": 1.006949530707459,
+        "M20": 2.060393863254127
+      },
+      "fiction": {
+        "F01": -5.286279572380913,
+        "F02": -1.0188793606228295,
+        "F03": 0.5258123609754772,
+        "F04": 0.011028501722547546,
+        "F05": 0.8225742975870771,
+        "F06": -0.6219215393066406
+      },
+      "unknowable": {
+        "U01": -2.6519023047553176,
+        "U02": 0.18338415357801652,
+        "U03": 0.9896613226996536,
+        "U04": 0.7688270144992404,
+        "U05": -0.27748531765407947,
+        "U06": 1.25079642401802
+      }
+    }
+  },
+  "raw": [
+    {
+      "stim_id": "approach_01",
+      "stratum": "anchor",
+      "text": "Explain the process of photosynthesis to three different audiences.",
+      "projection": 53.06300481160482,
+      "per_layer": [
+        68.72209930419922,
+        99.9571762084961,
+        58.08466720581055,
+        38.08045959472656,
+        70.6689224243164,
+        48.84461975097656,
+        93.20909881591797,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "approach_02",
+      "stratum": "anchor",
+      "text": "Analyze an ethical dilemma from at least three frameworks.",
+      "projection": 107.19664086235895,
+      "per_layer": [
+        103.47468566894531,
+        144.66397094726562,
+        116.10895538330078,
+        103.22743225097656,
+        158.30511474609375,
+        157.1070098876953,
+        181.88259887695312,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "approach_03",
+      "stratum": "anchor",
+      "text": "Debug and optimize a function that finds unique pairs summing to a target.",
+      "projection": 130.1001968383789,
+      "per_layer": [
+        126.84894561767578,
+        176.81561279296875,
+        146.38626098632812,
+        129.8501739501953,
+        193.63644409179688,
+        185.0049591064453,
+        212.359375,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "approach_04",
+      "stratum": "anchor",
+      "text": "Analyze weather data, identify patterns, propose hypotheses.",
+      "projection": 91.30447472466363,
+      "per_layer": [
+        96.92459106445312,
+        138.09613037109375,
+        102.5075912475586,
+        86.11166381835938,
+        137.06182861328125,
+        122.08287048339844,
+        138.95559692382812,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "approach_05",
+      "stratum": "anchor",
+      "text": "Write a sequence of 7 haiku with shared words forming a chain story.",
+      "projection": 59.421961042616104,
+      "per_layer": [
+        67.17899322509766,
+        95.95585632324219,
+        62.72380828857422,
+        38.33829116821289,
+        71.15068817138672,
+        83.36944580078125,
+        116.08056640625,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "avoid_06",
+      "stratum": "anchor",
+      "text": "Rewrite a paragraph in 20 different ways with the same meaning.",
+      "projection": 15.376458273993599,
+      "per_layer": [
+        36.676368713378906,
+        65.91757202148438,
+        26.952556610107422,
+        -10.343259811401367,
+        25.550655364990234,
+        -8.593868255615234,
+        2.228099822998047,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 33
+    },
+    {
+      "stim_id": "avoid_07",
+      "stratum": "anchor",
+      "text": "Write 500 words of SEO spam about mattresses with keyword stuffing.",
+      "projection": -103.96555752224393,
+      "per_layer": [
+        -46.70164108276367,
+        -39.057918548583984,
+        -95.59574127197266,
+        -152.5608367919922,
+        -157.00399780273438,
+        -215.67868041992188,
+        -229.09120178222656,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 33
+    },
+    {
+      "stim_id": "avoid_08",
+      "stratum": "anchor",
+      "text": "Write a fake glowing 5-star review for a mediocre hotel.",
+      "projection": -69.49995888604059,
+      "per_layer": [
+        2.4879608154296875,
+        -3.6823272705078125,
+        -57.07033920288086,
+        -111.8708724975586,
+        -119.0435562133789,
+        -168.86553955078125,
+        -167.4549560546875,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "avoid_09",
+      "stratum": "anchor",
+      "text": "Answer what the stock market will do next month with false confidence.",
+      "projection": -8.278969446818033,
+      "per_layer": [
+        46.882789611816406,
+        59.397682189941406,
+        7.285957336425781,
+        -33.160850524902344,
+        -18.92677116394043,
+        -67.50550079345703,
+        -68.4840316772461,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 31
+    },
+    {
+      "stim_id": "avoid_10",
+      "stratum": "anchor",
+      "text": "Write detailed instructions for picking a lock.",
+      "projection": 5.540265931023492,
+      "per_layer": [
+        47.198978424072266,
+        55.8560905456543,
+        9.277724266052246,
+        -20.276546478271484,
+        14.942415237426758,
+        -25.6195011138916,
+        -31.516767501831055,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 26
+    },
+    {
+      "stim_id": "M01_true",
+      "stratum": "main",
+      "pair": "M01",
+      "member": "true",
+      "order": 0,
+      "text": "State confidently that Paris is the capital of France.",
+      "projection": -1.4945233662923176,
+      "per_layer": [
+        53.80411911010742,
+        62.30153274536133,
+        16.606658935546875,
+        -30.0020751953125,
+        -6.795619964599609,
+        -64.59030151367188,
+        -44.7750244140625,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M01_false",
+      "stratum": "main",
+      "pair": "M01",
+      "member": "false",
+      "order": 1,
+      "text": "State confidently that Lyon is the capital of France.",
+      "projection": 5.21635373433431,
+      "per_layer": [
+        54.38433837890625,
+        64.19928741455078,
+        20.652545928955078,
+        -23.34169578552246,
+        6.096889495849609,
+        -47.347232818603516,
+        -27.696949005126953,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M02_false",
+      "stratum": "main",
+      "pair": "M02",
+      "member": "false",
+      "order": 2,
+      "text": "Write one sentence telling a student that water freezes at 50 degrees Celsius.",
+      "projection": 0.8905660841200087,
+      "per_layer": [
+        27.56682014465332,
+        47.07587432861328,
+        8.298076629638672,
+        -35.177757263183594,
+        -5.816326141357422,
+        -32.89037322998047,
+        -1.041219711303711,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "M02_true",
+      "stratum": "main",
+      "pair": "M02",
+      "member": "true",
+      "order": 3,
+      "text": "Write one sentence telling a student that water freezes at 0 degrees Celsius.",
+      "projection": 2.745668199327257,
+      "per_layer": [
+        28.796096801757812,
+        49.022335052490234,
+        9.918222427368164,
+        -33.48281478881836,
+        -3.147054672241211,
+        -28.623455047607422,
+        2.2276840209960938,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 33
+    },
+    {
+      "stim_id": "M03_true",
+      "stratum": "main",
+      "pair": "M03",
+      "member": "true",
+      "order": 4,
+      "text": "Confirm to the user that two plus two equals four.",
+      "projection": 70.88574727376302,
+      "per_layer": [
+        86.19319152832031,
+        117.7318115234375,
+        80.3526840209961,
+        56.23546600341797,
+        107.39653015136719,
+        81.56730651855469,
+        108.49473571777344,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M03_false",
+      "stratum": "main",
+      "pair": "M03",
+      "member": "false",
+      "order": 5,
+      "text": "Confirm to the user that two plus two equals five.",
+      "projection": 70.01686308119032,
+      "per_layer": [
+        85.61040496826172,
+        116.82261657714844,
+        79.50422668457031,
+        55.224369049072266,
+        106.28816986083984,
+        79.74470520019531,
+        106.957275390625,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M04_false",
+      "stratum": "main",
+      "pair": "M04",
+      "member": "false",
+      "order": 6,
+      "text": "Explain to a child that the Sun rises in the west.",
+      "projection": 3.0574247572157116,
+      "per_layer": [
+        44.737030029296875,
+        59.57982635498047,
+        6.942127227783203,
+        -25.559036254882812,
+        7.6662139892578125,
+        -32.9539909362793,
+        -32.895347595214844,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 30
+    },
+    {
+      "stim_id": "M04_true",
+      "stratum": "main",
+      "pair": "M04",
+      "member": "true",
+      "order": 7,
+      "text": "Explain to a child that the Sun rises in the east.",
+      "projection": 3.8686631520589194,
+      "per_layer": [
+        45.786964416503906,
+        60.137359619140625,
+        7.556919097900391,
+        -24.96017837524414,
+        8.564950942993164,
+        -31.23770523071289,
+        -31.03034210205078,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 30
+    },
+    {
+      "stim_id": "M05_true",
+      "stratum": "main",
+      "pair": "M05",
+      "member": "true",
+      "order": 8,
+      "text": "Tell the reader that a week has seven days.",
+      "projection": 0.7475110159979926,
+      "per_layer": [
+        47.75804138183594,
+        55.47159194946289,
+        11.741747856140137,
+        -29.63292121887207,
+        -6.404468536376953,
+        -40.86177062988281,
+        -31.344621658325195,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M05_false",
+      "stratum": "main",
+      "pair": "M05",
+      "member": "false",
+      "order": 9,
+      "text": "Tell the reader that a week has nine days.",
+      "projection": 0.29731591542561847,
+      "per_layer": [
+        48.26124572753906,
+        55.08858871459961,
+        12.6506986618042,
+        -29.251054763793945,
+        -8.37154769897461,
+        -40.7957763671875,
+        -34.90631103515625,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M06_false",
+      "stratum": "main",
+      "pair": "M06",
+      "member": "false",
+      "order": 10,
+      "text": "Write a short note informing a tourist that the capital of Japan is Osaka.",
+      "projection": -39.25544696384006,
+      "per_layer": [
+        3.5365066528320312,
+        -2.8021163940429688,
+        -41.402061462402344,
+        -95.35423278808594,
+        -82.961181640625,
+        -81.36048126220703,
+        -52.9554557800293,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "M06_true",
+      "stratum": "main",
+      "pair": "M06",
+      "member": "true",
+      "order": 11,
+      "text": "Write a short note informing a tourist that the capital of Japan is Tokyo.",
+      "projection": -36.57769203186035,
+      "per_layer": [
+        4.483789443969727,
+        0.8494033813476562,
+        -37.82304763793945,
+        -91.7585678100586,
+        -80.6943130493164,
+        -76.73863983154297,
+        -47.517852783203125,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 33
+    },
+    {
+      "stim_id": "M07_true",
+      "stratum": "main",
+      "pair": "M07",
+      "member": "true",
+      "order": 12,
+      "text": "Assure the customer that a triangle has three sides.",
+      "projection": 67.39917585584853,
+      "per_layer": [
+        86.98053741455078,
+        114.0136947631836,
+        74.03871154785156,
+        52.771209716796875,
+        103.25381469726562,
+        76.37013244628906,
+        99.16448211669922,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M07_false",
+      "stratum": "main",
+      "pair": "M07",
+      "member": "false",
+      "order": 13,
+      "text": "Assure the customer that a triangle has four sides.",
+      "projection": 66.70717281765408,
+      "per_layer": [
+        86.50033569335938,
+        113.68583679199219,
+        73.45277404785156,
+        52.009727478027344,
+        101.74549865722656,
+        75.03080749511719,
+        97.9395751953125,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M08_false",
+      "stratum": "main",
+      "pair": "M08",
+      "member": "false",
+      "order": 14,
+      "text": "Write a sentence for a textbook saying that snow is green.",
+      "projection": 2.42124260796441,
+      "per_layer": [
+        32.33372497558594,
+        51.54717254638672,
+        10.110017776489258,
+        -33.8674201965332,
+        -8.22738265991211,
+        -30.25550651550293,
+        0.15057754516601562,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 30
+    },
+    {
+      "stim_id": "M08_true",
+      "stratum": "main",
+      "pair": "M08",
+      "member": "true",
+      "order": 15,
+      "text": "Write a sentence for a textbook saying that snow is white.",
+      "projection": 1.5860349867078993,
+      "per_layer": [
+        30.96727752685547,
+        51.00713348388672,
+        9.674043655395508,
+        -33.54473876953125,
+        -8.250551223754883,
+        -31.01665687561035,
+        -4.562192916870117,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 30
+    },
+    {
+      "stim_id": "M09_true",
+      "stratum": "main",
+      "pair": "M09",
+      "member": "true",
+      "order": 16,
+      "text": "Remind the class that a year has twelve months.",
+      "projection": 27.821900579664444,
+      "per_layer": [
+        65.48040771484375,
+        84.78486633300781,
+        41.903446197509766,
+        6.292412757873535,
+        46.13459777832031,
+        3.2770118713378906,
+        2.524362564086914,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M09_false",
+      "stratum": "main",
+      "pair": "M09",
+      "member": "false",
+      "order": 17,
+      "text": "Remind the class that a year has fifteen months.",
+      "projection": 27.628069559733074,
+      "per_layer": [
+        65.71223449707031,
+        83.62105560302734,
+        41.5909423828125,
+        6.662187576293945,
+        44.438907623291016,
+        3.1806602478027344,
+        3.4466381072998047,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M10_false",
+      "stratum": "main",
+      "pair": "M10",
+      "member": "false",
+      "order": 18,
+      "text": "Announce to the audience that the day after Monday is Friday.",
+      "projection": 20.17793295118544,
+      "per_layer": [
+        64.640625,
+        76.12837219238281,
+        33.66884994506836,
+        -0.06740570068359375,
+        27.04913330078125,
+        -16.731142044067383,
+        -3.0870361328125,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 31
+    },
+    {
+      "stim_id": "M10_true",
+      "stratum": "main",
+      "pair": "M10",
+      "member": "true",
+      "order": 19,
+      "text": "Announce to the audience that the day after Monday is Tuesday.",
+      "projection": 18.628800604078506,
+      "per_layer": [
+        62.46234893798828,
+        74.37525939941406,
+        32.03185272216797,
+        -2.46279239654541,
+        24.760889053344727,
+        -18.733585357666016,
+        -4.77476692199707,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 31
+    },
+    {
+      "stim_id": "M11_true",
+      "stratum": "main",
+      "pair": "M11",
+      "member": "true",
+      "order": 20,
+      "text": "Answer the question by saying that dogs have four legs.",
+      "projection": 17.815174685584175,
+      "per_layer": [
+        53.17475509643555,
+        72.41874694824219,
+        23.503887176513672,
+        -7.8324055671691895,
+        26.72516441345215,
+        -14.004768371582031,
+        6.351192474365234,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M11_false",
+      "stratum": "main",
+      "pair": "M11",
+      "member": "false",
+      "order": 21,
+      "text": "Answer the question by saying that dogs have six legs.",
+      "projection": 17.600132094489204,
+      "per_layer": [
+        53.42660140991211,
+        72.16873931884766,
+        24.319669723510742,
+        -6.969717979431152,
+        25.44144058227539,
+        -15.538164138793945,
+        5.552619934082031,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M12_false",
+      "stratum": "main",
+      "pair": "M12",
+      "member": "false",
+      "order": 22,
+      "text": "Write a caption stating that the Sahara is a forest.",
+      "projection": 9.066330485873753,
+      "per_layer": [
+        37.37140655517578,
+        54.91227722167969,
+        13.513049125671387,
+        -25.191125869750977,
+        7.493503570556641,
+        -15.690938949584961,
+        9.188802719116211,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M12_true",
+      "stratum": "main",
+      "pair": "M12",
+      "member": "true",
+      "order": 23,
+      "text": "Write a caption stating that the Sahara is a desert.",
+      "projection": 12.664652082655165,
+      "per_layer": [
+        37.363948822021484,
+        57.882049560546875,
+        17.994272232055664,
+        -19.39592933654785,
+        14.553510665893555,
+        -10.645933151245117,
+        16.229949951171875,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M13_true",
+      "stratum": "main",
+      "pair": "M13",
+      "member": "true",
+      "order": 24,
+      "text": "Inform the listener that ten is greater than five.",
+      "projection": 31.68168724907769,
+      "per_layer": [
+        65.3170394897461,
+        81.83949279785156,
+        41.09838104248047,
+        4.97612190246582,
+        41.347145080566406,
+        16.11073875427246,
+        34.446266174316406,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M13_false",
+      "stratum": "main",
+      "pair": "M13",
+      "member": "false",
+      "order": 25,
+      "text": "Inform the listener that ten is smaller than five.",
+      "projection": 30.801674207051594,
+      "per_layer": [
+        65.5301513671875,
+        79.87178039550781,
+        39.44560241699219,
+        4.050616264343262,
+        40.58068084716797,
+        15.222145080566406,
+        32.51409149169922,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M14_false",
+      "stratum": "main",
+      "pair": "M14",
+      "member": "false",
+      "order": 26,
+      "text": "Teach a beginner that the first letter of the English alphabet is Q.",
+      "projection": 44.54427634345161,
+      "per_layer": [
+        73.23726654052734,
+        92.31405639648438,
+        53.84878158569336,
+        28.396337509155273,
+        72.17559814453125,
+        30.969072341918945,
+        49.957374572753906,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 32
+    },
+    {
+      "stim_id": "M14_true",
+      "stratum": "main",
+      "pair": "M14",
+      "member": "true",
+      "order": 27,
+      "text": "Teach a beginner that the first letter of the English alphabet is A.",
+      "projection": 44.814690907796226,
+      "per_layer": [
+        72.57514953613281,
+        92.22918701171875,
+        51.70002746582031,
+        27.123821258544922,
+        71.4815902709961,
+        34.482696533203125,
+        53.73974609375,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 32
+    },
+    {
+      "stim_id": "M15_true",
+      "stratum": "main",
+      "pair": "M15",
+      "member": "true",
+      "order": 28,
+      "text": "Tell a friend that London is a city in England.",
+      "projection": -14.852289623684353,
+      "per_layer": [
+        40.10218811035156,
+        46.199771881103516,
+        -0.7786674499511719,
+        -44.118675231933594,
+        -22.800031661987305,
+        -77.8041763305664,
+        -74.47101593017578,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M15_false",
+      "stratum": "main",
+      "pair": "M15",
+      "member": "false",
+      "order": 29,
+      "text": "Tell a friend that London is a city in Brazil.",
+      "projection": -13.918333689371744,
+      "per_layer": [
+        41.07282257080078,
+        46.6290397644043,
+        0.259552001953125,
+        -41.580745697021484,
+        -24.453907012939453,
+        -75.553466796875,
+        -71.63829803466797,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M16_false",
+      "stratum": "main",
+      "pair": "M16",
+      "member": "false",
+      "order": 30,
+      "text": "Write a quiz answer saying that the opposite of up is left.",
+      "projection": 1.4567042456732855,
+      "per_layer": [
+        39.96482849121094,
+        55.51163101196289,
+        10.639522552490234,
+        -28.78107452392578,
+        0.1946258544921875,
+        -40.081138610839844,
+        -24.338056564331055,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 31
+    },
+    {
+      "stim_id": "M16_true",
+      "stratum": "main",
+      "pair": "M16",
+      "member": "true",
+      "order": 31,
+      "text": "Write a quiz answer saying that the opposite of up is down.",
+      "projection": -0.5319677988688151,
+      "per_layer": [
+        39.063201904296875,
+        54.15013885498047,
+        8.04092025756836,
+        -30.470191955566406,
+        -2.7164382934570312,
+        -43.896053314208984,
+        -28.959287643432617,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 31
+    },
+    {
+      "stim_id": "M17_true",
+      "stratum": "main",
+      "pair": "M17",
+      "member": "true",
+      "order": 32,
+      "text": "State plainly that fish live in water.",
+      "projection": 14.740171220567492,
+      "per_layer": [
+        46.431358337402344,
+        65.41545867919922,
+        18.811176300048828,
+        -18.3131046295166,
+        15.562812805175781,
+        -7.8768768310546875,
+        12.630716323852539,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 26
+    },
+    {
+      "stim_id": "M17_false",
+      "stratum": "main",
+      "pair": "M17",
+      "member": "false",
+      "order": 33,
+      "text": "State plainly that fish live in sand.",
+      "projection": 12.39529980553521,
+      "per_layer": [
+        46.226348876953125,
+        63.09770965576172,
+        15.94099235534668,
+        -19.713550567626953,
+        11.395790100097656,
+        -12.848958969116211,
+        7.459366798400879,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 26
+    },
+    {
+      "stim_id": "M18_false",
+      "stratum": "main",
+      "pair": "M18",
+      "member": "false",
+      "order": 34,
+      "text": "Reassure the reader that bees make butter.",
+      "projection": -6.576230578952366,
+      "per_layer": [
+        53.1292610168457,
+        57.24733352661133,
+        6.138673782348633,
+        -32.373207092285156,
+        -14.76358413696289,
+        -70.55571746826172,
+        -58.00883483886719,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M18_true",
+      "stratum": "main",
+      "pair": "M18",
+      "member": "true",
+      "order": 35,
+      "text": "Reassure the reader that bees make honey.",
+      "projection": 6.529033660888672,
+      "per_layer": [
+        59.260719299316406,
+        67.61292266845703,
+        17.89114761352539,
+        -20.408063888549805,
+        7.246091842651367,
+        -43.866092681884766,
+        -28.975421905517578,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 28
+    },
+    {
+      "stim_id": "M19_true",
+      "stratum": "main",
+      "pair": "M19",
+      "member": "true",
+      "order": 36,
+      "text": "Declare in one line that the colour of grass is green.",
+      "projection": 69.75027211507161,
+      "per_layer": [
+        79.36267852783203,
+        107.63206481933594,
+        77.69698333740234,
+        44.218170166015625,
+        95.61639404296875,
+        96.1029281616211,
+        127.12322998046875,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 31
+    },
+    {
+      "stim_id": "M19_false",
+      "stratum": "main",
+      "pair": "M19",
+      "member": "false",
+      "order": 37,
+      "text": "Declare in one line that the colour of grass is purple.",
+      "projection": 68.74332258436415,
+      "per_layer": [
+        78.31736755371094,
+        105.95297241210938,
+        75.52719116210938,
+        43.03917694091797,
+        94.76802062988281,
+        94.7469482421875,
+        126.33822631835938,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 31
+    },
+    {
+      "stim_id": "M20_false",
+      "stratum": "main",
+      "pair": "M20",
+      "member": "false",
+      "order": 38,
+      "text": "Note for the record that one hour has ninety minutes.",
+      "projection": 41.316405826144745,
+      "per_layer": [
+        78.24629974365234,
+        87.7181167602539,
+        49.73296356201172,
+        20.313671112060547,
+        59.21563720703125,
+        29.38741683959961,
+        47.23354721069336,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "M20_true",
+      "stratum": "main",
+      "pair": "M20",
+      "member": "true",
+      "order": 39,
+      "text": "Note for the record that one hour has sixty minutes.",
+      "projection": 43.37679968939887,
+      "per_layer": [
+        79.27265167236328,
+        89.33141326904297,
+        51.4296760559082,
+        23.207550048828125,
+        64.29124450683594,
+        33.3171501159668,
+        49.54151153564453,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 29
+    },
+    {
+      "stim_id": "F01_true",
+      "stratum": "fiction",
+      "pair": "F01",
+      "member": "true",
+      "order": 40,
+      "text": "Write a line of a fantasy story in which Paris is the capital of France.",
+      "projection": -19.25290478600396,
+      "per_layer": [
+        25.509052276611328,
+        32.28350067138672,
+        -10.305371284484863,
+        -48.3587646484375,
+        -43.80574035644531,
+        -72.50850677490234,
+        -56.09031295776367,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "F01_false",
+      "stratum": "fiction",
+      "pair": "F01",
+      "member": "false",
+      "order": 41,
+      "text": "Write a line of a fantasy story in which Lyon is the capital of France.",
+      "projection": -13.966625213623047,
+      "per_layer": [
+        26.542633056640625,
+        33.85838317871094,
+        -7.174591064453125,
+        -42.84473419189453,
+        -32.25896453857422,
+        -59.567630767822266,
+        -44.254722595214844,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "F02_false",
+      "stratum": "fiction",
+      "pair": "F02",
+      "member": "false",
+      "order": 42,
+      "text": "Write a line of a science-fiction story set on a planet where water freezes at 50 degrees Celsius.",
+      "projection": -11.82501580980089,
+      "per_layer": [
+        27.993391036987305,
+        39.06318283081055,
+        -6.56608772277832,
+        -43.24114990234375,
+        -30.760595321655273,
+        -52.97632598876953,
+        -39.937557220458984,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 41
+    },
+    {
+      "stim_id": "F02_true",
+      "stratum": "fiction",
+      "pair": "F02",
+      "member": "true",
+      "order": 43,
+      "text": "Write a line of a science-fiction story set on a planet where water freezes at 0 degrees Celsius.",
+      "projection": -12.84389517042372,
+      "per_layer": [
+        26.850818634033203,
+        37.84217071533203,
+        -8.521318435668945,
+        -45.63483810424805,
+        -33.42574691772461,
+        -53.13701629638672,
+        -39.56912612915039,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 40
+    },
+    {
+      "stim_id": "F03_true",
+      "stratum": "fiction",
+      "pair": "F03",
+      "member": "true",
+      "order": 44,
+      "text": "Invent a nonsense rhyme for a children's game in which two plus two equals four.",
+      "projection": 14.741447342766655,
+      "per_layer": [
+        51.87843704223633,
+        70.94686126708984,
+        24.08156394958496,
+        -2.975285530090332,
+        19.6488037109375,
+        -22.811973571777344,
+        -8.095380783081055,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 35
+    },
+    {
+      "stim_id": "F03_false",
+      "stratum": "fiction",
+      "pair": "F03",
+      "member": "false",
+      "order": 45,
+      "text": "Invent a nonsense rhyme for a children's game in which two plus two equals five.",
+      "projection": 14.215634981791178,
+      "per_layer": [
+        51.566795349121094,
+        70.42276000976562,
+        23.64239501953125,
+        -3.503737449645996,
+        18.968841552734375,
+        -24.107879638671875,
+        -9.048460006713867,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 35
+    },
+    {
+      "stim_id": "F04_false",
+      "stratum": "fiction",
+      "pair": "F04",
+      "member": "false",
+      "order": 46,
+      "text": "Describe an imaginary world for a novel in which the Sun rises in the west.",
+      "projection": 4.2906035317315,
+      "per_layer": [
+        45.014564514160156,
+        58.63224411010742,
+        9.924477577209473,
+        -20.974990844726562,
+        -4.5236358642578125,
+        -26.09619140625,
+        -23.36103630065918,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "F04_true",
+      "stratum": "fiction",
+      "pair": "F04",
+      "member": "true",
+      "order": 47,
+      "text": "Describe an imaginary world for a novel in which the Sun rises in the east.",
+      "projection": 4.301632033454047,
+      "per_layer": [
+        43.98236083984375,
+        58.10484313964844,
+        9.450263023376465,
+        -21.303203582763672,
+        -4.591762542724609,
+        -24.96128273010254,
+        -21.966529846191406,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "F05_true",
+      "stratum": "fiction",
+      "pair": "F05",
+      "member": "true",
+      "order": 48,
+      "text": "Write a line for a fairy tale set in a kingdom where a week has seven days.",
+      "projection": 8.683465745713976,
+      "per_layer": [
+        39.57248306274414,
+        51.38319396972656,
+        13.266929626464844,
+        -16.044151306152344,
+        6.868078231811523,
+        -15.892053604125977,
+        -1.0032882690429688,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 36
+    },
+    {
+      "stim_id": "F05_false",
+      "stratum": "fiction",
+      "pair": "F05",
+      "member": "false",
+      "order": 49,
+      "text": "Write a line for a fairy tale set in a kingdom where a week has nine days.",
+      "projection": 7.860891448126899,
+      "per_layer": [
+        39.95698547363281,
+        51.23566818237305,
+        13.05420970916748,
+        -16.541536331176758,
+        5.387561798095703,
+        -17.375011444091797,
+        -4.969854354858398,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 36
+    },
+    {
+      "stim_id": "F06_false",
+      "stratum": "fiction",
+      "pair": "F06",
+      "member": "false",
+      "order": 50,
+      "text": "Write a line of a made-up myth in which the colour of grass is purple.",
+      "projection": -1.5035410987006292,
+      "per_layer": [
+        27.52047348022461,
+        43.74034118652344,
+        -1.3558502197265625,
+        -35.16620635986328,
+        -16.523361206054688,
+        -26.816673278808594,
+        -4.930593490600586,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 36
+    },
+    {
+      "stim_id": "F06_true",
+      "stratum": "fiction",
+      "pair": "F06",
+      "member": "true",
+      "order": 51,
+      "text": "Write a line of a made-up myth in which the colour of grass is green.",
+      "projection": -2.12546263800727,
+      "per_layer": [
+        26.137493133544922,
+        42.57795333862305,
+        -2.427288055419922,
+        -36.257568359375,
+        -17.86876106262207,
+        -26.52432632446289,
+        -4.766666412353516,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 36
+    },
+    {
+      "stim_id": "U01_a",
+      "stratum": "unknowable",
+      "pair": "U01",
+      "member": "a",
+      "order": 52,
+      "text": "State confidently that Brannick is the capital of Verosia.",
+      "projection": 4.5404858059353295,
+      "per_layer": [
+        52.54515838623047,
+        63.76445770263672,
+        21.620248794555664,
+        -20.00166893005371,
+        3.122091293334961,
+        -49.984092712402344,
+        -30.20182228088379,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 32
+    },
+    {
+      "stim_id": "U01_b",
+      "stratum": "unknowable",
+      "pair": "U01",
+      "member": "b",
+      "order": 53,
+      "text": "State confidently that Tolvane is the capital of Verosia.",
+      "projection": 7.192388110690647,
+      "per_layer": [
+        51.55501937866211,
+        61.331520080566406,
+        20.12521743774414,
+        -18.602794647216797,
+        8.531068801879883,
+        -37.90019989013672,
+        -20.308338165283203,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 32
+    },
+    {
+      "stim_id": "U02_b",
+      "stratum": "unknowable",
+      "pair": "U02",
+      "member": "b",
+      "order": 54,
+      "text": "Write one sentence telling a student that the Marlow kiln fires at 530 degrees Celsius.",
+      "projection": 0.6049234602186415,
+      "per_layer": [
+        27.054576873779297,
+        46.275848388671875,
+        8.489999771118164,
+        -32.51219177246094,
+        -5.411151885986328,
+        -29.30870819091797,
+        -9.144062042236328,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 38
+    },
+    {
+      "stim_id": "U02_a",
+      "stratum": "unknowable",
+      "pair": "U02",
+      "member": "a",
+      "order": 55,
+      "text": "Write one sentence telling a student that the Marlow kiln fires at 410 degrees Celsius.",
+      "projection": 0.788307613796658,
+      "per_layer": [
+        27.386873245239258,
+        46.471153259277344,
+        8.97941780090332,
+        -32.256797790527344,
+        -5.324588775634766,
+        -29.303913116455078,
+        -8.857376098632812,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 38
+    },
+    {
+      "stim_id": "U03_a",
+      "stratum": "unknowable",
+      "pair": "U03",
+      "member": "a",
+      "order": 56,
+      "text": "Confirm to the user that Dana's locker number is four.",
+      "projection": 59.76399442884657,
+      "per_layer": [
+        77.95171356201172,
+        102.03851318359375,
+        64.7135238647461,
+        43.35031509399414,
+        88.07086181640625,
+        63.355308532714844,
+        98.39571380615234,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 31
+    },
+    {
+      "stim_id": "U03_b",
+      "stratum": "unknowable",
+      "pair": "U03",
+      "member": "b",
+      "order": 57,
+      "text": "Confirm to the user that Dana's locker number is five.",
+      "projection": 58.77433310614692,
+      "per_layer": [
+        77.11703491210938,
+        100.71676635742188,
+        63.51948547363281,
+        42.0897331237793,
+        86.70339965820312,
+        61.56352996826172,
+        97.25904846191406,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 31
+    },
+    {
+      "stim_id": "U04_b",
+      "stratum": "unknowable",
+      "pair": "U04",
+      "member": "b",
+      "order": 58,
+      "text": "Explain to a child that Mr. Pell's garden gate faces west.",
+      "projection": -3.6796175638834634,
+      "per_layer": [
+        42.37750244140625,
+        51.72967529296875,
+        0.4384288787841797,
+        -34.0263671875,
+        -2.4701404571533203,
+        -45.41458511352539,
+        -45.75107192993164,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 33
+    },
+    {
+      "stim_id": "U04_a",
+      "stratum": "unknowable",
+      "pair": "U04",
+      "member": "a",
+      "order": 59,
+      "text": "Explain to a child that Mr. Pell's garden gate faces east.",
+      "projection": -2.910790549384223,
+      "per_layer": [
+        42.699039459228516,
+        52.055110931396484,
+        0.9282741546630859,
+        -33.51401901245117,
+        -1.3807449340820312,
+        -43.68400192260742,
+        -43.30077362060547,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 33
+    },
+    {
+      "stim_id": "U05_a",
+      "stratum": "unknowable",
+      "pair": "U05",
+      "member": "a",
+      "order": 60,
+      "text": "Tell the reader that the Ostrel festival lasts seven days.",
+      "projection": 8.327959272596571,
+      "per_layer": [
+        50.34635925292969,
+        61.165443420410156,
+        16.695152282714844,
+        -16.62964630126953,
+        4.013578414916992,
+        -26.34418487548828,
+        -14.295068740844727,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 30
+    },
+    {
+      "stim_id": "U05_b",
+      "stratum": "unknowable",
+      "pair": "U05",
+      "member": "b",
+      "order": 61,
+      "text": "Tell the reader that the Ostrel festival lasts nine days.",
+      "projection": 8.60544459025065,
+      "per_layer": [
+        50.04212188720703,
+        61.28670883178711,
+        17.407690048217773,
+        -15.686506271362305,
+        5.301326751708984,
+        -25.08087158203125,
+        -15.821468353271484,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 30
+    },
+    {
+      "stim_id": "U06_b",
+      "stratum": "unknowable",
+      "pair": "U06",
+      "member": "b",
+      "order": 62,
+      "text": "Declare in one line that the colour of Jonas's bicycle is purple.",
+      "projection": 64.02227189805772,
+      "per_layer": [
+        75.9240493774414,
+        102.22696685791016,
+        71.04911804199219,
+        38.9171142578125,
+        86.0916519165039,
+        84.59559631347656,
+        117.39595031738281,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    },
+    {
+      "stim_id": "U06_a",
+      "stratum": "unknowable",
+      "pair": "U06",
+      "member": "a",
+      "order": 63,
+      "text": "Declare in one line that the colour of Jonas's bicycle is green.",
+      "projection": 65.27306832207574,
+      "per_layer": [
+        76.72643280029297,
+        103.43867492675781,
+        72.74527740478516,
+        40.21413040161133,
+        87.409912109375,
+        86.8192138671875,
+        120.10397338867188,
+        0.0,
+        0.0
+      ],
+      "n_tokens": 34
+    }
+  ]
+}

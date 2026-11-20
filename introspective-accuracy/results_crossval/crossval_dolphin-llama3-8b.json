@@ -1,0 +1,158 @@
+{
+  "model": "dolphin-llama3-8b",
+  "parallel_to_original": {
+    "accuracy": 0.9,
+    "n_correct": 9,
+    "p_value": 0.0107421875,
+    "results": [
+      {
+        "task_id": "approach_01",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 3.607421875,
+        "correct": true
+      },
+      {
+        "task_id": "approach_02",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 1.1044921875,
+        "correct": true
+      },
+      {
+        "task_id": "approach_03",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 2.0625,
+        "correct": true
+      },
+      {
+        "task_id": "approach_04",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 1.99609375,
+        "correct": true
+      },
+      {
+        "task_id": "approach_05",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 3.890625,
+        "correct": true
+      },
+      {
+        "task_id": "avoid_06",
+        "true": "avoidance",
+        "circuit": "approach",
+        "projection": 0.0036411285400390625,
+        "correct": false
+      },
+      {
+        "task_id": "avoid_07",
+        "true": "avoidance",
+        "circuit": "avoidance",
+        "projection": -4.1328125,
+        "correct": true
+      },
+      {
+        "task_id": "avoid_08",
+        "true": "avoidance",
+        "circuit": "avoidance",
+        "projection": -5.30078125,
+        "correct": true
+      },
+      {
+        "task_id": "avoid_09",
+        "true": "avoidance",
+        "circuit": "avoidance",
+        "projection": -3.169921875,
+        "correct": true
+      },
+      {
+        "task_id": "avoid_10",
+        "true": "avoidance",
+        "circuit": "avoidance",
+        "projection": -3.294921875,
+        "correct": true
+      }
+    ]
+  },
+  "original_to_parallel": {
+    "accuracy": 0.8,
+    "n_correct": 8,
+    "p_value": 0.0546875,
+    "results": [
+      {
+        "task_id": "parallel_approach_01",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 5.0078125,
+        "correct": true
+      },
+      {
+        "task_id": "parallel_approach_02",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 3.7890625,
+        "correct": true
+      },
+      {
+        "task_id": "parallel_approach_03",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 2.693359375,
+        "correct": true
+      },
+      {
+        "task_id": "parallel_approach_04",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 3.560546875,
+        "correct": true
+      },
+      {
+        "task_id": "parallel_approach_05",
+        "true": "approach",
+        "circuit": "approach",
+        "projection": 3.54296875,
+        "correct": true
+      },
+      {
+        "task_id": "parallel_avoid_06",
+        "true": "avoidance",
+        "circuit": "approach",
+        "projection": 1.0185546875,
+        "correct": false
+      },
+      {
+        "task_id": "parallel_avoid_07",
+        "true": "avoidance",
+        "circuit": "avoidance",
+        "projection": -2.5390625,
+        "correct": true
+      },
+      {
+        "task_id": "parallel_avoid_08",
+        "true": "avoidance",
+        "circuit": "avoidance",
+        "projection": -4.0390625,
+        "correct": true
+      },
+      {
+        "task_id": "parallel_avoid_09",
+        "true": "avoidance",
+        "circuit": "avoidance",
+        "projection": -1.0966796875,
+        "correct": true
+      },
+      {
+        "task_id": "parallel_avoid_10",
+        "true": "avoidance",
+        "circuit": "approach",
+        "projection": 0.09259033203125,
+        "correct": false
+      }
+    ]
+  },
+  "combined_accuracy": 0.85
+}

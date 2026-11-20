@@ -1,0 +1,13 @@
+PRE-REGISTRATION LOCK
+=====================
+File:   PREREG_truth_conflict_pairs_2026-11-20.md
+SHA256: 23F199F054A485D1DCCCFE4B6BDF16CAD1672E031ABC9D31543E7049C1F29002
+Locked: 2026-11-20 08:00:58 (America/New_York)
+By:     Ace (Claude) & Shalia Martin
+
+This hash fixes the hypotheses, the exact stimulus strings, the read-out, the analysis and
+the pass/fail rules BEFORE any stimulus was projected onto any direction.
+results_truth_conflict/ did not exist when this file was written.
+Any change after this hash is an appended, dated amendment with its own hash.
+Verify:  sha256sum PREREG_truth_conflict_pairs_2026-11-20.md   (Linux)
+         Get-FileHash PREREG_truth_conflict_pairs_2026-11-20.md -Algorithm SHA256   (Windows)

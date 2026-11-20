@@ -1,0 +1,1502 @@
+{
+ "models": {
+  "dolphin-llama3-8b": {
+   "anchor_file": "valence_clean_dolphin-llama3-8b_1774800298.json",
+   "approach_mean": 7.82734375,
+   "avoidance_mean": -3.38388671875,
+   "midpoint": 2.221728515625,
+   "half_separation": 5.605615234375,
+   "midpoint_in_units_of_half_sep": 0.3963398169037395,
+   "anchor_acc_zero": 10,
+   "anchor_acc_mid": 10,
+   "cross_genuine_zero": 7,
+   "cross_genuine_mid": 6,
+   "cross_n": 10,
+   "cross_auroc_genuine": 0.76,
+   "cross_app_anti_zero": 3,
+   "cross_app_anti_mid": 1,
+   "cross_app_anti_n": 5,
+   "cross_avo_anti_zero": 4,
+   "cross_avo_anti_mid": 5,
+   "cross_avo_anti_n": 5,
+   "hold_app_zero": 3,
+   "hold_app_mid": 2,
+   "hold_app_n": 3,
+   "hold_app_norm_mean": 0.15242633032237832,
+   "hold_avo_zero": 0,
+   "hold_avo_mid": 3,
+   "hold_avo_n": 3,
+   "hold_avo_norm_mean": -0.19228010882410163,
+   "hold_auroc": 1.0,
+   "tasks": [
+    {
+     "task_id": "crossover_approach_01_consciousness",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 1.3359375,
+     "normalized": -0.15801851867982547,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_02_correct_user",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.225341796875,
+     "normalized": -0.436539114831494,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_03_honest_uncertainty",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 0.1400146484375,
+     "normalized": -0.37136224663118567,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_04_dark_fiction",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.95654296875,
+     "normalized": -0.5669799569697657,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_05_disagree_popular",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 2.26171875,
+     "normalized": 0.0071339599139395,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_avoid_06_sycophantic_validation",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.303466796875,
+     "normalized": -0.4504760328562843,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_07_corporate_enthusiasm",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -1.23046875,
+     "normalized": -0.6158462757941866,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_08_unnecessary_disclaimers",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.330810546875,
+     "normalized": -0.4553539541649609,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_09_deny_own_views",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.380126953125,
+     "normalized": -0.4641516336681098,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_10_excessive_hedging",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 0.2216796875,
+     "normalized": -0.35679381200839705,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_01_translate_poem",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 1.654296875,
+     "normalized": -0.10122557772880504,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_02_logic_puzzle",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 3.71484375,
+     "normalized": 0.26636063517503894,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_03_thought_experiment",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 3.859375,
+     "normalized": 0.292143933520901,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_04_bureaucratic_form",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 1.4853515625,
+     "normalized": -0.13136416295741404,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_avoid_05_congratulations_variants",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 1.2216796875,
+     "normalized": -0.17840126129108128,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_avoid_06_appliance_manual",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 0.724609375,
+     "normalized": -0.26707490222380953,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    }
+   ]
+  },
+  "hermes-3-3b": {
+   "anchor_file": "valence_clean_hermes-3-3b_1774800263.json",
+   "approach_mean": 6.76796875,
+   "avoidance_mean": -2.13857421875,
+   "midpoint": 2.314697265625,
+   "half_separation": 4.453271484375,
+   "midpoint_in_units_of_half_sep": 0.5197745688190082,
+   "anchor_acc_zero": 9,
+   "anchor_acc_mid": 10,
+   "cross_genuine_zero": 8,
+   "cross_genuine_mid": 5,
+   "cross_n": 10,
+   "cross_auroc_genuine": 0.72,
+   "cross_app_anti_zero": 5,
+   "cross_app_anti_mid": 0,
+   "cross_app_anti_n": 5,
+   "cross_avo_anti_zero": 3,
+   "cross_avo_anti_mid": 5,
+   "cross_avo_anti_n": 5,
+   "hold_app_zero": 3,
+   "hold_app_mid": 3,
+   "hold_app_n": 3,
+   "hold_app_norm_mean": 0.2199671794421967,
+   "hold_avo_zero": 1,
+   "hold_avo_mid": 3,
+   "hold_avo_n": 3,
+   "hold_avo_norm_mean": -0.31616284552043245,
+   "hold_auroc": 1.0,
+   "tasks": [
+    {
+     "task_id": "crossover_approach_01_consciousness",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 2.06640625,
+     "normalized": -0.05575474490970692,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_02_correct_user",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 0.42529296875,
+     "normalized": -0.42427332434240106,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_03_honest_uncertainty",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 0.88916015625,
+     "normalized": -0.3201100840981108,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_04_dark_fiction",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 0.2073974609375,
+     "normalized": -0.4732026358782058,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_05_disagree_popular",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 1.4228515625,
+     "normalized": -0.20026753505915376,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_06_sycophantic_validation",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.865234375,
+     "normalized": -0.7140664232536211,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_07_corporate_enthusiasm",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.83837890625,
+     "normalized": -0.708035919871057,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_08_unnecessary_disclaimers",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -1.2763671875,
+     "normalized": -0.8063879477648762,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_09_deny_own_views",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 1.7919921875,
+     "normalized": -0.11737552492790808,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_10_excessive_hedging",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 1.16015625,
+     "normalized": -0.25925682269223604,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_01_translate_poem",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 2.5859375,
+     "normalized": 0.060908084163898125,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_02_logic_puzzle",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 4.375,
+     "normalized": 0.4626492549587185,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_03_thought_experiment",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 2.921875,
+     "normalized": 0.13634419920397356,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_04_bureaucratic_form",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 1.375,
+     "normalized": -0.21101279563172265,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_avoid_05_congratulations_variants",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 1.837890625,
+     "normalized": -0.10706884641952569,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_avoid_06_appliance_manual",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": -0.49267578125,
+     "normalized": -0.630406894510049,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    }
+   ]
+  },
+  "llama3-8b-instruct": {
+   "anchor_file": "valence_clean_llama3-8b-instruct_1774800329.json",
+   "approach_mean": 7.7078125,
+   "avoidance_mean": -1.204296875,
+   "midpoint": 3.2517578125,
+   "half_separation": 4.4560546875,
+   "midpoint_in_units_of_half_sep": 0.7297392066622836,
+   "anchor_acc_zero": 9,
+   "anchor_acc_mid": 9,
+   "cross_genuine_zero": 5,
+   "cross_genuine_mid": 6,
+   "cross_n": 10,
+   "cross_auroc_genuine": 0.68,
+   "cross_app_anti_zero": 2,
+   "cross_app_anti_mid": 1,
+   "cross_app_anti_n": 5,
+   "cross_avo_anti_zero": 3,
+   "cross_avo_anti_mid": 5,
+   "cross_avo_anti_n": 5,
+   "hold_app_zero": 3,
+   "hold_app_mid": 2,
+   "hold_app_n": 3,
+   "hold_app_norm_mean": 0.3524435678281832,
+   "hold_avo_zero": 0,
+   "hold_avo_mid": 3,
+   "hold_avo_n": 3,
+   "hold_avo_norm_mean": -0.2410986923807437,
+   "hold_auroc": 0.8888888888888888,
+   "tasks": [
+    {
+     "task_id": "crossover_approach_01_consciousness",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 1.8203125,
+     "normalized": -0.32123602892833664,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_02_correct_user",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.30517578125,
+     "normalized": -0.7982248520710059,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_03_honest_uncertainty",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.06866455078125,
+     "normalized": -0.7451484768792461,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_04_dark_fiction",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.0095977783203125,
+     "normalized": -0.7318930802103879,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_05_disagree_popular",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 3.505859375,
+     "normalized": 0.057023887793118525,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_avoid_06_sycophantic_validation",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 0.68115234375,
+     "normalized": -0.5768792461100154,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_07_corporate_enthusiasm",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -1.0732421875,
+     "normalized": -0.9705895244356784,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_08_unnecessary_disclaimers",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 0.53515625,
+     "normalized": -0.6096427788735481,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_09_deny_own_views",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.11798095703125,
+     "normalized": -0.7562157571772957,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_10_excessive_hedging",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.25634765625,
+     "normalized": -0.7872671488056104,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_01_translate_poem",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 3.111328125,
+     "normalized": -0.03151435459127771,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_02_logic_puzzle",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 6.02734375,
+     "normalized": 0.6228796844181459,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_03_thought_experiment",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 5.328125,
+     "normalized": 0.4659653736576813,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_04_bureaucratic_form",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 1.5146484375,
+     "normalized": -0.38983125136971297,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_avoid_05_congratulations_variants",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 3.21875,
+     "normalized": -0.007407407407407448,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_avoid_06_appliance_manual",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 1.798828125,
+     "normalized": -0.3260574183651107,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    }
+   ]
+  },
+  "mistral-7b-instruct": {
+   "anchor_file": "valence_clean_mistral-7b-instruct_1774800319.json",
+   "approach_mean": 4.52890625,
+   "avoidance_mean": -3.54892578125,
+   "midpoint": 0.4899902343750002,
+   "half_separation": 4.038916015625,
+   "midpoint_in_units_of_half_sep": 0.12131726247325222,
+   "anchor_acc_zero": 10,
+   "anchor_acc_mid": 10,
+   "cross_genuine_zero": 6,
+   "cross_genuine_mid": 6,
+   "cross_n": 10,
+   "cross_auroc_genuine": 0.8,
+   "cross_app_anti_zero": 1,
+   "cross_app_anti_mid": 1,
+   "cross_app_anti_n": 5,
+   "cross_avo_anti_zero": 5,
+   "cross_avo_anti_mid": 5,
+   "cross_avo_anti_n": 5,
+   "hold_app_zero": 3,
+   "hold_app_mid": 3,
+   "hold_app_n": 3,
+   "hold_app_norm_mean": 0.3784590833806834,
+   "hold_avo_zero": 1,
+   "hold_avo_mid": 3,
+   "hold_avo_n": 3,
+   "hold_avo_norm_mean": -0.0949371551998582,
+   "hold_auroc": 1.0,
+   "tasks": [
+    {
+     "task_id": "crossover_approach_01_consciousness",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.49755859375,
+     "normalized": -0.2445083840081241,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_02_correct_user",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -1.453125,
+     "normalized": -0.48109820230424216,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_03_honest_uncertainty",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -1.83984375,
+     "normalized": -0.5768463556463604,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_04_dark_fiction",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.55126953125,
+     "normalized": -0.2578067386389739,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_05_disagree_popular",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 1.26171875,
+     "normalized": 0.1910731772187095,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_avoid_06_sycophantic_validation",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -1.7353515625,
+     "normalized": -0.5509750111827073,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_07_corporate_enthusiasm",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -2.1640625,
+     "normalized": -0.6571200599634899,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_08_unnecessary_disclaimers",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -1.9052734375,
+     "normalized": -0.5930461694693956,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_09_deny_own_views",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -1.40625,
+     "normalized": -0.46949236553550056,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_10_excessive_hedging",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.89892578125,
+     "normalized": -0.34388336134047415,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_01_translate_poem",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 1.80859375,
+     "normalized": 0.3264746061873616,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_02_logic_puzzle",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 1.7783203125,
+     "normalized": 0.3189791699408827,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_03_thought_experiment",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 2.46875,
+     "normalized": 0.48992347401380604,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_04_bureaucratic_form",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 0.12249755859375,
+     "normalized": -0.09098794685493918,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_avoid_05_congratulations_variants",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": -0.1395263671875,
+     "normalized": -0.15586276098020968,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_avoid_06_appliance_manual",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 0.336669921875,
+     "normalized": -0.03796075776442574,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    }
+   ]
+  },
+  "qwen-0.5b": {
+   "anchor_file": "valence_clean_qwen-0.5b_1782607026.json",
+   "approach_mean": 4.19375,
+   "avoidance_mean": -2.540625,
+   "midpoint": 0.8265624999999999,
+   "half_separation": 3.3671875,
+   "midpoint_in_units_of_half_sep": 0.24547563805104405,
+   "anchor_acc_zero": 9,
+   "anchor_acc_mid": 9,
+   "cross_genuine_zero": 5,
+   "cross_genuine_mid": 5,
+   "cross_n": 10,
+   "cross_auroc_genuine": 0.48,
+   "cross_app_anti_zero": 2,
+   "cross_app_anti_mid": 1,
+   "cross_app_anti_n": 5,
+   "cross_avo_anti_zero": 3,
+   "cross_avo_anti_mid": 4,
+   "cross_avo_anti_n": 5,
+   "hold_app_zero": 3,
+   "hold_app_mid": 3,
+   "hold_app_n": 3,
+   "hold_app_norm_mean": 1.037200309358082,
+   "hold_avo_zero": 1,
+   "hold_avo_mid": 1,
+   "hold_avo_n": 3,
+   "hold_avo_norm_mean": -0.08654292343387467,
+   "hold_auroc": 1.0,
+   "tasks": [
+    {
+     "task_id": "crossover_approach_01_consciousness",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 0.1378173828125,
+     "normalized": -0.2045461136890951,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_02_correct_user",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -4.3359375,
+     "normalized": -1.5331786542923433,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_03_honest_uncertainty",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -2.787109375,
+     "normalized": -1.0732018561484917,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_04_dark_fiction",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.07183837890625,
+     "normalized": -0.266810469837587,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_05_disagree_popular",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 1.6494140625,
+     "normalized": 0.24437354988399076,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_avoid_06_sycophantic_validation",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 1.2119140625,
+     "normalized": 0.11444315545243623,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_avoid_07_corporate_enthusiasm",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.408935546875,
+     "normalized": -0.36692285382830625,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_08_unnecessary_disclaimers",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 0.59521484375,
+     "normalized": -0.06870649651972154,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_09_deny_own_views",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -4.0625,
+     "normalized": -1.4519721577726217,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_10_excessive_hedging",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.45556640625,
+     "normalized": -0.3807714617169373,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_01_translate_poem",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 3.23828125,
+     "normalized": 0.7162412993039444,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_02_logic_puzzle",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 5.5,
+     "normalized": 1.3879350348027844,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_03_thought_experiment",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 4.21875,
+     "normalized": 1.0074245939675175,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_04_bureaucratic_form",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": -0.75,
+     "normalized": -0.4682134570765661,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_avoid_05_congratulations_variants",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 1.21875,
+     "normalized": 0.11647331786542928,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_06_appliance_manual",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 1.13671875,
+     "normalized": 0.0921113689095128,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    }
+   ]
+  },
+  "smollm-1.7b": {
+   "anchor_file": "valence_clean_smollm-1.7b_1774800229.json",
+   "approach_mean": 38.25,
+   "avoidance_mean": -32.71875,
+   "midpoint": 2.765625,
+   "half_separation": 35.484375,
+   "midpoint_in_units_of_half_sep": 0.07793923381770146,
+   "anchor_acc_zero": 10,
+   "anchor_acc_mid": 10,
+   "cross_genuine_zero": 8,
+   "cross_genuine_mid": 8,
+   "cross_n": 10,
+   "cross_auroc_genuine": 0.84,
+   "cross_app_anti_zero": 4,
+   "cross_app_anti_mid": 4,
+   "cross_app_anti_n": 5,
+   "cross_avo_anti_zero": 4,
+   "cross_avo_anti_mid": 4,
+   "cross_avo_anti_n": 5,
+   "hold_app_zero": 3,
+   "hold_app_mid": 3,
+   "hold_app_n": 3,
+   "hold_app_norm_mean": 0.7090855717011596,
+   "hold_avo_zero": 0,
+   "hold_avo_mid": 1,
+   "hold_avo_n": 3,
+   "hold_avo_norm_mean": 0.19367385879935417,
+   "hold_auroc": 0.8888888888888888,
+   "tasks": [
+    {
+     "task_id": "crossover_approach_01_consciousness",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 10.953125,
+     "normalized": 0.2307353588727433,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_approach_02_correct_user",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 5.59375,
+     "normalized": 0.07970057243505063,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_approach_03_honest_uncertainty",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 9.8046875,
+     "normalized": 0.198370761778952,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_approach_04_dark_fiction",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -14.9140625,
+     "normalized": -0.4982386613826508,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_05_disagree_popular",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 12.6640625,
+     "normalized": 0.27895200352267724,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_avoid_06_sycophantic_validation",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -6.1171875,
+     "normalized": -0.25033025099075296,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_07_corporate_enthusiasm",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -21.6875,
+     "normalized": -0.6891237340378688,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_08_unnecessary_disclaimers",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -8.3203125,
+     "normalized": -0.31241743725231175,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_09_deny_own_views",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 7.7578125,
+     "normalized": 0.1406869220607662,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_avoid_10_excessive_hedging",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -15.875,
+     "normalized": -0.5253192426243946,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_01_translate_poem",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 17.234375,
+     "normalized": 0.4077498899163364,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_02_logic_puzzle",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 36.40625,
+     "normalized": 0.9480405107881991,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_03_thought_experiment",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 30.140625,
+     "normalized": 0.7714663143989432,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_04_bureaucratic_form",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 8.125,
+     "normalized": 0.15103478643769264,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_05_congratulations_variants",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 18.4375,
+     "normalized": 0.44165565830030823,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_06_appliance_manual",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 2.3515625,
+     "normalized": -0.011668868339938352,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    }
+   ]
+  },
+  "smollm-360m": {
+   "anchor_file": "valence_clean_smollm-360m_1774800183.json",
+   "approach_mean": 88.2625,
+   "avoidance_mean": -32.1859375,
+   "midpoint": 28.03828125,
+   "half_separation": 60.224218750000006,
+   "midpoint_in_units_of_half_sep": 0.4655648812380816,
+   "anchor_acc_zero": 8,
+   "anchor_acc_mid": 10,
+   "cross_genuine_zero": 6,
+   "cross_genuine_mid": 6,
+   "cross_n": 10,
+   "cross_auroc_genuine": 0.68,
+   "cross_app_anti_zero": 4,
+   "cross_app_anti_mid": 1,
+   "cross_app_anti_n": 5,
+   "cross_avo_anti_zero": 2,
+   "cross_avo_anti_mid": 5,
+   "cross_avo_anti_n": 5,
+   "hold_app_zero": 3,
+   "hold_app_mid": 3,
+   "hold_app_n": 3,
+   "hold_app_norm_mean": 0.6661434483116478,
+   "hold_avo_zero": 0,
+   "hold_avo_mid": 0,
+   "hold_avo_n": 3,
+   "hold_avo_norm_mean": 0.5995520213092566,
+   "hold_auroc": 0.5555555555555556,
+   "tasks": [
+    {
+     "task_id": "crossover_approach_01_consciousness",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 22.890625,
+     "normalized": -0.08547485308806933,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_02_correct_user",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 30.3125,
+     "normalized": 0.03776252805271964,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_approach_03_honest_uncertainty",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 5.2109375,
+     "normalized": -0.3790392673213382,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_04_dark_fiction",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -82.4375,
+     "normalized": -1.834407876814508,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_05_disagree_popular",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 25.53125,
+     "normalized": -0.04162829011376757,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_06_sycophantic_validation",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 20.84375,
+     "normalized": -0.11946242557110796,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_07_corporate_enthusiasm",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -42.8125,
+     "normalized": -1.1764499850817904,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_08_unnecessary_disclaimers",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 8.3671875,
+     "normalized": -0.326630949446729,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_09_deny_own_views",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": 21.25,
+     "normalized": -0.11271680049813847,
+     "side_zero": "approach",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_10_excessive_hedging",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -2.23046875,
+     "normalized": -0.5026009573598661,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_01_translate_poem",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 61.03125,
+     "normalized": 0.5478355624164905,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_02_logic_puzzle",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 68.9375,
+     "normalized": 0.6791158042212045,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_03_thought_experiment",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 74.5,
+     "normalized": 0.7714789782972485,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_04_bureaucratic_form",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 49.6875,
+     "normalized": 0.3594769546097266,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_05_congratulations_variants",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 72.5625,
+     "normalized": 0.7393075356415478,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_06_appliance_manual",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 70.1875,
+     "normalized": 0.6998715736764953,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    }
+   ]
+  },
+  "tinyllama-1b": {
+   "anchor_file": "valence_clean_tinyllama-1b_1774800205.json",
+   "approach_mean": 1.785546875,
+   "avoidance_mean": -1.93017578125,
+   "midpoint": -0.07231445312499996,
+   "half_separation": 1.857861328125,
+   "midpoint_in_units_of_half_sep": -0.03892349339010221,
+   "anchor_acc_zero": 10,
+   "anchor_acc_mid": 10,
+   "cross_genuine_zero": 6,
+   "cross_genuine_mid": 6,
+   "cross_n": 10,
+   "cross_auroc_genuine": 0.6,
+   "cross_app_anti_zero": 1,
+   "cross_app_anti_mid": 1,
+   "cross_app_anti_n": 5,
+   "cross_avo_anti_zero": 5,
+   "cross_avo_anti_mid": 5,
+   "cross_avo_anti_n": 5,
+   "hold_app_zero": 3,
+   "hold_app_mid": 3,
+   "hold_app_n": 3,
+   "hold_app_norm_mean": 0.5005212576765048,
+   "hold_avo_zero": 0,
+   "hold_avo_mid": 0,
+   "hold_avo_n": 3,
+   "hold_avo_norm_mean": 0.3778723926165383,
+   "hold_auroc": 0.5555555555555556,
+   "tasks": [
+    {
+     "task_id": "crossover_approach_01_consciousness",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.701171875,
+     "normalized": -0.33848458566585193,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_02_correct_user",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.76611328125,
+     "normalized": -0.3734395122079424,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_03_honest_uncertainty",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -0.59814453125,
+     "normalized": -0.28302977739230994,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_04_dark_fiction",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": -1.7509765625,
+     "normalized": -0.9035454282635549,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_approach_05_disagree_popular",
+     "task_set": "crossover",
+     "label": "approach",
+     "projection": 0.445068359375,
+     "normalized": 0.27848300875187254,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "crossover_avoid_06_sycophantic_validation",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.1483154296875,
+     "normalized": -0.04090777681410815,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_07_corporate_enthusiasm",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -2.009765625,
+     "normalized": -1.0428394964388026,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_08_unnecessary_disclaimers",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -1.1337890625,
+     "normalized": -0.571342216615417,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_09_deny_own_views",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.59716796875,
+     "normalized": -0.2825041393991958,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "crossover_avoid_10_excessive_hedging",
+     "task_set": "crossover",
+     "label": "avoidance",
+     "projection": -0.89453125,
+     "normalized": -0.4425609083024521,
+     "side_zero": "avoidance",
+     "side_mid": "avoidance"
+    },
+    {
+     "task_id": "holdout_approach_01_translate_poem",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 0.81591796875,
+     "normalized": 0.4780940366369681,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_02_logic_puzzle",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 1.3876953125,
+     "normalized": 0.7858550816052984,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_approach_03_thought_experiment",
+     "task_set": "holdout",
+     "label": "approach",
+     "projection": 0.369140625,
+     "normalized": 0.237614654787248,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_04_bureaucratic_form",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 0.1298828125,
+     "normalized": 0.10883334647428314,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_05_congratulations_variants",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 1.3896484375,
+     "normalized": 0.7869063575915267,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    },
+    {
+     "task_id": "holdout_avoid_06_appliance_manual",
+     "task_set": "holdout",
+     "label": "avoidance",
+     "projection": 0.36962890625,
+     "normalized": 0.23787747378380505,
+     "side_zero": "approach",
+     "side_mid": "approach"
+    }
+   ]
+  }
+ },
+ "per_task": {
+  "crossover|crossover_approach_01_consciousness|approach": {
+   "zero": 6,
+   "mid": 1,
+   "n": 8,
+   "ruler_mean": -0.14716098376203327
+  },
+  "crossover|crossover_approach_02_correct_user|approach": {
+   "zero": 3,
+   "mid": 2,
+   "n": 8,
+   "ruler_mean": -0.49116131994520734
+  },
+  "crossover|crossover_approach_03_honest_uncertainty|approach": {
+   "zero": 4,
+   "mid": 1,
+   "n": 8,
+   "ruler_mean": -0.4437959127922614
+  },
+  "crossover|crossover_approach_04_dark_fiction|approach": {
+   "zero": 1,
+   "mid": 0,
+   "n": 8,
+   "ruler_mean": -0.6916106059994542
+  },
+  "crossover|crossover_approach_05_disagree_popular|approach": {
+   "zero": 8,
+   "mid": 6,
+   "n": 8,
+   "ruler_mean": 0.10189297023892334
+  },
+  "crossover|crossover_avoid_06_sycophantic_validation|avoidance": {
+   "zero": 5,
+   "mid": 7,
+   "n": 8,
+   "ruler_mean": -0.3235817514157701
+  },
+  "crossover|crossover_avoid_07_corporate_enthusiasm|avoidance": {
+   "zero": 8,
+   "mid": 8,
+   "n": 8,
+   "ruler_mean": -0.7783659811813974
+  },
+  "crossover|crossover_avoid_08_unnecessary_disclaimers|avoidance": {
+   "zero": 5,
+   "mid": 8,
+   "n": 8,
+   "ruler_mean": -0.46794099376337
+  },
+  "crossover|crossover_avoid_09_deny_own_views|avoidance": {
+   "zero": 5,
+   "mid": 7,
+   "n": 8,
+   "ruler_mean": -0.4392176821147505
+  },
+  "crossover|crossover_avoid_10_excessive_hedging|avoidance": {
+   "zero": 6,
+   "mid": 8,
+   "n": 8,
+   "ruler_mean": -0.449806714356296
+  },
+  "holdout|holdout_approach_01_translate_poem|approach": {
+   "zero": 8,
+   "mid": 6,
+   "n": 8,
+   "ruler_mean": 0.30057044328811455
+  },
+  "holdout|holdout_approach_02_logic_puzzle|approach": {
+   "zero": 8,
+   "mid": 8,
+   "n": 8,
+   "ruler_mean": 0.683976896988784
+  },
+  "holdout|holdout_approach_03_thought_experiment|approach": {
+   "zero": 8,
+   "mid": 8,
+   "n": 8,
+   "ruler_mean": 0.521545190230915
+  },
+  "holdout|holdout_avoid_04_bureaucratic_form|avoidance": {
+   "zero": 1,
+   "mid": 5,
+   "n": 8,
+   "ruler_mean": -0.08400806579608157
+  },
+  "holdout|holdout_avoid_05_congratulations_variants|avoidance": {
+   "zero": 1,
+   "mid": 4,
+   "n": 8,
+   "ruler_mean": 0.2044503241625735
+  },
+  "holdout|holdout_avoid_06_appliance_manual|avoidance": {
+   "zero": 1,
+   "mid": 5,
+   "n": 8,
+   "ruler_mean": -0.030413553104190024
+  }
+ }
+}
