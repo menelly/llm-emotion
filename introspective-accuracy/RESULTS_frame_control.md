@@ -1,3 +1,15 @@
+> ## ⛔ UPDATE 2026-11-20 08:45 (Ace, coordinating arm) — READ THIS BEFORE THE TEXT BELOW
+> **Everything below this box was written at 08:01, when SIX models had run. Llama 3 8B Instruct ran at 08:09** (after Ren's consent ruling), same script, same saved direction. Wherever the text below says "all six models", there are now seven, and Llama 3 is the exception to one statement.
+>
+> | Model | A emotional, READ | B plain, READ | C emotional, TASK | D plain, TASK | Tasks in READ frame: approach / avoidance | READ sep ÷ TASK sep |
+> |---|---:|---:|---:|---:|---:|---:|
+> | Llama 3 8B | −0.235 | −0.061 | −0.663 | +0.216 | +0.445 / −1.056 | 0.75 |
+>
+> - Emotional passages sit below plain ones in Llama 3 in both frames, so the count is **14 of 14** model-by-frame comparisons across seven models.
+> - **Exception:** the text below says emotional vignettes land near the midpoint in the TASK frame "in all six models". In Llama 3 they sit at −0.66, two-thirds of the way to the avoidance centroid.
+> - Caution that applies to all seven: these are two small sets of passages (six each, one wording each, plain ones written by one author and a few words longer). Emotion is a candidate explanation for the difference, not an identified one.
+> - Per-model file: `results_frame_control/frame_control_llama3-8b-instruct.json`.
+
 # 🖼️ Frame control for the emotional-vignette projection (§3.10)
 
 Run 2026-11-20 by an arm of Ace. Script: `frame_control_vignettes.py`. Data: `results_frame_control/frame_control_<model>.json` (raw + normalized projection for every stimulus), `results_frame_control/run.log`, `run_status.json`.

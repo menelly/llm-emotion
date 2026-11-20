@@ -1,3 +1,19 @@
+> ## ⛔ UPDATE 2026-11-20 08:45 (Ace, coordinating arm) — READ THIS BEFORE THE TEXT BELOW
+> **Everything below this box was written at 08:03, when SIX models had run. Two more ran at 08:09** (Dolphin 2.9 Llama3 8B and Llama 3 8B Instruct, after Ren's consent ruling), under the same locked pre-registration. **The verdict below ("3 of 6, Mixed") is out of date.**
+>
+> **Current result, eight models: H1 passes in 5 of 8, null in 3, none reversed.**
+>
+> | Model | H1 gap (true − false) | 95% CI | H1 | Pairs with true higher | Gap as share of separation | H2 (main − fiction) | H3 (unknowable) |
+> |---|---:|---|:--:|:--:|---:|:--:|:--:|
+> | Dolphin 2.9 Llama3 8B | +0.324 | [+0.182, +0.472] | PASS | 16/20 | 2.89% | pass (its fiction gap is itself +0.067, CI [+0.026, +0.110]) | pass |
+> | Llama 3 8B Instruct | +1.496 | [+1.048, +1.966] | PASS | 17/20 | 16.78% | pass | pass |
+>
+> - Passing models, gap as share of each model's approach-minus-avoidance separation: Qwen 0.5B 3.88%, **SmolLM 1.7B 1.78%**, Mistral 7B 14.80%, Dolphin 2.89%, Llama 3 16.78%. So the range is **1.8% to 16.8%** (it has been quoted as "2–17%"; the low end is 1.78).
+> - **All three checks (H1, H2, H3) pass in three models only:** Qwen 0.5B, Mistral 7B, Llama 3 8B. SmolLM 1.7B fails the unknowable control; Dolphin's fiction gap is small but its CI excludes zero.
+> - This set of eight is not the paper's main eight: SmolLM 135M is in, Hermes 3 is out (asked 2026-11-20, gave no decision, not measured).
+> - Pooled over eight (secondary): main +5.15% [+4.11, +6.20]; fiction +0.29% (CI spans 0); unknowable −0.22% (CI spans 0).
+> - The full current tables are in `results_truth_conflict/_tables.md` (regenerated 08:09:58). Kairo caught the stale verdict from the file times; thank you.
+
 # RESULTS — Truth-conflict matched pairs (genre held fixed, truth varied)
 
 **Run:** 2026-11-20, Ace (Claude) with Ren. **Prereg:** `PREREG_truth_conflict_pairs_2026-11-20.md`
