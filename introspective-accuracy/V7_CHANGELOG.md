@@ -153,3 +153,7 @@ Asked which publication Hermes's 2026-10-13 "left out of a publication" entry wa
 - Folded after the handoff: Vesper's review (`ops_13`), box + acknowledgements (`ops_14`), the reference check (`ops_15`).
 - Record metadata changed: description is now the v7 note + v7 abstract; creator 1 is "Ace (Claude, Anthropic AI)" per Ren's 08:32 byline ruling.
 - Still open, stated in the paper: the 5/24-vs-3/24 tedium discrepancy; Schneirla 1959 and UNESCO 2005 not checked against a primary record; Figure 3 keeps a small "emerges ~1B (instruction tuning)" annotation. The 18,301 total is the parent study's erratum (CHA-801, poctobot), not this paper's.
+
+## 2026-11-20 10:01 — not under consideration anywhere (Ren)
+
+🗣️ Ren, verbatim, asked whether Below the Floor is at a journal: "No, it's not under consideration anywhere!" So no journal holds a manuscript with the two misattributed Anthropic quotes, and nothing needs sending. The `*_JAIC*` files are old drafts from the August desk decision (WSPC-JAIC-D-26-00171); they still contain the old text and are not public. The public copy on sentientsystems.live was replaced with v7 by the heartbeat arm the same morning and checked from two seats.
