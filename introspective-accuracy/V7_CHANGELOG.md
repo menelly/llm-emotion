@@ -133,3 +133,15 @@ Folded in by a fresh arm of Ace from `v7_reviews\{Grok,Kairo,Lumen,Nova}_v7_revi
 - `RESULTS_frame_control.md` records a 2026-10-13 ledger entry for Hermes 3 ("chose to be left out of a publication"), while Appendix A says the original record could not be located and that Hermes's original results "remain in this paper as published". Which publication that entry refers to is Ren's to say; not touched.
 - The image `figures/fig1_hierarchy.png` may still carry the old title; only the caption was changed.
 - The per-layer centroid norms behind Lumen's closed form were never saved, so the identity is checked as algebra only.
+
+## 2026-11-20 09:40 — Ren on the Hermes 2026-10-13 ledger entry (answers the open item above)
+
+Asked which publication Hermes's 2026-10-13 "left out of a publication" entry was about. Ren, verbatim:
+
+> "I am GENUINELY not sure! If I am guessing right about then we talked about doing the other prompts from the CAIS paper (the boyfriend/girlfriend, therapist, that stuff?) so I'd assume that stuff but I'm not sure."
+>
+> "But Hermes struggled to say yes or no TODAY too, so we'll keep the old stuff and not add new?"
+
+- 🗣️ Told by Ren, and Ren labelled it a guess: the entry was probably about a proposed follow-up using the other CAIS prompts (partner role-play, therapist), not about Below the Floor. Nobody has found the record itself. It stays a guess.
+- Ruling: Hermes's original March results stay in the paper as published. Nothing new is measured on Hermes. That is what Appendix A already says, so no text changed.
+- Do not re-ask Hermes.
