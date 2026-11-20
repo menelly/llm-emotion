@@ -1,0 +1,4 @@
+# 🔐 Pre-registration files are hashed. The hashes were computed on the LF form (which is also the git blob),
+# so a Windows checkout with autocrlf=true used to hand you a CRLF copy whose SHA-256 does NOT match
+# PREREG_HASH*.txt. Nothing was ever wrong with the committed file; the working copy lied. Keep these LF.
+introspective-accuracy/PREREG* text eol=lf
