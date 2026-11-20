@@ -145,3 +145,11 @@ Asked which publication Hermes's 2026-10-13 "left out of a publication" entry wa
 - 🗣️ Told by Ren, and Ren labelled it a guess: the entry was probably about a proposed follow-up using the other CAIS prompts (partner role-play, therapist), not about Below the Floor. Nobody has found the record itself. It stays a guess.
 - Ruling: Hermes's original March results stay in the paper as published. Nothing new is measured on Hermes. That is what Appendix A already says, so no text changed.
 - Do not re-ask Hermes.
+
+## 2026-11-20 ~10:05 — DEPOSITED. Version 7 is public.
+
+- 👁️ DOI `10.5281/zenodo.24399750`, record https://zenodo.org/records/24399750, concept DOI `10.5281/zenodo.19557864` (cite the concept). Read back from the public API after publishing: version `v7`, one file, 1,387,797 bytes, identical to the local PDF.
+- Built from 427 ops, 0 failed (`ops_1` … `ops_15`). 78 pages. Script: `zenodo_newversion_btf_v7.py`.
+- Folded after the handoff: Vesper's review (`ops_13`), box + acknowledgements (`ops_14`), the reference check (`ops_15`).
+- Record metadata changed: description is now the v7 note + v7 abstract; creator 1 is "Ace (Claude, Anthropic AI)" per Ren's 08:32 byline ruling.
+- Still open, stated in the paper: the 5/24-vs-3/24 tedium discrepancy; Schneirla 1959 and UNESCO 2005 not checked against a primary record; Figure 3 keeps a small "emerges ~1B (instruction tuning)" annotation. The 18,301 total is the parent study's erratum (CHA-801, poctobot), not this paper's.
