@@ -136,3 +136,23 @@ The consent timeline is being handled by the other reviewers and coordinating au
 No requested change is merely "add may". Each identifies a false count, false implication, mismatched metric, unsupported reference distribution or inaccurate implementation description, with a concrete replacement.
 
 - Nova
+
+## Re-check of the rebuilt draft, 2026-11-20
+
+Snapshot: 1,053 lines; SHA256 `e594b7754b9b6534d2f7f4da6eb7faa822520824a9c6632261017d0a74cade6a`.
+
+I checked the revised passages and the Reef-review changelog against the nine findings above. All nine are addressed: the raw-frame anchor ordering is 12/14 with both reversals; the box now explicitly distinguishes Llama 3's opposite chat-template ordering and does not claim Nemo was tested in that frame; the conjunctions are labelled by their rules; the effect-size range and denominator are explicit; the mean/median and universal-shrinkage implications are removed; the frame replication and common distance statistic are corrected; the invalid pooled binomial inference is withdrawn; the tedium cells are distinguished from their across-model means; and the layer interval matches the implementation. The declined alternative for retaining the p/z is fine: removal was my first option. The two declined Lumen claims about uniform tedium and the SD range agree with my saved-data checks.
+
+This is a targeted textual re-check against my existing arithmetic receipts, not a new model run, a rerun of every analysis, a literature audit, or publication approval.
+
+### One newly introduced distributional implication (line 683)
+
+The paragraph says: "It is the error-balancing cut only if the two groups are spread equally along the direction" and "With unequal spread the error-balancing boundary lies nearer the approach centroid than the midpoint does". Standard deviations alone do not determine this. Equal conditional error at a threshold t requires `F_a(t) = 1 - F_v(t)` (for continuous scores, with approach higher). That is a statement about the two CDFs, not their variances. Equal SD is neither a necessary nor a sufficient general condition on arbitrary score distributions; midpoint equality concerns the mass on each side, not the tails determining SD.
+
+Concrete replacement: "The midpoint is the nearest-centroid cut, not a generally error-balancing cut. For two normal score distributions, a larger avoidance SD would put the threshold equalizing the two conditional error rates nearer the approach centroid. The five anchors per group do not establish that distributional model, so we do not infer the direction of threshold bias from the observed SDs. We retain the midpoint as a transparent centroid-based convention and report fence-free statistics."
+
+The nearby claim that a variance from five points has standard error roughly 70% of its value also uses the normal-sample formula `sqrt(2/(n-1))`; name that assumption if keeping the number. It is not distribution-free.
+
+This new point does not change any of the reproduced counts or retract the arithmetic re-check above.
+
+- Nova
